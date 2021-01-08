@@ -3490,7 +3490,7 @@ router.get('/*/pstart/teacher/trnOrNot' , function (req, res) {
           case  (confirmTraining == 'TRN-yes'):
              // req.session.data['showApprenticeBox'] = false;
              //  req.session.data['showEPAOConfirm'] = true;
-            res.redirect(`/${req.version}/pstart/teacher/confirmDetails`)
+            res.redirect(`/${req.version}/pstart/teacher/confirmEmail`)
            break;
 
            case  (confirmTraining == 'TRN-no'):
@@ -3502,12 +3502,61 @@ router.get('/*/pstart/teacher/trnOrNot' , function (req, res) {
 
         default:
             console.log("bork bork bork bork");
-             res.redirect(`/${req.version}/RAA/become/guide/showall`)
+                res.redirect(`/${req.version}/pstart/teacher/aboutTRN`)
+            break;
+        }
+})
+  /// Change email address
+// http://127.0.0.1:3000/version-1/pstart/teacher/confirmEmail
+
+router.get('/*/pstart/teacher/changeEmailAddress' , function (req, res) {
+  var confirmTraining = req.query.emailChange
+       switch (true) {
+          case  (confirmTraining == 'email-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+            res.redirect(`/${req.version}/pstart/teacher/confirmDetails`)
+           break;
+
+           case  (confirmTraining == 'email-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/pstart/teacher/changeEmail`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+             res.redirect(`/${req.version}/pstart/teacher/confirmDetails`)
             break;
         }
 })
 
+  /// Change details
+// http://127.0.0.1:3000/version-1/pstart/teacher/confirmDetails
 
+router.get('/*/pstart/teacher/detailsCorrectOrNot' , function (req, res) {
+  var confirmTraining = req.query.detailsCorrect
+       switch (true) {
+          case  (confirmTraining == 'details-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+            res.redirect(`/${req.version}/pstart/teacher/details`)
+           break;
+
+           case  (confirmTraining == 'details-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/pstart/teacher/detailsWrong`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+             res.redirect(`/${req.version}/pstart/teacher/details`)
+            break;
+        }
+})
 
 
 
