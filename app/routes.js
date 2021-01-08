@@ -3480,6 +3480,35 @@ router.get('/*/RAA/appForm/ethnicSplit' , function (req, res) {
 })
 
 /////////END OF RAA/FAA ROUTES //////////////////////////////
+/////////NPQ ROUTES //////////////////////////////
+  /// TRN or not
+// http://127.0.0.1:3000/version-1/pstart/teacher/TRNCheck
+
+router.get('/*/pstart/teacher/trnOrNot' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+            res.redirect(`/${req.version}/pstart/teacher/confirmDetails`)
+           break;
+
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/pstart/teacher/aboutTRN`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+             res.redirect(`/${req.version}/RAA/become/guide/showall`)
+            break;
+        }
+})
+
+
+
 
 
 /// Add apprentices > add apprentices yourself or send to provider
