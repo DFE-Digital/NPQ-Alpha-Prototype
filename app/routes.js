@@ -3490,6 +3490,7 @@ router.get('/*/pstart/teacher/trnOrNot' , function (req, res) {
           case  (confirmTraining == 'TRN-yes'):
              // req.session.data['showApprenticeBox'] = false;
              //  req.session.data['showEPAOConfirm'] = true;
+              req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
             res.redirect(`/${req.version}/pstart/teacher/confirmEmail`)
            break;
 
@@ -3513,7 +3514,8 @@ router.get('/*/pstart/teacher/changeEmailAddress' , function (req, res) {
   var confirmTraining = req.query.emailChange
        switch (true) {
           case  (confirmTraining == 'email-yes'):
-             // req.session.data['showApprenticeBox'] = false;
+             
+
              //  req.session.data['showEPAOConfirm'] = true;
             res.redirect(`/${req.version}/pstart/teacher/confirmDetails`)
            break;
@@ -3556,6 +3558,13 @@ router.get('/*/pstart/teacher/detailsCorrectOrNot' , function (req, res) {
              res.redirect(`/${req.version}/pstart/teacher/details`)
             break;
         }
+})
+
+  /// Change  email address
+// http://127.0.0.1:3000/version-1/pstart/teacher/confirmDetails
+
+router.get('/*/pstart/teacher/detailsCorrectOrNot' , function (req, res) {
+
 })
 
 
