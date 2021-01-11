@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+{% block beforeContent %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-xl" >Teacher reference number</h1>
+
+  <p>You will need to enter your TRN to register with us to take an NPQ.</p>
+
+    <p class="">The teacher reference number is a unique number that allows us to check if you are a qualified teacher.</p>
+    <p>All qualified teachers have a TRN.</p>
+      
+    <p>If you don’t know what your teacher reference number (TRN) is, this can usually be found on your payslip, teachers’ pension documentation or teacher training records.</p>
+
+    <p>The TRN has previously been known as a QTS, GTC, DfE, DfES or DCSF number and therefore may include the letters RP and the forward slash symbol ‘/’.</p>
+
+    <p>If you cannot find your TRN, you can request a reminder.</p>
+
+    <h2 class="govuk-heading-m">Request a TRN reminder by email</h2>
+    <p>Send an email which includes your:</p>
+       <ul class="govuk-list govuk-list--bullet">
+            <li>full name</li>
+            <li>date of birth</li>
+             <li>National Insurance number</li>
+        </ul>
+        <p> to <a href="">qts.enquiries@education.gov.uk</a></p>
+
+         <h2 class="govuk-heading-m">Request a TRN reminder by phone</h2>
+         <p>Call the Teaching Regulation Agency on 020 7593 5394</p>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}
