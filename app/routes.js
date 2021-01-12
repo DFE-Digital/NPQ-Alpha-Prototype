@@ -3577,7 +3577,7 @@ router.get('/*/tstart/trnOrNot' , function (req, res) {
              // req.session.data['showApprenticeBox'] = false;
              //  req.session.data['showEPAOConfirm'] = true;
              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
-            res.redirect(`/${req.version}/tstart/email`)
+            res.redirect(`/${req.version}/tstart/details`)
            break;
 
            case  (confirmTraining == 'TRN-no'):
