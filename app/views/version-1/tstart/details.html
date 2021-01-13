@@ -65,25 +65,27 @@ EventUtil.addHandler(createButton, 'click', function(){
                  Teacher reference number (TRN)
               </label>
              <span id="email-hint" class="govuk-hint">
-              The TRN is 7 digits long
+             Your TRN is 7-10 characters long. It may include  “/” or “RP”.
             </span>
               <input class="govuk-input govuk-input--width-10" id="trn" name="trn" type="text" aria-describedby="trn">
           </div>
+    <!--       <h3 class="govuk-heading-s" style="margin-bottom:10px">Name</h3>
+          <p>We need your first and last name as registered on the DQT. If you have changed your name and not updated it on the DQT, use your previous name. </p> -->
           <div class="govuk-form-group">
               <label class="govuk-label govuk-!-width-three-quarters bold-label" for="firstName">
                  First name
               </label>
-              <!--span id="email-hint" class="govuk-hint">
-              We’ll only use this to send you a receipt
-            </span-->
+              <span id="email-hint" class="govuk-hint">
+              We need your name as registered on the DQT. If you have changed your name and not updated it on the DQT, use your previous name.
+            </span>
               <input class="govuk-input govuk-!-width-three-quarters" id="firstName" name="firstName" type="text" aria-describedby="First Name">
           </div>
           <div class="govuk-form-group">
               <label class="govuk-label bold-label govuk-!-width-three-quarters" for="lastName">
                  Last name
               </label>
-              <span id="email-hint" class="govuk-hint">
-              We need the last name registered on the DQT. If you have changed your name and not updated it on the DQT use your previous name.
+           <span id="email-hint" class="govuk-hint">
+              We need your name as registered on the DQT. If you have changed your name and not updated it on the DQT, use your previous name.
             </span>
               <input class="govuk-input govuk-!-width-three-quarters" id="lastName" name="lastName" type="text" aria-describedby="Last name">
           </div>
@@ -122,6 +124,7 @@ EventUtil.addHandler(createButton, 'click', function(){
       </div>
     </div>
           </div>
+
 
           </fieldset>
         </div>
