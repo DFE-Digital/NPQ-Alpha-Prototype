@@ -3491,7 +3491,7 @@ router.get('/*/pstart/teacher/trnOrNot' , function (req, res) {
              // req.session.data['showApprenticeBox'] = false;
              //  req.session.data['showEPAOConfirm'] = true;
               req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
-            res.redirect(`/${req.version}/pstart/teacher/confirmEmail`)
+            res.redirect(`/${req.version}/pstart/teacher/details`)
            break;
 
            case  (confirmTraining == 'TRN-no'):
@@ -3543,7 +3543,7 @@ router.get('/*/pstart/teacher/detailsCorrectOrNot' , function (req, res) {
           case  (confirmTraining == 'details-yes'):
              // req.session.data['showApprenticeBox'] = false;
              //  req.session.data['showEPAOConfirm'] = true;
-            res.redirect(`/${req.version}/pstart/teacher/details`)
+            res.redirect(`/${req.version}/pstart/teacher/registerEmailUpdates`)
            break;
 
            case  (confirmTraining == 'details-no'):
