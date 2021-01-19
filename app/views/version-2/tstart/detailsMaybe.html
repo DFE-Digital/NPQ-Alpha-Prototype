@@ -1,0 +1,31 @@
+
+{% extends "layout.html" %}
+{% block beforeContent %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-width-container">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                                <h1 class="govuk-heading-xl">Unsure about registered names</h1>
+                                 <p class="govuk-body"> </p>
+                                 <p>If you are unsure about the name registered with the Database of Qualified Teachers (DQT) we would suggest using your preferred name when you register. If our service cannot match your details then it is likely that you have not updated your name. Either use your old name to register or <a href="DQTChange">update the DQT</a> with your new name and start again.  </p>
+                              
+                <form action="details" method="get" class="form">
+                    <button class="govuk-button">Continue</button>
+                    <!--  <a  class="govuk-button clear-button" href="apprenticeDetails/add-apprentice" >Skip and continue</a> -->
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+{% endblock %}

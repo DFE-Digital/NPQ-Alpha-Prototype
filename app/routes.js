@@ -3595,30 +3595,148 @@ router.get('/*/tstart/trnOrNot' , function (req, res) {
 })
 
 
-/// Add apprentices > add apprentices yourself or send to provider
-// router.get('/version-1/apprentices/add/finishAppEarly' , function (req, res) {
- // var optionFinishApps = req.query.optionFinishApps
-   //    switch (true) {
-     //     case  (optionFinishApps == 'send'):
-       //     res.redirect(`/${req.version}/apprentices/cohorts/index`)
-         //  break;
+ /// TRN or not Teacher starts version2
+// http://127.0.0.1:3000/version-2/tstart/TRNCheck
+router.get('/*/tstart/trnOrNotTwo' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/namecheck`)
+           break;
 
-      //    case  (optionFinishApps == 'save'):
-        //      res.redirect(`/${req.version}/apprentices/cohorts/index`)
-          // break;
-
-      //  default:
-      //       console.log('gyahhhhhhhh, bork bork borka')
-      //      break;
-      //  }
-// })
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/aboutTRN`)
+           break;
 
 
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/tstart/aboutTRN`)
+            break;
+        }
+})
 
-/// registration > what you'll need
-//// Not using routes for this as has a weird behaviour on the no option, so dealt with in page.
-/// manage-apprenticeships/whatyoullneed
+ /// Name change or not version2
+// http://127.0.0.1:3000/version-2/tstart/namecheck
+router.get('/*/tstart/namechecker' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/nameExplain`)
+           break;
 
-/// registration > 
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/details`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+           //     res.redirect(`/${req.version}/tstart/aboutTRN`)
+            break;
+        }
+})
+
+
+ /// Name change or not version2
+// http://127.0.0.1:3000/version-2/tstart/nameExplain
+router.get('/*/tstart/nameExplainer' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/details`)
+           break;
+
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/DQTChange`)
+           break;
+
+          case  (confirmTraining == 'name-ns'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/detailsMaybe`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/tstart/aboutTRN`)
+            break;
+        }
+})
+
+
+
+ /// Current school or not
+// http://127.0.0.1:3000/version-2/tstart/confirmSchool?assessment=NPQ+Leading+Teaching
+router.get('/*/tstart/schoolChecker' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'schoolYes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              req.session.data['school-name'] = "St Mark's Church of England Junior School";
+            res.redirect(`/${req.version}/tstart/chooseNPQ`)
+           break;
+
+           case  (confirmTraining == 'schoolNo'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/chooseSchoolPost`)
+           break;
+
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/tstart/aboutTRN`)
+            break;
+        }
+})
+
+
+
+ /// Share details with providers
+// http://127.0.0.1:3000/version-2/tstart/shareProvider?
+router.get('/*/tstart/shareWithProvider' , function (req, res) {
+  var confirmTraining = req.query.providerShare
+       switch (true) {
+          case  (confirmTraining == 'shareYes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             // req.session.data['school-name'] = "St Mark's Church of England Junior School";
+            res.redirect(`/${req.version}/tstart/namecheck`)
+           break;
+
+           case  (confirmTraining == 'shareNo'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/FIXTHIS`)
+           break;
+
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/tstart/trncheck`)
+            break;
+        }
+})
+
 
 module.exports = router
