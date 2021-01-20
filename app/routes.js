@@ -3663,7 +3663,7 @@ router.get('/*/tstart/nameExplainer' , function (req, res) {
            case  (confirmTraining == 'TRN-no'):
              // req.session.data['showEPAOConfirm'] = false;
              // req.session.data['showApprenticeBox'] = true;
-            res.redirect(`/${req.version}/tstart/DQTChange`)
+            res.redirect(`/${req.version}/tstart/nameNotUpdated`)
            break;
 
           case  (confirmTraining == 'name-ns'):
