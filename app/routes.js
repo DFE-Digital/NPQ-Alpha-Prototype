@@ -3765,5 +3765,30 @@ router.get('/*/tstart/ethnicSplit' , function (req, res) {
 
 
 
+  /// change name or use old nam
+// http://127.0.0.1:3000/version-2/tstart/nameNotUpdated
+router.get('/*/tstart/nameUpdateOrNot' , function (req, res) {
+  var confirmTraining = req.query.DQTorNot
+       switch (true) {
+          case  (confirmTraining == 'DQTChange'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+            res.redirect(`/${req.version}/tstart/DQTChange`)
+           break;
+
+           case  (confirmTraining == 'crackOn'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/details`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+             res.redirect(`/${req.version}/tstart/`)
+            break;
+        }
+})
+
 
 module.exports = router
