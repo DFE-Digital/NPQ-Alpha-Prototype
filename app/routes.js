@@ -3691,7 +3691,7 @@ router.get('/*/tstart/schoolChecker' , function (req, res) {
              // req.session.data['showApprenticeBox'] = false;
              //  req.session.data['showEPAOConfirm'] = true;
               req.session.data['school-name'] = "St Mark's Church of England Junior School";
-            res.redirect(`/${req.version}/tstart/chooseNPQ`)
+            res.redirect(`/${req.version}/tstart/ethnicty`)
            break;
 
            case  (confirmTraining == 'schoolNo'):
