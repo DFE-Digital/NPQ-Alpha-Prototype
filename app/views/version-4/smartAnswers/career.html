@@ -29,36 +29,41 @@ function whereNow(clickedID) {
 
 
 <div class="govuk-width-container">
- 
+  
         <div class="govuk-grid-row"">
     <div class="govuk-grid-column-two-thirds">
 
-        <form method="get" action="showPersonalisedGuidance">
+        <form method="get" action="careerStage">
          
-            <h1 class="govuk-heading-xl">Find out about teacher professional qualifications</h1>
+            <h1 class="govuk-heading-xl">Career stage</h1>
    <!--          <p>The information you provide will help us personalise your experience and will not used for anything else.</p> -->
            <!--  <p class="govuk-body-l">Do you want to use a saved apprenticeship?</p> -->
-            <div class="govuk-form-group">
-            </div>
+      
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                         <h1 class="govuk-fieldset__heading">
-                          Do you want to tell us about yourself so that we show you guidance that’s relevant to you?
-                          <span class="govuk-hint">The information you provide will help us personalise your experience and will not used for anything else.</span>
+                          Which post qualification teaching certificates do you have?
+                       <!--    <span class="govuk-hint">The information you provide will help us personalise your experience and will not used for anything else.</span> -->
                         </h1>
                     </legend>
                     <div class="govuk-radios">
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="confirm-yes" name="confirm" type="radio" value="yes">
+                            <input class="govuk-radios__input" id="confirm-yes" name="confirm" type="radio" value="ecf">
                             <label class="govuk-label govuk-radios__label" for="confirm-yes">
-                               Yes, I want to get personalised guidance
+                            Early career framework (ECF)
                             </label>
                         </div>
                         <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="confirm-no" name="confirm" type="radio" value="no" >
+                            <input class="govuk-radios__input" id="confirm-no" name="confirm" type="radio" value="npq" >
                             <label class="govuk-label govuk-radios__label" for="confirm-no">
-                               No, Show me everything
+                               National professional qualification (NPQ)
+                            </label>
+                        </div> 
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="confirm-no" name="confirm" type="radio" value="neither" >
+                            <label class="govuk-label govuk-radios__label" for="confirm-no">
+                               Neither of these
                             </label>
                         </div>  
                      

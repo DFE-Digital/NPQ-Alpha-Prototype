@@ -3824,5 +3824,36 @@ router.get('/*/smartAnswers/showPersonalisedGuidance' , function (req, res) {
         }
 })
 
+  /// smart answers begin
+// http://127.0.0.1:3000/version-4/smartAnswers/showPersonalisedGuidance
+router.get('/*/smartAnswers/careerStage' , function (req, res) {
+  var confirmTraining = req.query.confirm
+       switch (true) {
+          case  (confirmTraining == 'ecf'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+            res.redirect(`/${req.version}/smartAnswers/career`)
+           break;
+
+           case  (confirmTraining == 'npq'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/smartAnswers/begin`)
+           break;
+
+                   case  (confirmTraining == 'neither'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/smartAnswers/begin`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+             res.redirect(`/${req.version}/smartAnswers/`)
+            break;
+        }
+})
+
 
 module.exports = router
