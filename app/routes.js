@@ -3832,19 +3832,19 @@ router.get('/*/smartAnswers/careerStage' , function (req, res) {
           case  (confirmTraining == 'ecf'):
              // req.session.data['showApprenticeBox'] = false;
              //  req.session.data['showEPAOConfirm'] = true;
-            res.redirect(`/${req.version}/smartAnswers/career`)
+            res.redirect(`/${req.version}/smartAnswers/npq`)
            break;
 
            case  (confirmTraining == 'npq'):
              // req.session.data['showEPAOConfirm'] = false;
              // req.session.data['showApprenticeBox'] = true;
-            res.redirect(`/${req.version}/smartAnswers/begin`)
+            res.redirect(`/${req.version}/smartAnswers/npq`)
            break;
 
                    case  (confirmTraining == 'neither'):
              // req.session.data['showEPAOConfirm'] = false;
              // req.session.data['showApprenticeBox'] = true;
-            res.redirect(`/${req.version}/smartAnswers/begin`)
+            res.redirect(`/${req.version}/smartAnswers/npq`)
            break;
 
 
