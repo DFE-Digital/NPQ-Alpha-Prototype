@@ -3693,7 +3693,7 @@ router.get('/*/tstart/nameExplainer' , function (req, res) {
 
  /// Current school or not
 // http://127.0.0.1:3000/version-2/tstart/confirmSchool?assessment=NPQ+Leading+Teaching
-router.get('/*/tstart/schoolChecker' , function (req, res) {
+router.get('/version-3/tstart/schoolChecker' , function (req, res) {
   var confirmTraining = req.query.trn
        switch (true) {
           case  (confirmTraining == 'schoolYes'):
@@ -3701,6 +3701,33 @@ router.get('/*/tstart/schoolChecker' , function (req, res) {
              //  req.session.data['showEPAOConfirm'] = true;
               req.session.data['school-name'] = "St Mark's Church of England Junior School";
             res.redirect(`/${req.version}/tstart/ethnicty`)
+           break;
+
+           case  (confirmTraining == 'schoolNo'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/chooseSchoolPost`)
+           break;
+
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/tstart/aboutTRN`)
+            break;
+        }
+})
+
+ /// Current school or not
+// http://127.0.0.1:3000/version-2/tstart/confirmSchool?assessment=NPQ+Leading+Teaching
+router.get('/version-2/tstart/schoolChecker' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'schoolYes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              req.session.data['school-name'] = "St Mark's Church of England Junior School";
+            res.redirect(`/${req.version}/tstart/chooseNPQ`)
            break;
 
            case  (confirmTraining == 'schoolNo'):
