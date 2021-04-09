@@ -16,22 +16,8 @@ href: "javascript:history.back()"
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
                                 <h1 class="govuk-heading-xl">Teacher reference number</h1>
-                                 <p class="govuk-body">Your teacher reference number (TRN)  is used to check you're eligible to study for a national professional qualification (NPQ).</p>
-                                                     <details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      What is a teacher reference number?
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-<p>A teacher reference number (TRN) is a unique ID that allows us to check you are a teacher.</p>
+                                 <p class="govuk-body">The teacher reference number (TRN) is used to check the teacher is eligible to study for a national professional qualification (NPQ).</p>
 
-
-    <p>If you don’t know what your teacher reference number (TRN) is, this can usually be found on your payslip, teachers’ pension documentation or teacher training records.</p>
-
-    <p>The TRN has previously been known as a QTS, GTC, DfE, DfES or DCSF number  </p>
-  </div>
-</details>
                 <form action="trnOrNotTwo" method="get" class="form">
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
@@ -41,7 +27,7 @@ href: "javascript:history.back()"
        
 
                                 <label class="govuk-label  bold-label" for="firstName">
- Do you know your teacher reference number (TRN)
+ Do you know the teacher reference number (TRN)?
 
               </label>
 
@@ -50,13 +36,13 @@ href: "javascript:history.back()"
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="TRN-yes" {{ checked( "trn", "TRN-yes") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-yes">
-                                      Yes, I know my TRN
+                                      Yes, I know the TRN
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="TRN-no" {{ checked( "TRN", "TRN-no") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-no">
-                                      No, I don't know my TRN
+                                      No, I don't know the TRN
                                     </label>
                                 </div>
                     <!--             <div class="govuk-radios__item">
