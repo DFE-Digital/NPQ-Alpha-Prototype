@@ -23,7 +23,8 @@
         </p> -->
        
       
-        <p>  <a href="">Visit {{ data['providerName'] }}</a> to finish your registration. <br />They will send you an email with a link to complete your registration. </p>
+        <p>  <a href="">Visit {{ data['providerName'] }}</a> to finish your registration. <br />They will send a link to complete your registration to {{ data['email'] }}. </p>
+         <p style="margin-top:400px"> <a href="emailFinish">inbox</a>  </p>
 <!--         <p>We have also sent a link to  {{ data['email'] }}  with details of how to complete your application with {{ data['providerName'] }}.</p> -->
 <!--           <details class="govuk-details" data-module="govuk-details">
               <summary class="govuk-details__summary">
