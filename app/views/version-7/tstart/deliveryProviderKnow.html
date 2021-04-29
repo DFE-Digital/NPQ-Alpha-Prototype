@@ -15,9 +15,9 @@ href: "javascript:history.back()"
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Your delivery provider</h1>
+                                <h1 class="govuk-heading-xl">Your delivery partner</h1>
                                  <p class="govuk-body"> </p>
-                                 <p style="">A delivery provider is a thing, that thing is this.</p>
+                                 <p style="">Your delivery partner will be running your NPQ course.</p>
            
 
                 <form action="deliveryProviderChecking" method="get" class="form">
@@ -29,7 +29,7 @@ href: "javascript:history.back()"
        
 
                                 <label class="govuk-label  bold-label" for="firstName">
- Do you know which delivery provider {{ data['providerName'] }} are using?
+ Do you know which partner {{ data['providerName'] }} is using?
 
               </label>
 
@@ -38,13 +38,13 @@ href: "javascript:history.back()"
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="deliveryYes" {{ checked( "trn", "deliveryYes") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-yes">
-                                       Yes, I know which delivery provider is doing the thing
+                                       Yes, I know which delivery partner will be used
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="deliveryNo" {{ checked( "TRN", "deliveryNo") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-no">
-                                       No, I don't know which delivery provider is doing the thing
+                                       No, I don't know which partner is being used
                                     </label>
                                 </div>
                     <!--             <div class="govuk-radios__item">

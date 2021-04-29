@@ -18,7 +18,7 @@ href: "javascript:history.back()"
 
 
         <form method="get" action="confirmDetails">
-            <h1 class="govuk-heading-xl">Funding</h1>
+            <h1 class="govuk-heading-xl">Funding your NPQ</h1>
          <!--    <p>How are you paying for your {{data['assessment']}}?</p> -->
 
 <!--  <details class="govuk-details">
@@ -72,7 +72,7 @@ href: "javascript:history.back()"
        
 
                                 <label class="govuk-label  bold-label" for="firstName">
-How are you paying for your {{data['assessment']}}?
+How is your {{data['assessment']}} being paid for?
 
               </label>
 
@@ -81,19 +81,19 @@ How are you paying for your {{data['assessment']}}?
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="emailChange" name="paying" type="radio" value="School_paying" >
                                     <label class="govuk-label govuk-radios__label" for="TRN-yes">
-                                       My school is paying for the {{data['assessment']}}
+                                       My school is paying 
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="paying" name="paying" type="radio" value="Teacher_paying" >
                                     <label class="govuk-label govuk-radios__label" for="TRN-no">
-                                       I am paying for the {{data['assessment']}}
+                                       I am paying 
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="paying" name="paying" type="radio" value="Other" {{ checked( "epao-name", "Other") }}>
+                                    <input class="govuk-radios__input" id="paying" name="paying" type="radio" value="Another way" {{ checked( "epao-name", "Another way") }}>
                                     <label class="govuk-label govuk-radios__label" for="epaoName-coventry">
-                                      The {{data['assessment']}} is being paid for another way
+                                       Another way
                                     </label>
                                 </div>
                             </div>
