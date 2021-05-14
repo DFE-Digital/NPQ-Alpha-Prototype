@@ -3683,6 +3683,32 @@ router.get('/*/tstart/namechecker' , function (req, res) {
 })
 
  /// Name change or not version2
+// http://127.0.0.1:3000/version-2/tstart/namecheck
+router.get('/*/tstart/namecheckerTwo' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/nameExplain`)
+           break;
+
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/email`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+           //     res.redirect(`/${req.version}/tstart/aboutTRN`)
+            break;
+        }
+})
+
+ /// Name change or not version2
 // http://127.0.0.1:3000/version-5/sstart/namecheck
 router.get('/*/sstart/namechecker' , function (req, res) {
   var confirmTraining = req.query.trn
@@ -3745,6 +3771,38 @@ router.get('/*/tstart/nameExplainer' , function (req, res) {
              //  req.session.data['showEPAOConfirm'] = true;
              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
             res.redirect(`/${req.version}/tstart/details`)
+           break;
+
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/nameNotUpdated`)
+           break;
+
+          case  (confirmTraining == 'name-ns'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/detailsMaybe`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/tstart/aboutTRN`)
+            break;
+        }
+})
+
+ /// Name change or not version2
+// http://127.0.0.1:3000/version-2/tstart/nameExplain
+router.get('/*/tstart/nameExplainerTwo' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/email`)
            break;
 
            case  (confirmTraining == 'TRN-no'):
@@ -4025,6 +4083,32 @@ router.get('/*/tstart/nameUpdateOrNot' , function (req, res) {
              // req.session.data['showEPAOConfirm'] = false;
              // req.session.data['showApprenticeBox'] = true;
             res.redirect(`/${req.version}/tstart/details`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+             res.redirect(`/${req.version}/tstart/`)
+            break;
+        }
+})
+
+
+  /// change name or use old nam
+// http://127.0.0.1:3000/version-2/tstart/nameNotUpdated
+router.get('/*/tstart/nameUpdateOrNotTwo' , function (req, res) {
+  var confirmTraining = req.query.DQTorNot
+       switch (true) {
+          case  (confirmTraining == 'DQTChange'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+            res.redirect(`/${req.version}/tstart/DQTChange`)
+           break;
+
+           case  (confirmTraining == 'crackOn'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/email`)
            break;
 
 
