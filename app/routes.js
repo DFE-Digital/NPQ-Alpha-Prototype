@@ -3902,6 +3902,35 @@ router.get('/version-7/tstart/schoolChecker' , function (req, res) {
         }
 })
 
+
+// http://127.0.0.1:3000/version-8/tstart/confirmNewSchool
+router.get('/version-8/tstart/schoolConfirmationChecker' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'schoolYes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+          
+            res.redirect(`/${req.version}/tstart/confirmDetails`)
+           break;
+
+           case  (confirmTraining == 'schoolNo'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/chooseSchoolPost`)
+           break;
+
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/tstart/confirmDetails`)
+            break;
+        }
+})
+
+
+
 // http://127.0.0.1:3000/version-2/tstart/confirmSchool?assessment=NPQ+Leading+Teaching
 router.get('/*/tstart/deliveryProviderChecking' , function (req, res) {
   var confirmTraining = req.query.trn
@@ -3909,7 +3938,7 @@ router.get('/*/tstart/deliveryProviderChecking' , function (req, res) {
           case  (confirmTraining == 'deliveryNo'):
       
               req.session.data['delveryProvider'] = "Don't know";
-            res.redirect(`/${req.version}/tstart/confirmSchool`)
+            res.redirect(`/${req.version}/tstart/chooseSchoolPost`)
            break;
 
            case  (confirmTraining == 'deliveryYes'):
