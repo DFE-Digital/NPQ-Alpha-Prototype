@@ -3622,6 +3622,12 @@ router.get('/*/tstart/trnOrNotTwo' , function (req, res) {
             res.redirect(`/${req.version}/tstart/aboutTRN`)
            break;
 
+                  case  (confirmTraining == 'TRN-nai'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/getTRN`)
+           break;
+
 
         default:
             console.log("bork bork bork bork");
