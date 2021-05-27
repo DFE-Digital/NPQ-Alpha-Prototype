@@ -1,5 +1,14 @@
 
 {% extends "layout.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{{ govukBackLink({
+  text: "Back",
+ href: "javascript:history.back()"
+}) }}
+{% endblock %}
 
 {% block content %}
 
@@ -9,25 +18,25 @@
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-  <h1 class="govuk-heading-xl" >School is not in England</h1>
+  <h1 class="govuk-heading-xl" >School must be in England</h1>
 
       
-    <p>We cannot find a match with the details you have provided.</p>
+    <p>The school you have selected is not in England.</p>
+    <p>This NPQ application can only be completed by teachers working in England.</p>
   
 
-    <p>This could be because:</p>
-       <ul class="govuk-list govuk-list--bullet">
+    <p>If you teach in a school outside England and you want to study for an NPQ, check with your training provider or your school's training contact.</p>
+<!--        <ul class="govuk-list govuk-list--bullet">
             <li>you have abbreviated your first name e.g. Rob/Robert</li>
             <li>your surname is different to the name held on the DQT</li>
              <li>you've entered an incorrect TRN</li>
              <li>you've have entered an incorrect date of birth </li>
-        </ul>
+        </ul> -->
 
     
 
 
 
-  <button class="govuk-button">Try again</button>
 </form>
       
 
