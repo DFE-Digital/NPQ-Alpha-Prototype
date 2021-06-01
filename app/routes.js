@@ -4181,5 +4181,29 @@ router.get('/*/smartAnswers/careerStage' , function (req, res) {
         }
 })
 
+router.get('/*/tstart/npqandproviderornot' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/shareProvider`)
+           break;
+
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/aboutNPQ`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/pstart/teacher/aboutTRN`)
+            break;
+        }
+})
+
 
 module.exports = router
