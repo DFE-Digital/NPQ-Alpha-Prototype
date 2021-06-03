@@ -4206,4 +4206,23 @@ router.get('/*/tstart/npqandproviderornot' , function (req, res) {
 })
 
 
+router.get('/*/tstart/whichNPQRoute' , function (req, res) {
+  var assessment = req.query.assessment
+       switch (true) {
+          case  (assessment == 'NPQ Headship'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/npqHeadship`)
+           break;
+
+
+        default:
+            console.log("arse " + assessment);
+                res.redirect(`/${req.version}/tstart/chooseProvider`)
+            break;
+        }
+})
+
+
 module.exports = router

@@ -11,6 +11,20 @@ href: "javascript:history.back()"
 {% endblock %}
 {% block content %}
 
+{% if data.headship %}
+<div class="do-a-thing"></div>
+<script>
+$( document ).ready(function() {
+    $( "#headship" ).removeClass( "rj-dont-display" )
+});
+
+
+</script>
+{% else %}
+<div class="dont-a-thing"></div>
+{% endif %}
+<!-- end of conditional statement -->
+
 <div class="govuk-width-container">
   
         <div class="govuk-grid-row"">
@@ -139,6 +153,22 @@ href: "javascript:history.back()"
           </dd>
       
         </div>
+
+     
+        <div id="headship" class="app-check-your-answers__contents rj-dont-display">
+          <dt class="app-check-your-answers__question" style="font-weight:700; ">
+          In your first two years of headship
+          </dt>
+          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
+           {{ data['headship'] }} 
+          </dd>
+                    <dd class="app-check-your-answers__change">
+            <a href="#" style="font-weight:400; ">
+              Change
+            </a>
+          </dd>
+        </div>
+   
 
                <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question" style="font-weight:700; ">
