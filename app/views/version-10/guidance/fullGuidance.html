@@ -1,14 +1,6 @@
 
 {% extends "layout.html" %}
-{% block beforeContent %}
 
-{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-
-{{ govukBackLink({
-text: "Back",
-href: "javascript:history.back()"
-}) }}
-{% endblock %}
 {% block content %}
 
 
@@ -23,15 +15,15 @@ href: "javascript:history.back()"
         </div>
  <div class="govuk-grid-column-one-quarter">
     <p>Contents</p>
-   <p class="contentLinks"><a href=""  >Reformed national professional qualifications </a></p>
-    <p class="contentLinks"><a href="">NPQs available from 2021 </a></p>
-    <p class="contentLinks"><a href="">What’s involved </a></p>
-    <p class="contentLinks"><a href="">Additional support offer for the NPQH </a></p>
-    <p class="contentLinks"><a href="">Apply for an NPQ </a></p>
-     <p class="contentLinks"><a href="">NPQ providers and delivery chains </a></p>
-      <p class="contentLinks"><a href="">Costs </a></p>
-       <p class="contentLinks"><a href="">Funding and eligibility criteria </a></p>
-        <p class="contentLinks"><a href="">Next steps for potential applicants </a></p>
+   <p class="contentLinks"><a href="#reformed"  >Reformed national professional qualifications </a></p>
+    <p class="contentLinks"><a href="#NPQs">NPQs available from 2021 </a></p>
+    <p class="contentLinks"><a href="#whats">What’s involved </a></p>
+    <p class="contentLinks"><a href="#additional">Additional support offer for the NPQH </a></p>
+    <p class="contentLinks"><a href="#apply">Apply for an NPQ </a></p>
+     <p class="contentLinks"><a href="#providers">NPQ providers and delivery chains </a></p>
+      <p class="contentLinks"><a href="#costs">Costs </a></p>
+       <p class="contentLinks"><a href="#funding">Funding and eligibility criteria </a></p>
+        <p class="contentLinks"><a href="#next">Next steps for potential applicants </a></p>
  </div>
 
             <div class="govuk-grid-column-three-quarters">
@@ -45,7 +37,7 @@ href: "javascript:history.back()"
 </div>
 
 
- <h2 class="govuk-heading-l" >Reformed national professional qualifications</h2>
+ <h2 class="govuk-heading-l" id="reformed" >Reformed national professional qualifications</h2>
 <p>From September 2021, a reformed suite of NPQs will be available for teachers and leaders who want to develop their knowledge and skills in school leadership and specialist areas of teaching practice. These reforms include:</p>
 
 <p>These changes include:</p>
@@ -55,7 +47,7 @@ href: "javascript:history.back()"
            
         </ul>
 
-   <h2 class="govuk-heading-l" >NPQs available from 2021 </h2>
+   <h2 class="govuk-heading-l" id="NPQs">NPQs available from 2021 </h2>
    <p>The 3 new NPQs in specialist areas of teaching are:</p>
          <ul class="govuk-list govuk-list--bullet">
             <li>leading teacher development: for teachers supporting the training and development of others</li>
@@ -72,7 +64,7 @@ href: "javascript:history.back()"
         <p>You can access the reformed content <a href="https://www.gov.uk/government/publications/national-professional-qualifications-frameworks-from-september-2021">national professional qualification frameworks: from September 2021</a></p>
 
 
-<h2 class="govuk-heading-l" >What’s involved</h2>
+<h2 class="govuk-heading-l" id="whats" >What’s involved</h2>
 <p>NPQs provide teachers and leaders with the training, support and guidance they need to develop expertise in school leadership and specialist areas of teaching practice. </p>
 <p>They have been designed with teachers and leaders in mind using the latest evidence and can be completed flexibly around existing commitments. </p>
 <p>Study can last between 2 academic terms and 18 months, depending on your chosen NPQ and provider, who will also determine the course’s structure, content and method of delivery.  </p>
@@ -82,7 +74,7 @@ href: "javascript:history.back()"
     <li>partake in a mixture face-to-face sessions, webinars, and self-directed study. </li>
     <li>answer a short, assessed case study question (the summative assessment).</li>
  </ul>
-<h2 class="govuk-heading-l" >Additional support offer for the NPQH</h2>
+<h2 class="govuk-heading-l" id="additional" >Additional support offer for the NPQH</h2>
 <p>In addition to the reformed suite of National Professional Qualifications, the department is introducing an additional support offer for new head teachers from September 2021. This is a targeted support package for teachers new to the role of headship.</p>
 <p>You are eligible for this targeted support package if you meet all of the following:</p>
  <ul class="govuk-list govuk-list--bullet">
@@ -92,9 +84,9 @@ href: "javascript:history.back()"
 <li>are employed by an eligible school upon starting the training </li>
 </ul>
 <p>The offer provides structured, unassessed face-to-face support based on the best available evidence about what makes an effective head teacher. Activities may include a combination of group coaching, one-to-one support discussions and peer network support.  </p>
-<h2 class="govuk-heading-l" >Apply for an NPQ</h2>
+<h2 class="govuk-heading-l" id="apply" >Apply for an NPQ</h2>
 <p>Teachers and leaders can now apply with one of 9 providers accredited to offer this qualification. </p>
-<h2 class="govuk-heading-l" >NPQ providers and delivery chains </h2>
+<h2 class="govuk-heading-l" id="providers" >NPQ providers and delivery chains </h2>
 <p>Lead training providers will deliver the reformed suite of national professional qualifications from September 2021. They are: </p>
  <ul class="govuk-list govuk-list--bullet">
     <li><a href="https://www.ambition.org.uk/blog/how-new-npqs-will-make-professional-development-work-your-school/">Ambition Institute   </a></li>
@@ -109,11 +101,11 @@ href: "javascript:history.back()"
 </ul>
 
 <p>These providers have been chosen by a fair and open procurement process by the Department for Education.Providers of the reformed suite of NPQs will be subject to a quality assurance (QA) mechanism through Ofsted inspection to ensure the best support for schools and teachers. Ofsted’s QA role will be distinct from and not apply to the current suite of NPQs. The current QA agent (Tribal) will continue to provide QA for all 2017? NPQ programmes until contract closure in August 2022. </p>
-<h2 class="govuk-heading-l" >Costs</h2>
+<h2 class="govuk-heading-l" id="costs">Costs</h2>
 <p>Costs vary between providers. You should contact a provider for full details of their costs.</p>
-<h2 class="govuk-heading-l" >Funding and eligibility criteria </h2>
+<h2 class="govuk-heading-l" id="funding" >Funding and eligibility criteria </h2>
 <p>Scholarship funding to support participants to access the the expanded suite of NPQs from XXX is planned and details will be confirmed in due course.</p>
-<h2 class="govuk-heading-l" >Next steps for potential applicants</h2>
+<h2 class="govuk-heading-l" id="next">Next steps for potential applicants</h2>
 <p>If you are interested in an NPQ, you can explore the programmes on offer from each provider and contact them directly to find out more information and sign up to an NPQ course.  </p>
 
 <!--   <h2 class="govuk-heading-m" >Providers</h2> -->
