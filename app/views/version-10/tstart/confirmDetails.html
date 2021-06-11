@@ -52,20 +52,20 @@ $( document ).ready(function() {
      
         </div>
 
-         <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
-          First name
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-            {{ data['firstName'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-    
-        </div>
+                 <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Full name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['firstName'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
 <!--         <div class="app-check-your-answers__contents">
           <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
            Last name
@@ -80,125 +80,118 @@ $( document ).ready(function() {
           </dd>
   
         </div> -->
-                <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
-        TRN
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
+
+
+             
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+ TRN            </dt>
+            <dd class="govuk-summary-list__value">
               {{ data['trnd'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-        </div>
-                        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
-       Date of birth
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-              {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
 
 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-        </div>
+             
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+  Date of birth            </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['dob-day'] }} {{ data['dob-month'] }} {{ data['dob-year'] }}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
 
-                  <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
-        National Insurance Number
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-            {{ data['NI'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-     
-        </div>
 
-          <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
-        Email
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-            {{ data['email'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-     
-        </div>
+      <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+  National Insurance Number          </dt>
+            <dd class="govuk-summary-list__value">
+             {{ data['NI'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
 
-                <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="font-weight:700; ">
-          NPQ
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-           {{ data['assessment'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-      
-        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+  Email       </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['email'] }}  
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
 
-     
-        <div id="headship" class="app-check-your-answers__contents rj-dont-display">
-          <dt class="app-check-your-answers__question" style="font-weight:700; ">
-          Have you been a head teacher for two years or more?
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-           {{ data['headship'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-        </div>
-   
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+  NPQ       </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['assessment'] }}  
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
 
-               <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="font-weight:700; ">
-          Lead provider
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-           {{ data['providerName'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-      
-        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+   Have you been a head teacher for two years or more?       </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['headship'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
 
-                       <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="font-weight:700; ">
-          Delivery partner
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-           {{ data['delveryProvider'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-      
-        </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+   Lead provider      </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['providerName'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+  Delivery partner      </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['delveryProvider'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
+  
+
+
           </dl>
 
    
@@ -266,38 +259,39 @@ $( document ).ready(function() {
             </div> -->
 
 
-
-
-
-<dl class="app-check-your-answers app-check-your-answers--short">
-        <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
-        School
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-           {{ data['school-name'] }}         
+              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             School
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['school-name'] }} 
             </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-     
-        </div>
-
-              <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
-        How is your {{data['assessment']}} being paid for?
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-           {{ data['paying'] }}         
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
             </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-        </div>
+          </div>
+
+      <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+                     How is your {{data['assessment']}} being paid for?
+
+            </dt>
+            <dd class="govuk-summary-list__value">
+               {{ data['paying'] }}   
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
+
+
+
+      
       </dl>
     </div>
   </fieldset>
