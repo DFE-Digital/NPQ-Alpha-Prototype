@@ -15,8 +15,7 @@ href: "javascript:history.back()"
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Are you a headteacher?
-</h1>
+                                <h1 class="govuk-heading-xl">Have you already chosen an NPQ and provider?</h1>
                                 <!--  <p class="govuk-body">Your teacher reference number (TRN)  is used to check you're eligible to study for a national professional qualification (NPQ).</p> -->
 <!--               <details class="govuk-details">
                         <summary class="govuk-details__summary">
@@ -34,7 +33,7 @@ href: "javascript:history.back()"
                           <p>You may not have a TRN if you qualified outside England or overseas.</p>
                         </div>
                       </details> -->
-                <form action="chooseProvider" method="get" class="form">
+                <form action="npqandproviderornot" method="get" class="form">
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -44,31 +43,30 @@ href: "javascript:history.back()"
 
                                 <label class="govuk-label  bold-label" for="firstName">
 <!--  Do you know your teacher reference number (TRN) -->
-<!-- Are you in the first two years of a headship? -->
 
               </label>
 
                             </legend>
                             <div class="govuk-radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="I have been a head teacher for two years or more" {{ checked( "headship", "I have been a head teacher for two years or more") }}>
+                                    <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="TRN-yes" {{ checked( "trn", "TRN-yes") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-yes">
-                                      Yes, I am in the first two years of a headship
+                                      Yes, I have chosen my NPQ and provider
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="I have been a head teacher for less than two years" {{ checked( "headship", "I have been a head teacher for less than two years") }}>
+                                    <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="TRN-no" {{ checked( "TRN", "TRN-no") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-no">
-                                      Yes,  I have been a headteacher for more than 2 years
+                                      No, I don't know my NPQ and provider
                                     </label>
                                 </div>
 
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="Not headteacher" {{ checked( "TRN", "Not headteacher") }}>
+                <!--                 <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="TRN-nai" {{ checked( "TRN", "TRN-nai") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-nai">
-                                     No, I am not a headteacher
+                                     I don't have a TRN
                                     </label>
-                                </div>
+                                </div> -->
                     <!--             <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="epaoName-coventry" name="epao-name" type="radio" value="Coventry University" {{ checked( "epao-name", "Coventry University") }}>
                                     <label class="govuk-label govuk-radios__label" for="epaoName-coventry">

@@ -15,26 +15,25 @@ href: "javascript:history.back()"
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Are you a headteacher?
-</h1>
-                                <!--  <p class="govuk-body">Your teacher reference number (TRN)  is used to check you're eligible to study for a national professional qualification (NPQ).</p> -->
-<!--               <details class="govuk-details">
-                        <summary class="govuk-details__summary">
-                          <span class="govuk-details__summary-text">
-                            What is a teacher reference number?
-                          </span>
-                        </summary>
-                        <div class="govuk-details__text">
-                      <p>A teacher reference number (TRN) is a unique ID that allows us to check you are a teacher.</p>
+                                <h1 class="govuk-heading-xl">Teacher reference number</h1>
+                                 <p class="govuk-body">Your teacher reference number (TRN)  is used to check you're eligible to study for a national professional qualification (NPQ).</p>
+                                                     <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      What is a teacher reference number?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+<p>A teacher reference number (TRN) is a unique ID that allows us to check you are a teacher.</p>
 
 
-                          <p>If you don’t know what your teacher reference number (TRN) is, this can usually be found on your payslip, teachers’ pension documentation or teacher training records.</p>
+    <p>If you don’t know what your teacher reference number (TRN) is, this can usually be found on your payslip, teachers’ pension documentation or teacher training records.</p>
 
-                          <p>The TRN has previously been known as a QTS, GTC, DfE, DfES or DCSF number.  </p>
-                          <p>You may not have a TRN if you qualified outside England or overseas.</p>
-                        </div>
-                      </details> -->
-                <form action="chooseProvider" method="get" class="form">
+    <p>The TRN has previously been known as a QTS, GTC, DfE, DfES or DCSF number.  </p>
+    <p>You may not have a TRN if you qualified outside England or overseas.</p>
+  </div>
+</details>
+                <form action="trnOrNotTwo" method="get" class="form">
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
                             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -43,30 +42,29 @@ href: "javascript:history.back()"
        
 
                                 <label class="govuk-label  bold-label" for="firstName">
-<!--  Do you know your teacher reference number (TRN) -->
-<!-- Are you in the first two years of a headship? -->
+ Do you know your teacher reference number (TRN)
 
               </label>
 
                             </legend>
                             <div class="govuk-radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="I have been a head teacher for two years or more" {{ checked( "headship", "I have been a head teacher for two years or more") }}>
+                                    <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="TRN-yes" {{ checked( "trn", "TRN-yes") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-yes">
-                                      Yes, I am in the first two years of a headship
+                                      Yes, I know my TRN
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="I have been a head teacher for less than two years" {{ checked( "headship", "I have been a head teacher for less than two years") }}>
+                                    <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="TRN-no" {{ checked( "TRN", "TRN-no") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-no">
-                                      Yes,  I have been a headteacher for more than 2 years
+                                      No, I don't know my TRN
                                     </label>
                                 </div>
 
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="Not headteacher" {{ checked( "TRN", "Not headteacher") }}>
+                                    <input class="govuk-radios__input" id="trn" name="trn" type="radio" value="TRN-nai" {{ checked( "TRN", "TRN-nai") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-nai">
-                                     No, I am not a headteacher
+                                     I don't have a TRN
                                     </label>
                                 </div>
                     <!--             <div class="govuk-radios__item">
