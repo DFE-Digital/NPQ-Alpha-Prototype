@@ -23,9 +23,9 @@
              <li>you've have entered an incorrect date of birth </li>
         </ul>
 
-    
+    <p>Try again to enter your details - entering your National Insurance number will help us match your details. </p>
 
-    <h2 class="govuk-heading-m">Request a TRN reminder by email</h2>
+    <!-- <h2 class="govuk-heading-m">Request a TRN reminder by email</h2>
     <p>To request a reminder of your TRN, send an email to <a href="">qts.enquiries@education.gov.uk</a> which includes your:</p>
        <ul class="govuk-list govuk-list--bullet">
             <li>full name</li>
@@ -35,12 +35,25 @@
       
 
          <h2 class="govuk-heading-m">Request a TRN reminder by phone</h2>
-         <p>Call the Teaching Regulation Agency on 020 7593 5394<br />Make sure you have your National Insurance number ready before you call.</p>
+         <p>Call the Teaching Regulation Agency on 020 7593 5394<br />Make sure you have your National Insurance number ready before you call.</p> -->
  <form action="../details" >
 
   <button class="govuk-button">Try again</button>
 </form>
       
+
+      <h2 class="govuk-heading-m">Still can't match your details?</h2>
+      <p>You can still continue to register - our support team will contact you on {{ data['email'] }} to confirm your details before you start your course. </p>
+
+       <form action="../chooseNPQ" >
+
+  <button class="govuk-button btn-secondary">Continue registration</button>
+</form>
+ <!--       <ul class="govuk-list govuk-list--bullet">
+            <li>full name</li>
+            <li>date of birth</li>
+             <li>National Insurance number</li>
+        </ul> -->
 
 </div>
 </div>

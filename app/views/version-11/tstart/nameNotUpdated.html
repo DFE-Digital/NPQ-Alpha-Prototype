@@ -15,16 +15,19 @@ href: "javascript:history.back()"
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Name not updated</h1>
+                                <h1 class="govuk-heading-xl">Updating your name</h1>
                                  <p class="govuk-body"> </p>
                              <!--     <p>You can only register for this service using the name that is stored on the Database of Qualified Teachers (DQT). </p> -->
                                 <!--  <h2 class="govuk-heading-s">Registering with a new name</h2> -->
-                                 <p>If your name has not been updated and does not match the DQT, you have two options:</p>
+                                 <p>If your name has not been updated and does not match the Database of Qualified Teachers (DQT), you have three options:</p>
                               <!--    <h2 class="govuk-heading-s">Registering with a previous name</h2> -->
                                           <ul class="govuk-list govuk-list--bullet">
-                <li>use your old name to register with the service</li>
-                <li>change your name on the DQT</li>
+                <li>use your previous name to register with the service</li>
+                <li>use your previous name to register, and then change it on the DQT at a later date</li>
+                <li>change your name on the DQT first and then return to register for an NPQ</li>
             </ul>
+
+
       <!--       <p>If you are unsure whether the names match, try registering using your preferred name. If the service cannot match your details, you can try using your old name to register or <a href="DQTChange">update the DQT with your new name</a> and start again.</p> -->
 
                 <form action="nameUpdateOrNotTwo" method="get" class="form">
@@ -51,7 +54,7 @@ href: "javascript:history.back()"
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="DQTorNot" name="DQTorNot" type="radio" value="crackOn" {{ checked( "DQTorNot", "crackOn") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-no">
-                                      Register with my old name
+                                      Register with my previous name
                                     </label>
                                 </div>
                    <!--           <div class="govuk-radios__item">
