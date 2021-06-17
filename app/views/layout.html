@@ -43,9 +43,23 @@
 
 {% if useAutoStoreData %}
   {% block footer %}
+
     {{ govukFooter({
+
       meta: {
         items: [
+                          {
+            href: "cookies",
+            text: "Cookies " 
+          },
+                     {
+            href: "privacy",
+            text: "Privacy " 
+          },
+             {
+            href: "accessibility",
+            text: "Accessibility " 
+          },
           {
             href: "https://govuk-prototype-kit.herokuapp.com/",
             text: "GOV.UK Prototype Kit " + releaseVersion
