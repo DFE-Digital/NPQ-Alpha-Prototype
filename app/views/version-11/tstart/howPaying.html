@@ -84,6 +84,12 @@ How is your {{data['assessment']}} being paid for?
                                        My school is paying 
                                     </label>
                                 </div>
+                                         <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="trust" name="paying" type="radio" value="My trust is paying" >
+                                    <label class="govuk-label govuk-radios__label" for="TRN-yes">
+                                       My trust is paying 
+                                    </label>
+                                </div>
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="paying" name="paying" type="radio" value="Teacher_paying" >
                                     <label class="govuk-label govuk-radios__label" for="TRN-no">
@@ -93,8 +99,11 @@ How is your {{data['assessment']}} being paid for?
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="paying" name="paying" type="radio" value="Another way" {{ checked( "epao-name", "Another way") }}>
                                     <label class="govuk-label govuk-radios__label" for="epaoName-coventry">
-                                       Another way
+                                       My NPQ is being paid in another way
                                     </label>
+                                      <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+          For example, I am sharing the costs with my school
+        </div>
                                 </div>
                             </div>
                         </fieldset>
