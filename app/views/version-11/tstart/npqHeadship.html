@@ -15,9 +15,12 @@ href: "javascript:history.back()"
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Are you a headteacher?
+                                <h1 class="govuk-heading-xl">Funding your NPQH
 </h1>
-                                 <p class="govuk-body">Extra support is available if you are in the first 2 years of your headship.</p>
+                                 <p class="govuk-body">If you'll be in the first two years of a headship when your course starts, then you'll get government funding for your NPQH. </p>
+                                 <p>If you are not a headteacher or you have been a head for more than two years when your NPQH course begins, check your funding options with your provider. <p>
+<!-- 
+                                    <p>Headteachers in their role for more than two years are not eligible for government funding for their NPQH. </p> -->
 <!--               <details class="govuk-details">
                         <summary class="govuk-details__summary">
                           <span class="govuk-details__summary-text">
@@ -44,7 +47,7 @@ href: "javascript:history.back()"
 
                                 <label class="govuk-label  bold-label" for="firstName">
 <!--  Do you know your teacher reference number (TRN) -->
-<!-- Are you in the first two years of a headship? -->
+When your course starts, will you be in the first two years of a headship?
 
               </label>
 
@@ -53,20 +56,20 @@ href: "javascript:history.back()"
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="I have been a head teacher for two years or more" {{ checked( "headship", "I have been a head teacher for two years or more") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-yes">
-                                      Yes, I am in the first two years of a headship
+                                      Yes, I will be in the first two years of a headship 
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="I have been a head teacher for less than two years" {{ checked( "headship", "I have been a head teacher for less than two years") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-no">
-                                      Yes,  I have been a headteacher for more than 2 years
+                                      No,  I will have been a headteacher for more than two years
                                     </label>
                                 </div>
 
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="trn" name="headship" type="radio" value="Not headteacher" {{ checked( "TRN", "Not headteacher") }}>
                                     <label class="govuk-label govuk-radios__label" for="TRN-nai">
-                                     No, I am not a headteacher
+                                     No, I will not be a headteacher
                                     </label>
                                 </div>
                     <!--             <div class="govuk-radios__item">
