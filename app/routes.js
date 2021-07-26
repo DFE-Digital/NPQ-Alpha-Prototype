@@ -4224,5 +4224,34 @@ router.get('/*/tstart/whichNPQRoute' , function (req, res) {
         }
 })
 
+router.get('/*/sandbox/choosy' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/sandbox/npqOne`)
+           break;
+
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/sandbox/ecfOne`)
+           break;
+                 case  (confirmTraining == 'TRN-nai'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/sandbox/apiOne`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/pstart/teacher/aboutTRN`)
+            break;
+        }
+})
+
 
 module.exports = router
