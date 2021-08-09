@@ -24,7 +24,7 @@
         defaultValue: '',
         minLength: 2,
         selectElement: selectEl,
-        placeholder: 'Start typing to search schools',
+        placeholder: 'Start typing to search schools and colleges',
         showAllValues: false
       })
     })
@@ -40,13 +40,13 @@
       <form action="howPaying" method="get" class="form">
 
      <h1 class="govuk-heading-xl">
-        Choose your school
+        Choose your school or college
         </h1>
-         <p>Please choose from schools located in <span style="font-weight:700">{{ data['schoolPostcode'] }}</span> </p>
+         <p>Please choose from schools or colleges located in <span style="font-weight:700">{{ data['schoolPostcode'] }}</span> </p>
 
      <div class="govuk-form-group">
         <label class="govuk-label bold-label" for="course-name"">
-          Enter your school name
+          Enter your school or college name
         </label>
         <div class="autocomplete-wrapper">
           <select class="autocomplete-element" id="school-name" name="school-name">
