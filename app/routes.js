@@ -4206,6 +4206,31 @@ router.get('/*/tstart/npqandproviderornot' , function (req, res) {
 })
 
 
+router.get('/*/tstart/npqasoornot' , function (req, res) {
+  var confirmTraining = req.query.trn
+       switch (true) {
+          case  (confirmTraining == 'TRN-yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/asosupport/npqProviderCheck`)
+           break;
+
+           case  (confirmTraining == 'TRN-no'):
+             // req.session.data['showEPAOConfirm'] = false;
+             // req.session.data['showApprenticeBox'] = true;
+            res.redirect(`/${req.version}/tstart/npqProviderCheck`)
+           break;
+
+
+        default:
+            console.log("bork bork bork bork");
+                res.redirect(`/${req.version}/tstart/error`)
+            break;
+        }
+})
+
+
 router.get('/*/tstart/whichNPQRoute' , function (req, res) {
   var assessment = req.query.assessment
        switch (true) {
