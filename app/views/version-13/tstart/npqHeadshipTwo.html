@@ -14,16 +14,16 @@ href: "javascript:history.back()"
 <script>
 
 function whereNow() {
-   var status = $('input[name=assessment]:checked').val();
+   var status = $('input[name=headTwo]:checked').val();
    console.log(status);
        switch (true) {
-          case  (status == 'headteacherYes'):
+          case  (status == 'Yes'):
                 console.log('headteacherYes')
                 // localStorage.setItem("commitments.apprenticestatus", JSON.stringify('paused'));
                  window.location.href='qualifyASO';
                 break;
 
-        case  (status == 'headteacherNo'):
+        case  (status == 'No'):
             console.log('headteacherNo')
            // localStorage.setItem("commitments.apprenticestatus", JSON.stringify('stopped'));
              window.location.href='chooseProvider';
@@ -52,13 +52,13 @@ function whereNow() {
 
                       <div class="govuk-radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="headteacherYes" name="assessment" type="radio" value="headteacherYes" {{ checked( 'chooseSearch', '  headteacherYes') }}>
+                                    <input class="govuk-radios__input" id="headteacherYes" name="headTwo" type="radio" value="Yes" {{ checked( 'chooseSearch', '  Yes') }}>
                                     <label class="govuk-label govuk-radios__label" for="headteacherYes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="headteacherNo" name="assessment" type="radio" value="headteacherNo" {{ checked( 'chooseSearch', ' headteacherNo') }}>
+                                    <input class="govuk-radios__input" id="headteacherNo" name="headTwo" type="radio" value="No" {{ checked( 'chooseSearch', ' No') }}>
                                     <label class="govuk-label govuk-radios__label" for="headteacherNo">
                                        No
                                     </label>

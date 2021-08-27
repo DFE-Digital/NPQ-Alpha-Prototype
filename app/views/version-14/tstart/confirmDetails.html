@@ -12,6 +12,10 @@ href: "javascript:history.back()"
 {% block content %}
 
 
+<style>
+.govuk-summary-list__key {width: 60%} /* put a media query in here to fix mobile */
+</style>
+
 <!-- <script>
 $( document ).ready(function() {
     $( "#headship" ).removeClass( "rj-dont-display" )
@@ -19,7 +23,7 @@ $( document ).ready(function() {
 });
 </script> -->
 
-{% if data.head %}
+{% if data.twoyearsnpqh %}
 <div class="do-a-thing"></div>
 <script>
 $( document ).ready(function() {
@@ -31,12 +35,15 @@ $( document ).ready(function() {
 <div class="dont-a-thing"></div>
 {% endif %}
 
-{% if data.asoHead %}
+{% if data.asoHeadTwo %}
 <div class="do-a-thing"></div>
 <script>
 $( document ).ready(function() {
     $( "#headshipThree" ).removeClass( "rj-dont-display" )
     $( "#headshipFour" ).removeClass( "rj-dont-display" )
+ $( "#ASOchecket" ).removeClass( "rj-dont-display" )
+      $( "#NPQ" ).addClass( "rj-dont-display" )
+       $( "#HowPaying" ).addClass( "rj-dont-display" )
 });
 </script>
 {% else %}
@@ -52,7 +59,7 @@ $( document ).ready(function() {
                 <div class="govuk-grid-column-two-thirds">
 
 
-        <form method="get" action="finish">
+        <form method="get" action="confirmEnding">
             <h1 class="govuk-heading-xl">Check your details</h1>
             <p>Check the following details are correct before continuing. </p>
 
@@ -73,7 +80,25 @@ $( document ).ready(function() {
      
         </div>
 
+
+
                  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+                                    <div class="govuk-summary-list__row " id="">
+            <dt class="govuk-summary-list__key">
+  Have you already started or completed an NPQ for Headship (NPQH)?      </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['headChecker'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
+
+          
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
              Full name
@@ -87,20 +112,7 @@ $( document ).ready(function() {
               </a>
             </dd>
           </div>
-<!--         <div class="app-check-your-answers__contents">
-          <dt class="app-check-your-answers__question" style="width:45%; font-weight:700; ;">
-           Last name
-          </dt>
-          <dd class="app-check-your-answers__answer" style="font-weight:400; ">
-            {{ data['lastName'] }} 
-          </dd>
-                    <dd class="app-check-your-answers__change">
-            <a href="#" style="font-weight:400; ">
-              Change
-            </a>
-          </dd>
-  
-        </div> -->
+
              
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
@@ -169,7 +181,7 @@ $( document ).ready(function() {
             </dd>
           </div>
 
-        <div class="govuk-summary-list__row">
+        <div class="govuk-summary-list__row" id="NPQ">
             <dt class="govuk-summary-list__key">
   NPQ       </dt>
             <dd class="govuk-summary-list__value">
@@ -182,11 +194,27 @@ $( document ).ready(function() {
             </dd>
           </div>
 
+
+
+
+                  <div class="govuk-summary-list__row rj-dont-display" id="ASOchecket">
+            <dt class="govuk-summary-list__key">
+   Are you applying for the Additional Support Offer (ASO)?     </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['AsoNPQ'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
+
         <div class="govuk-summary-list__row rj-dont-display" id="headship">
             <dt class="govuk-summary-list__key">
   Will you be a headteacher when your NPQH starts?      </dt>
             <dd class="govuk-summary-list__value">
-            {{ data['head'] }} 
+            {{ data['npqhHeadorNot'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -199,7 +227,7 @@ $( document ).ready(function() {
             <dt class="govuk-summary-list__key">
  When your NPQH starts, will you be in the first 2 years of a headship?     </dt>
             <dd class="govuk-summary-list__value">
-            {{ data['headTwo'] }} 
+            {{ data['twoyearsnpqh'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -212,7 +240,7 @@ $( document ).ready(function() {
             <dt class="govuk-summary-list__key">
   Are you a headteacher?     </dt>
             <dd class="govuk-summary-list__value">
-            {{ data['ASOhead'] }} 
+            {{ data['asoHeader'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -225,7 +253,7 @@ $( document ).ready(function() {
             <dt class="govuk-summary-list__key">
 Are you in the first 2 years of a headship?     </dt>
             <dd class="govuk-summary-list__value">
-            {{ data['ASOheadTwo'] }} 
+            {{ data['asoHeadTwo'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -332,7 +360,7 @@ Are you in the first 2 years of a headship?     </dt>
              
     
 
-      <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__row" id="HowPaying">
             <dt class="govuk-summary-list__key">
                      How is your {{data['assessment']}} being paid for?
 
