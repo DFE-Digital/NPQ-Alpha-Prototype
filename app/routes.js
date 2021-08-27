@@ -4206,6 +4206,7 @@ router.get('/*/tstart/npqandproviderornot' , function (req, res) {
 })
 
 
+
 router.get('/*/tstart/npqasoornot' , function (req, res) {
   var confirmTraining = req.query.trn
        switch (true) {
@@ -4224,11 +4225,13 @@ router.get('/*/tstart/npqasoornot' , function (req, res) {
 
 
         default:
-            console.log("bork bork bork bork");
+         
                 res.redirect(`/${req.version}/tstart/error`)
             break;
         }
 })
+
+
 
 
 router.get('/*/tstart/whichNPQRoute' , function (req, res) {
@@ -4241,13 +4244,23 @@ router.get('/*/tstart/whichNPQRoute' , function (req, res) {
             res.redirect(`/${req.version}/tstart/npqHeadship`)
            break;
 
+          case  (assessment == 'Additional Support Offer for NPQH'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/npqASO`)
+           break;
+
 
         default:
-            console.log("arse " + assessment);
+            console.log("ar " + assessment);
                 res.redirect(`/${req.version}/tstart/chooseProvider`)
             break;
         }
 })
+
+
+
 
 router.get('/*/sandbox/choosy' , function (req, res) {
   var confirmTraining = req.query.trn
@@ -4294,8 +4307,7 @@ router.get('/*/sandbox/ecfchoosy' , function (req, res) {
              // req.session.data['showApprenticeBox'] = true;
              res.redirect(`/${req.version}/sandbox/ecfOne`)
             
-   
-
+  
 
         default:
             console.log("bork bork bork bork");

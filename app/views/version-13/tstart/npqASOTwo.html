@@ -20,13 +20,13 @@ function whereNow() {
           case  (status == 'headteacherYes'):
                 console.log('headteacherYes')
                 // localStorage.setItem("commitments.apprenticestatus", JSON.stringify('paused'));
-                 window.location.href='npqHeadshipTwo';
+                 window.location.href='qualifyASO';
                 break;
 
         case  (status == 'headteacherNo'):
             console.log('headteacherNo')
            // localStorage.setItem("commitments.apprenticestatus", JSON.stringify('stopped'));
-             window.location.href='chooseProvider';
+             window.location.href='ASOno';
             break;
        
         default:
@@ -41,7 +41,7 @@ function whereNow() {
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Will you be a headteacher when your NPQH starts?</h1>
+                                <h1 class="govuk-heading-xl">Are you in your first 2 years of a headship?</h1>
 
                  <form action="npqnotnotnot" >
                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
