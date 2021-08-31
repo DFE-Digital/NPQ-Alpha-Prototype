@@ -23,17 +23,31 @@ $( document ).ready(function() {
 });
 </script> -->
 
-{% if data.twoyearsnpqh %}
+{% if data.npqhHeadorNot %}
 <div class="do-a-thing"></div>
 <script>
 $( document ).ready(function() {
     $( "#headship" ).removeClass( "rj-dont-display" )
+ 
+});
+</script>
+{% else %}
+<div class="dont-a-thing"></div>
+{% endif %}
+
+
+{% if data.twoyearsnpqh %}
+<div class="do-a-thing"></div>
+<script>
+$( document ).ready(function() {
+  
     $( "#headshipTwo" ).removeClass( "rj-dont-display" )
 });
 </script>
 {% else %}
 <div class="dont-a-thing"></div>
 {% endif %}
+
 
 {% if data.asoHeadTwo %}
 <div class="do-a-thing"></div>
@@ -90,6 +104,47 @@ $( document ).ready(function() {
   Have you already started or completed an NPQ for Headship (NPQH)?      </dt>
             <dd class="govuk-summary-list__value">
             {{ data['headChecker'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
+
+
+          
+                  <div class="govuk-summary-list__row rj-dont-display" id="ASOchecket">
+            <dt class="govuk-summary-list__key">
+   Are you applying for the Additional Support Offer (ASO)?     </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['AsoNPQ'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
+
+                            <div class="govuk-summary-list__row rj-dont-display" id="headshipThree">
+            <dt class="govuk-summary-list__key">
+  Are you a headteacher?     </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['asoHeader'] }} 
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> full name</span>
+              </a>
+            </dd>
+          </div>
+
+                  <div class="govuk-summary-list__row rj-dont-display" id="headshipFour">
+            <dt class="govuk-summary-list__key">
+Are you in the first 2 years of a headship?     </dt>
+            <dd class="govuk-summary-list__value">
+            {{ data['asoHeadTwo'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -197,18 +252,6 @@ $( document ).ready(function() {
 
 
 
-                  <div class="govuk-summary-list__row rj-dont-display" id="ASOchecket">
-            <dt class="govuk-summary-list__key">
-   Are you applying for the Additional Support Offer (ASO)?     </dt>
-            <dd class="govuk-summary-list__value">
-            {{ data['AsoNPQ'] }} 
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> full name</span>
-              </a>
-            </dd>
-          </div>
 
         <div class="govuk-summary-list__row rj-dont-display" id="headship">
             <dt class="govuk-summary-list__key">
@@ -236,31 +279,7 @@ $( document ).ready(function() {
             </dd>
           </div>
 
-                  <div class="govuk-summary-list__row rj-dont-display" id="headshipThree">
-            <dt class="govuk-summary-list__key">
-  Are you a headteacher?     </dt>
-            <dd class="govuk-summary-list__value">
-            {{ data['asoHeader'] }} 
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> full name</span>
-              </a>
-            </dd>
-          </div>
 
-                  <div class="govuk-summary-list__row rj-dont-display" id="headshipFour">
-            <dt class="govuk-summary-list__key">
-Are you in the first 2 years of a headship?     </dt>
-            <dd class="govuk-summary-list__value">
-            {{ data['asoHeadTwo'] }} 
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">
-                Change<span class="govuk-visually-hidden"> full name</span>
-              </a>
-            </dd>
-          </div>
 
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
