@@ -24,6 +24,18 @@ $( document ).ready(function() {
 <script>
 $( document ).ready(function() {
     $( "#headship" ).removeClass( "rj-dont-display" )
+   
+});
+</script>
+{% else %}
+<div class="dont-a-thing"></div>
+{% endif %}
+
+{% if data.headTwo %}
+<div class="do-a-thing"></div>
+<script>
+$( document ).ready(function() {
+   
     $( "#headshipTwo" ).removeClass( "rj-dont-display" )
 });
 </script>
@@ -31,12 +43,27 @@ $( document ).ready(function() {
 <div class="dont-a-thing"></div>
 {% endif %}
 
+
+
 {% if data.asoHead %}
 <div class="do-a-thing"></div>
 <script>
 $( document ).ready(function() {
     $( "#headshipThree" ).removeClass( "rj-dont-display" )
+
+});
+</script>
+{% else %}
+<div class="dont-a-thing"></div>
+{% endif %}
+
+{% if data.asoHeadTwo %}
+<div class="do-a-thing"></div>
+<script>
+$( document ).ready(function() {
+   
     $( "#headshipFour" ).removeClass( "rj-dont-display" )
+     $( "#paidFor" ).addClass( "rj-dont-display" )
 });
 </script>
 {% else %}
@@ -212,7 +239,7 @@ $( document ).ready(function() {
             <dt class="govuk-summary-list__key">
   Are you a headteacher?     </dt>
             <dd class="govuk-summary-list__value">
-            {{ data['ASOhead'] }} 
+            {{ data['asoHead'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -225,7 +252,7 @@ $( document ).ready(function() {
             <dt class="govuk-summary-list__key">
 Are you in the first 2 years of a headship?     </dt>
             <dd class="govuk-summary-list__value">
-            {{ data['ASOheadTwo'] }} 
+            {{ data['asoHeadTwo'] }} 
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -332,7 +359,7 @@ Are you in the first 2 years of a headship?     </dt>
              
     
 
-      <div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__row" id="paidFor">
             <dt class="govuk-summary-list__key">
                      How is your {{data['assessment']}} being paid for?
 
