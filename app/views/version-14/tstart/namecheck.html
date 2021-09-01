@@ -17,8 +17,8 @@ href: "javascript:history.back()"
             <div class="govuk-grid-column-two-thirds">
                                 <h1 class="govuk-heading-xl">Name changes</h1>
                                  <p class="govuk-body"> </p>
-                                 <p>Your name must match the name held in the Teaching Regulation Agency records to confirm you can take an {% if data.asoHeadTwo %}ASO.{% else %}a NPQ.{% endif %}</p>
-                                 <p>If it doesn't match, you cannot continue with an {% if data.asoHeadTwo %}ASO.{% else %}a NPQ.{% endif %}</p>
+                                 <p>Your name must match the name held in the Teaching Regulation Agency records {% if data.asoHeadTwo %}to confirm you are eligible for the Additional Support Offer (ASO).{% else %}to confirm you can take an NPQ.{% endif %}</p>
+                                 <p>If it doesn't match, you cannot {% if data.asoHeadTwo %}benefit from the ASO.{% else %}continue with an NPQ.{% endif %}</p>
 
                 <form action="namecheckerTwo" method="get" class="form">
                     <div class="govuk-form-group">

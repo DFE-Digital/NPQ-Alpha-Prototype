@@ -4439,7 +4439,7 @@ router.get('/*/tstart/aso13' , function (req, res) {
              // req.session.data['showApprenticeBox'] = false;
              //  req.session.data['showEPAOConfirm'] = true;
               // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
-            res.redirect(`/${req.version}/tstart/npqASOtwo`)
+            res.redirect(`/${req.version}/tstart/npqASOTwo`)
            break;
 
           case  (assessment == 'No'):
@@ -4451,7 +4451,7 @@ router.get('/*/tstart/aso13' , function (req, res) {
 
 
         default:
-                res.redirect(`/${req.version}/tstart/npqASOtwo`)
+                res.redirect(`/${req.version}/tstart/npqASOTwo`)
             break;
         }
 })
