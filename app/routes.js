@@ -4259,6 +4259,33 @@ router.get('/*/tstart/whichNPQRoute' , function (req, res) {
         }
 })
 
+
+
+router.get('/*/tstart/whichNPQRouteTwo' , function (req, res) {
+  var assessment = req.query.assessment
+       switch (true) {
+          case  (assessment == 'NPQ Headship'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/chooseProvider`)
+           break;
+
+          case  (assessment == 'Additional Support Offer for NPQH'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/npqASO`)
+           break;
+
+
+        default:
+            console.log("ar " + assessment);
+                res.redirect(`/${req.version}/tstart/chooseProvider`)
+            break;
+        }
+})
+
 router.get('/*/tstart/headChecker' , function (req, res) {
   var assessment = req.query.headChecker
        switch (true) {
@@ -4456,6 +4483,81 @@ router.get('/*/tstart/aso13' , function (req, res) {
         }
 })
 
+router.get('/*/tstart/aso15' , function (req, res) {
+  var assessment = req.query.asoHead
+       switch (true) {
+          case  (assessment == 'Yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/npqASOTwo`)
+           break;
+
+          case  (assessment == 'No'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             req.session.data['npqhHeadorNot'] = false;
+            res.redirect(`/${req.version}/tstart/ASOSelfOne`)
+           break;
+
+
+        default:
+                res.redirect(`/${req.version}/tstart/npqASOTwo`)
+            break;
+        }
+})
+
+router.get('/*/tstart/ASOFundingorNot' , function (req, res) {
+  var assessment = req.query.asoGovFunds
+       switch (true) {
+          case  (assessment == 'Yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/ASOPay`)
+           break;
+
+          case  (assessment == 'No'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             req.session.data['npqhHeadorNot'] = false;
+            res.redirect(`/${req.version}/tstart/ASOno`)
+           break;
+
+
+        default:
+                res.redirect(`/${req.version}/tstart/npqASOTwo`)
+            break;
+        }
+})
+
+router.get('/*/tstart/ASOPayHow' , function (req, res) {
+  var assessment = req.query.asoHowPay
+       switch (true) {
+          case  (assessment == 'My school or college is covering the cost'):
+            res.redirect(`/${req.version}/tstart/chooseProvider`)
+           break;
+
+          case  (assessment == 'My trust is paying'):
+            res.redirect(`/${req.version}/tstart/chooseProvider`)
+           break;
+
+           case  (assessment == 'I am paying'):
+            res.redirect(`/${req.version}/tstart/chooseProvider`)
+           break;
+
+
+          case  (assessment == 'My ASO is being paid in another way'):
+            res.redirect(`/${req.version}/tstart/chooseProviderOno`)
+           break;
+
+
+        default:
+                res.redirect(`/${req.version}/tstart/error`)
+            break;
+        }
+})
+
 router.get('/*/tstart/asoTwo13' , function (req, res) {
   var assessment = req.query.asoHeadTwo
        switch (true) {
@@ -4471,6 +4573,30 @@ router.get('/*/tstart/asoTwo13' , function (req, res) {
              //  req.session.data['showEPAOConfirm'] = true;
              req.session.data['npqhHeadorNot'] = false;
             res.redirect(`/${req.version}/tstart/ASOno`)
+           break;
+
+
+        default:
+                res.redirect(`/${req.version}/tstart/qualifyASO`)
+            break;
+        }
+})
+
+router.get('/*/tstart/asoTwo15' , function (req, res) {
+  var assessment = req.query.asoHeadTwo
+       switch (true) {
+          case  (assessment == 'Yes'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+            res.redirect(`/${req.version}/tstart/qualifyASO`)
+           break;
+
+          case  (assessment == 'No'):
+             // req.session.data['showApprenticeBox'] = false;
+             //  req.session.data['showEPAOConfirm'] = true;
+             req.session.data['npqhHeadorNot'] = false;
+            res.redirect(`/${req.version}/tstart/ASOSelfOne`)
            break;
 
 
@@ -4557,7 +4683,7 @@ router.get('/*/tstart/confirmEnding13' , function (req, res) {
 
         default:
          
-               res.redirect(`/${req.version}/tstart/howPaying`)
+               res.redirect(`/${req.version}/tstart/confirmDetails`)
             break;
         }
 })
