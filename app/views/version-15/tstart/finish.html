@@ -27,6 +27,18 @@
         </h1>
         <p>   {{ data['providerName'] }} will contact you to complete your registration.  </p>
         <p>They will provide details of timings, costs and deadlines for your course.</p>
+
+
+{% if data.npqHeadshipChoice %}
+ <h2 class="govuk-heading-m" style="">Additional Support Offer (ASO) for NPQH</h2>
+        <p>You may be eligible for additional support if you are completing or have completed an NPQH and are in your first 2 years of headship.</p>
+
+<p>If eligible, your training provider will share further details with you.</p>
+{% else %}
+<div class="dont-a-thing"></div>
+{% endif %}
+
+
  
        
          <p style="margin-top:400px"> <a href="emailFinish">inbox</a>  </p>

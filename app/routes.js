@@ -4265,7 +4265,7 @@ router.get('/*/tstart/whichNPQRouteTwo' , function (req, res) {
   var assessment = req.query.assessment
        switch (true) {
           case  (assessment == 'NPQ Headship'):
-             // req.session.data['showApprenticeBox'] = false;
+              req.session.data['npqHeadshipChoice'] = true;
              //  req.session.data['showEPAOConfirm'] = true;
               // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
             res.redirect(`/${req.version}/tstart/chooseProvider`)
