@@ -50,9 +50,9 @@ EventUtil.addHandler(createButton, 'click', function(){
       <form action="chooseSchoolPost" method="get" class="form">
 
      <h1 class="govuk-heading-xl">
-         Your information
+        Your information
         </h1>
-         <p>We need to check your details on the Teaching Regulation Agency records to ensure you qualify to study for a National Professional Qualification (NPQ).</p>
+         <p>We need to check your details on the Teaching Regulation Agency records to ensure you  {% if data.asoHeader %}eligible for the Additional Support Offer (ASO) for NPQ Headship .{% else %}qualify to study for a national professional qualification (NPQ).>{% endif %}</p>
 
 
         <div class="govuk-form-group">

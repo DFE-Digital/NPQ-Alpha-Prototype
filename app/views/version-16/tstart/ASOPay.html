@@ -41,32 +41,47 @@ function whereNow() {
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Additional Support Offer</h1>
-                               <p>You are eligible for additional support if you are completing or have completed an NPQH and are in your first 2 years of headship. </p><p>If eligible, your training provider will share further details with you.</p>
+                                <h1 class="govuk-heading-xl">How is your additional support being paid for?</h1>
+                             <!--   <p>Some more guidance on this as it might confuse people about the NPQ itself</p> -->
 
-                 <form action="aso15" >
+                 <form action="ASOPayhow16" >
                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    
+              <!--       
                                         <label class="govuk-label  bold-label" for="firstName">
-Are you a headteacher?
+Do you want to pay for this without government funds?
 
-              </label>
+              </label> -->
                     </legend>
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
 
                       <div class="govuk-radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="headteacherYes" name="asoHead" type="radio" value="Yes" {{ checked( 'chooseSearch', '  Yes') }}>
+                                    <input class="govuk-radios__input" id="headteacherYes" name="asoHowPay" type="radio" value="My school or college is covering the cost" {{ checked( 'chooseSearch', '  My school or college is covering the cost') }}>
                                     <label class="govuk-label govuk-radios__label" for="headteacherYes">
-                                        Yes
+                                        My school or college is covering the cost
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="headteacherNo" name="asoHead" type="radio" value="No" {{ checked( 'chooseSearch', ' No') }}>
+                                    <input class="govuk-radios__input" id="headteacherNo" name="asoHowPay" type="radio" value="My trust is paying" {{ checked( 'chooseSearch', ' My trust is paying') }}>
                                     <label class="govuk-label govuk-radios__label" for="headteacherNo">
-                                       No
+                                       My trust is paying
                                     </label>
+                                </div>
+                                       <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="headteacherNo" name="asoHowPay" type="radio" value="I am paying" {{ checked( 'chooseSearch', ' I am paying') }}>
+                                    <label class="govuk-label govuk-radios__label" for="headteacherNo">
+                                       I am paying
+                                    </label>
+                                </div>
+                                       <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="headteacherNo" name="asoHowPay" type="radio" value="My ASO is being paid in another way" {{ checked( 'chooseSearch', ' My ASO is being paid in another way') }}>
+                                    <label class="govuk-label govuk-radios__label" for="headteacherNo">
+                                       My ASO is being paid in another way
+                                    </label>
+                                                                    <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+          For example, I am sharing the costs with my school or college
+        </div>
                                 </div>
 
                                 

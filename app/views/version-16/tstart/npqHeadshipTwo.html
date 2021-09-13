@@ -14,19 +14,19 @@ href: "javascript:history.back()"
 <!-- <script>
 
 function whereNow() {
-   var status = $('input[name=asoHead]:checked').val();
+   var status = $('input[name=headTwo]:checked').val();
    console.log(status);
        switch (true) {
           case  (status == 'Yes'):
-                console.log('Yes')
+                console.log('headteacherYes')
                 // localStorage.setItem("commitments.apprenticestatus", JSON.stringify('paused'));
-                 window.location.href='npqASOtwo';
+                 window.location.href='qualifyASO';
                 break;
 
         case  (status == 'No'):
             console.log('headteacherNo')
            // localStorage.setItem("commitments.apprenticestatus", JSON.stringify('stopped'));
-             window.location.href='ASOno';
+             window.location.href='chooseProvider';
             break;
        
         default:
@@ -41,29 +41,24 @@ function whereNow() {
 <div class="govuk-width-container">
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Additional Support Offer</h1>
-                               <p>You are eligible for additional support if you are completing or have completed an NPQH and are in your first 2 years of headship. </p><p>If eligible, your training provider will share further details with you.</p>
+                                <h1 class="govuk-heading-xl">When your NPQH starts, will you be in the first 2 years of a headship?</h1>
 
-                 <form action="aso15" >
+                 <form action="twoyearsnpqh" >
                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    
-                                        <label class="govuk-label  bold-label" for="firstName">
-Are you a headteacher?
-
-              </label>
+                      <!-- <h2 class="govuk-fieldset__heading">Sign up to email updates?</h2> -->
                     </legend>
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
 
                       <div class="govuk-radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="headteacherYes" name="asoHead" type="radio" value="Yes" {{ checked( 'chooseSearch', '  Yes') }}>
+                                    <input class="govuk-radios__input" id="headteacherYes" name="twoyearsnpqh" type="radio" value="Yes" {{ checked( 'chooseSearch', '  Yes') }}>
                                     <label class="govuk-label govuk-radios__label" for="headteacherYes">
                                         Yes
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="headteacherNo" name="asoHead" type="radio" value="No" {{ checked( 'chooseSearch', ' No') }}>
+                                    <input class="govuk-radios__input" id="headteacherNo" name="twoyearsnpqh" type="radio" value="No" {{ checked( 'chooseSearch', ' No') }}>
                                     <label class="govuk-label govuk-radios__label" for="headteacherNo">
                                        No
                                     </label>
@@ -73,7 +68,7 @@ Are you a headteacher?
                             </div>
                         </fieldset>
                     </div>
-                <!--      <input class="button govuk-button" id="saveAndContinue" type="button" onclick="whereNow()" value="Continue"> -->
+                    <!--  <input class="button govuk-button" id="saveAndContinue" type="button" onclick="whereNow()" value="Continue"> -->
                     <button class="govuk-button">Continue</button>
                 </form>
 
