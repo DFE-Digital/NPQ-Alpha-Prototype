@@ -4267,7 +4267,7 @@ router.get('/*/tstart/whichNPQRoute16' , function (req, res) {
              req.session.data['npqHeadshipChoice'] = true;
              //  req.session.data['showEPAOConfirm'] = true;
               // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
-            res.redirect(`/${req.version}/tstart/chooseProvider`)
+            res.redirect(`/${req.version}/tstart/qualifyNPQ`)
            break;
 
           case  (assessment == 'Additional Support Offer for NPQH'):
@@ -4280,7 +4280,7 @@ router.get('/*/tstart/whichNPQRoute16' , function (req, res) {
 
         default:
             console.log("ar " + assessment);
-                res.redirect(`/${req.version}/tstart/chooseProvider`)
+                res.redirect(`/${req.version}/tstart/qualifyNPQ`)
             break;
         }
 })
