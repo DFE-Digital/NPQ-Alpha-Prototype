@@ -4852,6 +4852,37 @@ router.get('/*/tstart/HowPayingorNot16' , function (req, res) {
 })
 
 
+router.get('/*/payments/ecfOrNPqPayments' , function (req, res) {
+  var assessment = req.query.providerName
+       switch (true) {
+          case  (assessment == 'ECF'):
+              req.session.data['ecfOrNot'] = true;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+             res.redirect(`/${req.version}/payments/chooseProvider`)
+           break;
+        default:
+               res.redirect(`/${req.version}/payments/chooseProvider`)
+            break;
+        }
+})
+
+router.get('/*/payments/ecfOrNPQChooser' , function (req, res) {
+  var assessment = req.session.data['ecfOrNot']
+       switch (true) {
+          case  (assessment == true):
+          req.session.data['ecfOrNot'] = false;
+             // req.session.data['ecfOrNot'] = true;
+             //  req.session.data['showEPAOConfirm'] = true;
+              // req.session.data['email'] = "jenny@stpaulsschool.ac.uk";
+             res.redirect(`/${req.version}/payments/ecfBreakdown`)
+           break;
+        default:
+               res.redirect(`/${req.version}/payments/npqList`)
+            break;
+        }
+})
+
 router.get('/*/sandbox/choosy' , function (req, res) {
   var confirmTraining = req.query.trn
        switch (true) {
