@@ -9,7 +9,7 @@ href: "javascript:history.back()"
 {% block content %}
 <script src="/public/javascripts/accordion.js"></script>
 <script>
-    if (
+if (
     'addEventListener' in document &&
     document.querySelectorAll
 ) {
@@ -24,12 +24,78 @@ href: "javascript:history.back()"
 <div class="govuk-width-container">
     <main class="govuk-main-wrapper govuk-main-wrapper--l">
         <div class="govuk-grid-row">
+            <div class="govuk-grid-column-one-third">
+                <h2 class="govuk-heading-s" style="margin-top: 10px;">Month</h2>
+                <nav role="navigation">
+                    <ul class="robSideNav">
+                        <li>
+                            <a href="#">September 2021</a>
+                        </li>
+                        <li>
+                            <a href="#">October 2021</a>
+                        </li>
+                        <li>
+                            <a href="#">November 2021</a>
+                        </li>
+                        <li>
+                            <a href="#">December 2021</a>
+                        </li>
+                        <li>
+                            <a href="#">January 2022</a>
+                        </li>
+                        <li>
+                            <a href="#">February 2022</a>
+                        </li>
+                        <li>
+                            <a href="#">March 2022</a>
+                        </li>
+                        <li>
+                            <a href="#">April 2022</a>
+                        </li>
+                        <li>
+                            <a href="#">May 2022</a>
+                        </li>
+                        <li>
+                            <a href="#">June 2022</a>
+                        </li>
+                        <li>
+                            <a href="#">July 2022</a>
+                        </li>
+                        <li>
+                            <a href="#" style="color:#000; text-decoration: none;">August 2022</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h2 class="govuk-heading-s" style="margin-top: 10px;">Year</h2>
+                <nav role="navigation">
+                    <ul class="robSideNav">
+                        <li>
+                            <a href="#">2021</a>
+                        </li>
+                        <li>
+                            <a href="#">2022 YTD</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
             <div class="govuk-grid-column-two-thirds">
                 <h1 class="govuk-heading-xl">FCA Ltd</h1>
                 <p style="margin-bottom:0; color: #505a5f; ">Payment of</p>
                 <h2 class="govuk-heading-xl" style="margin-bottom: 0; padding-top:0">£324,000<span style="font-size:30px">.00</span></h2>
-                <p style="margin-bottom:50px; color: #505a5f; ">On 21 May 2021</p>
+                <p style="margin-bottom:50px; color: #505a5f; ">On 21 September 2022</p>
                 <!--  <p> The following shows details of the payment into your account. </p> -->
+
+                    <nav role="navigation">
+                              <ul class="robSideNav">
+                                  <li>
+                                    <a href="#">Download PDF</a>
+                                  </li>
+                                  <li>
+                                    <a href="#">Download CSV</a>
+                                  </li>
+                                </ul>
+                        </nav>
                 <table class="govuk-table ">
                     <thead>
                         <tr class="govuk-table__row">
@@ -40,9 +106,9 @@ href: "javascript:history.back()"
                     <tbody>
                         <tr class="govuk-table__row">
                             <td class="govuk-table__cell" scope="row">Submission period</td>
-                            <td class="govuk-table__cell" scope="row">1 - 31 April 2021</td>
+                            <td class="govuk-table__cell" scope="row">1 - 31 August 2022</td>
                         </tr>
-    <!--                     <tr class="govuk-table__row">
+                        <!--                     <tr class="govuk-table__row">
                             <td class="govuk-table__cell" scope="row">Milestone</td>
                             <td class="govuk-table__cell" scope="row">2</td>
                         </tr>
@@ -58,7 +124,7 @@ href: "javascript:history.back()"
                             <td class="govuk-table__cell" scope="row">Contract reference</td>
                             <td class="govuk-table__cell" scope="row">90210</td>
                         </tr>
-             <!--            <tr class="govuk-table__row">
+                        <!--            <tr class="govuk-table__row">
                             <td class="govuk-table__cell" scope="row">Call off contract</td>
                             <td class="govuk-table__cell" scope="row">x</td>
                         </tr> -->
@@ -114,7 +180,7 @@ href: "javascript:history.back()"
                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">1,800</td>
                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">£180,000</td>
                         </tr>
-         <!--                <tr class="govuk-table__row">
+                        <!--                <tr class="govuk-table__row">
                             <td class="govuk-table__cell" scope="row">Back payments </td>
                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">900</td>
                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">-</td>
@@ -129,19 +195,19 @@ href: "javascript:history.back()"
                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">0</td>
                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">£0</td>
                         </tr>
-                                     <tr class="govuk-table__row">
+                        <tr class="govuk-table__row">
                             <td class="govuk-table__cell" scope="row" style="">VAT</td>
-                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row"></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric" scope="row"></td>
                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">£10,000</td>
                         </tr>
                         <tr class="govuk-table__row">
                             <td class="govuk-table__cell" scope="row" style="font-weight:700">Total payment</td>
-                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row"></td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric" scope="row"></td>
                             <td class="govuk-table__cell govuk-table__cell--numeric" scope="row" style="font-weight:700">£324,000</td>
                         </tr>
                     </tbody>
                 </table>
-  <!--               <table class="govuk-table ">
+                <!--               <table class="govuk-table ">
                     <thead>
                         <tr class="govuk-table__row">
                             <th scope="col" class="govuk-table__header"></th>
@@ -258,7 +324,7 @@ href: "javascript:history.back()"
                                         <td class="govuk-table__cell" scope="row">Current milestone participants </td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">400</td>
                                     </tr>
-                                                                <tr class="govuk-table__row">
+                                    <tr class="govuk-table__row">
                                         <td class="govuk-table__cell" scope="row">Back payment participants </td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">200</td>
                                     </tr>
@@ -285,7 +351,7 @@ href: "javascript:history.back()"
                                         <td class="govuk-table__cell" scope="row">Current milestone participants</td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">0</td>
                                     </tr>
-                                                                <tr class="govuk-table__row">
+                                    <tr class="govuk-table__row">
                                         <td class="govuk-table__cell" scope="row">Back payment participants </td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">0</td>
                                     </tr>
@@ -308,12 +374,11 @@ href: "javascript:history.back()"
                                         <td class="govuk-table__cell" scope="row">Fee per event</td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">£xxx</td>
                                     </tr>
-                       
-                                            <tr class="govuk-table__row">
+                                    <tr class="govuk-table__row">
                                         <td class="govuk-table__cell" scope="row">Current milestone participants </td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">0</td>
                                     </tr>
-                                                       <tr class="govuk-table__row">
+                                    <tr class="govuk-table__row">
                                         <td class="govuk-table__cell" scope="row">Back payment participants </td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">0</td>
                                     </tr>
@@ -333,7 +398,6 @@ href: "javascript:history.back()"
                                     </tr>
                                 </thead>
                                 <tbody>
-                     
                                     <tr class="govuk-table__row">
                                         <td class="govuk-table__cell" scope="row">Current milestone</td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row"><a href="paidList">400</a></td>
@@ -342,15 +406,15 @@ href: "javascript:history.back()"
                                         <td class="govuk-table__cell" scope="row">Back payments </td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row"><a href="paidListBackPayments">200</a></td>
                                     </tr>
-                                                   <tr class="govuk-table__row">
+                                    <tr class="govuk-table__row">
                                         <td class="govuk-table__cell" scope="row" style="font-weight:700">Total number paid</td>
-                                        <td class="govuk-table__cell govuk-table__cell--numeric" style="font-weight:700"scope="row">600</td>
+                                        <td class="govuk-table__cell govuk-table__cell--numeric" style="font-weight:700" scope="row">600</td>
                                     </tr>
                                     <tr class="govuk-table__row">
                                         <td class="govuk-table__cell" scope="row">Total number not paid</td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row"><a href="rejectedList">10</a></td>
                                     </tr>
-                           <!--          <tr class="govuk-table__row">
+                                    <!--          <tr class="govuk-table__row">
                                         <td class="govuk-table__cell" scope="row">Milestone 1 back payments</td>
                                         <td class="govuk-table__cell govuk-table__cell--numeric" scope="row"><a href="paidListBackPayments">xxx</a></td>
                                     </tr> -->
@@ -358,7 +422,7 @@ href: "javascript:history.back()"
                             </table>
                         </div>
                     </div>
- <!--                    <div class="accordion-section">
+                    <!--                    <div class="accordion-section">
                         <div class="accordion-section-header">
                             <h2 class="govuk-heading-m">Back payment </h2>
                         </div>
@@ -414,54 +478,45 @@ href: "javascript:history.back()"
                             </table>
                         </div>
                     </div>
-                        <div class="accordion-section">
-                            <div class="accordion-section-header">
-                                <h2 class="govuk-heading-m">Clawbacks </h2>
-                            </div>
-                            <div class="accordion-section-body">
-                                <table class="govuk-table ">
-                                    <thead>
-                                    
-                                        <tr class="govuk-table__row">
-                                            <th scope="col" class="govuk-table__header"></th>
-                                            <th scope="col" class="govuk-table__header"></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="govuk-table__row">
-                                            <td class="govuk-table__cell" scope="row">Clawback per participant</td>
-                                            <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">£xxx</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <td class="govuk-table__cell" scope="row">Number of participants </td>
-                                            <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">0</td>
-                                        </tr>
-                                        <tr class="govuk-table__row">
-                                            <td class="govuk-table__cell" scope="row" style="font-weight:700">Clawbacks</td>
-                                            <td class="govuk-table__cell govuk-table__cell--numeric" scope="row" style="font-weight:700">£0</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                    <div class="accordion-section">
+                        <div class="accordion-section-header">
+                            <h2 class="govuk-heading-m">Clawbacks </h2>
                         </div>
+                        <div class="accordion-section-body">
+                            <table class="govuk-table ">
+                                <thead>
+                                    <tr class="govuk-table__row">
+                                        <th scope="col" class="govuk-table__header"></th>
+                                        <th scope="col" class="govuk-table__header"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="govuk-table__row">
+                                        <td class="govuk-table__cell" scope="row">Clawback per participant</td>
+                                        <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">£xxx</td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                        <td class="govuk-table__cell" scope="row">Number of participants </td>
+                                        <td class="govuk-table__cell govuk-table__cell--numeric" scope="row">0</td>
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                        <td class="govuk-table__cell" scope="row" style="font-weight:700">Clawbacks</td>
+                                        <td class="govuk-table__cell govuk-table__cell--numeric" scope="row" style="font-weight:700">£0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
                     </div>
+
                 </div>
-                     <div class="govuk-grid-column-one-third">
-                      <!--   <aside class="related"> -->
-                        <h2 class="govuk-heading-m" style="margin-top: 10px;">Save a copy</h2>
-                        <nav role="navigation">
-                              <ul class="robSideNav">
-                                  <li>
-                                    <a href="#">Download PDF</a>
-                                  </li>
-                                  <li>
-                                    <a href="#">Download CSV</a>
-                                  </li>
-                                </ul>
-                        </nav>
-                 <!--    </aside> -->
-                </div>
+
+            
             </div>
+
+            
+        </div>
     </main>
 </div>
 {% endblock %}
