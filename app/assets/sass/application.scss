@@ -51,7 +51,7 @@ table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sor
 .bba {
   display: inline-block ;
   position: relative;
-   
+    z-index: 4;
     vertical-align: top;
 }
 
