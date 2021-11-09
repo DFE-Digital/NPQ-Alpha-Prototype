@@ -1,240 +1,152 @@
-
 {% extends "layout.html" %}
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
-
 <script src="/socket.io/socket.io.js"></script>
 <script>
-  var socket = io();
+var socket = io();
 </script>
-
-
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-xl">
             NPQ Alpha </h1>
-       <!--  <h2 class="govuk-heading-m">Linkies</h2> -->
-
-                                      <h2 class="govuk-heading-s">v18</h2>
-                  
-                            <p style="margin-top:25px; font-weight:700">NPQ payment breakdown</p>
-                                  <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqList">- NPQ list</a></p>
-                
-                                 <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqBreakdownv3">- NPQ breakdown v3</a></p>
-                                            <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqBreakdownv4">- NPQ breakdown v4</a><span class="govuk-caption-m">Has additional particpant breakdowns for each cohort </span></p>
-                                              <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqBreakdownv7">- NPQ breakdown v7</a><span class="govuk-caption-m">Cohorts split out </span></p>
-                                             <p style="margin-top:25px; font-weight:700">ECF payment breakdown</p>
-                                         <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv4">- ECF breakdown v4</a><br /><span class="govuk-caption-m">Shows the version that is past the the last submission deadline and is the breakdown that is being paid </span></p>
-                                          <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv41">- ECF breakdown v4.1</a><br /><span class="govuk-caption-m">Version with alternate forecast </span></p>
-                                             <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv5">- ECF breakdown v5 </a><br /><span class="govuk-caption-m">Shows the version that is currently populating with data </span></p>
-                                                <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv6">- ECF breakdown v6 </a><br /><span class="govuk-caption-m">Shows uplift fee backpayments </span></p>
-                                                      <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv7">- ECF breakdown v7 </a><br /><span class="govuk-caption-m">Service fee only </span></p>
-                                                             <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv8">- ECF breakdown v8 </a><br /><span class="govuk-caption-m">Split out schedules </span></p>
-                                                              <p style="margin-top:25px; font-weight:700">Provider payment breakdown</p>
-                                                              <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownProviderv1">- ECF breakdown for provider v1 </a><br /><span class="govuk-caption-m">Provider version </span></p>
-                                                                 <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqBreakdownProviderv1">- NPQ breakdown for provider v1 </a><br /><span class="govuk-caption-m">Provider version </span></p>
-             <!--             <p style="margin-top:25px"><a href="/version-11/ambition/">v11 Provider page</a></p> -->
-                
-<hr style="margin:25px 0 25px 0">
-        
-
-       
-
-                                      <h2 class="govuk-heading-s">Sprint 17 - Payment breakdown updates</h2>
-                  
-                            <p style="margin-top:25px"><a href="/version-17/payments">v17 Payment breakdown</a></p>
-                                  <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqList">- NPQ list</a></p>
-                             <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqBreakdown">- NPQ breakdown v1</a></p>
-                              <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqBreakdownv2">- NPQ breakdown v2</a></p>
-                                 <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqBreakdownv3">- NPQ breakdown v3</a></p>
-                                            <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqBreakdownv4">- NPQ breakdown v4</a><span class="govuk-caption-m">Has additional particpant breakdowns for each cohort </span></p>
-                                   <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv2">- ECF breakdown v2</a></p>
-                                       <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv3">- ECF breakdown v3</a></p>
-                                         <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv4">- ECF breakdown v4</a><br /><span class="govuk-caption-m">Shows the version that is past the the last submission deadline and is the breakdown that is being paid </span></p>
-                                             <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv5">- ECF breakdown v5 </a><br /><span class="govuk-caption-m">Shows the version that is currently populating with data </span></p>
-                                                <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv6">- ECF breakdown v6 </a><br /><span class="govuk-caption-m">Shows uplift fee backpayments </span></p>
-             <!--             <p style="margin-top:25px"><a href="/version-11/ambition/">v11 Provider page</a></p> -->
-                
-<hr style="margin:25px 0 25px 0">
-
-            <h2 class="govuk-heading-s">v15 - NPQ Updates - self funding</h2>
-                
-                             <p style="margin-top:25px"><a href="/version-15/tstart/">v15 Teacher registration on NPQ service with ASO updates v1 - branch on NPQ</a></p>
-                                   <p style="margin-top:25px"><a href="/version-16/tstart/">v16 Teacher registration on NPQ service with ASO updates v2 - branch early</a></p>
-                        
-     <hr style="margin:25px 0 25px 0">
-
-            <h2 class="govuk-heading-s">Sprint 13 - NPQ Updates</h2>
-                
-                             <p style="margin-top:25px"><a href="/version-13/tstart/">v13 Teacher registration on NPQ service with ASO updates v1 - branch on NPQ</a></p>
-                             <p style="margin-top:25px"><a href="/version-14/tstart/">v13 Teacher registration on NPQ service with ASO updates v2 - branch early</a></p>
-                      
-
-     <hr style="margin:25px 0 25px 0">
-
-       
-
-                                      <h2 class="govuk-heading-s">Sprint 12 - Sandbox Journey Updates</h2>
-                          <p style="margin-top:25px"><a href="/version-12/sandbox">v12 Sandbox</a></p>
-                          <p style="margin-top:25px"><a href="http://tech-docs-dfe.herokuapp.com/documentation/Top/">v12 API Tech Docs</a></p>
-                            <p style="margin-top:25px"><a href="/version-12/payments">v12 Payment breakdown</a></p>
-             <!--             <p style="margin-top:25px"><a href="/version-11/ambition/">v11 Provider page</a></p> -->
-                         <p style="margin-top:25px"><a href="/version-12/tstart/">v12 Teacher registration on NPQ service with FE content</a></p>
-                       
-
-      
-          
-
-                
-
-     <hr style="margin:25px 0 25px 0">
-                               <h2 class="govuk-heading-s">Sprint 11 - NPQ Journey Updates</h2>
-                          <p style="margin-top:25px"><a href="/version-11/guidance/fullGuidance">v11 Guidance</a></p>
-             <!--             <p style="margin-top:25px"><a href="/version-11/ambition/">v11 Provider page</a></p> -->
-                         <p style="margin-top:25px"><a href="/version-11/tstart/">v11 Teacher registration on NPQ service with additional guidance at the start</a></p>
-
-      
-          
-
-                
-
-     <hr style="margin:25px 0 25px 0">
-
-                            <h2 class="govuk-heading-s">Sprint 10 - NPQ Journey Updates</h2>
-                          <p style="margin-top:25px"><a href="/version-10/guidance/fullGuidance">v10 Guidance</a></p>
-                         <p style="margin-top:25px"><a href="/version-10/ambition/">v10 Provider page</a></p>
-                         <p style="margin-top:25px"><a href="/version-10/tstart/">v10 Teacher registration on NPQ service with additional guidance at the start</a></p>
-
-      
-          
-
-                
-
-     <hr style="margin:25px 0 25px 0">
-
-                     <h2 class="govuk-heading-s">Sprint 9 - NPQ Journey Updates</h2>
-
-           <p style="margin-top:25px"><a href="/version-9/guidance/">v9 Guidance</a></p>
-             <p style="margin-top:25px"><a href="/version-9/ambition/">v9 Provider page</a></p>
-              <p style="margin-top:25px"><a href="/version-9/tstart/">v9 Teacher registration on NPQ service</a></p>
-                <p style="margin-top:25px"><a href="/version-9/account/">v9 Account</a></p>
-                 <p style="margin-top:25px"><a href="/version-9/account/acceptOne/">v9 Choose course</a></p>
-                  <p style="margin-top:25px"><a href="/version-9/API/">v9 API Landing Page</a></p>
-      
-          
-
-                
-
-     <hr style="margin:25px 0 25px 0">
-
-              <h2 class="govuk-heading-s">Sprint 8 - NPQ Journey Updates</h2>
-
-           <p style="margin-top:25px"><a href="/version-8/guidance/">v8 Guidance</a></p>
-             <p style="margin-top:25px"><a href="/version-8/ambition/">v8 Provider page</a></p>
-              <p style="margin-top:25px"><a href="/version-8/tstart/">v8 Teacher registration on NPQ service</a></p>
-                <p style="margin-top:25px"><a href="/version-8/account/">v8 Account</a></p>
-                 <p style="margin-top:25px"><a href="/version-8/account/acceptOne/">v8 Choose course</a></p>
-                  <p style="margin-top:25px"><a href="/version-8/API/">v8 API Landing Page</a></p>
-      
-          
-
-                
-
-     <hr style="margin:25px 0 25px 0">
-
-                  <h2 class="govuk-heading-s">Sprint 7 - NPQ Journey Updates</h2>
-
-           <p style="margin-top:25px"><a href="/version-7/guidance/">v7 Guidance</a></p>
-             <p style="margin-top:25px"><a href="/version-7/ambition/">v7 Provider page</a></p>
-              <p style="margin-top:25px"><a href="/version-7/tstart/">v7 Teacher registration on NPQ service</a></p>
-                <p style="margin-top:25px"><a href="/version-7/account/">v7 Account</a></p>
-                 <p style="margin-top:25px"><a href="/version-7/account/acceptOne/">v7 Choose course</a></p>
-      
-          
-
-                
-
-     <hr style="margin:25px 0 25px 0">
-
-                  <h2 class="govuk-heading-s">Sprint 6 - Test Journeys</h2>
-
-              <p style="margin-top:25px"><a href="/version-6/upload/">File upload</a></p>
-              <p style="margin-top:25px"><a href="/version-6/tstart/">v6 Teacher registration on NPQ service</a></p>
-              <p style="margin-top:25px"><a href="/version-6/payments/">v1 NPQ Payment breakdown</a></p>
-                <p style="margin-top:25px"><a href="/version-6/paymentsECF/">v1 ECF Payment breakdown</a></p>
-          
-
-                
-
-     <hr style="margin:25px 0 25px 0">
+        <!--  <h2 class="govuk-heading-m">Linkies</h2> -->
+        <h2 class="govuk-heading-s">v18</h2>
+        <p style="margin-top:25px; font-weight:700">NPQ payment breakdown</p>
 
 
-                    <h2 class="govuk-heading-s">Sprint 5 - Test Journeys</h2>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqList">- NPQ list</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqBreakdownv3">- NPQ breakdown v3</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqBreakdownv4">- NPQ breakdown v4</a><span class="govuk-caption-m">Has additional particpant breakdowns for each cohort </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqBreakdownv7">- NPQ breakdown v7</a><span class="govuk-caption-m">Cohorts split out </span></p>
+
+
+        <p style="margin-top:25px; font-weight:700">ECF payment breakdown</p>
+
+
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv4">- ECF breakdown v4</a><br /><span class="govuk-caption-m">Shows the version that is past the the last submission deadline and is the breakdown that is being paid </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv41">- ECF breakdown v4.1</a><br /><span class="govuk-caption-m">Version with alternate forecast </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv5">- ECF breakdown v5 </a><br /><span class="govuk-caption-m">Shows the version that is currently populating with data </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv6">- ECF breakdown v6 </a><br /><span class="govuk-caption-m">Shows uplift fee backpayments </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv7">- ECF breakdown v7 </a><br /><span class="govuk-caption-m">Service fee only </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownv8">- ECF breakdown v8 </a><br /><span class="govuk-caption-m">Split out schedules </span></p>
+         <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/paidList">- ECF paid list with search </a><br /><span class="govuk-caption-m">Split out schedules </span></p>
+         
+
+
+        <p style="margin-top:25px; font-weight:700">Provider payment breakdown</p>
+
+
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownProviderv1">- ECF breakdown for provider v1 </a><br /><span class="govuk-caption-m">Provider version </span></p>
+            <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownProviderv2">- ECF breakdown for provider v2 </a><br /><span class="govuk-caption-m">Delivery partner info in accordion </span></p>
+              <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/ecfBreakdownProviderv4">- ECF breakdown for provider v4 </a><br /><span class="govuk-caption-m">Delivery partner info in separate page </span></p>
+                   <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/upliftSplitJan">- Delivery partner uplift breakdown - new page </a><br /><!-- <span class="govuk-caption-m">Delivery partner uplift breakdown - new page </span> --></p>
+             <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/deliveryPartnersSept">- Delivery partner breakdown - new page </a><br /><!-- <span class="govuk-caption-m">Delivery partner breakdown - new page </span> --></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-18/payments/npqBreakdownProviderv1">- NPQ breakdown for provider v1 </a><br /><span class="govuk-caption-m">Provider version </span></p>
+        <!--             <p style="margin-top:25px"><a href="/version-11/ambition/">v11 Provider page</a></p> -->
+        <hr style="margin:25px 0 25px 0">
+
+
+        <h2 class="govuk-heading-s">Sprint 17 - Payment breakdown updates</h2>
+        <p style="margin-top:25px"><a href="/version-17/payments">v17 Payment breakdown</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqList">- NPQ list</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqBreakdown">- NPQ breakdown v1</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqBreakdownv2">- NPQ breakdown v2</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqBreakdownv3">- NPQ breakdown v3</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/npqBreakdownv4">- NPQ breakdown v4</a><span class="govuk-caption-m">Has additional particpant breakdowns for each cohort </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv2">- ECF breakdown v2</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv3">- ECF breakdown v3</a></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv4">- ECF breakdown v4</a><br /><span class="govuk-caption-m">Shows the version that is past the the last submission deadline and is the breakdown that is being paid </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv5">- ECF breakdown v5 </a><br /><span class="govuk-caption-m">Shows the version that is currently populating with data </span></p>
+        <p style="margin-top:15px; margin-left:20px"><a href="/version-17/payments/ecfBreakdownv6">- ECF breakdown v6 </a><br /><span class="govuk-caption-m">Shows uplift fee backpayments </span></p>
+        <!--             <p style="margin-top:25px"><a href="/version-11/ambition/">v11 Provider page</a></p> -->
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">v15 - NPQ Updates - self funding</h2>
+        <p style="margin-top:25px"><a href="/version-15/tstart/">v15 Teacher registration on NPQ service with ASO updates v1 - branch on NPQ</a></p>
+        <p style="margin-top:25px"><a href="/version-16/tstart/">v16 Teacher registration on NPQ service with ASO updates v2 - branch early</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 13 - NPQ Updates</h2>
+        <p style="margin-top:25px"><a href="/version-13/tstart/">v13 Teacher registration on NPQ service with ASO updates v1 - branch on NPQ</a></p>
+        <p style="margin-top:25px"><a href="/version-14/tstart/">v13 Teacher registration on NPQ service with ASO updates v2 - branch early</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 12 - Sandbox Journey Updates</h2>
+        <p style="margin-top:25px"><a href="/version-12/sandbox">v12 Sandbox</a></p>
+        <p style="margin-top:25px"><a href="http://tech-docs-dfe.herokuapp.com/documentation/Top/">v12 API Tech Docs</a></p>
+        <p style="margin-top:25px"><a href="/version-12/payments">v12 Payment breakdown</a></p>
+        <!--             <p style="margin-top:25px"><a href="/version-11/ambition/">v11 Provider page</a></p> -->
+        <p style="margin-top:25px"><a href="/version-12/tstart/">v12 Teacher registration on NPQ service with FE content</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 11 - NPQ Journey Updates</h2>
+        <p style="margin-top:25px"><a href="/version-11/guidance/fullGuidance">v11 Guidance</a></p>
+        <!--             <p style="margin-top:25px"><a href="/version-11/ambition/">v11 Provider page</a></p> -->
+        <p style="margin-top:25px"><a href="/version-11/tstart/">v11 Teacher registration on NPQ service with additional guidance at the start</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 10 - NPQ Journey Updates</h2>
+        <p style="margin-top:25px"><a href="/version-10/guidance/fullGuidance">v10 Guidance</a></p>
+        <p style="margin-top:25px"><a href="/version-10/ambition/">v10 Provider page</a></p>
+        <p style="margin-top:25px"><a href="/version-10/tstart/">v10 Teacher registration on NPQ service with additional guidance at the start</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 9 - NPQ Journey Updates</h2>
+        <p style="margin-top:25px"><a href="/version-9/guidance/">v9 Guidance</a></p>
+        <p style="margin-top:25px"><a href="/version-9/ambition/">v9 Provider page</a></p>
+        <p style="margin-top:25px"><a href="/version-9/tstart/">v9 Teacher registration on NPQ service</a></p>
+        <p style="margin-top:25px"><a href="/version-9/account/">v9 Account</a></p>
+        <p style="margin-top:25px"><a href="/version-9/account/acceptOne/">v9 Choose course</a></p>
+        <p style="margin-top:25px"><a href="/version-9/API/">v9 API Landing Page</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 8 - NPQ Journey Updates</h2>
+        <p style="margin-top:25px"><a href="/version-8/guidance/">v8 Guidance</a></p>
+        <p style="margin-top:25px"><a href="/version-8/ambition/">v8 Provider page</a></p>
+        <p style="margin-top:25px"><a href="/version-8/tstart/">v8 Teacher registration on NPQ service</a></p>
+        <p style="margin-top:25px"><a href="/version-8/account/">v8 Account</a></p>
+        <p style="margin-top:25px"><a href="/version-8/account/acceptOne/">v8 Choose course</a></p>
+        <p style="margin-top:25px"><a href="/version-8/API/">v8 API Landing Page</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 7 - NPQ Journey Updates</h2>
+        <p style="margin-top:25px"><a href="/version-7/guidance/">v7 Guidance</a></p>
+        <p style="margin-top:25px"><a href="/version-7/ambition/">v7 Provider page</a></p>
+        <p style="margin-top:25px"><a href="/version-7/tstart/">v7 Teacher registration on NPQ service</a></p>
+        <p style="margin-top:25px"><a href="/version-7/account/">v7 Account</a></p>
+        <p style="margin-top:25px"><a href="/version-7/account/acceptOne/">v7 Choose course</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 6 - Test Journeys</h2>
+        <p style="margin-top:25px"><a href="/version-6/upload/">File upload</a></p>
+        <p style="margin-top:25px"><a href="/version-6/tstart/">v6 Teacher registration on NPQ service</a></p>
+        <p style="margin-top:25px"><a href="/version-6/payments/">v1 NPQ Payment breakdown</a></p>
+        <p style="margin-top:25px"><a href="/version-6/paymentsECF/">v1 ECF Payment breakdown</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 5 - Test Journeys</h2>
         <!--   <p>Logos version</p> -->
-           
-              <p style="margin-top:25px"><a href="/version-5/tstart/">v5 Teacher registration on NPQ service</a></p>
-              <p style="margin-top:25px"><a href="/version-5/sstart/home">v5 School registration on NPQ service</a></p>
-
-                
-
-     <hr style="margin:25px 0 25px 0">
-
-             <h2 class="govuk-heading-s">Sprint 4 - Guidance</h2>
+        <p style="margin-top:25px"><a href="/version-5/tstart/">v5 Teacher registration on NPQ service</a></p>
+        <p style="margin-top:25px"><a href="/version-5/sstart/home">v5 School registration on NPQ service</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 4 - Guidance</h2>
         <!--   <p>Logos version</p> -->
-           
-              <p style="margin-top:25px"><a href="/version-4/guidance/">Guidance</a></p>
-               <p style="margin-top:25px"><a href="/version-4/guidance/guidanceAccordian">Guidance accordion</a></p>
-              
-               <p style="margin-top:25px"><a href="/version-4/microsite/guide/showall/">Task list</a></p>
-               <p style="margin-top:25px"><a href="/version-4/smartAnswers/">Smart answers type journey</a></p>
-                <p style="margin-top:25px"><a href="/version-4/microsite/">Sketch microsite</a></p>
-                
-
-     <hr style="margin:25px 0 25px 0">
-
-       <h2 class="govuk-heading-s">Sprint 3 - Teacher registration</h2>
+        <p style="margin-top:25px"><a href="/version-4/guidance/">Guidance</a></p>
+        <p style="margin-top:25px"><a href="/version-4/guidance/guidanceAccordian">Guidance accordion</a></p>
+        <p style="margin-top:25px"><a href="/version-4/microsite/guide/showall/">Task list</a></p>
+        <p style="margin-top:25px"><a href="/version-4/smartAnswers/">Smart answers type journey</a></p>
+        <p style="margin-top:25px"><a href="/version-4/microsite/">Sketch microsite</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 3 - Teacher registration</h2>
         <!--   <p>Logos version</p> -->
-           
-              <p style="margin-top:25px"><a href="/version-3/tstart/">v3 Full registation on NPQ service</a></p>
-               <p style="margin-top:25px; margin-left:20px">- <a href="/version-3/tstart/proQuestionOne">v3 Jump to questions</a></p>
-                 <p style="margin-top:25px"><a href="/version-3/task/">v3 Task List, Full registation on NPQ service</a></p>
-
-
-     <hr style="margin:25px 0 25px 0">
-     <h2 class="govuk-heading-s">Sprint 2 - Teacher registration</h2>
+        <p style="margin-top:25px"><a href="/version-3/tstart/">v3 Full registation on NPQ service</a></p>
+        <p style="margin-top:25px; margin-left:20px">- <a href="/version-3/tstart/proQuestionOne">v3 Jump to questions</a></p>
+        <p style="margin-top:25px"><a href="/version-3/task/">v3 Task List, Full registation on NPQ service</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 2 - Teacher registration</h2>
         <!--   <p>Logos version</p> -->
-           
-              <p style="margin-top:25px"><a href="/version-2/tstart/">v2 Teacher starts, Provider verifies</a></p>
-
-    
-          
-   
-           <hr style="margin:25px 0 25px 0">
-            <h2 class="govuk-heading-s">Sprint 1 - Teacher registration</h2>
+        <p style="margin-top:25px"><a href="/version-2/tstart/">v2 Teacher starts, Provider verifies</a></p>
+        <hr style="margin:25px 0 25px 0">
+        <h2 class="govuk-heading-s">Sprint 1 - Teacher registration</h2>
         <!--   <p>Logos version</p> -->
-           <p style="margin-top:25px"><a href="/version-1/pstart/teacher">v1 Provider starts, teacher finishes</a></p>
-              <p style="margin-top:25px"><a href="/version-1/tstart/">v2 Teacher starts, Provider verifies</a></p>
-
-    
-          
-   
-           <hr style="margin:25px 0 25px 0">
-
-
-
-
-
-
-
-
-
-</div>
+        <p style="margin-top:25px"><a href="/version-1/pstart/teacher">v1 Provider starts, teacher finishes</a></p>
+        <p style="margin-top:25px"><a href="/version-1/tstart/">v2 Teacher starts, Provider verifies</a></p>
+        <hr style="margin:25px 0 25px 0">
+    </div>
 </div>
 </details>
 </div>
 </div>
-
-
 {% endblock %}
