@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 # Show the user’s answers on the ‘Check your answers’ page
+=======
+# Show the user’s answers on the ‘Check answers’ page
+>>>>>>> f905369 (Master update)
 
 The Prototype Kit stores answers that users enter. This means you can make more realistic prototypes, for example by showing answers for users to check.
 
 ## Show the answer to question 1
 
+<<<<<<< HEAD
 1. Open `check-your-answers.html` in your `app/views` folder.
+=======
+1. Open `check-answers.html` in your `app/views` folder.
+>>>>>>> f905369 (Master update)
 2. Find the `<dt>` tag that contains the text 'Name'.
 3. Change 'Name' to 'Number of balls you can juggle'.
 4. In the `<dd>` tag on the next line, change 'Sarah Philips' to `{{ data['how-many-balls'] }}`.
@@ -40,7 +48,11 @@ Go to http://localhost:3000/start and answer the questions to check your answers
 
 ## Delete the remaining example answers
 
+<<<<<<< HEAD
 On the ‘Check your answers’ template page, there are example answers that you do not need.
+=======
+On the ‘Check answers’ template page, there are example answers that you do not need.
+>>>>>>> f905369 (Master update)
 
 1. Find and delete the whole `<div>` that starts with `<div class="govuk-summary-list__row">` and contains 'Contact information'.
 
@@ -92,7 +104,11 @@ Your code should now look like this:
 
       <h2 class="govuk-heading-m">Now send your application</h2>
 
+<<<<<<< HEAD
       <p>By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+=======
+      <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+>>>>>>> f905369 (Master update)
 
       <form action="/confirmation" method="post" novalidate>
 

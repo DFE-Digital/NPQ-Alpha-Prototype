@@ -14,7 +14,11 @@ GDS staff can install the software themselves with the Self Service app.
 
 You'll need:
 
+<<<<<<< HEAD
 * Node.js 14.x.x
+=======
+* Node.js 16.x.x
+>>>>>>> f905369 (Master update)
 * Git Bash (if you're using Windows, see below)
 
 ## Terminal
@@ -37,6 +41,7 @@ Download [Git Bash (direct download)](https://git-scm.com/download/win).
 
 Install with all the default options.
 
+<<<<<<< HEAD
 ### Entering commands in the terminal
 
 Commands to be entered in to the terminal will be inset like this:
@@ -49,6 +54,11 @@ Once you’ve typed the command, press enter to run it.
 ## Node.js version 14 LTS
 
 The kit is designed to work with Node.js version 14 LTS. The kit works with any 14.x.x version.
+=======
+## Node.js version 16 LTS
+
+The kit is designed to work with Node.js version 16 LTS. The kit works with any 16.x.x version.
+>>>>>>> f905369 (Master update)
 
 ### Check if you have Node.js
 
@@ -58,22 +68,36 @@ node --version
 ```
 If it says `command not found` or `Error 0x2 starting node.exe --version` you don’t have Node and will need to download and install it.
 
+<<<<<<< HEAD
 If the version number starts with 14 you have the correct version installed.
 
 If it says another number such as `0.12` or `5.x.x`, you need to download and install version 14.
+=======
+If the version number starts with 16 you have the correct version installed.
+
+If it says another number such as `0.12` or `5.x.x`, you need to download and install version 16.
+>>>>>>> f905369 (Master update)
 
 ### Download and install Node.js
 
 #### Mac / Windows users
 
+<<<<<<< HEAD
 Download version 14 from [nodejs.org](https://nodejs.org/en/).
+=======
+[Download version 16 from the Node.js website.](https://nodejs.org/en/)
+>>>>>>> f905369 (Master update)
 
 Run the installer with all default options.
 
 #### Linux users
 
+<<<<<<< HEAD
 Follow the instructions on the [Node.js](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 ) site. Make sure you get version 14.
+=======
+[Follow the Linux instructions on the Node.js. website.](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) Make sure you get version 16.
+>>>>>>> f905369 (Master update)
 
 ### Once Node is installed
 
@@ -84,6 +108,10 @@ To check it is installed correctly you can again run:
 node --version
 ```
 
+<<<<<<< HEAD
 If it’s installed correctly it should show a number starting with 14.
+=======
+If it’s installed correctly it should show a number starting with 16.
+>>>>>>> f905369 (Master update)
 
 <a href="install-the-kit.md" class="button">Next (install the kit)</a>

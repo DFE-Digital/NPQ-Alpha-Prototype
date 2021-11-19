@@ -17,7 +17,7 @@
 
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-two-thirds">
-                                <h1 class="govuk-heading-xl">Choose trainee payments scheme</h1>
+                                <h1 class="govuk-heading-xl">Choose provider</h1>
                              <!--    <p>These are the training providers who provide {{ data['assessment'] }}. Providers may have different entry requirements for courses.</p>
                                 <p>Check with the person responsible for professional development at your school.  </p> -->
                                <!--  <p>You </p> -->
@@ -35,27 +35,80 @@
 
             <p>to:  {{ data['email'] }} </p> -->
 
-                <form action="choose-provider" >
-               
+                <form  method="post" novalidate="" autocomplete="off" action="payment-breakdown" >
+   
+           <input class="govuk-visually-hidden" name="pn2" type="text" value="{{data.pn}}" >
+                  <!--!!!!!!! ------ NEXT LINK WAS confirmSchool !!!!!! --------->
                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                      <h2 class="govuk-fieldset__heading">I want to review</h2>
+                      <!-- <h2 class="govuk-fieldset__heading">Sign up to email updates?</h2> -->
                     </legend>
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
+                            {% if data.pn === "ecf1"%}
                       <div class="govuk-radios">
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="provider1" name="pn" type="radio" value="ECF" {{ checked( 'providerName', 'ECF') }}>
+                                    <input class="govuk-radios__input" id="provider1" name="providerName" type="radio" value="Ambition Institute" {{ checked( 'chooseSearch', 'Ambition Institute') }}>
                                     <label class="govuk-label govuk-radios__label" for="epaoName-city-guilds">
-                                        ECF payments
+                                       Ambition Institute
                                     </label>
                                 </div>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="provider2" name="pn" type="radio" value="NPQ" {{ checked( 'providerName', 'NPQ') }}>
+                                    <input class="govuk-radios__input" id="provider2" name="providerName" type="radio" value="Best Practice Network (home of Outstanding Leaders Partnership)" {{ checked( 'chooseSearch', 'Best Practice Network (home of Outstanding Leaders Partnership)') }}>
                                     <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
-                                         NPQ payments
+                                        Best Practice Network (home of Outstanding Leaders Partnership)
                                     </label>
                                 </div>
-                                          <!-- <div class="govuk-radios__item">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider2" name="providerName" type="radio" value="Capita" {{ checked( 'chooseSearch', 'Best Practice Network (home of Outstanding Leaders Partnership)') }}>
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                      Capita
+                                    </label>
+                                </div>
+                                                    <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider4" name="providerName" type="radio" value=" Education Development Trust" {{ checked( 'chooseSearch', ' Education Development Trust') }}>
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                      Education Development Trust
+                                    </label>
+                                </div>
+                                 
+
+                                   <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider6" name="providerName" type="radio" value=" Teach First" {{ checked( 'chooseSearch', ' Teach First') }}>
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                    Teach First
+                                    </label>
+                                </div>
+
+                                   <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider6" name="providerName" type="radio" value=" UCL Institute of Education" {{ checked( 'chooseSearch', ' UCL Institute of Education') }}>
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                    UCL Institute of Education
+                                    </label>
+                                </div>
+                     <!--                      <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider6" name="assessment" type="radio" value="provider6" {{ checked( 'chooseSearch', 'provider6') }}>
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                        NPQ 6
+                                    </label>
+                                </div> -->
+                                
+                            </div>
+                            {% else%}
+                            <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider1" name="providerName" type="radio" value="Ambition Institute" {{ checked( 'chooseSearch', 'Ambition Institute') }}>
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-city-guilds">
+                                       Ambition Institute
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider2" name="providerName" type="radio" value="Best Practice Network (home of Outstanding Leaders Partnership)" {{ checked( 'chooseSearch', 'Best Practice Network (home of Outstanding Leaders Partnership)') }}>
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                        Best Practice Network (home of Outstanding Leaders Partnership)
+                                    </label>
+                                </div>
+                              
+                                          <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="provider3" name="providerName" type="radio" value="Church of England" {{ checked( 'chooseSearch', 'Church of England') }}>
                                     <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
                                         Church of England
@@ -99,18 +152,14 @@
                                     <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
                                     UCL Institute of Education
                                     </label>
-                                </div> -->
-                     <!--                      <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="provider6" name="assessment" type="radio" value="provider6" {{ checked( 'chooseSearch', 'provider6') }}>
-                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
-                                        NPQ 6
-                                    </label>
-                                </div> -->
+                                </div>
+                 
                                 
                             </div>
+                            {%endif%}
                         </fieldset>
                     </div>
-                    <button class="govuk-button">Continue</button>
+                    <button type="submit" data-module="govuk-button"class="govuk-button">Continue</button>
                 </form>
             </div>
         </div>

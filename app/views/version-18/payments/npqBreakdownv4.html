@@ -7,20 +7,6 @@ href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
-<script src="/public/javascripts/accordion.js"></script>
-<script>
-    if (
-    'addEventListener' in document &&
-    document.querySelectorAll
-) {
-    document.addEventListener('DOMContentLoaded', function() {
-        var accordions = document.querySelectorAll('.accordion')
-        for (var i = accordions.length - 1; i >= 0; i--) {
-            new Accordion(accordions[i])
-        };
-    })
-}
-</script>
 <div class="govuk-width-container">
     <main class="govuk-main-wrapper govuk-main-wrapper--l">
         <div class="govuk-grid-row">
@@ -38,44 +24,6 @@ href: "javascript:history.back()"
                                   </li>
                                 </ul>
                         </nav>
- <!--                <p style="margin-bottom:0; color: #505a5f; ">Payment of</p>
-                <h2 class="govuk-heading-xl" style="margin-bottom: 0; padding-top:0">£324,000<span style="font-size:30px">.00</span></h2>
-                <p style="margin-bottom:50px; color: #505a5f; ">On 21 May 2021</p> -->
-                <!--  <p> The following shows details of the payment into your account. </p> -->
-<!--                 <table class="govuk-table ">
-                    <thead>
-                        <tr class="govuk-table__row">
-                            <th scope="col" class="govuk-table__header"></th>
-                            <th scope="col" class="govuk-table__header"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Payment period</td>
-                            <td class="govuk-table__cell" scope="row">1 - 31 April 2021</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Milestone</td>
-                            <td class="govuk-table__cell" scope="row">2</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Induction</td>
-                            <td class="govuk-table__cell" scope="row">Standard</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">PO reference</td>
-                            <td class="govuk-table__cell" scope="row">90210</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Contract reference</td>
-                            <td class="govuk-table__cell" scope="row">90210</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Call off contract</td>
-                            <td class="govuk-table__cell" scope="row">x</td>
-                        </tr>
-                    </tbody>
-                </table> -->
 
                 <div>
                 <table class="govuk-table ">

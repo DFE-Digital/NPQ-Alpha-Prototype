@@ -1,5 +1,7 @@
-const express = require('express')
-const router = new express.Router()
+const express = require('express');
+const router = express.Router();
+
+
 
 // route middleware that will happen on every request
 router.use(function(req, res, next) {
@@ -23,15 +25,15 @@ router.use('/', (req, res, next) => {
 })
 
 
-// Versions routing stuff - so indivdual routes are in the sub version
-router.use(/\/version-([0-9]+)/, (req, res, next) => {
-  require(`./views/version-${req.params[0]}/routes`)(req, res, next);
-})
+// // Versions routing stuff - so indivdual routes are in the sub version
+// router.use(/\/version-([0-9]+)/, (req, res, next) => {
+//   require(`./views/version-${req.params[0]}/routes`)(req, res, next);
+// })
 
 console.log('main routes loaded');
-router.get('/', (req, res) => {
-  res.render('index')
-})
+// router.get('/', (req, res) => {
+//   res.render('index')
+// })
 
 /// Employers ID setup
 
@@ -4937,5 +4939,6 @@ router.get('/*/sandbox/ecfchoosy' , function (req, res) {
         }
 })
 
+require('./views/version-18/routes.js')(router);
 
 module.exports = router

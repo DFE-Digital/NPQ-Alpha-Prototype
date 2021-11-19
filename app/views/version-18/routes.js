@@ -1,15 +1,30 @@
+module.exports = (app) => {
 
-const express = require('express')
-const router =  new express.Router()
-
-
-
-// Route index page
-router.get('/', function (req, res) {
-  res.render('index')
-})
+  app.get('/prototype/test', function(req, res) {
+      res.write("I am a new route")
+      res.end();
+  });
 
 
+ 
+  app.post('/version-18/payments/payment-breakdown', function (req, res) {
 
 
-module.exports = router
+    if (req.body.pn2 === "ecf1") {
+        res.redirect('/version-18/payments/ecfBreakdownv8');
+
+    } else  {
+        res.redirect('/version-18/payments/npqList');
+
+    }
+
+  
+});
+
+
+
+}
+
+ 
+
+

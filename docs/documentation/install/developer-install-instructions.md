@@ -6,7 +6,11 @@ If you already installed a previous version of the Prototype Kit, you can [updat
 
 ## Requirements
 
+<<<<<<< HEAD
 node.js - version 14.x.x
+=======
+node.js - version 16.x.x
+>>>>>>> f905369 (Master update)
 
 ## Install dependencies
 

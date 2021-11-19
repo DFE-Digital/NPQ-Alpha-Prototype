@@ -13,11 +13,10 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/step-by-step-nav";
 @import "patterns/step-by-step-related";
 @import "patterns/task-list";
-@import "patterns/related-items"; 
+@import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 @mixin das-clearfix {
   &:after {
@@ -629,8 +628,7 @@ gem-c-pagination__link-text {
 
 
 
-.fullChatWrapper {
-}
+
 
 #chatAppear, #chatAppearN {
   position: fixed;
@@ -874,11 +872,6 @@ padding-left:95px;
   width:100px
 }
 
-.metroLogo {
-// width:184px;
- // height:92px;
-// padding-left:25px;
-}
 
 .metroLogo img {
 padding-left:45px;
@@ -2803,9 +2796,7 @@ ul.hidden-links li {
    box-shadow: 0 1px 0px #bfc1c3;
 }
 
-ul.hidden-links li:last-child  { 
- //  box-shadow: 0 3px 0px #bfc1c3;
-}
+
 
 ul.hidden-links li:first-child  { 
  border-top: 1px solid #6f777b;
