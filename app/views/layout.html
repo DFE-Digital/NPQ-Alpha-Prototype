@@ -77,9 +77,16 @@
 
 
  {% block footer %}
+ 
     {{ govukFooter({
       meta: {
-        html: '<h2 class="govuk-heading-m">Support and guidance</h2><p class="govuk-body-s">If you have a question, or you&apos;ve had a problem using this service, please contact us at <a class="govuk-footer__link" href="mailto:continuing-professional-development@digital.education.gov.uk">continuing-professional-development@digital.education.gov.uk</a></p><ul class="govuk-footer__inline-list">
+        html: '
+        <li class="govuk-footer__inline-list-item">
+          <a class="govuk-button govuk-button--warning" href="/prototype-admin/clear-data">
+            Clear data
+          </a>
+        </li>
+        <h2 class="govuk-heading-m">Support and guidance</h2><p class="govuk-body-s">If you have a question, or you&apos;ve had a problem using this service, please contact us at <a class="govuk-footer__link" href="mailto:continuing-professional-development@digital.education.gov.uk">continuing-professional-development@digital.education.gov.uk</a></p><ul class="govuk-footer__inline-list">
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="#">
@@ -105,11 +112,6 @@
                   </a>
                 </li>
 
-                <li class="govuk-footer__inline-list-item">
-                  <a class="govuk-footer__link" href="/prototype-admin/clear-data">
-                    Clear data
-                  </a>
-                </li>
 
             </ul>',
         items: [
