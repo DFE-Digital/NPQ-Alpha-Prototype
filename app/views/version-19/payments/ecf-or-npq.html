@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{{ govukBackLink({
+  text: "Back",
+ href: "javascript:history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                                <h1 class="govuk-heading-xl">Choose trainee payments scheme</h1>
+                             <!--    <p>These are the training providers who provide {{ data['assessment'] }}. Providers may have different entry requirements for courses.</p>
+                                <p>Check with the person responsible for professional development at your school.  </p> -->
+                               <!--  <p>You </p> -->
+                    <!--                <span id="waste-hint" class="govuk-hint">
+                                     The information you provide will help us personalise your experience and will not used for anything else
+                                    </span> -->
+
+        <!--     <p>We'll send you:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Reminders</li>
+              <li>Help and advice</li>
+              <li>Announcements</li>
+           
+            </ul>
+
+            <p>to:  {{ data['email'] }} </p> -->
+
+                <form method="post" novalidate="" autocomplete="off" action="choose-provider" >
+               
+                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <h2 class="govuk-fieldset__heading">I want to review</h2>
+                    </legend>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                      <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider1" name="pn" type="radio" value="ecf1">
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-city-guilds">
+                                        ECF payments
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider2" name="pn" type="radio" value="npq2" >
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                         NPQ payments
+                                    </label>
+                                </div>
+                     
+                                
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button type="submit" data-module="govuk-button"class="govuk-button">Continue</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

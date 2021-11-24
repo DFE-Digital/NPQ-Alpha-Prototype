@@ -5,16 +5,16 @@ module.exports = (app) => {
       res.end();
   });
 
-
+var version = 'version-18'
  
-  app.post('/version-18/payments/payment-breakdown', function (req, res) {
+  app.post('/' + version + '/payments/payment-breakdown', function (req, res) {
 
 
     if (req.body.pn2 === "ecf1") {
-        res.redirect('/version-18/payments/ecfBreakdownv8');
+        res.redirect('/' + version + '/payments/ecfBreakdownv8');
 
     } else  {
-        res.redirect('/version-18/payments/npqList');
+        res.redirect('/' + version + '/payments/npqList');
 
     }
 

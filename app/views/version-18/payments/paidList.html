@@ -28,7 +28,7 @@
                             Search participants
                         </label>
                         <span id="email-hint" class="govuk-hint">
-                        Search by name or TRN
+                        Search by participant ID (UUID) or TRN
                         </span>
                         <input class="govuk-input govuk-!-width-three-quarters" style="min-width:500px" id="firstName" name="firstName" type="text" aria-describedby="First Name"><div class="bba"><button class="search" type="submit"> </button></div>
                     </div>
@@ -36,39 +36,48 @@
                 </fieldset>
             </div>
  
-                 <table class="govuk-table " style="">
-                    <thead>
-                        <tr class="govuk-table__row">
-                                <th scope="col" class="govuk-table__header">Name</th>
-                                <th scope="col" class="govuk-table__header">TRN</th>
-                               
-                     
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Helen O'Connor</td>
-                            <td class="govuk-table__cell " scope="row">9021022</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Satoko Jenkins</td>
-                            <td class="govuk-table__cell " scope="row">1234567</td>
-                        </tr>
-                        <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">David Jenkins</td>
-                            <td class="govuk-table__cell " scope="row">7654321</td>
-                        </tr>
-                         <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Penelope Partridge</td>
-                            <td class="govuk-table__cell " scope="row">7778888</td>
-                        </tr>
-                          <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Geoff Capes</td>
-                            <td class="govuk-table__cell " scope="row">2222333</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+            <table class="govuk-table " style="">
+                <thead>
+                    <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header">Participant ID (UUID)</th>
+                            <th scope="col" class="govuk-table__header">TRN</th>
+                            <th scope="col" class="govuk-table__header">Delivery partner</th>
+                          
+                          <!--   <th scope="col" class="govuk-table__header">Reason for rejection</th> -->
+                           
+                 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row">32893843984</td>
+                        <td class="govuk-table__cell " scope="row">dsdsd</td>
+                        <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+                    
+                       <!--   <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row">Satoko Jenkins</td>
+                        <td class="govuk-table__cell " scope="row">1234567</td>
+                      <!--   <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row">David Jenkins</td>
+                        <td class="govuk-table__cell " scope="row">7654321</td>
+                       <!--  <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                    </tr>
+                     <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row">Penelope Partridge</td>
+                        <td class="govuk-table__cell " scope="row">7778888</td>
+                       <!--  <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                    </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell" scope="row">Geoff Capes</td>
+                        <td class="govuk-table__cell " scope="row">2222333</td>
+                     <!--    <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                    </tr>
+                </tbody>
+            </table>
             </div>
         </div>
 </main>

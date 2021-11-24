@@ -4940,5 +4940,6 @@ router.get('/*/sandbox/ecfchoosy' , function (req, res) {
 })
 
 require('./views/version-18/routes.js')(router);
+require('./views/version-19/routes.js')(router);
 
 module.exports = router
