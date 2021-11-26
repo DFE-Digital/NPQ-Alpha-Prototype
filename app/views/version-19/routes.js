@@ -11,7 +11,7 @@ module.exports = (app) => {
   
   
       if (req.body.pn2 === "ecf1") {
-          res.redirect('/' + version + '/payments/ecfBreakdownv8');
+          res.redirect('/' + version + '/payments/ecfBreakdownv8v1');
   
       } else  {
           res.redirect('/' + version + '/payments/npqList');
