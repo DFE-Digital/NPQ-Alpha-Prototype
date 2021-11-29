@@ -1,0 +1,457 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{{ govukBackLink({
+text: "Back",
+href: "npqListv1"
+}) }}
+{% endblock %}
+{% block content %}
+
+
+
+
+        <div class="govuk-grid-row">
+           
+            <div class="govuk-grid-column-full ">
+             <span class="govuk-caption-xl">   {{data.providerName}}</span>
+                <h1 class="govuk-heading-xl">{{data.h1}}</h1>
+
+                  <div style="display:inline-block" class="govuk-!-width-one-third">
+           
+                
+                  <div class="autocomplete-wrapper">
+                    <label class="govuk-label" for="sort">
+              Choose a different NPQ
+                          </label>
+                    <select class="govuk-select autocomplete-element " id="delveryProvider" name="delveryProvider">
+
+
+                       <option value="" ></option>
+                        <option value="dec">Leading Teaching</option>
+                        <option value="nov">Leading Behaviour and Culture</option>
+                        <option value="oct" >Leading Teacher Development</option>
+                        <option value="aug"> Senior Leadership</option>
+                        <option value="jul" >Headship</option>
+                        <option value="jun">Executive Leadership</option>
+                        <option value="may">Additional Support Offer</option>
+                       
+                    </select>
+                
+          
+          </div>
+                
+
+                </div>
+                <button  style="display:inline-block; margin-top:30px;" class="govuk-button" data-module="govuk-button">
+                  View
+                </button>
+                <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+
+  
+                  <ul class="first govuk-list">
+                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                      <strong class="govuk-body-s float govuk-!-margin-bottom-0">PO number &nbsp;&nbsp;&nbsp;</strong>
+                       <div class="number-group">
+                           <div class="number-container govuk-!-padding-right-4">
+                               <div class="float tooltip">
+                                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                       <span class="">90210</span></div>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+               
+                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                      <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Current participants </strong>
+                       <div class="number-group">
+                           <div class="number-container govuk-!-padding-right-4">
+                               <div class="float tooltip">
+                                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                       <span class="">90210</span></div>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+               
+                      <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                         <strong class="govuk-body-s float govuk-!-margin-bottom-0">
+                         Total participants not paid</strong>
+                          <div class="number-group">
+                              <div class="number-container govuk-!-padding-right-4">
+                                  <div class="float tooltip">
+                                      <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                          <span class="">600</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      
+                      
+                  </ul>
+                  
+                  <ul class="second govuk-list">
+                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Milestone end date</strong>
+                       <div class="number-group">
+                           <div class="number-container govuk-!-padding-right-4">
+                               <div class="float tooltip">
+                                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                       <span class="">	31 August 2022 </span></div>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                      <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                          <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants paid</strong>
+                          <div class="number-group">
+                              <div class="number-container govuk-!-padding-right-4">
+                                  <div class="float tooltip">
+                                      <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                          <span class="">300</span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                   <p></p>
+                   <p></p>
+                  </ul>
+             
+                  <ul class="booster govuk-list">
+                    
+                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Recruitment target</strong>
+                       <div class="number-group">
+                           <div class="number-container govuk-!-padding-right-4">
+                               <div class="float tooltip">
+                                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                       <span class="">	90210 </span></div>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                      <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                          <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Total back payments </strong>
+                          <div class="number-group">
+                              <div class="number-container govuk-!-padding-right-4">
+                                  <div class="float tooltip">
+                                      <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                          <span class="">900</span></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <p></p>
+                      <p></p>
+                  </ul>
+                  <ul class="booster govuk-list">
+                    
+                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort</strong>
+                       <div class="number-group">
+                           <div class="number-container govuk-!-padding-right-4">
+                               <div class="float tooltip">
+                                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                       <span class="">		January 2022,
+                                        May 2022 </span></div>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                      <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                          <strong class="govuk-body-s float govuk-!-margin-bottom-0"> <strong>Total &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</strong></strong> 
+                          <div class="number-group">
+                              <div class="number-container govuk-!-padding-right-4">
+                                  <div class="float tooltip">
+                                      <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                          <span class="">900</span></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </li>
+                      <p></p>
+                      <p></p>
+                  </ul>
+
+                  
+
+                   
+              </div>   
+        
+            <br>
+           
+                   </div>
+       
+
+<div class="govuk-grid-column-full ">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+         
+
+    
+
+    <div class="govuk-grid-column-two-thirds">
+     <table class="govuk-table ">
+       <caption class="govuk-table__caption govuk-table__caption--m">Payment Breakdown</caption>
+       <thead class="govuk-table__head">
+         <tr class="govuk-table__row">
+           <th scope="col" class="govuk-table__header">Payment type</th>
+           <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment amount</th>
+         </tr>
+       </thead>
+       <tbody class="govuk-table__body">
+         <tr class="govuk-table__row">
+           <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee: September 2021 cohort <br><span style="font-weight: normal;">Number of participants - 100</span></td>
+           <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">     £100</td>
+         </tr>
+         <tr class="govuk-table__row">
+           <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee: January 2022 cohort <br><span style="font-weight: normal;">Number of participants - 100</span></td>
+           <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">     £100</td>
+         </tr>
+         <tr class="govuk-table__row">
+           <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Service fee</td>
+           <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£4,282.20</td>
+         </tr>
+         <tr class="govuk-table__row">
+           <td  scope="row" class="govuk-table__cell">Clawbacks</td>
+           <td  class="govuk-table__cell govuk-table__header--numeric">£4,282.20</td>
+         </tr>
+         <!-- <tr class="govuk-table__row">
+           <td scope="row" class="govuk-table__cell">VAT</td>
+           <td class="govuk-table__cell govuk-table__header--numeric">£4,282.20</td>
+         </tr> -->
+         <tr class="govuk-table__row">
+           <th style="border-bottom:none;" scope="row" class="govuk-table__header">Total</th>
+           <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£4,282.20</th>
+         </tr>
+       </tbody>
+     </table>
+
+
+ </div>
+            
+        </div>
+<br>
+        <div class="govuk-tabs" data-module="govuk-tabs">
+          <h2 class="govuk-tabs__title">
+            Contents
+          </h2>
+          <ul class="govuk-tabs__list" role="tablist">
+            <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation">
+              <a class="govuk-tabs__tab" href="#past-day" id="tab_past-day" role="tab" aria-controls="past-day" aria-selected="true" tabindex="0">
+                  Participants paid
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item" role="presentation">
+              <a class="govuk-tabs__tab" href="#past-week" id="tab_past-week" role="tab" aria-controls="past-week" aria-selected="false" tabindex="-1">
+                  Back payments paid
+              </a>
+            </li>
+            <li class="govuk-tabs__list-item" role="presentation">
+              <a class="govuk-tabs__tab" href="#past-month" id="tab_past-month" role="tab" aria-controls="past-month" aria-selected="false" tabindex="-1">
+                  Participants not paid
+              </a>
+            </li>
+
+
+          </ul>
+          <div class="govuk-tabs__panel" id="past-day" role="tabpanel" aria-labelledby="tab_past-day">
+            <h2 class="govuk-heading-l">        Participants paid</h2>
+        
+     
+   
+               
+                  <div style="display: inline-block">
+                      <label class="govuk-label govuk-!-width-three-quarters bold-label" for="firstName">
+                          Search participants
+                      </label>
+                      <span id="email-hint" class="govuk-hint">
+                      Search by User ID (UUID) or TRN
+                      </span>
+                      <input class="govuk-input govuk-!-width-three-quarters" style="min-width:300px" id="firstName" name="firstName" type="text" aria-describedby="First Name"><div class="bba"><button class="search" type="submit"> </button></div>
+                      <p style="margin-top:10px">Showing 1 to 5 of five results found</p>
+                  </div>
+
+          <table class="govuk-table  " style="">
+              <thead>
+                  <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">User ID (UUID)</th>
+                          <th scope="col" class="govuk-table__header">TRN</th>
+                          <th scope="col" class="govuk-table__header">Delivery partner</th>
+                          <th scope="col" class="govuk-table__header">Cohort</th>
+                        
+
+                         
+               
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="row">32893843984</td>
+                      <td class="govuk-table__cell " scope="row">dsdsd</td>
+                      <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+                      <td class="govuk-table__cell" scope="row">September 2021</td>
+                     <!--   <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="row">32893843984</td>
+                      <td class="govuk-table__cell " scope="row">dsdsd</td>
+                      <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+                      <td class="govuk-table__cell" scope="row">September 2021</td>
+                     <!--   <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="row">32893843984</td>
+                      <td class="govuk-table__cell " scope="row">dsdsd</td>
+                      <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+                      <td class="govuk-table__cell" scope="row">September 2021</td>
+                     <!--   <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="row">32893843984</td>
+                      <td class="govuk-table__cell " scope="row">dsdsd</td>
+                      <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+                      <td class="govuk-table__cell" scope="row">January 2022</td>
+                     <!--   <td class="govuk-table__cell " scope="row">Reason X</td> -->
+                  </tr>
+              </tbody>
+          </table>
+        
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week" role="tabpanel" aria-labelledby="tab_past-week">
+            <h2 class="govuk-heading-l">     Back payments paid</h2>
+            <div class="govuk-form-group" style="">
+              <fieldset class="govuk-fieldset">
+                  <div class="govuk-form-group" style="display: inline-block">
+                      <label class="govuk-label govuk-!-width-three-quarters bold-label" for="firstName">
+                          Search participants
+                      </label>
+                      <span id="email-hint" class="govuk-hint">
+                      Search by User ID (UUID) or TRN
+                      </span>
+                      <input class="govuk-input govuk-!-width-three-quarters" style="min-width:500px" id="firstName" name="firstName" type="text" aria-describedby="First Name"><div class="bba"><button class="search" type="submit"> </button></div>
+                  </div>
+                  <p style="margin-top:10px">Showing 1 to 5 of five results found</p>
+              </fieldset>
+          </div>
+
+          <table class="govuk-table " style="">
+              <thead>
+                  <tr class="govuk-table__row">
+                          <th scope="col" class="govuk-table__header">User ID (UUID)</th>
+                          <th scope="col" class="govuk-table__header">TRN</th>
+                          <th scope="col" class="govuk-table__header">Delivery partner</th>
+                          <th scope="col" class="govuk-table__header">Milestone </th>
+                          <th scope="col" class="govuk-table__header">Cohort</th>
+                        <!--   <th scope="col" class="govuk-table__header">Reason for rejection</th> -->
+                         
+               
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="row">32893843984</td>
+                      <td class="govuk-table__cell " scope="row">dsdsd</td>
+                      <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+                      <td class="govuk-table__cell" scope="row">1</td>
+                      <td class="govuk-table__cell" scope="row">September 2021</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="row">32893843984</td>
+                      <td class="govuk-table__cell " scope="row">dsdsd</td>
+                      <td class="govuk-table__cell" scope="row">delivery partner 2</td>
+                      <td class="govuk-table__cell" scope="row">2</td>
+                      <td class="govuk-table__cell" scope="row">September 2021</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <td class="govuk-table__cell" scope="row">32893843984</td>
+                      <td class="govuk-table__cell " scope="row">dsdsd</td>
+                      <td class="govuk-table__cell" scope="row">delivery partner 3</td>
+                      <td class="govuk-table__cell" scope="row">3</td>
+                      <td class="govuk-table__cell" scope="row">September 2021</td>
+                  </tr>
+                  
+              </tbody>
+          </table>
+        
+          </div>
+          <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month" role="tabpanel" aria-labelledby="tab_past-month">
+            <h2 class="govuk-heading-l">    Participants not paid</h2>
+            <div class="govuk-form-group" style="">
+              <fieldset class="govuk-fieldset">
+                  <div class="govuk-form-group" style="display: inline-block">
+                      <label class="govuk-label govuk-!-width-three-quarters bold-label" for="firstName">
+                          Search participants
+                      </label>
+                      <span id="email-hint" class="govuk-hint">
+                      Search by User ID (UUID) or TRN
+                      </span>
+                      <input class="govuk-input govuk-!-width-three-quarters" style="min-width:500px" id="firstName" name="firstName" type="text" aria-describedby="First Name"><div class="bba"><button class="search" type="submit"> </button></div>
+                  </div>
+                  <p style="margin-top:10px">Showing 1 to 5 of five results found</p>
+              </fieldset>
+          </div>
+<table class="govuk-table " style="">
+      <thead>
+          <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">User ID (UUID)</th>
+                  <th scope="col" class="govuk-table__header">TRN</th>
+                  <th scope="col" class="govuk-table__header">Delivery partner</th>
+                  <th scope="col" class="govuk-table__header">Reason for rejection</th>
+                  <th scope="col" class="govuk-table__header">Cohort</th>
+                 
+       
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">32893843984</td>
+              <td class="govuk-table__cell " scope="row">dsdsd</td>
+              <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+              <td class="govuk-table__cell " scope="row">9021022</td>
+              <td class="govuk-table__cell" scope="row">September 2021</td>
+           
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">32893843984</td>
+              <td class="govuk-table__cell " scope="row">dsdsd</td>
+              <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+              <td class="govuk-table__cell " scope="row">9021022</td>
+              <td class="govuk-table__cell" scope="row">September 2021</td>
+           
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">32893843984</td>
+              <td class="govuk-table__cell " scope="row">dsdsd</td>
+              <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+              <td class="govuk-table__cell " scope="row">9021022</td>
+              <td class="govuk-table__cell" scope="row">September 2021</td>
+           
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">32893843984</td>
+              <td class="govuk-table__cell " scope="row">dsdsd</td>
+              <td class="govuk-table__cell" scope="row">delivery partner 1</td>
+              <td class="govuk-table__cell " scope="row">9021022</td>
+              <td class="govuk-table__cell" scope="row">September 2021</td>
+           
+          </tr>
+      </tbody>
+  </table>
+
+        
+          </div>
+
+  
+        </div>
+                    </div>
+
+            
+            </div>
+
+            
+
+
+{% endblock %}
+

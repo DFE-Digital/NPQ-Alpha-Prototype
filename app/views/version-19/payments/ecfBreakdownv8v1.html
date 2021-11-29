@@ -3,31 +3,18 @@
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
 text: "Back",
-href: "javascript:history.back()"
+href: "choose-provider"
 }) }}
 {% endblock %}
 {% block content %}
-<script src="/public/javascripts/accordion.js"></script>
-<script>
-if (
-    'addEventListener' in document &&
-    document.querySelectorAll
-) {
-    document.addEventListener('DOMContentLoaded', function() {
-        var accordions = document.querySelectorAll('.accordion')
-        for (var i = accordions.length - 1; i >= 0; i--) {
-            new Accordion(accordions[i])
-        };
-    })
-}
-</script>
+
 
 
 
         <div class="govuk-grid-row">
            
             <div class="govuk-grid-column-full ">
-          
+             
                 <h1 class="govuk-heading-xl">{{data.providerName}}</h1>
                 <div class="govuk-grid-column-one-third">
                 <div  style="display:inline-block" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
@@ -45,39 +32,35 @@ if (
                 </div>
 </div>
                   <div style="display:inline-block" class="">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="sort">
-              View previous payment breakdown
-                  </label>
-                  <select class="govuk-select govuk-!-width-full" id="sort" name="sort">
-                    <option value="updated" selected>Select an option</option>
-                    <option value="dec">December 2021</option>
-                    <option value="nov">November 2021</option>
-                    <option value="oct" >October 2021</option>
-                    <option value="sep">September 2021</option>
-                    <option value="aug"> August 2021</option>
-                    <option value="jul" >July 2021</option>
-                    <option value="jun">June 2021</option>
-                    <option value="may">May 2021</option>
-                    <option value="apr" >April 2021</option>
-                    <option value="mar">March 2021</option>
-                    <option value="feb">February 2021</option>
-                    <option value="jan" >January 2021</option>
-                   
-             
-              
-               
-                  
-             
+           
+                
+                  <div class="autocomplete-wrapper">
+                    <label class="govuk-label" for="sort">
+                      View previous payment breakdown
+                          </label>
+                    <select class="govuk-select autocomplete-element" id="delveryProvider" name="delveryProvider">
+
+
+                       <option value="" ></option>
+                        <option value="dec">December 2021</option>
+                        <option value="nov">November 2021</option>
+                        <option value="oct" >October 2021</option>
+                        <option value="sep">September 2021</option>
+                        <option value="aug"> August 2021</option>
+                        <option value="jul" >July 2021</option>
+                        <option value="jun">June 2021</option>
+                        <option value="may">May 2021</option>
+                        <option value="apr" >April 2021</option>
+                        <option value="mar">March 2021</option>
+                        <option value="feb">February 2021</option>
+                        <option value="jan" >January 2021</option>
+                       
+                    </select>
                 
           
-                 
-                  
-              
-                  </select>
-                  
-                </div>
+          </div>
                 
+
                 </div>
   
                 <button  style="display:inline-block; margin-top:30px;" class="govuk-button" data-module="govuk-button">
@@ -116,7 +99,7 @@ if (
                          <div class="number-container govuk-!-padding-right-4">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="govuk-link--no-visited-state number-link">90210</span></div>
+                                     <span class="">90210</span></div>
                              </div>
                          </div>
                      </div>
@@ -128,7 +111,7 @@ if (
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
                                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                        <span class="govuk-link--no-visited-state number-link">600</span>
+                                        <span class="">600</span>
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +125,7 @@ if (
                          <div class="number-container govuk-!-padding-right-4">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="govuk-link--no-visited-state number-link">	90210 </span></div>
+                                     <span class="">	90210 </span></div>
                              </div>
                          </div>
                      </div>
@@ -153,7 +136,7 @@ if (
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
                                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                        <span class="govuk-link--no-visited-state number-link">300</span>
+                                        <span class="">300</span>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +151,7 @@ if (
                          <div class="number-container govuk-!-padding-right-4">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="govuk-link--no-visited-state number-link">	90210 </span></div>
+                                     <span class="">	90210 </span></div>
                              </div>
                          </div>
                      </div>
@@ -179,7 +162,7 @@ if (
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
                                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                        <span class="govuk-link--no-visited-state number-link">900</span></div>
+                                        <span class="">900</span></div>
                                 </div>
                             </div>
                         </div>

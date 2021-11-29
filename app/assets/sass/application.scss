@@ -16,7 +16,16 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/related-items";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
+.autocomplete__dropdown-arrow-down2 {
+  /* z-index: 0; */
+  display: block;
+  position: relative;
+  /* right: 328px; */
+  /* width: 24px; */
+  height: 24px;
+  left: 252px;
+  bottom: 30px;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -65,23 +74,10 @@ $govuk-assets-path: '/govuk/assets/';
   grid-template-rows: 1fr repeat(3,auto);
   grid-auto-flow: row;
   grid-row-gap: 1rem;
-  grid-column-gap: 1
-rem
+  grid-column-gap: 1rem
 ;
 }
-.vaccinations {
-  display: grid;
-  padding: 20px;
-  background-color: #f8f8f8;
-  border: 1px #f3f2f1 solid;
-  flex: 1 1 100%;
-  margin-bottom: 0 !important;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr repeat(3,auto);
-  grid-auto-flow: row;
-  grid-row-gap: 1rem;
-  grid-column-gap: 1rem;
-}
+
 
 .vaccinations>ul {
   padding: unset
@@ -121,7 +117,7 @@ rem
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2,1fr);
   grid-gap: .5rem;
-  align-items: end
+
 }
 
 @media(min-width: 68.75em) {
@@ -282,7 +278,7 @@ rem
 
 .float {
   display: inline-block;
-  float: left
+  float: left;
 }
 
 /* Sortable tables 
@@ -1584,182 +1580,6 @@ table.sortable th.sorttable_sorted_reverse
 #sorttable_sortfwdind {
   font-size: 16px;
 }
-
-//// Things for the autocomplete
-
-.das-user-panel {
-    margin-top: -10px;
-    padding: 25px 0 15px;
-    background-color: #005ea5;
-  }
-
-.das-user-panel__content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-}
-.das-user-panel__item {
-    color: #fff;
-    margin-right: 15px;
-    margin-bottom: 0;
-}
-.govuk-link--white:link, .govuk-link--white:visited {
-    color: #fff;
-}
-
-.das-no-wrap {
-    white-space: nowrap;
-}
-
-.das-user-panel__item--grow {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-}
-
-.autocomplete__wrapper {
-  position: relative;
-  font-size: 16px;
-}
-
-.autocomplete__hint,
-.autocomplete__input {
-  -webkit-appearance: none;
-  border: 2px solid;
-  border-radius: 0; /* Safari 10 on iOS adds implicit border rounding. */
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  margin-bottom: 0; /* BUG: Safari 10 on macOS seems to add an implicit margin. */
-  height: 40px;
-  width: 100%;
-}
-
-.autocomplete__input {
-  background-color: transparent;
-  position: relative;
-}
-
-.autocomplete__hint {
-  color: $govuk-border-colour;
-  position: absolute;
-}
-
-.autocomplete__input--default {
-  padding: 5px;
-}
-
-.autocomplete__input--focused {
-  outline-offset: 0;
-  outline: 3px solid $govuk-focus-colour;
-}
-
-.autocomplete__input--show-all-values {
-  padding: 5px 35px 5px 5px;
-  cursor: pointer;
-}
-
-.autocomplete__dropdown-arrow-down {
-  z-index: -1;
-  display: inline-block;
-  position: absolute;
-  right: 8px;
-  width: 24px;
-  height: 24px;
-  top: 10px;
-}
-
-.autocomplete__menu {
-  background-color: govuk-colour("white");
-  border: 2px solid govuk-colour("black");
-  border-top: 0;
-  color: $govuk-text-colour;
-  margin: 0;
-  max-height: 332px;
-  overflow-y: scroll;
-  padding: 0;
-  width: 100%;
-  width: calc(100% - 4px);
-}
-
-.autocomplete__menu--visible {
-  display: block;
-}
-
-.autocomplete__menu--hidden {
-  display: none;
-}
-
-.autocomplete__menu--overlay {
-  box-shadow: rgba(0, 0, 0, 0.256863) 0px 2px 6px;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  z-index: 100;
-}
-
-.autocomplete__menu--inline {
-  position: relative;
-}
-
-.autocomplete__option {
-  border-bottom: solid $govuk-border-colour;
-  border-width: 1px 0;
-  cursor: pointer;
-  display: block;
-  line-height: 26px;
-  position: relative;
-
-  // option 1 - truncated
-  // white-space: nowrap;
-  // overflow: hidden;
-  // text-overflow: ellipsis;
-  // height: 26px;
-
-  // option 2 - full text dynamic height
-  min-height: 26px
-}
-
-.autocomplete__option > * {
-  pointer-events: none;
-}
-
-.autocomplete__option:first-of-type {
-  border-top-width: 0;
-}
-
-.autocomplete__option:last-of-type {
-  border-bottom-width: 0;
-}
-
-.autocomplete__option--odd {
-  background-color: govuk-colour("light-grey")
-}
-
-.autocomplete__option--focused,
-.autocomplete__option:hover {
-  background-color: $govuk-link-colour;
-  border-color: $govuk-link-colour;
-  color: white;
-  outline: none;
-}
-
-.autocomplete__option--no-results {
-  background-color: govuk-colour("dark-grey");
-  color: govuk-colour("mid-grey");
-  cursor: not-allowed;
-}
-
-.autocomplete__hint,
-.autocomplete__option {
-  padding: 5px;
-}
-
 .autocomplete__wrapper input,
 .autocomplete__wrapper li {
   font-family: 'nta', Arial, sans-serif;
@@ -1769,24 +1589,6 @@ table.sortable th.sorttable_sorted_reverse
   -moz-osx-font-smoothing: grayscale;
 }
 
-@include govuk-media-query($from: tablet) {
-  .autocomplete__hint,
-  .autocomplete__input,
-  .autocomplete__option {
-    font-size: 19px;
-  }
-
-  .autocomplete__hint,
-  .autocomplete__input {
-    line-height: 25px;
-  }
-
-  .autocomplete__wrapper input,
-  .autocomplete__wrapper li {
-    font-size: 19px;
-  }
-}
-/////
 .recruitSideAddThing {
   border-left: 5px solid #2e358b;
   min-height:80px;

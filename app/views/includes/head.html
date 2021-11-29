@@ -3,15 +3,38 @@
 <!-- Javascript -->
  <script src="/public/javascripts/jquery-3.3.1.min.js"></script>
  <script src="/public/javascripts/jquery-migrate-1.4.1.min.js"></script>
-<script src="/node_modules/govuk-frontend/all.js"></script>
 <script src="/public/javascripts/application.js"></script>
 <script src="/public/javascripts/jquery.tabs.js"></script>
  <script src="/public/javascripts/greedyNav.js"></script>
  <script src="/public/javascripts/cookie.js"></script>
+ <script src="/public/javascripts/accessible-autocomplete.min.js"></script>
+ <script>
+   $(document).ready(function() {
+     $('.autocomplete-element').each(function() {
+       var selectEl = document.querySelector('#' + $(this).attr('id') )
+       accessibleAutocomplete.enhanceSelectElement({
+         autoselect: false,
+         defaultValue: '',
+         minLength: 2,
+         selectElement: selectEl,
+         placeholder: 'Select an option',
+         showAllValues: true, 
+         dropdownArrow: function (config) {
+      return '<svg class="' + config.className + '" style="top: 8px;" viewBox="0 0 512 512" ><path d="M256,298.3L256,298.3L256,298.3l174.2-167.2c4.3-4.2,11.4-4.1,15.8,0.2l30.6,29.9c4.4,4.3,4.5,11.3,0.2,15.5L264.1,380.9  c-2.2,2.2-5.2,3.2-8.1,3c-3,0.1-5.9-0.9-8.1-3L35.2,176.7c-4.3-4.2-4.2-11.2,0.2-15.5L66,131.3c4.4-4.3,11.5-4.4,15.8-0.2L256,298.3  z"/></svg>'
+    }
+         
+       })
+     })
+   })
+ 
+   </script>
+ 
+    
+<!-- 
  <script>
 console.log("the prototype can't find the all.js from GET https://das-nonlevy-prototype.herokuapp.com/node_modules/govuk-frontend/all.js so its in /public/javascripts/all.js - remember to replace this in includes/head.html if it changes")
 
- </script>
+ </script> -->
  <!-- this is a hack as the prototype can't find the all.js from GET https://das-nonlevy-prototype.herokuapp.com/node_modules/govuk-frontend/all.js  -->
 
   <script src="/public/javascripts/all.js"></script>
@@ -22,7 +45,7 @@ console.log("the prototype can't find the all.js from GET https://das-nonlevy-pr
   <script src="/public/javascripts/auto-store-data.js"></script>
 {% endif %}
 
-
+<link rel="stylesheet" href="/public/css/accessible-autocomplete.min.css"/>
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
  

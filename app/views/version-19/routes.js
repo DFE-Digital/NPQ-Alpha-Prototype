@@ -14,7 +14,7 @@ module.exports = (app) => {
           res.redirect('/' + version + '/payments/ecfBreakdownv8v1');
   
       } else  {
-          res.redirect('/' + version + '/payments/npqList');
+          res.redirect('/' + version + '/payments/npqListv1');
   
       }
   
