@@ -11,10 +11,10 @@ module.exports = (app) => {
   
   
       if (req.body.pn2 === "ecf1") {
-          res.redirect('/' + version + '/payments/ecfBreakdownv8v1');
+          res.redirect('/' + version + '/payments/ecf-payment-breakdown');
   
       } else  {
-          res.redirect('/' + version + '/payments/npqListv1');
+          res.redirect('/' + version + '/payments/npq-payment-breakdown');
   
       }
   
