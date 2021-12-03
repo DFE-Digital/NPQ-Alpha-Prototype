@@ -7,7 +7,7 @@
 
 {{ govukBackLink({
   text: "Back",
- href: "ecfBreakdownv8v1"
+ href: "ecf-payment-breakdown"
 }) }}
 {% endblock %}
 
@@ -20,54 +20,107 @@
                 <h1 class="govuk-heading-xl">Participant information</h1>
                 <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
 
-                 
-    
-                  
-                    <div itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">{{data.providerName}}</strong>
-                         <div class="number-group">
-                             <div class="number-container govuk-!-padding-right-4">
-                                 <div class="float tooltip">
-                                     <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                         <span class="">	Milestone end date 21 September 2022 </span>
-                                         <p class="govuk-!-margin-bottom-0 govuk-!-margin-top-2 govuk-!-font-size-16">
-                                          <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
-                                              <strong>Download payment breakdown (CSV)</strong>
-                                              </a>
-                                          </p>
-                                        </div>
-                                 </div>
-                             </div>
-                         </div>
-                        </div>
-                      <div itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants - September 2021 cohort</strong>
-                         <div class="number-group">
-                             <div class="number-container govuk-!-padding-right-4">
-                                 <div class="float tooltip">
-                                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                         <span class="">	90210 </span></div>
-                                 </div>
-                             </div>
-                         </div>
-                        </div>
-                           
-                      <div itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants - January 2022 cohort</strong>
-                         <div class="number-group">
-                             <div class="number-container govuk-!-padding-right-4">
-                                 <div class="float tooltip">
-                                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                         <span class="">	90210 </span></div>
-                                 </div>
-                             </div>
-                         </div>
-                        </div>
+                  <div class="topic">
+                    <strong itemprop="name" class="govuk-caption-m govuk-!-font-weight-regular">Provider</strong>
+                      <h4 class="govuk-heading-m title-mobile govuk-!-margin-bottom-0">{{data.providerName}}</h4>
+                      <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
+                        
+                        <span class="card-timestamp">Milestone end date 21 September 2022</span> <br>       <br>
                    
-               
-     
-                                    
-                </div>  
+                          <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
+                              <strong>Download payment breakdown (CSV)</strong>
+                              </a>
+                      </p>
+                       
+                            
+                  </div>
+                  <ul class="second govuk-list">
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Current milestone &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">1</span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+             
+                 <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                  <strong class="govuk-body-s float govuk-!-margin-bottom-0">Back payment</strong>
+                  <div class="number-group">
+                      <div class="number-container govuk-!-padding-right-4">
+                          <div class="float tooltip">
+                              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                  <span class="">300</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+                    
+                    
+                </ul>
+                
+                <ul class="second govuk-list">
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants - September 2021 cohort</strong>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">	100</span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                 <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                  <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Total paid</strong>
+                  <br>
+                  <div class="number-group">
+                      <div class="number-container govuk-!-padding-right-4">
+                          <div class="float tooltip">
+                              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                  <span class="">900</span></div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+           
+                </ul>
+           
+                <ul class="booster govuk-list">
+                  
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants - January 2022 cohort</strong>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">	100 </span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Total not paid </strong>
+                        <br>
+                        <div class="number-group">
+                            <div class="number-container govuk-!-padding-right-4">
+                                <div class="float tooltip">
+                                    <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                        <span class="">900</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+          
+                </ul>
+           
+   
+                                  
+              </div>
                 <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
                   <ul class="app-subnav__list">
                       <li class="app-subnav__list-item ">

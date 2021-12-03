@@ -48,6 +48,14 @@ const dummy_employer_2 = {
   name: "; DROP TABLE \"COMPANIES\";-- LTD"
 }
 
+router.use(function (req, res, next) {
+  if (!req.session.employers) {
+    console.log("Adding employers to session");
+    req.session.employers = [dummy_employer_1, dummy_employer_2];
+  }
+  next();
+})
+
 
 router.use(function (req, res, next) {
   if (!req.session.employers) {
