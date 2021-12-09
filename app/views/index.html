@@ -16,22 +16,23 @@ var socket = io();
               Contents
             </h2>
             <ul class="govuk-tabs__list">
-              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                <a class="govuk-tabs__tab" href="#past-day">
-              Dev ready versions
-                </a>
-              </li>
               <li class="govuk-tabs__list-item">
                 <a class="govuk-tabs__tab" href="#past-week">
           Design exploration
                 </a>
               </li>
+              <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <a class="govuk-tabs__tab" href="#past-day">
+              Dev ready versions
+                </a>
+              </li>
+            
            
             </ul>
             <div class="govuk-tabs__panel" id="past-day">
               <h2 class="govuk-heading-l">Latest version - 18</h2>
 
-              <h2 class="govuk-heading-m">Contract manager journey</h2>
+              <h2 class="govuk-heading-m">Manage CPD contracts</h2>
       
               <a class="govuk-button" href="version-18/payments">Start</a>
               <p class="govuk-body">Quick links:</p>
@@ -53,7 +54,7 @@ var socket = io();
                     <div class="govuk-accordion__section-header">
                       <h2 class="govuk-accordion__section-heading">
                         <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-             Version archive
+         Previous versions
                         </span>
                       </h2>
                     </div>
@@ -167,26 +168,80 @@ var socket = io();
             </div>
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
     
-              <h2 class="govuk-heading-l">Latest version - 1</h2>
+              <h2 class="govuk-heading-m">Version 2 - <strong class="govuk-tag govuk-tag--pink ">To be user tested</strong> </h2>
 
-              <h2 class="govuk-heading-m">Contract manager journey</h2>
+              <h2 class="govuk-heading-m">Manage CPD contracts</h2>
       
-              <a class="govuk-button" href="version-19/payments">Start</a>
-              <!-- <p class="govuk-body">Quick links:</p>
+              <a class="govuk-button" href="version-20/payments">Start</a>
+              <p class="govuk-heading-s">Quick links:</p>
               <ul class="govuk-list govuk-list--bullet">
-                <li><a href="/version-18/payments/npqList">NPQ payment breakdown</a></li>
-                <li><a href="/version-18/payments/ecfBreakdownv8">ECF payment breakdown</a></li>
-                <li><a href="/version-18/payments/upliftSplitJan">Delivery partner uplift breakdown - new page </a></li>
-                <li><a href="/version-18/payments/deliveryPartnersSept">Delivery partner breakdown - new page </a></li>
+                <p class="govuk-body">ECF:</p>
+                <li><a href="/version-20/payments/ecf-payment-breakdown">ECF payment breakdown</a></li>
+                <li><a href="/version-20/payments/ecf-participant-information-p1">Participant information and Delivery partner breakdown</a></li>
+                <li><a href="/version-20/payments/ecf-uplift-payment-information">Uplift payment information</a></li>
+
+            <br>
+                <p class="govuk-body">NPQ:</p>
+                <li><a href="/version-20/payments/npq-payment-breakdown">NPQ payment breakdown</a></li>
+                <li><a href="/version-20/payments/npq-further-payment-breakdown">NPQ course payment breakdown and participnt information</a></li>
+               
               </ul>
-              <h2 class="govuk-heading-m">Provider journeys</h2>
-              <ul class="govuk-list govuk-list--bullet">
-                <li><a href="/version-18/payments/ecfBreakdownProviderv4">ECF breakdown for provider</a></li>
-                <li><a href="/version-18/payments/npqBreakdownProviderv1">NPQ breakdown for provider</a></li>
-              </ul>
-           -->
-            </div>
+       
+          
+<hr>
+<br>
+           <h2 class="govuk-heading-m">Previous versions </h2>
+           <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+             
+                 
+            <div class="govuk-accordion__section govuk-accordion__section--expanded">
+              <div class="govuk-accordion__section-header">
+              
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button govuk-!-width-two-thirds" id="accordion-default-heading-4">
+Version 1 -      <strong class="govuk-tag govuk-tag--green ">User tested on Thursday 9 December</strong> 
+</span>
+
+             
+                </h2>
+               
+              </div>
+              <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+             
+               <p><a class="govuk-heading-s" target="_blank" href="">View research results</a></p> 
+                <h2 class="govuk-heading-m">Manage CPD contracts</h2>
         
+                <a class="govuk-button" href="version-19/payments">Start</a>
+
+                <p class="govuk-heading-s">Design changes</p>
+                <ul class="govuk-list govuk-list--bullet">
+          <li>Reused space to allow users to view information easier</li>
+          <li>Created more of a dashboard feel</li>
+          <li>Removed accordians</li>
+          <li>Introduced participant information</li>
+                </ul>
+                <p class="govuk-heading-s">Quick links:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <p class="govuk-body">ECF:</p>
+                  <li><a href="/version-19/payments/ecf-payment-breakdown">ECF payment breakdown</a></li>
+                  <li><a href="/version-19/payments/ecf-participant-information-p1">Participant information and Delivery partner breakdown</a></li>
+                  <li><a href="/version-19/payments/ecf-uplift-payment-information">Uplift payment information</a></li>
+  
+              <br>
+                  <p class="govuk-body">NPQ:</p>
+                  <li><a href="/version-19/payments/npq-payment-breakdown">NPQ payment breakdown</a></li>
+                  <li><a href="/version-19/payments/npq-further-payment-breakdown">NPQ course payment breakdown and participnt information</a></li>
+                 
+                </ul>
+         
+              </div>
+            </div>
+       
+
+    </div>
+   
+            </div>
+    
     
           </div>
      

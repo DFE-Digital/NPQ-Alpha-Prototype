@@ -1,0 +1,333 @@
+{% extends "layout.html" %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{{ govukBackLink({
+  text: "Back",
+ href: "ecf-payment-breakdown"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+             
+                <h1 class="govuk-heading-xl">Participant information</h1>
+                <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+
+                  <div class="topic govuk-!-width-two-quarters">
+                    <strong itemprop="name" class="govuk-caption-m govuk-!-font-weight-regular">Provider</strong>
+                      <h4 class="govuk-heading-m title-mobile govuk-!-margin-bottom-0">{{data.providerName}}</h4>
+                      <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
+                        
+                        <span class="card-timestamp">Milestone end date 21 November 2021</span> <br>       <br>
+                   
+                          <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
+                              <strong>Download payment breakdown (CSV)</strong>
+                              </a>
+                      </p>
+                       
+                            
+                  </div>
+                  <ul class="second govuk-list">
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Current milestone </strong>
+                    <br>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">1</span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+             
+                 <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                  <strong class="govuk-body-s float govuk-!-margin-bottom-0">Back payment</strong>
+                  <div class="number-group">
+                      <div class="number-container govuk-!-padding-right-4">
+                          <div class="float tooltip">
+                              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                  <span class="">300</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+                    
+                    
+                </ul>
+                
+                <ul class="second govuk-list">
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants - January 2021 cohort</strong>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">	2250</span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                 <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                  <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Total paid</strong>
+                  <br>
+                  <div class="number-group">
+                      <div class="number-container govuk-!-padding-right-4">
+                          <div class="float tooltip">
+                              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                  <span class="">900</span></div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+           
+                </ul>
+           
+                <ul class="booster govuk-list">
+                  
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants - September 2021 cohort</strong>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">	2250 </span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Total not paid </strong>
+                        <br>
+                        <div class="number-group">
+                            <div class="number-container govuk-!-padding-right-4">
+                                <div class="float tooltip">
+                                    <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                        <span class="">900</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+          
+                </ul>
+           
+   
+                                  
+              </div>
+
+                
+                <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
+                    <ul class="app-subnav__list">
+                        <li class="app-subnav__list-item app-subnav__list-item--selected">
+                    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="">
+                      
+                        Participants
+                   <span class="govuk-visually-hidden">Current page</span>
+                  </a></li>
+                  <li class="app-subnav__list-item">
+                    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-participant-information-p2">
+                      
+                        Delivery partner breakdown 
+                  </a></li>
+                  
+                  
+                    </ul>
+                  </nav>
+                  
+            
+                  
+                  <div class="search-box">
+                    <div class="search-box__form ">
+                      <div class="search-box__input govuk-!-width-two-thirds">
+                        <div class="govuk-form-group">
+                          <label for="query-field" class="govuk-label govuk-label--s">Search participants</label>
+                          <span class="govuk-hint" id="query-hint"> Search by full name or TRN</span>
+                          <input id="search" class="govuk-input" aria-describedby="query-hint" type="text"name="query">
+                          </div>
+                      </div>
+
+                      <div class="search-box__input  govuk-!-width-one-third">
+           
+                        <div class="govuk-form-group "><label for="type-field" class="govuk-label">Filter by payment status</label><select
+                            id="paid" class="govuk-select" name="type">
+                            <option value="View all">View all</option>
+                            <option value="PAID">Paid</option>
+                            <option value="BACKPAYMENT">Backpayment</option>
+                            <option value="NOTPAID">Not paid</option>
+                          </select></div>
+                      </div>
+                      <button id="searchbtn"  name="commit" value="Search" formnovalidate="formnovalidate" class="govuk-button search-box__button">Search</button>
+                      <a class="govuk-link search-box__button govuk-!-font-size-16 " href="">Clear filters</a>
+                    </div>
+                  </div>
+
+           
+                <table id="table" class="govuk-table  " style="">
+                    <thead>
+                        <tr class="govuk-table__row">
+                          <tr class="govuk-table__row">
+                   
+                                <th scope="col" class="govuk-table__header">Full name</th>
+                                <th scope="col" class="govuk-table__header">TRN</th>
+                                <th scope="col" class="govuk-table__header">Delivery partner</th>
+                                <th scope="col" class="govuk-table__header">Cohort</th>
+                                <th scope="col" class="govuk-table__header">Payment status for current milestone</th>
+                                <th scope="col" class="govuk-table__header">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="shelulerData">
+                     
+                          {% for item in data.pinfo %}
+                          <tr id="row" 
+                          {% if item.pay === 'PAID' %} 
+                          class="govuk-table__row paid" 
+                          {% elif item.pay === 'NOT PAID' %} 
+                          class="govuk-table__row notpaid" 
+                          {% elif item.pay === 'BACKPAYMENT' %} 
+                          class="govuk-table__row backpayment" 
+                           {%endif%}
+                          >
+                      
+                          <td class="govuk-table__cell" scope="row">{{item.name}}</td>
+                  
+                         
+                            <td class="govuk-table__cell " scope="row">{{item.trn}}</td>
+                            <td class="govuk-table__cell" scope="row">{{item.dp}}</td>
+          
+                            <td class="govuk-table__cell" scope="row">{{item.c}}</td>
+                             <td  class="govuk-table__cell" scope="row">     
+                               <strong {% if item.pay === 'PAID' %} class="govuk-tag govuk-tag--green"
+                               {% elif item.pay === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                               {% elif item.pay === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                              {%endif%}
+                               >
+                               {% if item.pay === 'NOT PAID' %}
+                              {{item.pay}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                              {%else%}
+                              {{item.pay}}
+                            </strong>
+                              {%endif%}
+                        </td>
+                        <td scope="col" class="govuk-table__cell"><a href="participant-payment-info?name={{item.name}}">View payment history</a></td>
+                        </tr>
+                        {% endfor %}
+                  
+
+                    </tbody>
+                </table>
+                <div class="hods-pagination">
+                    <div class="hods-pagination__summary">
+                      Showing 51 - 75 of 249 results
+                    </div>
+                    <ul style="padding-left:0px;" class="">
+                      <li class="hods-pagination__item" id="prevButton">
+                        <a class="hods-pagination__link" href="?page=2">
+                          <span aria-hidden="true" role="presentation">
+                            «
+                          </span>
+                          Previous
+                        </a>
+                      </li>
+                      <li class="hods-pagination__item">
+                        <a class="hods-pagination__link" href="?page=1">
+                          1
+                        </a>
+                      </li>
+                      <li class="hods-pagination__item">
+                        <a class="hods-pagination__link" href="?page=2">
+                          2
+                        </a>
+                      </li>
+                      <li class="hods-pagination__item">
+                        <a
+                          class="
+                            hods-pagination__link
+                            hods-pagination__link--current
+                          "
+                          href=""
+                        >
+                          3
+                        </a>
+                      </li>
+                      <li class="hods-pagination__item">
+                        <a class="hods-pagination__link" href="?page=4">
+                          4
+                        </a>
+                      </li>
+                      <li class="hods-pagination__item">
+                        <a class="hods-pagination__link" href="?page=5">
+                          5
+                        </a>
+                      </li>
+                      <li class="hods-pagination__item" id="nextButton">
+                        <a class="hods-pagination__link" href="?page=4">
+                          Next
+                          <span aria-hidden="true" role="presentation">
+                            »
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+               
+          
+
+    
+            </div>
+        </div>
+
+        <script>
+
+$("#searchbtn").click(function() {
+
+  $.each($("#table tbody tr"), function() {
+
+if($(this).text().toLowerCase().indexOf($('#search').val().toLowerCase()) === -1){
+    $(this).hide();
+              
+
+} 
+
+
+else if($("select").find(':selected').text() == 'Paid' ){
+  $("tr").filter( $("tr.notpaid").hide());
+  $("tr").filter( $("tr.backpayment").hide());
+  $("tr").filter( $("tr.paid").show());
+}
+
+else if($("select").find(':selected').text() == 'Backpayment'){
+  $("tr").filter( $("tr.notpaid").hide());
+  $("tr").filter( $("tr.backpayment").show());
+  $("tr").filter( $("tr.paid").hide());
+}
+
+else if($("select").find(':selected').text() == 'Not paid'){
+  $("tr").filter( $("tr.notpaid").show());
+  $("tr").filter( $("tr.backpayment").hide());
+  $("tr").filter( $("tr.paid").hide());
+}
+
+else if($("select").find(':selected').text() == 'View all'){
+  $("tr").filter( $("tr.notpaid").show());
+  $("tr").filter( $("tr.backpayment").show());
+  $("tr").filter( $("tr.paid").show());
+}
+
+  })
+   
+});
+
+
+
+          </script>
+
+{% endblock %}
+
