@@ -17,15 +17,39 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
              
-                <h1 class="govuk-heading-xl">Participant information</h1>
+              <span class="govuk-caption-xl">Early career framework payments</span>
+              <h1 class="govuk-heading-xl">{{data.providerName}} </h1>
+              
+                <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
+                  <ul class="app-subnav__list">
+                      <li class="app-subnav__list-item  ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="ecf-payment-breakdown">
+                  Payment breakdown
+                 <span class="govuk-visually-hidden ">Current page</span>
+                </a></li>
+                <li class="app-subnav__list-item app-subnav__list-item--selected">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="">
+                    
+                  Participants
+                </a></li>
+                
+                <li class="app-subnav__list-item ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
+                    
+                      Delivery partner breakdown 
+                      <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+                  </ul>
+                </nav>
+                <h2 class="govuk-heading-l">Participants</h2>
                 <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
 
                   <div class="topic govuk-!-width-two-quarters">
-                    <strong itemprop="name" class="govuk-caption-m govuk-!-font-weight-regular">Provider</strong>
-                      <h4 class="govuk-heading-m title-mobile govuk-!-margin-bottom-0">{{data.providerName}}</h4>
-                      <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
-                        
-                        <span class="card-timestamp">Milestone end date 21 November 2021</span> <br>       <br>
+                    <strong itemprop="name" class="govuk-caption-m govuk-!-font-weight-regular">Milestone end date</strong>
+                    <h4 class="govuk-heading-m title-mobile govuk-!-margin-bottom-0">21 November 2021</h4>
+                    <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
+                      
+                    <br>       <br>
                    
                           <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
                               <strong>Download payment breakdown (CSV)</strong>
@@ -39,7 +63,7 @@
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Current milestone </strong>
                     <br>
                      <div class="number-group">
-                         <div class="number-container govuk-!-padding-right-4">
+                         <div class="number-container govuk-!-padding-right-8">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                      <span class="">1</span></div>
@@ -51,7 +75,7 @@
                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                   <strong class="govuk-body-s float govuk-!-margin-bottom-0">Back payment</strong>
                   <div class="number-group">
-                      <div class="number-container govuk-!-padding-right-4">
+                      <div class="number-container govuk-!-padding-right-8">
                           <div class="float tooltip">
                               <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                   <span class="">300</span>
@@ -68,7 +92,7 @@
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants - January 2021 cohort</strong>
                      <div class="number-group">
-                         <div class="number-container govuk-!-padding-right-4">
+                         <div class="number-container govuk-!-padding-right-8">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                      <span class="">	2250</span></div>
@@ -80,7 +104,7 @@
                   <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Total paid</strong>
                   <br>
                   <div class="number-group">
-                      <div class="number-container govuk-!-padding-right-4">
+                      <div class="number-container govuk-!-padding-right-8">
                           <div class="float tooltip">
                               <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                   <span class="">900</span></div>
@@ -96,7 +120,7 @@
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total participants - September 2021 cohort</strong>
                      <div class="number-group">
-                         <div class="number-container govuk-!-padding-right-4">
+                         <div class="number-container govuk-!-padding-right-8">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                      <span class="">	2250 </span></div>
@@ -108,7 +132,7 @@
                         <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Total not paid </strong>
                         <br>
                         <div class="number-group">
-                            <div class="number-container govuk-!-padding-right-4">
+                            <div class="number-container govuk-!-padding-right-8">
                                 <div class="float tooltip">
                                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                         <span class="">900</span></div>
@@ -124,24 +148,7 @@
               </div>
 
                 
-                <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
-                    <ul class="app-subnav__list">
-                        <li class="app-subnav__list-item app-subnav__list-item--selected">
-                    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="">
-                      
-                        Participants
-                   <span class="govuk-visually-hidden">Current page</span>
-                  </a></li>
-                  <li class="app-subnav__list-item">
-                    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-participant-information-p2">
-                      
-                        Delivery partner breakdown 
-                  </a></li>
-                  
-                  
-                    </ul>
-                  </nav>
-                  
+            <br>
             
                   
                   <div class="search-box">
@@ -153,7 +160,7 @@
                           <input id="search" class="govuk-input" aria-describedby="query-hint" type="text"name="query">
                           </div>
                       </div>
-
+<!-- 
                       <div class="search-box__input  govuk-!-width-one-third">
            
                         <div class="govuk-form-group "><label for="type-field" class="govuk-label">Filter by payment status</label><select
@@ -163,29 +170,25 @@
                             <option value="BACKPAYMENT">Backpayment</option>
                             <option value="NOTPAID">Not paid</option>
                           </select></div>
-                      </div>
+                      </div> -->
                       <button id="searchbtn"  name="commit" value="Search" formnovalidate="formnovalidate" class="govuk-button search-box__button">Search</button>
                       <a class="govuk-link search-box__button govuk-!-font-size-16 " href="">Clear filters</a>
                     </div>
                   </div>
 
-           
+
                 <table id="table" class="govuk-table  " style="">
-                    <thead>
-                        <tr class="govuk-table__row">
-                          <tr class="govuk-table__row">
-                   
-                                <th scope="col" class="govuk-table__header">Full name</th>
-                                <th scope="col" class="govuk-table__header">TRN</th>
-                                <th scope="col" class="govuk-table__header">Delivery partner</th>
-                                <th scope="col" class="govuk-table__header">Cohort</th>
-                                <th scope="col" class="govuk-table__header">Payment status for current milestone</th>
-                                <th scope="col" class="govuk-table__header">Action</th>
-                        </tr>
-                    </thead>
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th class="govuk-table__header" scope="col"> Details</th>
+                      <th class="govuk-table__header" scope="col"> Payment history </th>
+                    </tr>
+                  </thead>
+       
                     <tbody id="shelulerData">
-                     
+                    
                           {% for item in data.pinfo %}
+                        
                           <tr id="row" 
                           {% if item.pay === 'PAID' %} 
                           class="govuk-table__row paid" 
@@ -196,27 +199,120 @@
                            {%endif%}
                           >
                       
-                          <td class="govuk-table__cell" scope="row">{{item.name}}</td>
+                      
                   
                          
-                            <td class="govuk-table__cell " scope="row">{{item.trn}}</td>
-                            <td class="govuk-table__cell" scope="row">{{item.dp}}</td>
-          
-                            <td class="govuk-table__cell" scope="row">{{item.c}}</td>
-                             <td  class="govuk-table__cell" scope="row">     
-                               <strong {% if item.pay === 'PAID' %} class="govuk-tag govuk-tag--green"
-                               {% elif item.pay === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
-                               {% elif item.pay === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
-                              {%endif%}
-                               >
-                               {% if item.pay === 'NOT PAID' %}
-                              {{item.pay}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
-                              {%else%}
-                              {{item.pay}}
-                            </strong>
-                              {%endif%}
-                        </td>
-                        <td scope="col" class="govuk-table__cell"><a href="participant-payment-info?name={{item.name}}">View payment history</a></td>
+                            <td class="govuk-table__cell" scope="row"> 
+
+                            <strong> {{item.name}}</strong> 
+                              <br>
+                        
+                              TRN: {{item.trn}} <br>
+                              Cohort: {{item.c}} <br>
+                              Delivery partner: <br>{{item.dp}}
+                            </td>
+                          
+                         
+
+                             <td class="govuk-table__cell " scope="row"> 
+                              <ul class="govuk-list"
+                              >
+                              <li>
+                                Milestone 1:&nbsp;
+                                <strong {% if item.m1 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m1 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m1 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m1 === 'NOT PAID' %}
+                               {{item.m1}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m1}}
+                             </strong>
+                             {%endif%}
+
+                              </li>
+                              <li>
+                                Milestone 2:
+                                <strong {% if item.m2 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m2 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m2 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m2 === 'NOT PAID' %}
+                               {{item.m2}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m2}}
+                             </strong>
+                             {%endif%}
+                              </li>
+                              <li>
+                                
+                                Milestone 3:
+                                <strong {% if item.m3 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m3 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m3 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m3 === 'NOT PAID' %}
+                               {{item.m3}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m3}}
+                             </strong>
+                             {%endif%}
+
+                              </li>
+                              <li>
+                                Milestone 4:
+                                <strong {% if item.m4 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m4 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m4 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m4 === 'NOT PAID' %}
+                               {{item.m4}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m4}}
+                             </strong>
+                             {%endif%}
+
+                              </li>
+                              <li>
+                                Milestone 5:
+                                <strong {% if item.m5 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m5 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m5 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m5 === 'NOT PAID' %}
+                               {{item.m5}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m5}}
+                             </strong>
+                             {%endif%}
+                               
+                              </li>
+                              <li>
+                                Milestone 6:
+                                <strong {% if item.m6 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m6 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m6=== 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m6 === 'NOT PAID' %}
+                               {{item.m6}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m6}}
+                             </strong>
+                             {%endif%}
+                               
+
+                              </li>
+                            </ul>
+                             
+                             </td>
+                     
+                       
                         </tr>
                         {% endfor %}
                   

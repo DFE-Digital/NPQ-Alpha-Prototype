@@ -100,8 +100,51 @@ $govuk-assets-path: '/govuk/assets/';
   }
 
   .app-subnav__list-item+.app-subnav__list-item {
-      margin-left: 20px
+      margin-left: 40px
   }
+}
+
+.ons-status:before {
+  height: 1rem;
+  margin-bottom: -.15rem;
+  width: 1rem;
+  border-radius: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  content: "";
+  display: inline-block;
+  margin-right: .391rem
+}
+
+.ons-status.ons-status--small:before {
+  height: .555555rem;
+  margin-bottom: .055556rem;
+  width: .555555rem
+}
+
+.ons-status.ons-status--success:before {
+  background-color: #10ca64;
+  border: 3px solid #10ca64
+}
+
+.ons-status.ons-status--pending:before {
+  background-color: #fe8230;
+  border: 3px solid #fe8230
+}
+
+.ons-status.ons-status--error:before {
+  background-color: #fd112d;
+  border: 3px solid #fd112d
+}
+
+.ons-status.ons-status--dead:before {
+  background-color: #707071;
+  border: 3px solid #707071
+}
+
+.ons-status.ons-status--info:before {
+  background-color: #1f84d8;
+  border: 3px solid #1f84d8
 }
 
 .app-subnav__list-item a,.app-subnav__list-item a:link,.app-subnav__list-item a:visited {
