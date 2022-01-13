@@ -172,20 +172,23 @@ var socket = io();
 
               <h2 class="govuk-heading-m">Manage CPD contracts</h2>
       
-              <a class="govuk-button" href="version-20/payments">Start</a>
+              <a class="govuk-button" href="version-20/payments/scheme">Start</a>
               <p class="govuk-heading-s">Quick links:</p>
               <ul class="govuk-list govuk-list--bullet">
-                <p class="govuk-body">ECF:</p>
-                <li><a href="/version-20/payments/ecf-payment-breakdown">ECF payment breakdown</a></li>
-                <li><a href="/version-20/payments/ecf-participant-information-p1-option-1">Participant information</a></li>
-                <li><a href="/version-20/payments/ecf-delivery-partner-breakdown">Delivery partner breakdown</a></li>
-                <li><a href="/version-20/payments/ecf-uplift-payment-information">Uplift payment information</a></li>
+                <span  class="govuk-body">ECF:</span>
+                <li><a href="/version-20/payments/ecf-payment-breakdown?scheme=Early Career Framework">ECF payment breakdown</a></li>
+                <li><a href="/version-20/payments/participant-information?scheme=Early Career Framework">Participant information</a></li>
+                <li><a href="/version-20/payments/ecf-delivery-partner-breakdown?scheme=Early Career Framework">Delivery partner breakdown</a></li>
+                <li><a href="/version-20/payments/ecf-uplift-payment-information?scheme=Early Career Framework">Uplift payment information</a></li>
 
             <br>
-                <p class="govuk-body">NPQ:</p>
-                <li><a href="/version-20/payments/npq-payment-breakdown">NPQ payment breakdown</a></li>
-                <li><a href="/version-20/payments/npq-further-payment-breakdown">NPQ course payment breakdown and participnt information</a></li>
-               
+                <span class="govuk-body">NPQ:</span>
+                <li><a href="/version-20/payments/npq-payment-breakdown?scheme=National professional qualifications">NPQ payment breakdown</a></li>
+                <li><a href="/version-20/payments/participant-information?scheme=National professional qualifications">Participant information</a></li>
+
+            <br>
+                <span class="govuk-body">Other stuff:</span>
+                <li><a href="/version-20/payments/calculations">Calculations screen</a></li>
               </ul>
        
           

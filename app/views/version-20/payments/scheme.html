@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block header %}
+
+  {# Set serviceName in config.js. #}
+ 
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+     
+    
+  })
+ 
+}}
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong style="color:black" class="govuk-tag govuk-tag--yellow">
+  PROTOTYPE
+    </strong>
+    -&nbsp;
+    <span class="govuk-phase-banner__text">
+    for user testing
+    </span>
+  </p>
+</div>
+
+
+ 
+{% endblock %}
+
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                              
+                  
+
+                <form method="post" novalidate="" autocomplete="off" action="index" >
+               
+                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading" >Choose trainee scheme</h1>
+                    </legend>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                      <div class="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider1" name="scheme" type="radio" value="Early Career Framework">
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-city-guilds">
+                                        Early Career Framework 
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="provider2" name="scheme" type="radio" value="National professional qualifications" >
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                        National professional qualifications
+                                    </label>
+                                </div>
+                     
+                                
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button type="submit" data-module="govuk-button"class="govuk-button">Continue</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

@@ -2,68 +2,65 @@
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
-text: "Back",
-href: "npq-payment-breakdown"
-}) }}
+  text: "Change trainee scheme",
+  href: "scheme"
+  }) }}
+
 {% endblock %}
 {% block content %}
-
-
-
 
         <div class="govuk-grid-row">
            
             <div class="govuk-grid-column-full ">
-              <h1 class="govuk-heading-xl">{{data.providerName}}</h1>
-              <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
+              <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1> 
+              <nav class="app-subnav " aria-label="Sub navigation">
+                  <ul class="app-subnav__list">
+                      <li class="app-subnav__list-item ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
+                    
+                  Programme dashboard
+                
+                </a></li>
+                
+                <li class="app-subnav__list-item  ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider">
+                    
+                      Payment breakdown
+                      <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+  
+                <li class="app-subnav__list-item app-subnav__list-item--selected">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                    
+                    Participant information
+                      <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+                
+                
+                  </ul>
+                </nav>
+                <h2 class="govuk-heading-l">Participant information
+             
+
+                </h2>
+              <!-- <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
                 <ul class="app-subnav__list">
                     <li class="app-subnav__list-item ">
                 <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="npq-payment-breakdown">
-                Payment breakdown
+              Early Career Framework
                <span class="govuk-visually-hidden">Current page</span>
               </a></li>
               <li class="app-subnav__list-item app-subnav__list-item--selected">
                 <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="">
                   
-                Participants
+                  National professional qualifications
               </a></li>
               
               
                 </ul>
-              </nav>
-<!-- 
-                  <div style="display:inline-block" class="govuk-!-width-one-third">
-           
-                
-                  <div class="autocomplete-wrapper">
-                    <label class="govuk-label" for="sort">
-              Choose a different NPQ
-                          </label>
-                    <select class="govuk-select autocomplete-element " id="delveryProvider" name="delveryProvider">
+              </nav> -->
 
-
-                       <option value="" ></option>
-                        <option value="dec">Leading Teaching</option>
-                        <option value="nov">Leading Behaviour and Culture</option>
-                        <option value="oct" >Leading Teacher Development</option>
-                        <option value="aug"> Senior Leadership</option>
-                        <option value="jul" >Headship</option>
-                        <option value="jun">Executive Leadership</option>
-                        <option value="may">Additional Support Offer</option>
-                       
-                    </select>
-                
-          
-          </div>
-                
-
-                </div>
-                <button  style="display:inline-block; margin-top:30px;" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
-                  View
-                </button>
-           -->
-     
-                <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+                <!-- <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
 
                     <div class="topic"><strong itemprop="name" class="govuk-caption-m govuk-!-font-weight-regular">Cohort</strong>
                         <h4 class="govuk-heading-m title-mobile govuk-!-margin-bottom-0">January 2022, May 2022</h4>
@@ -183,7 +180,7 @@ href: "npq-payment-breakdown"
                                     
                 </div>
 
-            <br>
+            <br> -->
            
                    </div>
        
@@ -194,29 +191,176 @@ href: "npq-payment-breakdown"
                   
 <div class="search-box">
   <div class="search-box__form ">
-    <div class="search-box__input govuk-!-width-two-thirds">
+    <div class="search-box__input ">
       <div class="govuk-form-group">
         <label for="query-field" class="govuk-label govuk-label--s">Search participants</label>
         <span class="govuk-hint" id="query-hint"> Search by full name or TRN</span>
-        <input id="search" class="govuk-input" aria-describedby="query-hint" type="text"name="query">
+        <input id="search" class="govuk-input govuk-!-width-one-half" aria-describedby="query-hint" type="text"name="query">
+        <button id="searchbtn"  name="commit" value="Search" formnovalidate="formnovalidate" class="govuk-button search-box__button">Search</button>
         </div>
+        
     </div>
-
-    <div class="search-box__input  govuk-!-width-one-third">
-
-      <div class="govuk-form-group "><label for="type-field" class="govuk-label">Filter by provider</label><select
-          id="paid" class="govuk-select" name="type">
-          <option value="View all">View all</option>
-          <option value="PAID"></option>
-          <option value="BACKPAYMENT"></option>
-          <option value="NOTPAID"> </option>
-        </select></div>
-    </div>
-    <button id="searchbtn"  name="commit" value="Search" formnovalidate="formnovalidate" class="govuk-button search-box__button">Search</button>
-    <a class="govuk-link search-box__button govuk-!-font-size-16 " href="">Clear filters</a>
+   
   </div>
+  
 </div>
 
+
+<div class=" govuk-grid-column-one-third govuk-!-padding-left-0">
+
+  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Cohort</button>
+      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+    </h2>
+    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" style="height: 143px;">
+      <div class="app-c-option-select__container-inner js-auto-height-inner">
+        
+  <div id="checkboxes-fe072cac" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
+        <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          January 2021
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              April 2021
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              September 2021
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+              January 2022
+            </label>
+          </div>
+        </div>
+    
+      </fieldset>
+    </div>
+  
+  </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<div class="govuk-grid-column-one-third">
+
+  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Schedule</button>
+      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+    </h2>
+    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" style="height: 143px;">
+      <div class="app-c-option-select__container-inner js-auto-height-inner">
+        
+  <div id="checkboxes-fe072cac" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Schedule</legend>
+        <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation">
+       Standard
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+      Reduced 
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+             Extended
+            </label>
+          </div>
+        
+        </div>
+    
+      </fieldset>
+    </div>
+  
+  </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<div class="govuk-grid-column-one-third govuk-!-padding-right-0">
+
+  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Provider</button>
+      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+    </h2>
+    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" style="height: 143px;">
+      <div class="app-c-option-select__container-inner js-auto-height-inner">
+        
+  <div id="checkboxes-fe072cac" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Schedule</legend>
+        <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation">
+Provider name
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+              Provider name
+            </label>
+          </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+            <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+              Provider name
+            </label>
+          </div>
+        
+        </div>
+    
+      </fieldset>
+    </div>
+  
+  </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<div id="js-search-results-info" data-module="remove-filter" class="result-info">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <div class="result-info__header">
+        <h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 govuk-!-margin-bottom-2" id="js-result-count">{{data.pinfo.length}} Participants {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
+      </div>
+    </div>
+
+ 
+  </div>
+
+</div>
 <table id="table" class="govuk-table govuk-summary-list"  style="">
   <thead>  
     <th scope="col" class="govuk-table__header"> 
@@ -229,21 +373,24 @@ href: "npq-payment-breakdown"
  </th>
  <th scope="col" class="govuk-table__header"> 
 
-   Delivery partner:
+  Cohort
  </th>
  <th scope="col" class="govuk-table__header"> 
 
-   Cohort
+  Schedule
  </th>
  <th scope="col" class="govuk-table__header"> 
 
-   NPQ courses
+Scheme
  </th>
  <th scope="col" class="govuk-table__header"> 
 
    Provider
  </th>
+ <th scope="col" class="govuk-table__header"> 
 
+  Delivery partner
+</th>
 </thead>
     
 
@@ -261,28 +408,33 @@ href: "npq-payment-breakdown"
          
                   <span class="">{{item.trn}} </span>
                 </td>
-                <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
-          
-                  <span class="">{{item.dp}} </span>
-                 
-                </td>
+               
                 <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
      
                   <span class="">{{item.c}}</span>
                 </td>
                 <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
+     
+                  <span class="">Standard</span>
+                </td>
+                <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
           
-                  <span class="">Course 1 </span>
+                  <span class="">ECF</span>
                  
                 </td>
                 <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
      
                   <span class="">[Random provider name]</span>
                 </td>
+                <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
+          
+                  <span class="">{{item.dp}} </span>
+                 
+                </td>
               </tr>
       
                 <div class="">
-                  <td  scope="col" colspan="6" class="govuk-table__header"> 
+                  <td  scope="col" colspan="7" class="govuk-table__header"> 
      
                     <details class="govuk-details govuk-!-margin-0 " data-module="govuk-details">
                       <summary class="govuk-details__summary">

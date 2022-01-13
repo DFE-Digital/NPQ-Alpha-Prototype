@@ -29,9 +29,12 @@
 {% from "govuk/components/textarea/macro.njk"         import govukTextarea %}
 {% from "govuk/components/warning-text/macro.njk"     import govukWarningText %}
 {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+
 {% block head %}
 
   {% include "includes/head.html" %}
+  
   
 {% endblock %}
 
@@ -53,6 +56,36 @@
   })
  
 }}
+
+
+<!-- 
+<div  class="primary-nav-container">
+  <div class="govuk-width-container">
+    <div id="navlinks" class="primary-nav">
+        <div class="nav-item nav-item1 ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/version-20/payments/scheme">
+    
+      Programme dashboard
+ <span class="govuk-visually-hidden">Current page</span>
+</a></div>
+
+        <div id="one" class="nav-item nav-item2">
+  <a class="govuk-link govuk-link--no-visited-state" href="/version-20/payments/ecf-or-npq">
+    
+      Payment breakdown
+ 
+</a></div>
+
+<div class="nav-item nav-item3">
+  <a class="govuk-link govuk-link--no-visited-state" href="/version-20/payments/participant-information">
+    
+     Participant information
+ 
+</a></div>
+
+    </div>
+  </div>
+</div> -->
 <div class="govuk-phase-banner govuk-width-container">
   <p class="govuk-phase-banner__content">
     <strong style="color:black" class="govuk-tag govuk-tag--yellow">
@@ -63,8 +96,9 @@
     for user testing
     </span>
   </p>
-</div>
   
+</div>
+
 
  
 {% endblock %}
@@ -86,7 +120,9 @@
             Clear data
           </a>
         </li>
-        <h2 class="govuk-heading-m">Support and guidance</h2><p class="govuk-body-s">If you have a question, or you&apos;ve had a problem using this service, please contact us at <a class="govuk-footer__link" href="mailto:continuing-professional-development@digital.education.gov.uk">continuing-professional-development@digital.education.gov.uk</a></p><ul class="govuk-footer__inline-list">
+        <h2 class="govuk-heading-m">Support and guidance</h2><p class="govuk-body-s">If you have a question, or you&apos;ve had a problem using this service, please contact us at <a class="govuk-footer__link" href="mailto:continuing-professional-development@digital.education.gov.uk">continuing-professional-development@digital.education.gov.uk</a></p>
+        
+        <ul  class="govuk-footer__inline-list">
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="#">
@@ -127,7 +163,36 @@
   {% block scripts %}
     {% include "includes/scripts.html" %}
     {% block pageScripts %}
-
+    <script>
+      $(document).ready(function(){
+      
+         var anchor = '/version-20/payments/ecf-or-npq';
+         var anchor1 = '/version-20/payments/choose-provider';
+         var anchor11 = '/version-20/payments/ecf-payment-breakdown';
+         var anchor12 = '/version-20/payments/npq-payment-breakdown';
+         var anchor2 = '/version-20/payments/participant-information';
+         var anchor3 = '/version-20/payments/scheme';
+         var anchor31 = '/version-20/payments/index';
+         if (window.location.href.indexOf(anchor) > 0 || window.location.href.indexOf(anchor1) > 0 || window.location.href.indexOf(anchor11) > 0 || window.location.href.indexOf(anchor12) > 0 ) {
+      $(".nav-item2").addClass("nav-item__selected")
+      $(".nav-item1").removeClass("nav-item__selected")
+      $(".nav-item3").removeClass("nav-item__selected")
+         }
+        else if (window.location.href.indexOf(anchor2) > 0) {
+      $(".nav-item3").addClass("nav-item__selected")
+      $(".nav-item1").removeClass("nav-item__selected")
+      $(".nav-item2").removeClass("nav-item__selected")
+         }
+      
+         else if (window.location.href.indexOf(anchor3) > 0 || window.location.href.indexOf(anchor31) > 0) {
+          $(".nav-item1").addClass("nav-item__selected")
+      $(".nav-item3").removeClass("nav-item__selected")
+      $(".nav-item2").removeClass("nav-item__selected")
+         }
+      
+      });
+      
+          </script>
 
     {% endblock %}
   {% endblock %}

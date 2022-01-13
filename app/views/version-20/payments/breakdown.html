@@ -1,0 +1,277 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Service performance
+      </h1>
+    </div>
+
+  </div>
+  
+  <div class="govuk-grid-row"> 
+    
+    <div class="govuk-grid-column-one-quarter">
+      <h2 class="govuk-heading-m">Providers</h2>
+      <div class="app-card">
+        <span class="app-card__secondary-count">1059</span>
+        listed
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <h2 class="govuk-heading-m">Courses</h2>
+      <div class="app-card">
+        <span class="app-card__secondary-count">12995</span>
+        listed
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <h2 class="govuk-heading-m">Users</h2>
+      <div class="app-card">
+        <span class="app-card__secondary-count">3031</span>
+        registered
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-quarter">
+      <h2 class="govuk-heading-m">Allocations</h2>
+      <div class="app-card">
+        <span class="app-card__secondary-count">5</span>
+        new requests
+      </div>
+    </div>
+
+  </div>
+  
+  {# <h2 class="govuk-heading-m govuk-!-margin-top-6">Users</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <div class="app-card">
+        <span class="app-card__secondary-count">3030</span>
+        Publish users
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-quarter">
+      <div class="app-card app-card--green">
+        <span class="app-card__secondary-count">1858</span>
+        active
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-quarter">
+      <div class="app-card app-card--red">
+        <span class="app-card__secondary-count">1172</span>
+        non-active
+      </div>
+    </div>
+  </div>
+  
+  <h2 class="govuk-heading-m govuk-!-margin-top-6">Allocations</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+      <div class="app-card">
+        <span class="app-card__secondary-count">4</span>
+        requests submitted
+      </div>
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <div class="app-card app-card--green">
+        <span class="app-card__secondary-count">36</span>
+        placed requested
+      </div>
+    </div>
+
+  </div> #}
+
+  <div class="govuk-grid-row govuk-!-margin-top-8 performance-tabs">
+    
+    <div class="govuk-grid-column-full-width govuk-!-padding-left-3 govuk-!-padding-right-3">
+
+      {% set providersTab %}
+      <h2 class="govuk-heading-m">Providers</h2>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full-width govuk-!-padding-left-3 govuk-!-padding-right-3">
+          <div class="app-card app-card--blue">
+            <span class="app-card__secondary-count">1059</span>
+            listed
+          </div>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-half">
+          <div class="app-card app-card--green">
+            <span class="app-card__tertiary-count">905</span>
+            with open courses
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <div class="app-card app-card--red">
+            <span class="app-card__tertiary-count">154</span>
+            with closed courses
+          </div>
+        </div>
+
+      </div>
+      
+      <h2 class="govuk-heading-m govuk-!-margin-top-4">Secondary metric</h2>
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">###</span>
+            label
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">###</span>
+            label
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">###</span>
+            label
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+          <h2 class="govuk-heading-m govuk-!-margin-top-4">Provider types</h2>
+        </div>
+        <div class="govuk-grid-column-one-third show-when-wide">
+          <h4 class="govuk-heading-m govuk-!-margin-top-4">Open</h4>
+        </div>
+        <div class="govuk-grid-column-one-third show-when-wide">
+          <h4 class="govuk-heading-m govuk-!-margin-top-4">Closed</h4>
+        </div>
+
+      </div>
+      
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+           <h4 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4" style="">Lead school</h4>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">700</span>
+            <span class="show-when-thin">open</span>
+          </div>   
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">139</span>
+            <span class="show-when-thin">closed</span>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+           <h4 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">SCITT</h4>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">132</span>
+            <span class="show-when-thin">open</span>
+          </div>   
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">16</span>
+            <span class="show-when-thin">closed</span>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third">
+           <h4 class="govuk-heading-m govuk-!-margin-top-4 govuk-!-margin-bottom-4">University</h4>
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">71</span>
+          </div>   
+        </div>
+        <div class="govuk-grid-column-one-third">
+          <div class="app-card">
+            <span class="app-card__tertiary-count">0</span>
+          </div>
+        </div>
+
+      </div>
+
+      {% endset -%}
+
+      {% set coursesTab %}
+      <h2 class="govuk-heading-l">Courses</h2>
+      ...
+      {% endset -%}
+
+      {% set publishActivityTab %}
+      <h2 class="govuk-heading-l">Activity in Pubish</h2>
+      ...
+      {% endset -%}
+
+      {% set allocationsTab %}
+      <h2 class="govuk-heading-l">Allocations</h2>
+      ...
+      {% endset -%}
+
+      {{ govukTabs({
+        items: [
+          {
+            label: "Providers",
+            id: "providers",
+            panel: {
+              html: providersTab
+            }
+          },
+          {
+            label: "Courses",
+            id: "courses",
+            panel: {
+              html: coursesTab
+            }
+          },
+          {
+            label: "Activity in Pubish",
+            id: "publish-activity",
+            panel: {
+              html: publishActivityTab
+            }
+          },
+          {
+            label: "Allocations",
+            id: "allocations",
+            panel: {
+              html: allocationsTab
+            }
+          }
+        ]
+      }) }}
+            
+      {% endblock %}
+
+    </div>
+  </div>
+  

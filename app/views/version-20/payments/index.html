@@ -1,56 +1,476 @@
 {% extends "layout.html" %}
 {% block beforeContent %}
-
+{{ govukBackLink({
+    text: "Change trainee scheme",
+    href: "scheme"
+    }) }}
 {% endblock %}
 {% block content %}
 
+{%if data.scheme === "Early Career Framework" %}
 
-        <section id="allContentHome" class="">
-            <!-- <div class="govuk-grid-row"> -->
-                <h1 class="govuk-heading-xl " style="margin-top: 0" id="company-Name">Manage CPD contracts
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
 
-   </h1>
-                <!--script>document.getElementById('company-Name').innerText = JSON.parse(localStorage.getItem('company-name-header'));</script-->
-                <div class="govuk-grid-row">
-                    <div class="govuk-grid-column-two-thirds">
-                        <div style="max-width:90%">
-                            <div class="govuk-grid-row">
-                                 <div class="govuk-grid-column-one-half">
-                                    <h3 class="govuk-heading-m " style="margin-top:0;"><a href="payments/ecf-or-npq">Payment breakdown</a></h3>
-                                    <p class="rj-home-spacer rj-bottom-border-mobile ">Review upcoming payments to providers</p>
-                                </div>
+       
 
-                                        <div class="govuk-grid-column-one-half rj-space-top-mobile ">
-                                    <h3 class="govuk-heading-m " style="margin-top:0;  "><a href="">Contract summary</a></h3>
-                                    <p class="rj-home-spacer  ">View all current contract details  </p>
-                                </div>
- 
-
-                         
+        <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1>
+       
+            <nav class="app-subnav " aria-label="Sub navigation">
+                <ul class="app-subnav__list">
+                    <li class="app-subnav__list-item app-subnav__list-item--selected">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="ecf-participant-information-p1">
                   
-                            </div>
-                            <div class="govuk-grid-row">
-
-                                         <div class="govuk-grid-column-one-half">
-                                    <h3 class="govuk-heading-m " style="margin-top:0; padding-top:35px"><a href="https://das-raa-v2.herokuapp.com/prototypes/public-beta/dashboard">Provider dashboard</a></h3>
-                                    <p class="rj-home-spacer  ">Overview of all course providers </p>
-                                </div>
-                       
-
-                                    <div class="govuk-grid-column-one-half ">
-                                   <h3 class="govuk-heading-m " style="margin-top:0; padding-top:35px"><a href="./team">Programme dashboard</a></h3>
-                                    <p >Overview of all programme participants</p>
-                                </div>
-
-                            </div>
-
-
+                Programme dashboard 
               
+              </a></li>
+              
+              <li class="app-subnav__list-item  ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?pn=ecf1">
+                  
+                    Payment breakdown
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
 
-                        </div>
-                    </div>
-            
-        </section>
-</div>
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                  
+                  Participant information
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+              
+              
+                </ul>
+              </nav>
+     <h2 class="govuk-heading-l">Programme dashboard </h2>
+<div class="govuk-grid-row">
+        <div  class="govuk-grid-column-one-third">
+           
+                
+            <div class="autocomplete-wrapper">
+              <label class="govuk-label" for="sort">
+         Filter by provider
+                    </label>
+              <select class="govuk-select autocomplete-element" id="delveryProvider" name="delveryProvider">
+
+
+                 <option value="" ></option>
+                  <option value="dec">Ambition Institute</option>
+                  <option value="nov">Best Practice Network (home of Outstanding Leaders Partnership)</option>
+                  <option value="oct" >Capita</option>
+                  <option value="sep">Education Development Trust</option>
+                  <option value="aug">Teach First</option>
+                  <option value="jul" >UCL Institute of Education</option>
+       
+                 
+              </select>
+          
     
+    </div>
+
+  </div>
+  <div   class="govuk-grid-column-one-third">
+           
+                
+    <div class="autocomplete-wrapper">
+      <label class="govuk-label" for="sort">
+ Filter by schedule
+            </label>
+      <select class="govuk-select autocomplete-element" id="delveryProvider1" name="delveryProvider1">
+
+
+         <option value="" ></option>
+          <option value="dec">Standard</option>
+          <option value="nov">Reduced</option>
+          <option value="oct" >Extended</option>      
+      </select>
+  
+
+</div>
+
+</div>
+<button  style=" margin-top:30px; display:inline-block" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
+    Filter
+  </button>
+</div>
+<div id="js-search-results-info" data-module="remove-filter" class="result-info">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="result-info__header">
+          <h2 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-2" id="js-result-count">Programme overview </h2>
+        </div>
+      </div>
+  
+   
+    </div>
+  
+  </div>
+  <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+    <ul class=" govuk-list">
+        <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+          <strong class="govuk-body-s float govuk-!-margin-bottom-0">Target budget</strong>
+           <div class="number-group">
+               <div class="number-container govuk-!-padding-right-4">
+                   <div class="float tooltip">
+                       <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                           <span class="">£100,000.00</span></div>
+                   </div>
+               </div>
+           </div>
+       </li>
+     
+      </ul>
+    <ul class=" govuk-list">
+      <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+        <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total spent</strong>
+         <div class="number-group">
+             <div class="number-container govuk-!-padding-right-4">
+                 <div class="float tooltip">
+                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                         <span class="">£10,000.00</span></div>
+                 </div>
+             </div>
+         </div>
+     </li>
+   
+    </ul>
+    <ul class=" govuk-list">
+      <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+        <strong class="govuk-body-s float govuk-!-margin-bottom-0">Active participants </strong>
+         <div class="number-group">
+             <div class="number-container govuk-!-padding-right-4">
+                 <div class="float tooltip">
+                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                         <span class="">	20,000 </span></div>
+                 </div>
+             </div>
+         </div>
+     </li>
+      
+    </ul>
+    <ul class=" govuk-list">
+    
+      <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+        <strong class="govuk-body-s float govuk-!-margin-bottom-0">Participants withdrawn</strong>
+         <div class="number-group">
+             <div class="number-container govuk-!-padding-right-4">
+                 <div class="float tooltip">
+                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                         <span class="">	4500 </span></div>
+                 </div>
+             </div>
+         </div>
+     </li>
+     
+
+   
+    </ul>
+    <ul class=" govuk-list">
+    
+        <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+          <strong class="govuk-body-s float govuk-!-margin-bottom-0">Total declarations</strong>
+           <div class="number-group">
+               <div class="number-container govuk-!-padding-right-4">
+                   <div class="float tooltip">
+                       <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                           <span class="">	100,000 </span></div>
+                   </div>
+               </div>
+           </div>
+       </li>
+       
+  
+     
+      </ul>
+
+</div>   
+<br>
+  
+       <table class="govuk-table">
+            
+        <caption class="govuk-table__caption govuk-table__caption--s"> Milestone declarations</caption>
+           
+                  <thead class="govuk-table__head">
+           
+                    <tr  class="govuk-table__row">
+                     
+              
+                      <th   scope="col"  class="govuk-table__header">Type</th>
+                      <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Starts </th>
+
+                      <th  scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 1</th>
+                      <th  scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 2</th>
+                      <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 3</th>
+                      <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 4</th>
+                      <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Completed</th>
+                    </tr>
+
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td  scope="row" class="govuk-table__cell">Submitted</td>
+                        <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                        <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                        <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                        <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                        <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                        <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Eligible</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Payable</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Paid</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Voided</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Clawed back</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                    
+                    </tr>
+         
+                  </tbody>
+                </table>
+
+
+    </div>
+
+
+</div>
+{%elif data.scheme === "National professional qualifications"%}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+       
+
+        <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1>
+       
+            <nav class="app-subnav " aria-label="Sub navigation">
+                <ul class="app-subnav__list">
+                    <li class="app-subnav__list-item app-subnav__list-item--selected">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="ecf-participant-information-p1">
+                  
+                Programme dashboard 
+              
+              </a></li>
+              
+              <li class="app-subnav__list-item  ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?pn=npq2">
+                  
+                    Payment breakdown
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                  
+                  Participant information
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+              
+              
+                </ul>
+              </nav>
+     <h2 class="govuk-heading-l">Programme dashboard </h2>
+<div class="govuk-grid-row">
+        <div  class="govuk-grid-column-one-third">
+           
+                
+            <div class="autocomplete-wrapper">
+              <label class="govuk-label" for="sort">
+         Filter by provider
+                    </label>
+              <select class="govuk-select autocomplete-element" id="delveryProvider" name="delveryProvider">
+
+
+                 <option value="" ></option>
+                  <option value="dec">Ambition Institute</option>
+                  <option value="nov">Best Practice Network (home of Outstanding Leaders Partnership)</option>
+                  <option value="oct" >Capita</option>
+                  <option value="sep">Education Development Trust</option>
+                  <option value="aug">Teach First</option>
+                  <option value="jul" >UCL Institute of Education</option>
+       
+                 
+              </select>
+          
+    
+    </div>
+
+  </div>
+  <div   class="govuk-grid-column-one-third">
+           
+                
+    <div class="autocomplete-wrapper">
+      <label class="govuk-label" for="sort">
+ Filter by schedule
+            </label>
+      <select class="govuk-select autocomplete-element" id="delveryProvider1" name="delveryProvider1">
+
+
+         <option value="" ></option>
+          <option value="dec">Standard</option>
+          <option value="nov">Reduced</option>
+          <option value="oct" >Extended</option>      
+      </select>
+  
+
+</div>
+
+</div>
+<button  style=" margin-top:30px; display:inline-block" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
+    Filter
+  </button>
+</div>
+<div class="govuk-grid-row ">
+    <div class="govuk-grid-column-one-third">
+        <div class="dashboard-numbers">
+          <p class="govuk-heading-s">Payment total to date</p>
+          <p class="govuk-heading-l">£975,103.20</p>
+        </div>
+      </div>
+  
+  </div>
+  
+  <div id="js-search-results-info" data-module="remove-filter" class="result-info">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="result-info__header">
+          <h2 class="gem-c-heading govuk-heading-s govuk-!-margin-bottom-2" id="js-result-count">Total declarations 100,000</h2>
+        </div>
+      </div>
+  
+   
+    </div>
+  
+  </div>
+       <table class="govuk-table">
+            
+                 
+           
+                  <thead class="govuk-table__head">
+           
+                    <tr  class="govuk-table__row">
+                     
+              
+                      <th   scope="col"  class="govuk-table__header">Type</th>
+                      <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Starts </th>
+
+                      <th  scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 1</th>
+                      <th  scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 2</th>
+                      <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 3</th>
+                      <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 4</th>
+                      <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Completed</th>
+                    </tr>
+
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td  scope="row" class="govuk-table__cell">Submitted</td>
+                        <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                        <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                        <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                        <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                        <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                        <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Eligible</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Payable</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Paid</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Voided</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Clawed back</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                    
+                    </tr>
+         
+                  </tbody>
+                </table>
+
+
+    </div>
+
+
+</div>
+{% endif %}
 {% endblock %}

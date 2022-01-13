@@ -2,9 +2,9 @@
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
-text: "Back",
-href: "choose-provider"
-}) }}
+  text: "Change trainee scheme",
+  href: "scheme"
+  }) }}
 {% endblock %}
 {% block content %}
 
@@ -14,9 +14,131 @@ href: "choose-provider"
         <div class="govuk-grid-row">
            
             <div class="govuk-grid-column-full ">
+              <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1>
+              <nav class="app-subnav " aria-label="Sub navigation">
+                  <ul class="app-subnav__list">
+                      <li class="app-subnav__list-item ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
+                    
+                  Programme dashboard
+                
+                </a></li>
+                
+                <li class="app-subnav__list-item  app-subnav__list-item--selected">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-payment-breakdown">
+                    
+                      Payment breakdown
+                      <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+  
+                <li class="app-subnav__list-item ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                    
+                    Participant information
+                      <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+                
+                
+                  </ul>
+                </nav>
+                <div class="">
+                  <div  style="float:right" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
+                    <div class="govuk-radios govuk-!-margin-bottom-0 ">
+                      <div class="govuk-radios__item"><input class="govuk-radios__input"
+                          id="lab-based-testing-and-capacity-by-test-type-0"
+                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
+                          checked=""><label class="govuk-label govuk-radios__label "
+                          for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
+                      <div class="govuk-radios__item"><input class="govuk-radios__input"
+                          id="lab-based-testing-and-capacity-by-test-type-1"
+                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
+                          class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Forecast payment breakdown</label></div>
+      
+                        
+                        
+                    </div>
+                  
+                  </div>
+                
+                  
+      </div>
+      <h2 class="govuk-heading-l">Payment breakdown
              
-                <h1 class="govuk-heading-xl">{{data.providerName}}</h1>
-                <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
+
+      </h2>
+  
+  <br>
+      <div class="govuk-grid-row">
+      <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
+ 
+      
+        <div class="autocomplete-wrapper">
+          <label class="govuk-label" for="sort">
+           Select a differerent provider 
+                </label>
+          <select class="govuk-select autocomplete-element " id="delveryProvider" name="delveryProvider">
+
+
+             <option value="" ></option>
+              <option value="dec">December 2021</option>
+              <option value="nov">November 2021</option>
+              <option value="oct" >October 2021</option>
+              <option value="sep">September 2021</option>
+              <option value="aug"> August 2021</option>
+              <option value="jul" >July 2021</option>
+              <option value="jun">June 2021</option>
+              <option value="may">May 2021</option>
+              <option value="apr" >April 2021</option>
+              <option value="mar">March 2021</option>
+              <option value="feb">February 2021</option>
+              <option value="jan" >January 2021</option>
+             
+          </select>
+      
+
+</div>
+
+
+</div>
+
+<div  class="govuk-grid-column-one-third">
+ 
+      
+<div class="autocomplete-wrapper">
+  <label class="govuk-label" for="sort">
+    View previous payment breakdown
+        </label>
+  <select class="govuk-select autocomplete-element" id="delveryProvider1" name="delveryProvider1">
+
+
+     <option value="" ></option>
+      <option value="dec">December 2021</option>
+      <option value="nov">November 2021</option>
+      <option value="oct" >October 2021</option>
+      <option value="sep">September 2021</option>
+      <option value="aug"> August 2021</option>
+      <option value="jul" >July 2021</option>
+      <option value="jun">June 2021</option>
+      <option value="may">May 2021</option>
+      <option value="apr" >April 2021</option>
+      <option value="mar">March 2021</option>
+      <option value="feb">February 2021</option>
+      <option value="jan" >January 2021</option>
+     
+  </select>
+
+
+</div>
+
+
+</div>
+
+<button  style=" margin-top:30px; display:inline-block" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
+View
+</button>
+</div>
+        
+                <!-- <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
                   <ul class="app-subnav__list">
                       <li class="app-subnav__list-item app-subnav__list-item--selected">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="">
@@ -31,81 +153,25 @@ href: "choose-provider"
                 
                 
                   </ul>
-                </nav>
-                <div class="govuk-grid-column-one-third">
-                <div  style="display:inline-block" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
-                  <div class="govuk-radios  govuk-!-margin-bottom-0 ">
-                    <div class="govuk-radios__item"><input class="govuk-radios__input"
-                        id="lab-based-testing-and-capacity-by-test-type-0"
-                        name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
-                        checked=""><label class="govuk-label govuk-radios__label "
-                        for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
-                    <div class="govuk-radios__item"><input class="govuk-radios__input"
-                        id="lab-based-testing-and-capacity-by-test-type-1"
-                        name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
-                        class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Live payment breakdown</label></div>
-                  </div>
-                </div>
-</div>
-                  <div style="display:inline-block" class="">
+                </nav> -->
+       
+
            
-                
-                  <div class="autocomplete-wrapper">
-                    <label class="govuk-label" for="sort">
-                      View previous payment breakdown
-                          </label>
-                    <select class="govuk-select autocomplete-element" id="delveryProvider" name="delveryProvider">
-
-
-                       <option value="" ></option>
-                        <option value="dec">December 2021</option>
-                        <option value="nov">November 2021</option>
-                        <option value="oct" >October 2021</option>
-                        <option value="sep">September 2021</option>
-                        <option value="aug"> August 2021</option>
-                        <option value="jul" >July 2021</option>
-                        <option value="jun">June 2021</option>
-                        <option value="may">May 2021</option>
-                        <option value="apr" >April 2021</option>
-                        <option value="mar">March 2021</option>
-                        <option value="feb">February 2021</option>
-                        <option value="jan" >January 2021</option>
-                       
-                    </select>
-                
-          
-          </div>
-                
-
-                </div>
   
-                <button  style="display:inline-block; margin-top:30px;" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
-                  View
-                </button>
+         
            
            
             <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
 
-                <div class="topic"><strong itemprop="name" class="govuk-caption-m govuk-!-font-weight-regular">Payment</strong>
-                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-0">£1,663,733.30</h4>
-                    <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
+                <div class="topic">
+                  <strong itemprop="name" class="govuk-heading-m govuk-!-margin-bottom-0   govuk-!-font-weight-regular">{{data.providerName}}</strong>
+                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-0">Total £1,663,733.30</h4>
+                    <p class="grey govuk-!-font-size-16 govuk-!-margin-top-3">
                       
-                      <span
-                            class="card-timestamp"></span></p>
-
-                            
-                            <div class="additional-info bottom-aligned">
-                                <p class=" govuk-!-margin-top-0 govuk-!-font-size-16">
-                                <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
-                                    <strong>Download payment breakdown (PDF)</strong>
-                                    </a>
-                                </p>
-                                <p class="govuk-!-margin-bottom-0 govuk-!-margin-top-0 govuk-!-font-size-16">
-                                  <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
-                                      <strong>Download payment breakdown (CSV)</strong>
-                                      </a>
-                                  </p>
-                            </div>
+                      <a href="" class="govuk-link govuk-link--no-visited-state ext-link">
+                        <strong>Download payment breakdown (CSV)</strong>
+                        </a>
+                    </p>
                 </div>
 
                 <ul class="first govuk-list">

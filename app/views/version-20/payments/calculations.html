@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+
+{% endblock %}
+{% block content %}
+
+
+
+
+        <div class="govuk-grid-row">
+           
+            <div class="govuk-grid-column-full "> 
+              <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">Test data</h1>
+
+              <div class="govuk-grid-column-full ">
+  
+                 <div class="dashboard-numbers govuk-!-width-one-quarter">
+      <p class="govuk-heading-m">Total</p>
+      <p class="govuk-heading-l">15600000</p>
+    </div>
+                </h2>
+                <table class="govuk-table">
+            
+ 
+                 
+           
+                  <thead class="govuk-table__head">
+           
+                    <tr  class="govuk-table__row">
+                     
+              
+                      <th  style="border-bottom: 1px solid black;" scope="col"  class="govuk-table__header">Status</th>
+                      <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">Starts </th>
+
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 1</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 2</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 3</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 4</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Completed</th>
+                    </tr>
+                    <th  style=" border-bottom: 1px solid black;" scope="col" colspan="7" class="govuk-table__header govuk-colour">Band A</th>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Paid</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  style="border-bottom: 1px solid black;" scope="row" class="govuk-table__cell">Payable</td>
+         
+                      <td style="border-bottom: 1px solid black;"  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td style="border-bottom: 1px solid black;"  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td style="border-bottom: 1px solid black;"  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  style="border-bottom: 1px solid black;"  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th style="border-bottom: 1px solid black;"   class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                   
+                    <th  style=" border-bottom: 1px solid black;" scope="col" colspan="7" class="govuk-table__header govuk-colour">Band B</th>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Paid</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  style="border-bottom: 1px solid black;" scope="row" class="govuk-table__cell">Payable</td>
+         
+                      <td style="border-bottom: 1px solid black;"  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td style="border-bottom: 1px solid black;"  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td style="border-bottom: 1px solid black;"  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <th  style=" border-bottom: 1px solid black; " scope="col" colspan="7" class="govuk-table__header govuk-colour">Band C</th>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Paid</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Payable</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                   
+         
+                  </tbody>
+                </table>
+             
+                <table class="govuk-table">
+            
+ 
+                 
+           
+                  <thead class="govuk-table__head">
+           
+                    <tr  class="govuk-table__row">
+                     
+              
+                      <th  style="border-bottom: 1px solid black;" scope="col"  class="govuk-table__header">Band</th>
+                      <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">Starts </th>
+
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 1</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 2</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 3</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 4</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Completed</th>
+                    </tr>
+                    <th  style=" border-bottom: 1px solid black;" scope="col" colspan="7" class="govuk-table__header govuk-colour">Paid declarations</th>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band A</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band B</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  style="border-bottom: 1px solid black;" scope="row" class="govuk-table__cell">Band c</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                    
+                    </tr>
+                    <th  style="border-bottom: 1px solid black;"  scope="col" colspan="7" class="govuk-table__header">Payable declrations </th>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band A</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band B</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band c</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                    
+                    </tr>
+         
+                  </tbody>
+                </table>
+
+
+           </div>
+        
+           
+         
+    
+            </div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "Hello") {
+    x.innerHTML = "Swapped text!";
+  } else {
+    x.innerHTML = "Hello";
+  }
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// // Get the modal
+// var sendmodal = document.getElementById("sendmodal");
+
+// // Get the button that opens the modal
+// var sendbtn = document.getElementById("send");
+
+// // Get the <span> element that closes the modal
+// var sendspan = document.getElementsByClassName("close2")[0];
+
+// // When the user clicks on the button, open the modal
+// sendbtn.onclick = function() {
+//   sendmodal.style.display = "block";
+// }
+
+// // When the user clicks on <span> (x), close the modal
+// sendspan.onclick = function() {
+//   sendmodal.style.display = "none";
+// }
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == sendmodal) {
+//     sendmodal.style.display = "none";
+//   }
+// }
+
+</script>
+{% endblock %}
