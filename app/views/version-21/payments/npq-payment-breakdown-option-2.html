@@ -1,0 +1,458 @@
+{% extends "layout-full-width.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{{ govukBackLink({
+text: "Back",
+href: "choose-provider"
+}) }}
+{% endblock %}
+{% block content %}
+
+
+
+
+        <div class="govuk-grid-row">
+           
+            <div class="govuk-grid-column-full ">
+              <span class="govuk-caption-xl">National professional qualifications payments</span>
+                <h1 class="govuk-heading-xl">{{data.providerName}}</h1>
+                <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
+                  <ul class="app-subnav__list">
+                      <li class="app-subnav__list-item app-subnav__list-item--selected">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="">
+                  Payment breakdown
+                 <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+                <li class="app-subnav__list-item">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-participant-information">
+                    
+                  Participants
+                </a></li>
+                
+                
+                  </ul>
+                </nav>
+
+                <h2 class="govuk-heading-l">Payment breakdown</h2>
+                <div class="govuk-grid-column-one-third">
+                <div  style="display:inline-block" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
+                  <div class="govuk-radios  govuk-!-margin-bottom-0 ">
+                    <div class="govuk-radios__item"><input class="govuk-radios__input"
+                        id="lab-based-testing-and-capacity-by-test-type-0"
+                        name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
+                        checked=""><label class="govuk-label govuk-radios__label "
+                        for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
+                    <div class="govuk-radios__item"><input class="govuk-radios__input"
+                        id="lab-based-testing-and-capacity-by-test-type-1"
+                        name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
+                        class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Live payment breakdown</label></div>
+                  </div>
+                </div>
+</div>
+                  <div style="display:inline-block" class="">
+           
+                
+                  <div class="autocomplete-wrapper">
+                    <label class="govuk-label" for="sort">
+                      View previous payment breakdown
+                          </label>
+                    <select class="govuk-select autocomplete-element" id="delveryProvider" name="delveryProvider">
+
+
+                       <option value="" ></option>
+                        <option value="dec">December 2021</option>
+                        <option value="nov">November 2021</option>
+                        <option value="oct" >October 2021</option>
+                        <option value="sep">September 2021</option>
+                        <option value="aug"> August 2021</option>
+                        <option value="jul" >July 2021</option>
+                        <option value="jun">June 2021</option>
+                        <option value="may">May 2021</option>
+                        <option value="apr" >April 2021</option>
+                        <option value="mar">March 2021</option>
+                        <option value="feb">February 2021</option>
+                        <option value="jan" >January 2021</option>
+                       
+                    </select>
+                
+          
+          </div>
+                
+
+                </div>
+  
+                <button  style="display:inline-block; margin-top:30px;" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
+                  View
+                </button>
+           
+           
+            <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+
+                <div class="topic"><strong itemprop="name" class="govuk-caption-m govuk-!-font-weight-regular">Payment</strong>
+                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-0">£1,663,733.30</h4>
+                    <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
+                      
+                      <span
+                            class="card-timestamp"></span></p>
+
+                            
+                            <div class="additional-info bottom-aligned">
+                                <p class=" govuk-!-margin-top-0 govuk-!-font-size-16">
+                                <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
+                                    <strong>Download payment breakdown (PDF)</strong>
+                                    </a>
+                                </p>
+                                <p class="govuk-!-margin-bottom-0 govuk-!-margin-top-0 govuk-!-font-size-16">
+                                  <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
+                                      <strong>Download payment breakdown (CSV)</strong>
+                                      </a>
+                                  </p>
+                            </div>
+                </div>
+
+                <ul class="first govuk-list">
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Milestone end date </strong>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">21 November 2021</span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                
+                </ul>
+                <ul class="first govuk-list">
+                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                      <strong class="govuk-body-s float govuk-!-margin-bottom-0">PO number</strong>
+                       <div class="number-group">
+                           <div class="number-container govuk-!-padding-right-4">
+                               <div class="float tooltip">
+                                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                       <span class="">001</span></div>
+                               </div>
+                           </div>
+                       </div>
+                   </li>
+                  
+                  </ul>
+              
+            
+        
+ 
+                                
+            </div>   
+            <br>
+                                    </div>
+       
+
+<div class="govuk-grid-column-one-half">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement"
+    itemscope="">
+    <div class="govuk-grid-column-full ">
+      <table class="govuk-table govuk-table govuk-!-margin-0">
+        <caption class="govuk-table__caption govuk-table__caption--s">Leading Behaviour and Culture</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee<br><span
+                style="font-weight: normal;">Number of participants - 1000</span></td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric"> £90,200.00</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Service fee</td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£20,044.44</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Clawbacks</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">£0.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th style="border-bottom:none;" scope="row" class="govuk-table__header">Total</th>
+            <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£200,444.44</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+  <br>
+</div>
+<div class="govuk-grid-column-one-half">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement"
+    itemscope="">
+    <div class="govuk-grid-column-full ">
+      <table class="govuk-table govuk-table govuk-!-margin-0">
+        <caption class="govuk-table__caption govuk-table__caption--s">Leading Behaviour and Culture</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee<br><span
+                style="font-weight: normal;">Number of participants - 1000</span></td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric"> £90,200.00</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Service fee</td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£20,044.44</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Clawbacks</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">£0.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th style="border-bottom:none;" scope="row" class="govuk-table__header">Total</th>
+            <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£200,444.44</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+  <br>
+</div>
+
+<div class="govuk-grid-column-one-half ">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement"
+    itemscope="">
+    <div class="govuk-!-width-full ">
+      <table class="govuk-table govuk-!-margin-0">
+        <caption class="govuk-table__caption govuk-table__caption--s">Leading Teacher Development</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee<br><span
+                style="font-weight: normal;">Number of participants - 1000</span></td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric"> £90,200.00</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Service fee</td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£20,044.44</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Clawbacks</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">£0.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th style="border-bottom:none;" scope="row" class="govuk-table__header">Total</th>
+            <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£200,444.44</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+  <br>
+</div>
+<div class="govuk-grid-column-one-half">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement"
+    itemscope="">
+    <div class="govuk-!-width-full">
+      <table class="govuk-table govuk-!-margin-0">
+        <caption class="govuk-table__caption govuk-table__caption--s">Senior Leadership</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee<br><span
+                style="font-weight: normal;">Number of participants - 1000</span></td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric"> £90,200.00</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Service fee</td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£20,044.44</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Clawbacks</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">£0.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th style="border-bottom:none;" scope="row" class="govuk-table__header">Total</th>
+            <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£200,444.44</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+  <br>
+</div>
+<div class="govuk-grid-column-one-half ">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement"
+    itemscope="">
+    <div class="govuk-!-width-full ">
+      <table class="govuk-table govuk-!-margin-0">
+        <caption class="govuk-table__caption govuk-table__caption--s">Headship</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee<br><span
+                style="font-weight: normal;">Number of participants - 1000</span></td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric"> £90,200.00</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Service fee</td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£20,044.44</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Clawbacks</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">£0.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th style="border-bottom:none;" scope="row" class="govuk-table__header">Total</th>
+            <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£200,444.44</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+  <br>
+</div>
+<div class="govuk-grid-column-one-half ">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement"
+    itemscope="">
+    <div class="govuk-!-width-full ">
+      <table class="govuk-table govuk-!-margin-0">
+        <caption class="govuk-table__caption govuk-table__caption--s">Executive Leadership</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee<br><span
+                style="font-weight: normal;">Number of participants - 1000</span></td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric"> £90,200.00</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Service fee</td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£20,044.44</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Clawbacks</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">£0.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th style="border-bottom:none;" scope="row" class="govuk-table__header">Total</th>
+            <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£200,444.44</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+  <br>
+</div>
+<div class="govuk-grid-column-one-half ">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement"
+    itemscope="">
+    <div class="govuk-!-width-full ">
+      <table class="govuk-table govuk-!-margin-0">
+        <caption class="govuk-table__caption govuk-table__caption--s">Additional Support Offer</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Payment type</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment amount</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Output fee<br><span
+                style="font-weight: normal;">Number of participants - 1000</span></td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric"> £90,200.00</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <td style="border-bottom:none;" scope="row" class="govuk-table__cell">Service fee</td>
+            <td style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£20,044.44</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__cell">Clawbacks</td>
+            <td class="govuk-table__cell govuk-table__header--numeric">£0.00</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th style="border-bottom:none;" scope="row" class="govuk-table__header">Total</th>
+            <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£200,444.44</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+  <br>
+</div>
+<div class="govuk-grid-column-one-half">
+  <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement"
+    itemscope="">
+    <div class="govuk-!-width-two-thirds ">
+      <table class="govuk-table govuk-!-margin-0">
+
+        <thead class="govuk-table__head">
+    
+        </thead>
+        <tbody class="govuk-table__body">
+     
+          <tr class="govuk-table__row">
+            <th style="border-bottom:none;" scope="row" class="govuk-table__header">VAT</th>
+            <th style="border-bottom:none;" class="govuk-table__cell govuk-table__header--numeric">£1,663,733.30</th>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+  <br>
+</div>
+
+ 
+                    </div>
+
+            
+    
+            
+
+
+{% endblock %}
+

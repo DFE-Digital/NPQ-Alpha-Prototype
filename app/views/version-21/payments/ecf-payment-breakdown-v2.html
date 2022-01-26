@@ -1,12 +1,10 @@
-{% extends "layout.html" %}
+{% extends "layout-full-width.html" %}
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
-  text: "Change trainee scheme",
-  href: "scheme"
-  }) }}
-
-
+text: "Back",
+href: "choose-provider"
+}) }}
 {% endblock %}
 {% block content %}
 
@@ -16,60 +14,9 @@
         <div class="govuk-grid-row">
            
             <div class="govuk-grid-column-full "> 
-              <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1>
-              <nav class="app-subnav " aria-label="Sub navigation">
-                  <ul class="app-subnav__list">
-                      <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
-                    
-                  Programme dashboard
-                
-                </a></li>
-                
-                <li class="app-subnav__list-item  app-subnav__list-item--selected">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-payment-breakdown">
-                    
-                      Payment breakdown
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-  
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
-                    
-                    Participant information
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                
-                
-                  </ul>
-                </nav>
-                <div class="">
-                  <div  style="float:right" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
-                    <div class="govuk-radios govuk-!-margin-bottom-0 ">
-                      <div class="govuk-radios__item"><input class="govuk-radios__input"
-                          id="lab-based-testing-and-capacity-by-test-type-0"
-                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
-                          checked=""><label class="govuk-label govuk-radios__label "
-                          for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
-                      <div class="govuk-radios__item"><input class="govuk-radios__input"
-                          id="lab-based-testing-and-capacity-by-test-type-1"
-                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
-                          class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Forecast payment breakdown</label></div>
-      
-                        
-                        
-                    </div>
-                  
-                  </div>
-                
-                  
-      </div>
+             <span class="govuk-caption-xl">Early career framework payment breakdown</span>
+                <h1 class="govuk-heading-xl">{{data.providerName}} </h1>
                
-           
-                <h2 class="govuk-heading-l">Payment breakdown
-             
-
-                </h2>
                 <!-- <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
                   <ul class="app-subnav__list">
                       <li class="app-subnav__list-item app-subnav__list-item--selected">
@@ -92,16 +39,15 @@
                 
                   </ul>
                 </nav> -->
-            <br>
-                <div class="govuk-grid-row">
-                <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
+
+                <div  style="display:inline-block" class="">
            
                 
                   <div class="autocomplete-wrapper">
                     <label class="govuk-label" for="sort">
-                     Select a differerent provider 
+                      View previous payment breakdown
                           </label>
-                    <select class="govuk-select autocomplete-element " id="delveryProvider" name="delveryProvider">
+                    <select class="govuk-select autocomplete-element" id="delveryProvider" name="delveryProvider">
 
 
                        <option value="" ></option>
@@ -122,174 +68,110 @@
                 
           
           </div>
-          
      
         </div>
-
-        <div  class="govuk-grid-column-one-third">
-           
-                
-          <div class="autocomplete-wrapper">
-            <label class="govuk-label" for="sort">
-              View previous payment breakdown
-                  </label>
-            <select class="govuk-select autocomplete-element" id="delveryProvider1" name="delveryProvider1">
-
-
-               <option value="" ></option>
-                <option value="dec">December 2021</option>
-                <option value="nov">November 2021</option>
-                <option value="oct" >October 2021</option>
-                <option value="sep">September 2021</option>
-                <option value="aug"> August 2021</option>
-                <option value="jul" >July 2021</option>
-                <option value="jun">June 2021</option>
-                <option value="may">May 2021</option>
-                <option value="apr" >April 2021</option>
-                <option value="mar">March 2021</option>
-                <option value="feb">February 2021</option>
-                <option value="jan" >January 2021</option>
-               
-            </select>
-        
-  
-  </div>
-  
-
-</div>
-        
-        <button  style=" margin-top:30px; display:inline-block" class="govuk-button govuk-button--secondary govuk-!-margin-left-2" data-module="govuk-button">
+        <button  style=" margin-top:30px; display:inline-block" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
           View
         </button>
-</div>
-       
-               
-            <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+    
+          <div class="">
+            <div  style="display:inline-block" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
+              <div class="govuk-radios govuk-radios--inline govuk-!-margin-bottom-0 ">
+                <div class="govuk-radios__item"><input class="govuk-radios__input"
+                    id="lab-based-testing-and-capacity-by-test-type-0"
+                    name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
+                    checked=""><label class="govuk-label govuk-radios__label "
+                    for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
+                <div class="govuk-radios__item"><input class="govuk-radios__input"
+                    id="lab-based-testing-and-capacity-by-test-type-1"
+                    name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
+                    class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Forecast payment breakdown</label></div>
+
+                  
+                  
+              </div>
             
-                <div class="topic">
-                 
-                  <strong itemprop="name" class="govuk-heading-m govuk-!-margin-bottom-0   govuk-!-font-weight-regular">{{data.providerName}}</strong>
-                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-0">Total £975,103.20</h4>
+            </div>
+          
+            
+</div>
+
+                <!-- <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
+                  <ul class="app-subnav__list">
+                      <li class="app-subnav__list-item">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="">
+                    
+           Milestone 1
+                 <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+                <li class="app-subnav__list-item">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
+                    
+             Milestone 2
+                </a></li>
+                <li class="app-subnav__list-item">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
+                    
+             Milestone 3
+                </a></li>
+                <li class="app-subnav__list-item  app-subnav__list-item--selected">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
+                    
+             Milestone 4 - <strong class="govuk-tag govuk-tag--turquoise">
+              Current
+            </strong>
+                </a></li>
+                <li class="app-subnav__list-item ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
+                    
+             Milestone 5
+                </a></li>
+                <li class="app-subnav__list-item">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
+                    
+             Milestone 6
+                </a></li>
+                
+                
+                  </ul>
+                </nav> -->
+
+           
+                <!-- <div  class="govuk-form-group govuk-radios--small  ">
+                  <div class="govuk-radios  govuk-radios--inline govuk-!-margin-bottom-0 ">
+                    <div class="govuk-radios__item"><input class="govuk-radios__input"
+                        id="lab-based-testing-and-capacity-by-test-type-0"
+                        name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
+                        checked=""><label class="govuk-label govuk-radios__label "
+                        for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
+                    <div class="govuk-radios__item"><input class="govuk-radios__input"
+                        id="lab-based-testing-and-capacity-by-test-type-1"
+                        name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
+                        class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Payable payment breakdown</label></div>
+                  </div>
+                </div> -->
+
+            <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+
+                <div class="topic"><strong itemprop="name" class="govuk-caption-m govuk-!-font-weight-regular">Payment total</strong>
+                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-0">£975,103.20</h4>
                     <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
                       
                       <span
                             class="card-timestamp">Milestone end date 21 November 2021</span></p>
-                            {%if data.payable ==="true"%}
-                            <div>
-                            <strong class="govuk-tag">
-                              PAYMENT CONFIRMED
-                            </strong>
-                          </div>
-                          <br>
-                            {%else%}
-                            <button class="govuk-button" id="myBtn">Confirm payment</button>
-                       
 
-                            {%endif%}
-                           
+                            
                             <div class="additional-info bottom-aligned">
-                              
-                              
+                                <p class=" govuk-!-margin-top-0 govuk-!-font-size-16">
+                                <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
+                                    <strong>Download payment breakdown (PDF)</strong>
+                                    </a>
+                                </p>
                                 <p class="govuk-!-margin-bottom-0 govuk-!-margin-top-0 govuk-!-font-size-16">
-                                  
                                   <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
                                       <strong>Download payment breakdown (CSV)</strong>
                                       </a>
                                   </p>
-                                  <br>
-                                  <!-- <div class="govuk-checkboxes " data-module="govuk-checkboxes">
-                                    <div class="govuk-checkboxes__item">
-                                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                      <label class="govuk-label govuk-checkboxes__label" for="waste">
-                                    Mark as payable
-                                      </label>
-                                    </div>
-                                    </div>
-                                    <br>
-                                    <button class="govuk-button" id="send">Confirm and send</button> -->
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-
-    
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h1 class="govuk-fieldset__heading">
-            This will confirm the payment of £975,103.20 for {{data.providerName}} for the milestone period.
-          </h1>
-        </legend>
-        <div id="changed-name-hint" class="govuk-hint">
-         
-        </div>
-        <!-- <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changed-name">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-              No
-            </label>
-          </div>
-        </div>
-     -->
-      </fieldset>
-    </div>
-    <a href="ecf-payment-breakdown?payable=true"  class="govuk-button" data-module="govuk-button">
-   Continue
-    </a>
-    <button class="close govuk-button govuk-button--secondary"> Cancel</button>  
-  </div>
-
-</div>
-
-<!-- The Modal -->
-<div id="sendmodal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close2"> <span >&times;</span> Close</span>  
-    
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h1 class="govuk-fieldset__heading">
-          Are you sure you want to send this payment breakdown to {{data.providerName}}?
-          </h1>
-        </legend>
-        <div id="changed-name-hint" class="govuk-hint">
-         
-        </div>
-        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changed-name">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-              No
-            </label>
-          </div>
-        </div>
-    
-      </fieldset>
-    </div>
-    <a href="ecf-payment-breakdown?payable=true"  class="govuk-button" data-module="govuk-button">
-   Continue
-    </a>
-  </div>
-
-</div>
                             </div>
                 </div>
 
@@ -345,7 +227,7 @@
                     </li>
                 </ul>
                 <ul class="booster govuk-list">
-                
+                  
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Recruitment target</strong>
                      <div class="number-group">
@@ -368,10 +250,9 @@
                             </div>
                         </div>
                     </li>
-
-               
                 </ul>
  
+                                
             </div>   
             <br>
                                     </div>
@@ -385,7 +266,9 @@
 
                 <div class="govuk-grid-column-full ">
                   <h2 class="govuk-heading-m">Output fee  
-                   
+                    <div style="float:right" class="govuk-radios__item">  <a href="participant-information" class="govuk-link  govuk-!-font-size-16">
+              <strong> View participant information</strong>       
+                           </a></div>
                   </h2>
                
                
@@ -400,13 +283,13 @@
                        
                 
                         <th  style="border-bottom: 1px solid black;" scope="col"  class="govuk-table__header">Band</th>
-                        <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">January 2021 participants </th>
-                        <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">April 2021 participants </th>
-                        <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">September 2021 participants </th>
+                        <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">Started declarations </th>
+                        <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">Retained declarations</th>
+                        <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">Completed declarations</th>
                         <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Fee per participant</th>
                         <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
                       </tr>
-                      <th  style=" border-bottom: 1px solid black;" scope="col" colspan="7" class="govuk-table__header govuk-colour">Started declarations</th>
+                      <th  style=" border-bottom: 1px solid black;" scope="col" colspan="7" class="govuk-table__header govuk-colour">January 2021 declarations</th>
                     </thead>
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
@@ -753,69 +636,5 @@
     
             </div>
 
-<script>
-  
 
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.innerHTML === "Hello") {
-    x.innerHTML = "Swapped text!";
-  } else {
-    x.innerHTML = "Hello";
-  }
-}
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-// // Get the modal
-// var sendmodal = document.getElementById("sendmodal");
-
-// // Get the button that opens the modal
-// var sendbtn = document.getElementById("send");
-
-// // Get the <span> element that closes the modal
-// var sendspan = document.getElementsByClassName("close2")[0];
-
-// // When the user clicks on the button, open the modal
-// sendbtn.onclick = function() {
-//   sendmodal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// sendspan.onclick = function() {
-//   sendmodal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == sendmodal) {
-//     sendmodal.style.display = "none";
-//   }
-// }
-
-</script>
 {% endblock %}
