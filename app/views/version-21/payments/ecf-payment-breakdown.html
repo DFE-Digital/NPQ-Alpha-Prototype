@@ -29,7 +29,7 @@
                 <li class="app-subnav__list-item  app-subnav__list-item--selected">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?scheme={{data.scheme}}">
                     
-                      Payment breakdown
+                      Provider statement
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
   
@@ -54,7 +54,25 @@
                 
                   </ul>
                 </nav>
-                {%if data.payable ==="true"%}
+                {%if data.statementDate === "April 2022"%}
+                <div id="notification" class="govuk-notification-banner " role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                  <div class="govuk-notification-banner__header">
+                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                      Important
+                    </h2>
+                  </div>
+                  <div class="govuk-notification-banner__content">
+                    <p class="govuk-notification-banner__heading">
+                      you can't approve this <br>
+                      the info is changing
+       
+                    </p>
+                  </div>
+                </div>
+                {%else%}
+
+                {%endif%}
+                {%if data.payable === "true"%}
                 <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                   <div class="govuk-notification-banner__header">
                     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -71,40 +89,23 @@
                 {%else%}
 
                 {%endif%}
-                <div class="">
-                  <div  style="float:right" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
-                    <div class="govuk-radios govuk-!-margin-bottom-0 ">
-                      <div class="govuk-radios__item"><input class="govuk-radios__input"
-                          id="lab-based-testing-and-capacity-by-test-type-0"
-                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
-                          checked=""><label class="govuk-label govuk-radios__label "
-                          for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
-                      <div class="govuk-radios__item"><input class="govuk-radios__input"
-                          id="lab-based-testing-and-capacity-by-test-type-1"
-                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
-                          class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Forecast payment breakdown</label></div>
-      
-                        
-                        
-                    </div>
-                  
-                  </div>
-                
-                  
-      </div>
+
                
       
-           
-                <h2 class="govuk-heading-l">Payment breakdown
+    
+        <span autocomplete="on" class="govuk-caption-l">{{data.providerName}} </span> 
+                <h2 class="govuk-heading-l">{{data.statementDate}} provider statement
              
 
                 </h2>
-          
+                <div class="govuk-inset-text">
+                  Next milestone end date 28 February 2022
+                </div>
                 <!-- <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
                   <ul class="app-subnav__list">
                       <li class="app-subnav__list-item app-subnav__list-item--selected">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="">
-                  Payment breakdown
+                  Provider statement
                  <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 <li class="app-subnav__list-item">
@@ -124,15 +125,16 @@
                 </nav> -->
             <br>
                 <div class="govuk-grid-row">
-                  <form  method="post" novalidate="" autocomplete="off" action="ecf-payment-breakdown?payable=false" >
+                  <form  method="get" novalidate="" autocomplete="off" action="" >   
                 <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
            
-                
+   
+                   
                   <div class="autocomplete-wrapper">
                     <label class="govuk-label" for="sort">
-                     Select a differerent provider 
+                     View a differerent provider 
                           </label>
-                    <select class="govuk-select autocomplete-element " id="delveryProvider" name="providerName">
+                    <select class="govuk-select autocomplete-element " id="provider" name="providerName">
 
 
                  
@@ -140,7 +142,7 @@
                       <option value="Ambition Institute">Ambition Institute</option>
                       <option value="Best Practice Network (home of Outstanding Leaders Partnership)">Best Practice Network (home of Outstanding Leaders Partnership)</option>
                       <option value="Capita" >Capita</option>
-                      <option value="Education Development Trust">ducation Development Trust</option>
+                      <option value="Education Development Trust">Education Development Trust</option>
                       <option value="Teach First">Teach First</option>
                       <option value="UCL Institute of Education" >UCL Institute of Education</option>
                        
@@ -148,7 +150,7 @@
                 
           
           </div>
-          
+     
      
         </div>
 
@@ -156,43 +158,35 @@
            
                 
           <div class="autocomplete-wrapper">
-            <label class="govuk-label" for="date">View by date</label>
-            <duet-date-picker identifier="date">
+            <label class="govuk-label" for="date">View a different satement</label>
+            <!-- <duet-date-picker identifier="date">
 
               
-            </duet-date-picker>
+            </duet-date-picker> -->
             
-            <!-- <select class="govuk-select autocomplete-element" id="delveryProvider1" name="delveryProvider1">
+            <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
 
 
                <option value="" ></option>
-                <option value="dec">December 2021</option>
-                <option value="nov">November 2021</option>
-                <option value="oct" >October 2021</option>
-                <option value="sep">September 2021</option>
-                <option value="aug"> August 2021</option>
-                <option value="jul" >July 2021</option>
-                <option value="jun">June 2021</option>
-                <option value="may">May 2021</option>
-                <option value="apr" >April 2021</option>
-                <option value="mar">March 2021</option>
-                <option value="feb">February 2021</option>
-                <option value="jan" >January 2021</option>
+               <option value="April 2022">April 2022</option>
+                <option value="March 2022">March 2022</option>
+                <option value="February 2022">February 2022</option>
+                <option value="January 2022" >January 2022</option>
                
-            </select> -->
+            </select>
         
   
   </div>
   
 
 </div>
-        
+
         <button  type="submit" style=" margin-top:30px; display:inline-block" class="govuk-button govuk-button--secondary govuk-!-margin-left-2" data-module="govuk-button">
           View
         </button>
                   </form>
 </div>
-       
+
               <!-- The Modal -->
 <div id="myModal" class="modal">
 
@@ -279,13 +273,18 @@
             
                 <div style="width:30%" class="topic ">
                  
-                  <strong itemprop="name" class="govuk-heading-m govuk-!-margin-bottom-0   govuk-!-font-weight-regular">{{data.providerName}}</strong>
-                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-0">Total £975,103.20</h4>
+                  <strong itemprop="name" class="govuk-heading-m govuk-!-margin-bottom-0   govuk-!-font-weight-regular"></strong>
+                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-0 ">Total £975,103.20</h4>
+                    <br>
+                    
+                    <p class=" govuk-body-m title-mobile govuk-!-margin-bottom-2">Service fee £975,103.20</p>
+                    <p class=" govuk-body-m title-mobile govuk-!-margin-bottom-0">VAT £975,103.20</p>
                     <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
                       
-                      <span
-                            class="card-timestamp">Milestone end date 21 November 2021</span>
-                          </p>
+                      {%if data.statementDate === "April 2022" %}
+                
+                      {%else%}
+                     
                             {%if data.payable ==="true"%}
                             <div>
                             <strong class="govuk-tag">
@@ -300,7 +299,7 @@
                        
 
                             {%endif%}
-                           
+                            {%endif%}   
                             <div class="additional-info bottom-aligned">
                               
                               
@@ -406,6 +405,7 @@
                 </ul>
  
             </div>   
+      
             <br>
                                     </div>
        
@@ -420,7 +420,11 @@
                   <h2 class="govuk-heading-m">Output fee  
                    
                   </h2>
-               
+                  {%if data. statementDate === "April 2022" %}
+                  <div class="govuk-inset-text">
+                    There is no output fee this month.
+                  </div>
+                  {%else%}
                   <table class="govuk-table ">
               
    
@@ -549,81 +553,19 @@
                        
                     </tbody>
                   </table>
+               
+               
+
                  <div style="float: right;" class="govuk-table__row">     
     <div class=" govuk-heading-s govuk-table__header--numeric">Output fee total <br>£156,000.00</div> 
   
 </div>     
-
+{%endif%}
              </div>
           
                  </div>    
                
-<!-- <br>
-<div style="border-bottom:none; border-top:none" class="vaccinations" itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
-         
 
-  <div class="govuk-grid-column-full">
-    <h2 class="govuk-heading-m">Clawbacks
-     
-    </h2>
- 
- 
-    <table class="govuk-table">
-
-
-     
-
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th  scope="col" class="govuk-table__header govuk-table__header--numeric">Started declarations</th>
-          <th scope="col" class="govuk-table__header govuk-table__header--numeric">Retained declarations</th>
-     
-          <th  scope="col" class="govuk-table__header govuk-table__header--numeric">Fee per participant</th>
-          <th  scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
-
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-  
-          <td  class="govuk-table__cell govuk-table__cell--numeric">     1000</td>
-          <td  class="govuk-table__cell govuk-table__cell--numeric">     1000</td>
-
-          <td  class="govuk-table__cell govuk-table__cell--numeric">     £168</td>
-          <th class="govuk-table__cell govuk-table__cell--numeric">£168,000.00</th>
-        </tr>
-        <tr class="govuk-table__row">
-
-          <td class="govuk-table__cell govuk-table__cell--numeric">     1000</td>
-          <td class="govuk-table__cell govuk-table__cell--numeric">     1000</td>
-    
-  
-          <td  class="govuk-table__cell govuk-table__cell--numeric">     £156</td>
-          <th  class="govuk-table__cell govuk-table__cell--numeric">£156,000.00</th>
-        </tr>
-        <tr class="govuk-table__row">
-    
-          <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
-          <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
-    
-  
-          <td  class="govuk-table__cell govuk-table__cell--numeric">     £144</td>
-    
-       
-          <th  class="govuk-table__cell govuk-table__cell--numeric">£36,000</th>
-        
-        </tr>
-      
-
-      </tbody>
-    </table>
-    <div style="float: right;">     
-      <div class=" govuk-heading-s govuk-table__header--numeric">Clawbacks total <br>£156,000.00</div> 
-    
-  </div>     
-</div>
-
-   </div>   -->
                       <br>
                
               </div>     
@@ -631,15 +573,27 @@
     
             </div>
             <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-half" >
+              <div class="govuk-grid-column-full" >
               <div style="border-bottom:none; border-top:none" class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
  
 
                 <div class="govuk-grid-column-full ">
-                  <h2 class="govuk-heading-m">Clawbacks
+                  {%if data. statementDate === "April 2022" %}
+                
+                  {%else%}
+                  <a style="float:right; font-size: 16px;" href="ecf-uplift-payment-information" class="govuk-link govuk-link--no-visited-state">
+                  <strong>View uplift payment information</strong>
+                    </a>
+                  {%endif%}
+                    
+                  <h2 class="govuk-heading-m">Other fees
                    
                   </h2>
-               
+                  {%if data. statementDate === "April 2022" %}
+                  <div class="govuk-inset-text">
+                    There are no other fees this month.
+                  </div>
+                  {%else%}
                   <table class="govuk-table ">
               
    
@@ -650,53 +604,48 @@
                       <tr  class="govuk-table__row">
                        
                   
-                        <th   scope="col"  class="govuk-table__header">Type</th>
+                        <th   scope="col"  class="govuk-table__header">Payment Type</th>
                   
-                        <th    scope="col" class="govuk-table__header govuk-table__header--numeric">Details </th>
-                  
-                        <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
+                        <th    scope="col" class="govuk-table__header ">Participants </th>
+                                    
+                        <th    scope="col" class="govuk-table__header ">Fee per participant </th>
+                        <th   scope="col" class="govuk-table__header ">Payments</th>
                       </tr>
                      
                     </thead>
                   
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
-                        <td  style="border-bottom: none;" scope="row" class="govuk-table__cell"> <strong>Starts</strong>
+                        <td   scope="row" class="govuk-table__cell"> Clawbacks
                         </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000 </td>
-                 
+                       
+                        <td  class="govuk-table__cell ">1000 </td>
+                        <td   scope="row" class="govuk-table__cell"> 
+                          £100.00
+                        </td>
                   
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric"></td>
+                        <td  class="govuk-table__cell">£10,000.00</td>
                       </tr>
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Fee per participant</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £119.40</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric"> - £10,000.00</td>
-                
                    
-                       </tr>
                        <tr class="govuk-table__row">
-                        <td  style="border-bottom: none;" scope="row" class="govuk-table__cell"><strong>Retained </strong></td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000 </td>
-                     
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric"></td>
+                        <td   scope="row" class="govuk-table__cell">Uplift fee</td>
+                        <td   class="govuk-table__cell ">1000 </td>
+                        <td   scope="row" class="govuk-table__cell"> 
+                          £100.00
+                        </td>
+                        <td   class="govuk-table__cell ">£10,000.00</td>
                       </tr>
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Fee per participant</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £119.40</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric"> - £10,000.00</td>
-                  
-                   
-                       </tr>
+                    
                
                        
                     </tbody>
                   </table>
+               
                  <div style="float: right;" class="govuk-table__row">     
-    <div class=" govuk-heading-s govuk-table__header--numeric">Clawbacks total <br> - £20,000.00</div> 
+    <div class=" govuk-heading-s govuk-table__header--numeric">Other fees total <br> - £20,000.00</div> 
   
 </div>     
-
+{%endif%}
              </div>
           
                  </div>    
@@ -753,14 +702,12 @@
                 </div>
             
                 <div class="govuk-grid-column-one-half" >
-    <div style="border-bottom:none; border-top:none" class="vaccinations" itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+    <!-- <div style="border-bottom:none; border-top:none" class="vaccinations" itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
              
     
       <div style="width:120%" class="govuk-grid-column-full">
-        <h2 class="govuk-heading-m">Other fees
-          <a style="float:right; font-size: 16px;" href="ecf-uplift-payment-information" class="govuk-link govuk-link--no-visited-state">
-            <strong>View uplift payment information</strong>
-            </a>
+        <h2 class="govuk-heading-m">Uplift fee
+         
         </h2>
      
      
@@ -786,22 +733,7 @@
               <td  class="govuk-table__cell">     Uplift payment <br> Eligible participants - 100 <br> Fee per participant - £100.00</td>
               <th  class="govuk-table__cell govuk-table__cell--numeric">£10,000.00</th>
             </tr>
-            <tr class="govuk-table__row">
-    
-        
-              <td  class="govuk-table__cell">     Service fee</td>
-              <th  class="govuk-table__cell govuk-table__cell--numeric">£156,000.00</th>
-            </tr>
-            <tr class="govuk-table__row">
-
-        
-
-              <td  class="govuk-table__cell ">     VAT</td>
-        
-           
-              <th  class="govuk-table__cell govuk-table__cell--numeric">£36,000</th>
-            
-            </tr>
+  
           
     
           </tbody>
@@ -812,7 +744,7 @@
       </div> 
     </div>
     
-       </div>  
+       </div>   -->
        </div>  
       </div>   
             <script>
@@ -825,6 +757,9 @@
 <script nomodule src="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/duet.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/themes/default.css" />
 <script>
+  $( "#mybtn2" ).click(function() {
+  $( "#notification" ).removeClass('govuk-visually-hidden');
+});
  $( ".inner" ).before( "<p>Test</p>" );
   const picker = document.querySelector("duet-date-picker")
   const DATE_FORMAT_US = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/
@@ -862,6 +797,7 @@
 <script>
 
 
+
 function myFunction() {
   var x = document.getElementById("myDIV");
   if (x.innerHTML === "Hello") {
@@ -870,6 +806,8 @@ function myFunction() {
     x.innerHTML = "Hello";
   }
 }
+
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
