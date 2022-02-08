@@ -1,4 +1,4 @@
-{% extends "layout-full-width.html" %}
+{% extends "layout-full-width-providers.html" %}
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
@@ -19,20 +19,20 @@
               <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1>
               <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">
-                      <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
-                    
-                  Programme dashboard
-                
-                </a></li>
+                 
                 
                 <li class="app-subnav__list-item  app-subnav__list-item--selected">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?scheme={{data.scheme}}">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-payment-breakdown?scheme={{data.scheme}}">
                     
-                      Provider statement
+                      Your statements
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
-  
+                <li class="app-subnav__list-item ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
+                    
+                  Contract overview
+                
+                </a></li>
                 <li class="app-subnav__list-item ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                     
@@ -46,9 +46,9 @@
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="banding-tracker">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="">
                     
-                 Banding tracker
+                Support request
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 
@@ -105,7 +105,7 @@
                   <ul class="app-subnav__list">
                       <li class="app-subnav__list-item app-subnav__list-item--selected">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="">
-                  Provider statement
+                  Your statements
                  <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 <li class="app-subnav__list-item">

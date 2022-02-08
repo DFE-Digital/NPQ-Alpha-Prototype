@@ -79,35 +79,39 @@
                 
                   
       </div> -->
-      <h2 class="govuk-heading-l">Provider statement 
-             
+
+      <span autocomplete="on" class="govuk-caption-l">{{data.providerName}} </span> 
+      <h2 class="govuk-heading-l">{{data.statementDate}} provider statement
+   
 
       </h2>
-  
-  <br>
-  <div class="govuk-grid-row">
-    <form  method="post" novalidate="" autocomplete="off" action="npq-payment-breakdown?payable=false" >
-  <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
+      <div class="govuk-inset-text">
+        Next milestone end date 28 February 2022
+      </div>
+      <div class="govuk-grid-row">
+        <form  method="get" novalidate="" autocomplete="off" action="" >   
+      <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
+ 
 
-  
-    <div class="autocomplete-wrapper">
-      <label class="govuk-label" for="sort">
-       Select a differerent provider 
-            </label>
-      <select class="govuk-select autocomplete-element " id="delveryProvider" name="providerName">
-
-
-   
-        <option value="" ></option>
-        <option value="Ambition Institute">Ambition Institute</option>
-        <option value="Best Practice Network (home of Outstanding Leaders Partnership)">Best Practice Network (home of Outstanding Leaders Partnership)</option>
-        <option value="Capita" >Capita</option>
-        <option value="Education Development Trust">ducation Development Trust</option>
-        <option value="Teach First">Teach First</option>
-        <option value="UCL Institute of Education" >UCL Institute of Education</option>
          
-      </select>
-  
+        <div class="autocomplete-wrapper">
+          <label class="govuk-label" for="sort">
+           View a differerent provider 
+                </label>
+          <select class="govuk-select autocomplete-element " id="provider" name="providerName">
+
+
+       
+            <option value="" ></option>
+            <option value="Ambition Institute">Ambition Institute</option>
+            <option value="Best Practice Network (home of Outstanding Leaders Partnership)">Best Practice Network (home of Outstanding Leaders Partnership)</option>
+            <option value="Capita" >Capita</option>
+            <option value="Education Development Trust">Education Development Trust</option>
+            <option value="Teach First">Teach First</option>
+            <option value="UCL Institute of Education" >UCL Institute of Education</option>
+             
+          </select>
+      
 
 </div>
 
@@ -115,29 +119,25 @@
 </div>
 
 <div  class="govuk-grid-column-one-third">
-
-  
-<div class="autocomplete-wrapper">
-<label class="govuk-label" for="date">View by date</label>
-<duet-date-picker identifier="date"></duet-date-picker>
-<!-- <select class="govuk-select autocomplete-element" id="delveryProvider1" name="delveryProvider1">
-
-
- <option value="" ></option>
-  <option value="dec">December 2021</option>
-  <option value="nov">November 2021</option>
-  <option value="oct" >October 2021</option>
-  <option value="sep">September 2021</option>
-  <option value="aug"> August 2021</option>
-  <option value="jul" >July 2021</option>
-  <option value="jun">June 2021</option>
-  <option value="may">May 2021</option>
-  <option value="apr" >April 2021</option>
-  <option value="mar">March 2021</option>
-  <option value="feb">February 2021</option>
-  <option value="jan" >January 2021</option>
  
-</select> -->
+      
+<div class="autocomplete-wrapper">
+  <label class="govuk-label" for="date">View a different satement</label>
+  <!-- <duet-date-picker identifier="date">
+
+    
+  </duet-date-picker> -->
+  
+  <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
+
+
+     <option value="" ></option>
+     <option value="April 2022">April 2022</option>
+      <option value="March 2022">March 2022</option>
+      <option value="February 2022">February 2022</option>
+      <option value="January 2022" >January 2022</option>
+     
+  </select>
 
 
 </div>
@@ -148,9 +148,8 @@
 <button  type="submit" style=" margin-top:30px; display:inline-block" class="govuk-button govuk-button--secondary govuk-!-margin-left-2" data-module="govuk-button">
 View
 </button>
-    </form>
+        </form>
 </div>
-
 
        
 
@@ -243,7 +242,7 @@ View
             <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
 
                 <div class="topic">
-                  <strong itemprop="name" class="govuk-heading-m govuk-!-margin-bottom-0   govuk-!-font-weight-regular">{{data.providerName}}</strong>
+
                     <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>
                     {%if data.payable ==="true"%}
                     <div>
@@ -262,7 +261,7 @@ View
                     <p class="grey govuk-!-font-size-16 ">
                       
                       <a href="" class="govuk-link govuk-link--no-visited-state ext-link">
-                        <strong>Download payment breakdown (CSV)</strong>
+                        <strong>Download provider statement (CSV)</strong>
                         </a>
                     </p>
                 </div>

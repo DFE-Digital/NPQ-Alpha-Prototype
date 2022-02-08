@@ -1,4 +1,4 @@
-{% extends "layout-full-width.html" %}
+{% extends "layout-full-width-providers.html" %}
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
@@ -20,14 +20,14 @@
                       <li class="app-subnav__list-item ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
                     
-                  Programme dashboard
+                  Contract overview
                 
                 </a></li>
                 
                 <li class="app-subnav__list-item  app-subnav__list-item--selected">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown">
                     
-                      Provider statement
+                      Your statements
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
   
@@ -62,7 +62,7 @@
                 
                   
       </div>
-      <h2 class="govuk-heading-l">Provider statement
+      <h2 class="govuk-heading-l">Your statements
              
 
       </h2>

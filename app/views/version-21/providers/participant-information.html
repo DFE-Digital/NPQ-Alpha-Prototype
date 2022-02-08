@@ -1,0 +1,712 @@
+{% extends "layout-full-width-providers.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{{ govukBackLink({
+  text: "Change trainee scheme",
+  href: "scheme"
+  }) }}
+
+{% endblock %}
+{% block content %}
+
+        <div class="govuk-grid-row">
+           
+            <div class="govuk-grid-column-full ">
+              
+              <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1> 
+              {%if data.scheme === "Early Career Framework" %}
+              <nav class="app-subnav " aria-label="Sub navigation">
+                <ul class="app-subnav__list">
+            
+            
+            <li class="app-subnav__list-item  ">
+              <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-payment-breakdown?scheme={{data.scheme}}">
+                
+                  Your statements
+                  <span class="govuk-visually-hidden">Current page</span>
+            </a></li>
+            <li class="app-subnav__list-item ">
+              <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
+                
+    Contract overview
+            
+            </a></li>
+            <li class="app-subnav__list-item app-subnav__list-item--selected">
+              <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                
+                Participant information
+                  <span class="govuk-visually-hidden">Current page</span>
+            </a></li>
+
+            <li class="app-subnav__list-item ">
+              <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
+                
+                Delivery partner information
+                  <span class="govuk-visually-hidden">Current page</span>
+            </a></li>
+            <li class="app-subnav__list-item ">
+              <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="support">
+                
+            Support request
+                  <span class="govuk-visually-hidden">Current page</span>
+            </a></li>
+       
+            
+              </ul>
+              </nav>
+                {% elif data.scheme === "National professional qualifications" %}
+                <nav class="app-subnav " aria-label="Sub navigation">
+                  <ul class="app-subnav__list">
+                   
+              
+              <li class="app-subnav__list-item  ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown?scheme={{data.scheme}}">
+                  
+                    Your statements
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="ecf-participant-information-p1">
+                  
+                Contract overview 
+              
+              </a></li>
+              <li class="app-subnav__list-item app-subnav__list-item--selected">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                  
+                  Participant information
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="support">
+                  
+              Support request
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+              
+                </ul>
+                </nav>
+                {%endif%}
+           
+                <h2 class="govuk-heading-l">Participant information
+             
+
+                </h2>
+
+     
+                <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
+                  <div class="moj-filter-layout__filter app-filter" tabindex="-1">
+                    <div class="moj-filter">
+                      <div class="moj-filter__header">
+                        <div class="moj-filter__header-title">
+                          <h2 class="govuk-heading-m">Filter</h2>
+                        </div>
+                        <div class="moj-filter__header-action">
+                        </div>
+                      </div>
+                  
+                      <div class="moj-filter__content" tabindex="-1">
+                        {%if data.remove === "true" %}
+                        {%else%}
+                        <div class="moj-filter__selected ">
+                          <div class="moj-filter__selected-heading">
+                            <div class="moj-filter__heading-title">
+                              <h3 class="govuk-heading-m govuk-!-margin-bottom-1">Selected filters</h3>
+                              <p class="govuk-body">
+                                <a class="govuk-link govuk-link--no-visited-state" href="?remove=true">Clear filters</a>
+                              </p>
+                            </div>
+                          </div>
+              
+                            <h4 class="govuk-heading-s govuk-!-margin-bottom-0">Cohort</h4>
+                            <ul class="moj-filter-tags">
+                                <li>
+                                  <a class="app-checkbox-filter__tag" id="tag-head" href="?q=&amp;remove=true">
+                                    <span class="govuk-visually-hidden">Remove this filter</span>
+                                    January 2021  <span style="float:right">X</span> 
+              </a>                  </li>
+              <li>
+                <a class="app-checkbox-filter__tag" id="tag-head" href="?q=&amp;remove=true">
+                  <span class="govuk-visually-hidden">Remove this filter</span>
+                  April 2021  <span style="float:right">X</span> 
+</a>                  </li>
+<li>
+  <a class="app-checkbox-filter__tag" id="tag-head" href="?q=&amp;remove=true">
+    <span class="govuk-visually-hidden">Remove this filter</span>
+    September 2021  <span style="float:right">X</span> 
+</a>                  </li>
+                            </ul>
+                        </div>
+                        {%endif%}
+                        <div class="moj-filter__options">
+                          <form method="get">
+                            
+                            <input id="searchbtn" type="button" name="commit" value="Apply filters" class="govuk-button" data-disable-with="Apply filters">
+                  
+                            
+                              <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset">
+                                  <legend id="filter-legend-q" class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                    Search
+                                  </legend>
+                                  <span class="govuk-hint" id="query-hint"> Search by participant ID or TRN</span>
+                                    <input class="govuk-input " id="search" name="q" type="text" value="" aria-labelledby="filter-legend-q" autocomplete="off">
+                                </fieldset>
+                              </div>
+                              
+                <div class=" govuk-!-padding-left-0">
+                  
+                  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+                    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Cohort</button>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+                    </h2>
+                    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" >
+                      <div class="app-c-option-select__container-inner js-auto-height-inner">
+                        
+                  <div id="checkboxes" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
+                        <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="jan" name="cohort" type="checkbox" value="January 2021">
+                            <label class="govuk-label govuk-checkboxes__label" for="jan">January 2021</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="apr" name="cohort" type="checkbox" value="April 2021">
+                            <label class="govuk-label govuk-checkboxes__label" for="apr">April 2021</label></div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="sep" name="cohort" type="checkbox" value="September 2021">
+                            <label class="govuk-label govuk-checkboxes__label" for="sep">September 2021</label>
+                          </div>
+                     
+                        </div>
+                    
+                      </fieldset>
+                    </div>
+                  
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="">
+                
+                  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+                    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Schedule</button>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+                    </h2>
+                    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" >
+                      <div class="app-c-option-select__container-inner js-auto-height-inner">
+                        
+                            
+                        <div id="checkboxes2" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
+                              <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="standard" name="schedule" type="checkbox" value="Standard">
+                                  <label class="govuk-label govuk-checkboxes__label" for="standard">
+                              Standard
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="reduced" name="schedule" type="checkbox" value="Reduced">
+                                  <label class="govuk-label govuk-checkboxes__label" for="reduced">
+                                  Reduced
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="extended" name="schedule" type="checkbox" value="Extended">
+                                  <label class="govuk-label govuk-checkboxes__label" for="extended">
+                                 Extended
+                                  </label>
+                                </div>
+                           
+                              </div>
+                          
+                            </fieldset>
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class=" govuk-!-padding-right-0">
+                
+                  <div  class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+                    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Provider</button>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+                    </h2>
+                    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" >
+                      <div class="app-c-option-select__container-inner js-auto-height-inner">
+                        
+                        
+                        <div id="checkboxes3" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+                          <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
+                              <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="ai" name="lp" type="checkbox" value="Ambition Institute">
+                                  <label class="govuk-label govuk-checkboxes__label" for="ai">
+                                    Ambition Institute
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="bp" name="lp" type="checkbox" value="Best Practice Network (home of Outstanding Leaders Partnership)">
+                                  <label class="govuk-label govuk-checkboxes__label" for="bp">
+                                    Best Practice Network (home of Outstanding Leaders Partnership)
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="coe" name="lp" type="checkbox" value="Church of England">
+                                  <label class="govuk-label govuk-checkboxes__label" for="coe">
+                                    Church of England
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="edt" name="lp" type="checkbox" value="Education Development Trust">
+                                  <label class="govuk-label govuk-checkboxes__label" for="edt">
+                                    Education Development Trust
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="sln" name="lp" type="checkbox" value="School-Led Network">
+                                  <label class="govuk-label govuk-checkboxes__label" for="sln">
+                                    School-Led Network
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="llse" name="lp" type="checkbox" value="Leadership Learning South East (LLSE)">
+                                  <label class="govuk-label govuk-checkboxes__label" for="llse">
+                                    Leadership Learning South East (LLSE)
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="tdt" name="lp" type="checkbox" value="Teacher Development Trust">
+                                  <label class="govuk-label govuk-checkboxes__label" for="tdt">
+                                    Teacher Development Trust
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="tf" name="lp" type="checkbox" value="Teach First">
+                                  <label class="govuk-label govuk-checkboxes__label" for="tf">
+                                    Teach First
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="ucl" name="lp" type="checkbox" value="UCL Institute of Education">
+                                  <label class="govuk-label govuk-checkboxes__label" for="ucl">
+                                    UCL Institute of Education
+                                  </label>
+                                </div>
+                              </div>
+                          
+                            </fieldset>
+                          </div>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class=" govuk-!-padding-right-0">
+                
+                  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+                    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Statements</button>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+                    </h2>
+                    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" >
+                      <div class="">
+                        
+                  <div id="checkboxes-fe072cac" class="gem-c-checkboxes gem-c-checkboxes__list " data-module="gem-checkboxes">
+                    <div class="govuk-form-group ">
+                      <label class="govuk-label" for="sort">
+            Month
+                      </label>
+                      <select class="govuk-select govuk-!-width-full" id="sort" name="sort">
+                        <option value="All">All</option>
+                        <option value="Milestone 1">Milestone 1</option>
+                        <option value="Milestone 2">Milestone 2</option>
+                        <option value="Milestone 3">Milestone 3</option>
+                        <option value="Milestone 4">Milestone 4</option>
+                        <option value="Milestone 5">Milestone 5</option>
+                        <option value="Milestone 6">Milestone 6</option>
+                      </select>
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="sort">
+                   Year
+                      </label>
+                      <select class="govuk-select govuk-!-width-full" id="sort" name="sort">
+                        <option value="All">All</option>
+                        <option value="Paid">Paid</option>
+                        <option value="Not paid">Not paid</option>
+                        <option value="Backpayment">Backpayment</option>
+                    
+                      </select>
+                    </div>
+                  
+                  </div>
+              
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+           
+                
+                  </div>
+             
+
+<div class="govuk-grid-column-three-quarters">
+
+ 
+                  
+ 
+  
+  
+  <div id="js-search-results-info" data-module="remove-filter" class="result-info">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <div class="result-info__header">
+          <h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} Participants for current milestone {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
+        </div>
+      </div>
+  
+   
+    </div>
+  
+  </div>
+  <table id="table" class="govuk-table govuk-summary-list"  style="">
+    <thead >  
+      <th scope="col" class="govuk-table__header"> 
+  
+     UUID
+   </th>
+   <th scope="col" class="govuk-table__header"> 
+  
+     TRN
+   </th>
+   <th scope="col" class="govuk-table__header"> 
+  
+    Cohort
+   </th>
+   <th scope="col" class="govuk-table__header"> 
+  
+    Schedule
+   </th>
+   
+   <th scope="col" class="govuk-table__header"> 
+  
+   Declaration status
+   </th>
+ 
+  <th scope="col" class="govuk-table__header"> 
+  
+    Participant status
+     </th>
+     <th scope="col" class="govuk-table__header govuk-table__header--numeric"> 
+  
+      Delivery partner
+    </th>
+  </thead>
+
+  
+             
+                  {% for item in data.pinfo %}
+                  <tbody id="shelulerData">
+             <tr id="row" class="govuk-table__row">
+                    <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
+                      {{item.id}}
+                    </td>
+                
+             
+                  <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
+           
+                    <span class="">{{item.trn}} </span>
+                  </td>
+                 
+                  <td style="border-bottom: none;" scope="col" class="govuk-table__cell cohort" rel="{{item.c}}"> 
+       
+                    <span 
+                    {% if item.c === 'January 2021' %} class="jan"
+                    {% elif item.c === 'April 2021' %} class="apr"
+                    {% elif item.c === 'September 2021' %} class="sep"
+                   {%endif%}
+                    >
+                      
+                      {{item.c}}</span>
+                  </td>
+                  <td style="border-bottom: none;" scope="col" class="govuk-table__cell schedule" rel="{{item.s}}"> 
+       
+                    <span class="">{{item.s}} </span>
+                  </td>
+               
+                  <td style="border-bottom: none;" scope="col" class="govuk-table__cell lp" rel="{{item.lp}}"> 
+                    Milestone 1  <strong class="govuk-tag govuk-tag--green"
+              
+                   > PAID</strong>
+                  </td>
+                
+              
+                  <td style="border-bottom: none;" scope="col" class="govuk-table__cell lp" rel="{{item.lp}}"> 
+                    <strong class="govuk-tag govuk-tag--green"
+              
+                   >Completed</strong>
+                  </td>
+                  <td style="border-bottom: none;" scope="col" class="govuk-table__cell govuk-table__cell--numeric"> 
+            
+                    <span class="">{{item.dp}} </span>
+                   
+                  </td>
+                </tr>
+        <tr class="paymenthistory" >
+                  <div class="">
+                    <td  scope="col" colspan="7" class="govuk-table__header"> 
+       
+                      <!-- <details class="govuk-details govuk-!-margin-0 " data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Declaration history
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                    
+                       
+                              <ul class="govuk-list"
+                              >
+                              <li>
+                                Milestone 1:&nbsp;
+                                <strong {% if item.m1 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m1 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m1 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m1 === 'NOT PAID' %}
+                               {{item.m1}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m1}}
+                             </strong>
+                             {%endif%}
+
+                              </li>
+                              <li>
+                                Milestone 2:
+                                <strong {% if item.m2 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m2 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m2 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m2 === 'NOT PAID' %}
+                               {{item.m2}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m2}}
+                             </strong>
+                             {%endif%}
+                              </li>
+                              <li>
+                                
+                                Milestone 3:
+                                <strong {% if item.m3 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m3 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m3 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m3 === 'NOT PAID' %}
+                               {{item.m3}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m3}}
+                             </strong>
+                             {%endif%}
+
+                              </li>
+                              <li>
+                                Milestone 4:
+                                <strong {% if item.m4 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m4 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m4 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m4 === 'NOT PAID' %}
+                               {{item.m4}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m4}}
+                             </strong>
+                             {%endif%}
+
+                              </li>
+                              <li>
+                                Milestone 5:
+                                <strong {% if item.m5 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m5 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m5 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m5 === 'NOT PAID' %}
+                               {{item.m5}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m5}}
+                             </strong>
+                             {%endif%}
+                               
+                              </li>
+                              <li>
+                                Milestone 6:
+                                <strong {% if item.m6 === 'PAID' %} class="govuk-tag govuk-tag--green"
+                                {% elif item.m6 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
+                                {% elif item.m6=== 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
+                               {%endif%}
+                                >
+                                {% if item.m6 === 'NOT PAID' %}
+                               {{item.m6}}</strong> - <span class="govuk-body-s">Due to previous induction</span>
+                               {%else%}
+                               {{item.m6}}
+                             </strong>
+                             {%endif%}
+                               
+
+                              </li>
+                            </ul>
+                             
+               
+                      
+                   </div>
+                      </details> -->
+                    </td>
+                  </div>
+                </tr>
+                {% endfor %}
+          
+  
+            </tbody>
+        </table>
+  
+  <div class="hods-pagination">
+    <div class="hods-pagination__summary">
+      Showing 51 - 75 of 249 results
+    </div>
+    <ul style="padding-left:0px;" class="">
+      <li class="hods-pagination__item" id="prevButton">
+        <a class="hods-pagination__link" href="?page=2">
+          <span aria-hidden="true" role="presentation">
+            «
+          </span>
+          Previous
+        </a>
+      </li>
+      <li class="hods-pagination__item">
+        <a class="hods-pagination__link" href="?page=1">
+          1
+        </a>
+      </li>
+      <li class="hods-pagination__item">
+        <a class="hods-pagination__link" href="?page=2">
+          2
+        </a>
+      </li>
+      <li class="hods-pagination__item">
+        <a
+          class="
+            hods-pagination__link
+            hods-pagination__link--current
+          "
+          href=""
+        >
+          3
+        </a>
+      </li>
+      <li class="hods-pagination__item">
+        <a class="hods-pagination__link" href="?page=4">
+          4
+        </a>
+      </li>
+      <li class="hods-pagination__item">
+        <a class="hods-pagination__link" href="?page=5">
+          5
+        </a>
+      </li>
+      <li class="hods-pagination__item" id="nextButton">
+        <a class="hods-pagination__link" href="?page=4">
+          Next
+          <span aria-hidden="true" role="presentation">
+            »
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  
+                      </div>
+
+                   </div>
+       
+
+
+            
+            </div>
+
+            
+            <script>
+
+              $("#searchbtn").click(function() {
+              
+                $.each($("#table tbody tr"), function() {
+              
+              if($(this).text().toLowerCase().indexOf($('#search').val().toLowerCase()) === -1){
+                  $(this).hide();
+                            
+              
+              } 
+            
+
+          
+              
+                })
+                var showAll = true;
+  $('tr').not(':first').hide();
+
+  $('input:checkbox:checked').each(function() {
+    showAll = false;
+    var status = $(this).attr('rel');
+    var value = $(this).val();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent().siblings('tr').show();
+  
+  });
+  if (showAll) {
+    $('tr').show();
+  }
+;
+              });
+              
+              
+              
+                        </script>
+
+{% endblock %}
+
