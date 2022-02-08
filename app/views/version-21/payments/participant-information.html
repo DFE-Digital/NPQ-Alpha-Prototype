@@ -20,27 +20,27 @@
                     <li class="app-subnav__list-item ">
                 <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
                   
-                Programme dashboard
+                Programme overview
               
               </a></li>
               
               <li class="app-subnav__list-item  ">
                 <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider">
                   
-                    Provider statement
+                    Provider statements
                     <span class="govuk-visually-hidden">Current page</span>
               </a></li>
 
               <li class="app-subnav__list-item app-subnav__list-item--selected">
                 <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?scheme={{data.scheme}}">
                   
-                  Participant information
+                  Trainee details
                     <span class="govuk-visually-hidden">Current page</span>
               </a></li>
               <li class="app-subnav__list-item ">
                 <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
                   
-                  Delivery partner information
+                  Delivery partners
                     <span class="govuk-visually-hidden">Current page</span>
               </a></li>
               <li class="app-subnav__list-item ">
@@ -57,21 +57,21 @@
                       <li class="app-subnav__list-item ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
                     
-                  Programme dashboard
+                  Programme overview
                 
                 </a></li>
                 
                 <li class="app-subnav__list-item  ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?scheme={{data.scheme}}">
                     
-                      Provider statement
+                      Provider statements
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
   
                 <li class="app-subnav__list-item app-subnav__list-item--selected ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                     
-                    Participant information
+                    Trainee details
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 
@@ -80,7 +80,7 @@
                 </nav>
                 {%endif%}
            
-                <h2 class="govuk-heading-l">Participant information
+                <h2 class="govuk-heading-l">Trainee details
              
 
                 </h2>
@@ -464,7 +464,7 @@
                   </td>
                   <td style="border-bottom: none;" scope="col" class="govuk-table__cell"> 
             
-                    <span class="">Milestone 1 (current)</span> <br>
+                    <span class="">Output 1 (current)</span> <br>
                     <strong {% if item.m1 === 'PAID' %} class="govuk-tag govuk-tag--green"
                     {% elif item.m1 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
                     {% elif item.m1 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
@@ -489,7 +489,7 @@
                               <ul class="govuk-list"
                               >
                               <li>
-                                Milestone 1:&nbsp;
+                                Output 1:&nbsp;
                                 <strong {% if item.m1 === 'PAID' %} class="govuk-tag govuk-tag--green"
                                 {% elif item.m1 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
                                 {% elif item.m1 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
@@ -504,7 +504,7 @@
 
                               </li>
                               <li>
-                                Milestone 2:
+                                Output 2:
                                 <strong {% if item.m2 === 'PAID' %} class="govuk-tag govuk-tag--green"
                                 {% elif item.m2 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
                                 {% elif item.m2 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
@@ -519,7 +519,7 @@
                               </li>
                               <li>
                                 
-                                Milestone 3:
+                                Output 3:
                                 <strong {% if item.m3 === 'PAID' %} class="govuk-tag govuk-tag--green"
                                 {% elif item.m3 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
                                 {% elif item.m3 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
@@ -534,7 +534,7 @@
 
                               </li>
                               <li>
-                                Milestone 4:
+                                Output 4:
                                 <strong {% if item.m4 === 'PAID' %} class="govuk-tag govuk-tag--green"
                                 {% elif item.m4 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
                                 {% elif item.m4 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
@@ -549,7 +549,7 @@
 
                               </li>
                               <li>
-                                Milestone 5:
+                                Output 5:
                                 <strong {% if item.m5 === 'PAID' %} class="govuk-tag govuk-tag--green"
                                 {% elif item.m5 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
                                 {% elif item.m5 === 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
@@ -564,7 +564,7 @@
                                
                               </li>
                               <li>
-                                Milestone 6:
+                                Output 6:
                                 <strong {% if item.m6 === 'PAID' %} class="govuk-tag govuk-tag--green"
                                 {% elif item.m6 === 'NOT PAID' %} class="govuk-tag govuk-tag--red"
                                 {% elif item.m6=== 'BACKPAYMENT' %} class="govuk-tag govuk-tag--blue"
