@@ -54,105 +54,27 @@
                 
                   </ul>
                 </nav>
-                {%if data.statementDate === "April 2022"%}
-                <div id="notification" class="govuk-notification-banner " role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-                  <div class="govuk-notification-banner__header">
-                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                      Important
-                    </h2>
-                  </div>
-                  <div class="govuk-notification-banner__content">
-                    <p class="govuk-notification-banner__heading">
-                      you can't approve this <br>
-                      the info is changing
-       
-                    </p>
-                  </div>
-                </div>
-                {%else%}
+             
+            
 
-                {%endif%}
-                {%if data.payable === "true"%}
-                <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-                  <div class="govuk-notification-banner__header">
-                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                      Success
-                    </h2>
-                  </div>
-                  <div class="govuk-notification-banner__content">
-                    <h3 class="govuk-notification-banner__heading">
-                     Payment has been approved
-                    </h3>
 
-                  </div>
-                </div>
-                {%else%}
-
-                {%endif%}
 
                
       
     
         <span autocomplete="on" class="govuk-caption-l">{{data.providerName}} </span> 
-                <h2 class="govuk-heading-l">{{data.statementDate}} provider statement
+                <h2 class="govuk-heading-l">{{data.statementDate}} statement
              
 
                 </h2>
                 <div class="govuk-inset-text">
                   Next milestone end date 28 February 2022
                 </div>
-                <!-- <nav class="app-subnav govuk-!-margin-top-6" aria-label="Sub navigation">
-                  <ul class="app-subnav__list">
-                      <li class="app-subnav__list-item app-subnav__list-item--selected">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="">
-                  Your statements
-                 <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                <li class="app-subnav__list-item">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-participant-information-p1-option-1">
-                    
-                  Participants
-                </a></li>
-
-                  <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
-                    
-                      Delivery partner breakdown 
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                
-                  </ul>
-                </nav> -->
+            
             <br>
                 <div class="govuk-grid-row">
                   <form  method="get" novalidate="" autocomplete="off" action="" >   
-                <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
-           
-   
-                   
-                  <div class="autocomplete-wrapper">
-                    <label class="govuk-label" for="sort">
-                     View a differerent provider 
-                          </label>
-                    <select class="govuk-select autocomplete-element " id="provider" name="providerName">
-
-
-                 
-                      <option value="" ></option>
-                      <option value="Ambition Institute">Ambition Institute</option>
-                      <option value="Best Practice Network (home of Outstanding Leaders Partnership)">Best Practice Network (home of Outstanding Leaders Partnership)</option>
-                      <option value="Capita" >Capita</option>
-                      <option value="Education Development Trust">Education Development Trust</option>
-                      <option value="Teach First">Teach First</option>
-                      <option value="UCL Institute of Education" >UCL Institute of Education</option>
-                       
-                    </select>
-                
           
-          </div>
-     
-     
-        </div>
 
         <div  class="govuk-grid-column-one-third">
            
@@ -169,10 +91,13 @@
 
 
                <option value="" ></option>
-               <option value="April 2022">April 2022</option>
-                <option value="March 2022">March 2022</option>
+
                 <option value="February 2022">February 2022</option>
                 <option value="January 2022" >January 2022</option>
+                <option value="April 2021">April 2021</option>
+                <option value="March 2021" >March 2021</option>
+                <option value="February 2021">February 2021</option>
+                <option value="January 2022" >January 2021</option>
                
             </select>
         
@@ -188,88 +113,7 @@
                   </form>
 </div>
 
-              <!-- The Modal -->
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-
-    
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h1 class="govuk-fieldset__heading">
-            This will approve the payment of £975,103.20 for {{data.providerName}} for the milestone period.
-          </h1>
-        </legend>
-        <div id="changed-name-hint" class="govuk-hint">
-         
-        </div>
-        <!-- <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changed-name">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-              No
-            </label>
-          </div>
-        </div>
-     -->
-      </fieldset>
-    </div>
-    <a href="ecf-payment-breakdown?payable=true"  class="govuk-button" data-module="govuk-button">
-   Continue
-    </a>
-    <button class="close govuk-button govuk-button--secondary"> Cancel</button>  
-  </div>
-
-</div>
-
-<!-- The Modal -->
-<div id="sendmodal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close2"> <span >&times;</span> Close</span>  
-    
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h1 class="govuk-fieldset__heading">
-          Are you sure you want to send this payment breakdown to {{data.providerName}}?
-          </h1>
-        </legend>
-        <div id="changed-name-hint" class="govuk-hint">
-         
-        </div>
-        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changed-name">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-              No
-            </label>
-          </div>
-        </div>
-    
-      </fieldset>
-    </div>
-    <a href="ecf-payment-breakdown?payable=true"  class="govuk-button" data-module="govuk-button">
-   Continue
-    </a>
-  </div>
-
-</div> 
             <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
             
                 <div style="width:30%" class="topic ">
@@ -282,25 +126,7 @@
                     <p class=" govuk-body-m title-mobile govuk-!-margin-bottom-0">VAT £975,103.20</p>
                     <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
                       
-                      {%if data.statementDate === "April 2022" %}
-                
-                      {%else%}
                      
-                            {%if data.payable ==="true"%}
-                            <div>
-                            <strong class="govuk-tag">
-                              APPROVED
-                            </strong>
-                          </div>
-                          <br>
-                            {%else%}
-                            <div>
-                              <button class="govuk-button" id="myBtn">Approve payment</button>
-                            </div>
-                       
-
-                            {%endif%}
-                            {%endif%}   
                             <div class="additional-info bottom-aligned">
                               
                               
