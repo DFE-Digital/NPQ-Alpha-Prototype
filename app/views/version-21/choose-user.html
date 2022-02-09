@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+        <div class="govuk-grid-row">
+         
+            <div class="govuk-grid-column-two-thirds">
+                
+                                <h1 class="govuk-heading-xl">Select a user</h1>
+                    
+                                <div class="govuk-inset-text">
+                               Use this to simulate what a user would see in the service
+                                                                  </div>
+                <form  method="post" novalidate="" autocomplete="off" action="user-flow" >
+   
+           <input class="govuk-visually-hidden" name="scheme" type="text" value="{{data.scheme}}" >
+                  <!--!!!!!!! ------ NEXT LINK WAS confirmSchool !!!!!! --------->
+                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                      <!-- <h2 class="govuk-fieldset__heading">Sign up to email updates?</h2> -->
+                    </legend>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+               
+                      <div class="govuk-radios">
+                        <img  style="padding-left: 50px;" height="100px;" width="100px;" src="/public/images/5349022.png" alt="wip gif"> 
+                                <div class="govuk-radios__item">
+                                  
+                                    <input class="govuk-radios__input" id="provider1" name="user" type="radio" value="cm">
+                              
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-city-guilds">
+                                      <strong class="govuk-tag govuk-tag--purple">
+                                      Contract manager
+                                        </strong>
+                                        
+                                    </label>
+                                 
+                                </div>
+                                <br>
+                                <img style="padding-left: 50px;" height="100px;" width="100px;" src="/public/images/5349273.png" alt="wip gif"> 
+                                <div class="govuk-radios__item">
+                                  
+                                    <input class="govuk-radios__input" id="provider2" name="user" type="radio" value="lp">
+                                    <label class="govuk-label govuk-radios__label" for="epaoName-cumbria">
+                                      <strong class="govuk-tag govuk-tag--purple">
+                                      Lead provider
+                                      </strong>
+                                      
+                                    </label>
+                                    
+                                </div>
+                            
+                                
+                            </div>
+                       
+                        </fieldset>
+                    </div>
+                    <button type="submit" data-module="govuk-button"class="govuk-button govuk-button--start">Start
+                      <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+                      </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}

@@ -1,4 +1,4 @@
-{% extends "layout-full-width.html" %}
+{% extends "layout-full-width-providers.html" %}
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
@@ -20,21 +20,21 @@
                       <li class="app-subnav__list-item ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
                     
-                  Programme overview
+                  Contract overview
                 
                 </a></li>
                 
                 <li class="app-subnav__list-item  app-subnav__list-item--selected">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown">
                     
-                      Provider statements
+                      Your statements
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
   
                 <li class="app-subnav__list-item ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                     
-                    Trainee details
+                    Participant information
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 
@@ -62,7 +62,7 @@
                 
                   
       </div>
-      <h2 class="govuk-heading-l">Provider statements
+      <h2 class="govuk-heading-l">Your statements
              
 
       </h2>
@@ -310,10 +310,10 @@ View
       
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Retained </th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Completed </th>
-            <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s"> Fee per trainee</th>
+            <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s"> Fee per participant</th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Output fee  </th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Service fee </th>
-            <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Refunds</th>
+            <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Clawbacks</th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric">Course total</th>
           </tr>
          
@@ -450,7 +450,7 @@ Leading Teacher Development
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Retained 2</th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Completed </th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s"> Fee per participant</th>
-            <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Output payment  </th>
+            <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Output fee  </th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Service fee </th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s ">Clawbacks</th>
             <th style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric">Course total</th>
