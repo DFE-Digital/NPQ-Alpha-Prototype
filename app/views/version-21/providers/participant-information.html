@@ -34,14 +34,14 @@
             <li class="app-subnav__list-item app-subnav__list-item--selected">
               <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                 
-                Participant information
+                Trainee details
                   <span class="govuk-visually-hidden">Current page</span>
             </a></li>
 
             <li class="app-subnav__list-item ">
               <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
                 
-                Delivery partner information
+                Delivery partners
                   <span class="govuk-visually-hidden">Current page</span>
             </a></li>
             <li class="app-subnav__list-item ">
@@ -74,7 +74,7 @@
               <li class="app-subnav__list-item app-subnav__list-item--selected">
                 <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                   
-                  Participant information
+                  Trainee details
                     <span class="govuk-visually-hidden">Current page</span>
               </a></li>
               <li class="app-subnav__list-item ">
@@ -88,7 +88,7 @@
                 </nav>
                 {%endif%}
            
-                <h2 class="govuk-heading-l">Participant information
+                <h2 class="govuk-heading-l">Trainee details
              
 
                 </h2>
@@ -158,7 +158,7 @@
                   
                   <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
                     <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
-                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Schedule</button>
+                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Cohort</button>
                       <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
                       <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
                     </h2>
@@ -168,7 +168,7 @@
                   <div id="checkboxes" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset">
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Schedule</legend>
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
                         <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
                           <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="jan" name="cohort" type="checkbox" value="January 2021">
@@ -387,7 +387,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <div class="result-info__header">
-          <h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} Participants  {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
+          <h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} Trainee  {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
         </div>
       </div>
   
@@ -414,7 +414,7 @@
 <header class="app-application-card__header">
   <span class="govuk-body-m">     TRN:{{item.trn}} </span>
  
-    <span class="govuk-body-m">Schedule: {{item.c}} {{item.s}}</span>
+    <span class="govuk-body-m">Cohort: {{item.c}} {{item.s}}</span>
   
 
   
@@ -443,7 +443,7 @@
    {{item.m1}}</strong> - <span class="govuk-body-m">in September 2022 due to previous induction </span>
    {%else%}
    {{item.m1}}
- </strong>
+ </strong> in January 2021 
  {%endif%}
 
   </li>

@@ -3,12 +3,22 @@
 GOV.UK Prototype Kit
 {% endblock %}
 {% block content %}
+{% block header %}
+
+
+
+
+
+
+ 
+{% endblock %}
 <script src="/socket.io/socket.io.js"></script>
 <script>
 var socket = io();
 </script>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+      <span class="govuk-caption-xl">Manage CPD contracts</span>
         <h1 class="govuk-heading-xl">
            Prototypes and designs  </h1>
            <div class="govuk-tabs" data-module="govuk-tabs">
@@ -32,7 +42,7 @@ var socket = io();
             <div class="govuk-tabs__panel" id="past-day">
               <h2 class="govuk-heading-l">Latest version - 18</h2>
 
-              <h2 class="govuk-heading-m">Manage CPD contracts</h2>
+   
       
               <a class="govuk-button" href="version-18/payments">Start</a>
               <p class="govuk-body">Quick links:</p>
@@ -170,7 +180,7 @@ var socket = io();
     
               <h2 class="govuk-heading-m">Version 2 - <strong class="govuk-tag govuk-tag--pink ">To be user tested</strong> </h2>
 
-              <h2 class="govuk-heading-m">Manage CPD contracts</h2>
+            
       
               <a class="govuk-button" href="version-21/choose-user">Start</a>
               <p class="govuk-heading-s">Quick links</p>
