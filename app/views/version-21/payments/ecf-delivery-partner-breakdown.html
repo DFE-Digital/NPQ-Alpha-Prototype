@@ -81,58 +81,19 @@
                          
                     </tr>
                 </thead>
-                <tbody>
+           
+{% for item in data.pinfo %}
+{% if loop.index0 < 20 %}  
                     <tr class="govuk-table__row">
-                        <td class="govuk-table__cell" scope="row">Delivery partner 1</td>
+                        <td class="govuk-table__cell" scope="row">{{item.dp}}</td>
                        <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
                          <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
                     </tr>
-                    <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Delivery partner 2</td>
-                            <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                            <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                            <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                             <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                         <td class="govuk-table__cell" scope="row">Delivery partner 3</td>
-                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="row">Delivery partner 4</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                           <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="row">Delivery partner 5</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                           <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="row">Delivery partner 6</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                           <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="row">Delivery partner 7</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                           <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                 
-                     
+               
+                {%endif%}
+                {%endfor%}  
                 </tbody>
             </table>
             <div class="hods-pagination">

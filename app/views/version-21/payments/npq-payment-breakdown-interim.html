@@ -1,4 +1,4 @@
-{% extends "layout-full-width-providers.html" %}
+{% extends "layout-full-width.html" %}
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
@@ -15,77 +15,11 @@
            
             <div class="govuk-grid-column-full ">
               <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1>
-              <nav class="app-subnav " aria-label="Sub navigation">
-                  <ul class="app-subnav__list">
-                 
-                
-                <li class="app-subnav__list-item  app-subnav__list-item--selected">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown">
-                    
-                      Your statements
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
-                    
-                  Contract overview
-                
-                </a></li>
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
-                    
-                    Trainee details
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="support">
-                    
-                   Help
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                
-                  </ul>
-                </nav>
-                {%if data.payable ==="true"%}
-                <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-                  <div class="govuk-notification-banner__header">
-                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                      Success
-                    </h2>
-                  </div>
-                  <div class="govuk-notification-banner__content">
-                    <h3 class="govuk-notification-banner__heading">
-                     Payment has been approved
-                    </h3>
-
-                  </div>
-                </div>
-                {%else%}
-
-                {%endif%}
-                <!-- <div class="">
-                  <div  style="float:right" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
-                    <div class="govuk-radios govuk-!-margin-bottom-0 ">
-                      <div class="govuk-radios__item"><input class="govuk-radios__input"
-                          id="lab-based-testing-and-capacity-by-test-type-0"
-                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
-                          checked=""><label class="govuk-label govuk-radios__label "
-                          for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
-                      <div class="govuk-radios__item"><input class="govuk-radios__input"
-                          id="lab-based-testing-and-capacity-by-test-type-1"
-                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
-                          class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Forecast payment breakdown</label></div>
-      
-                        
-                        
-                    </div>
-                  
-                  </div>
-                
-                  
-      </div> -->
+         
+    
 
 
+      <span autocomplete="on" class="govuk-caption-l">{{data.providerName}} </span> 
       <h2 class="govuk-heading-l">{{data.statementDate}} statement
    
 
@@ -98,6 +32,28 @@
         <form  method="get" novalidate="" autocomplete="off" action="" >   
       <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
  
+
+         
+        <div class="autocomplete-wrapper">
+          <label class="govuk-label" for="sort">
+           View a differerent provider 
+                </label>
+          <select class="govuk-select autocomplete-element " id="provider" name="providerName">
+
+
+       
+            <option value="" ></option>
+            <option value="Ambition Institute">Ambition Institute</option>
+            <option value="Best Practice Network (home of Outstanding Leaders Partnership)">Best Practice Network (home of Outstanding Leaders Partnership)</option>
+            <option value="Capita" >Capita</option>
+            <option value="Education Development Trust">Education Development Trust</option>
+            <option value="Teach First">Teach First</option>
+            <option value="UCL Institute of Education" >UCL Institute of Education</option>
+             
+          </select>
+      
+
+</div>
 
 
 </div>
@@ -229,20 +185,8 @@ View
 
                     <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span  >£880,320.64</span></p>
-                    {%if data.payable ==="true"%}
-                    <div>
-                    <strong class="govuk-tag">
-                      APPROVED
-                    </strong>
-                  </div>
-                  <br>
-                    {%else%}
-                    <div>
-                      <button class="govuk-button" id="myBtn">Approve payment</button>
-                    </div>
-               
-
-                    {%endif%}
+                
+                   
                     <p class="grey govuk-!-font-size-16 ">
                       
                       <a href="" class="govuk-link govuk-link--no-visited-state ext-link">
@@ -265,7 +209,7 @@ View
                  </li>
                 
                 </ul>
-           
+          
                   <ul class="first govuk-list">
                     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                       <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort</strong>
@@ -280,6 +224,7 @@ View
                    </li>
                   
                   </ul>
+              
             
         
  
@@ -405,30 +350,7 @@ View
                                      £1000.00
                                               </td> 
 </tr>
-<tr class="govuk-table__row">
 
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-Refunds
-
-          </td> 
-
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-   1000 
-
-          </td> 
-  
-
-     
-                   </td> 
-                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                  
-                     -£1000.00
-                              </td> 
-                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                           
-                               £1000.00
-                                        </td> 
-</tr>
         </tbody>
       </table>
       <div class="govuk-table__row govuk-!-padding-bottom-1">     
@@ -537,30 +459,7 @@ Refunds
                                        £1000.00
                                                 </td> 
  </tr>
- <tr class="govuk-table__row">
-  
-  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-Refunds
 
-            </td> 
-
-  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-     1000 
-
-            </td> 
-    
- 
-       
-                     </td> 
-                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                    
-                       -£1000.00
-                                </td> 
-                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                             
-                                 £1000.00
-                                          </td> 
-</tr>
           </tbody>
         </table>
         <div class="govuk-table__row govuk-!-padding-bottom-1">     
@@ -670,30 +569,7 @@ Refunds
                                          £1000.00
                                                   </td> 
    </tr>
-   <tr class="govuk-table__row">
-    
-    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-Refunds
 
-              </td> 
-
-    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-       1000 
-
-              </td> 
-      
-   
-         
-                       </td> 
-                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                      
-                         -£1000.00
-                                  </td> 
-                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                               
-                                   £1000.00
-                                            </td> 
-</tr>
             </tbody>
           </table>
           <div class="govuk-table__row govuk-!-padding-bottom-1">     
@@ -803,31 +679,7 @@ Refunds
                                            £1000.00
                                                     </td> 
      </tr>
-     <tr class="govuk-table__row">
-      
-      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-Refunds
-  
-                </td> 
-
-      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-         1000 
-  
-                </td> 
-        
-     
-           
-                         </td> 
-                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                        
-                           -£1000.00
-                                    </td> 
-                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                 
-                                     £1000.00
-                                              </td> 
-</tr>
-              </tbody>
+    </tbody>
             </table>
             <div class="govuk-table__row govuk-!-padding-bottom-1">     
               <div class=" govuk-label--s govuk-table__header--numeric">Course Total <br> £1000.00</div> 
@@ -936,30 +788,7 @@ Refunds
                                              £1000.00
                                                       </td> 
        </tr>
-       <tr class="govuk-table__row">
-        
-        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-  Refunds
-    
-                  </td> 
 
-        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-           1000 
-    
-                  </td> 
-          
-       
-             
-                           </td> 
-                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                          
-                             -£1000.00
-                                      </td> 
-                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                   
-                                       £1000.00
-                                                </td> 
- </tr>
                 </tbody>
               </table>
               <div class="govuk-table__row govuk-!-padding-bottom-1">     
@@ -1069,30 +898,7 @@ Refunds
                                                £1000.00
                                                         </td> 
          </tr>
-         <tr class="govuk-table__row">
-          
-          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-    Refunds
-      
-                    </td> 
- 
-          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-             1000 
-      
-                    </td> 
-            
-         
-               
-                             </td> 
-                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                            
-                               -£1000.00
-                                        </td> 
-                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                     
-                                         £1000.00
-                                                  </td> 
-   </tr>
+
                   </tbody>
                 </table>
                 <div class="govuk-table__row govuk-!-padding-bottom-1">     
