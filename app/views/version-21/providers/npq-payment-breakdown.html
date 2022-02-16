@@ -15,6 +15,8 @@
            
             <div class="govuk-grid-column-full ">
               <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1>
+
+              {% if data.version === "1" %}
               <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">
                  
@@ -46,6 +48,28 @@
                 
                   </ul>
                 </nav>
+                {%else%}
+                <nav class="app-subnav " aria-label="Sub navigation">
+                  <ul class="app-subnav__list">
+                 
+                
+                <li class="app-subnav__list-item  app-subnav__list-item--selected">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown">
+                    
+                      Your statements
+                      <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+            
+                <li class="app-subnav__list-item ">
+                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                    
+                    Trainee details
+                      <span class="govuk-visually-hidden">Current page</span>
+                </a></li>
+           
+                  </ul>
+                </nav>
+                {%endif%}
                 {%if data.payable ==="true"%}
                 <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                   <div class="govuk-notification-banner__header">
