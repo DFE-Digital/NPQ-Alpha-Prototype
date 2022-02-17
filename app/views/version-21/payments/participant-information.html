@@ -143,7 +143,7 @@ September 2021  <span style="float:right">X</span>
                         <legend id="filter-legend-q" class="govuk-fieldset__legend govuk-fieldset__legend--s">
                           Search
                         </legend>
-                        <span class="govuk-hint" id="query-hint"> Search by participant ID or TRN</span>
+                        <span class="govuk-hint" id="query-hint"> Search by Trainee ID or Teacher reference number</span>
                           <input class="govuk-input " id="search" name="q" type="text" value="" aria-labelledby="filter-legend-q" autocomplete="off">
                       </fieldset>
                     </div>
@@ -317,7 +317,7 @@ September 2021  <span style="float:right">X</span>
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="coe" name="lp" type="checkbox" value="Church of England">
                         <label class="govuk-label govuk-checkboxes__label" for="coe">
-                          Backpayment
+                          Back payment
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
@@ -414,7 +414,7 @@ September 2021  <span style="float:right">X</span>
 <div class="govuk-grid-row">
 <div class="govuk-grid-column-full">
 <div class="result-info__header">
-<h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} Trainee  {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
+<h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} trainees  {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
 </div>
 </div>
 
@@ -438,8 +438,8 @@ September 2021  <span style="float:right">X</span>
 <p class="govuk-body-s govuk-!-margin-bottom-2"><strong>Course completed</strong></p>
 </header>
 <header class="app-application-card__header">
-<span class="govuk-body-s">     TRN:{{item.trn}} </span>
-<span class="govuk-body-s">Role: ECT</span>
+<span class="govuk-body-s">     Teacher reference number: {{item.trn}} </span>
+<span class="govuk-body-s">Role: Early career framework</span>
 
 <span class="govuk-body-s">Cohort: {{item.c}} {{item.s}}</span>
 
