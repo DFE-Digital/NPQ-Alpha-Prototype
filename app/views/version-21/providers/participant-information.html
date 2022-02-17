@@ -14,7 +14,7 @@
             <div class="govuk-grid-column-full ">
               
               <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1> 
-              {%if data.scheme === "Early Career Framework" %}
+              {%if data.scheme === "Early Career Framework (ECF)" %}
               {% if data.version === "1" %}
               <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">
@@ -77,7 +77,7 @@
             </nav>
              {%endif%}
 
-                {% elif data.scheme === "National professional qualifications" %}
+                {% elif data.scheme === "National professional qualifications (NPQ)" %}
                 {% if data.version === "1" %}
                 <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">

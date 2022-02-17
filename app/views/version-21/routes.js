@@ -10,7 +10,7 @@ module.exports = (app) => {
     app.post('/' + version + '/payments/payment-breakdown', function (req, res) {
   
   
-      if (req.body.scheme === "Early Career Framework") {
+      if (req.body.scheme === "Early Career Framework (ECF)") {
           res.redirect('/' + version + '/payments/ecf-payment-breakdown');
   
       } else  {
@@ -25,7 +25,7 @@ module.exports = (app) => {
       app.post('/' + version + '/providers/trainee-scheme-route', function (req, res) {
   
   
-        if (req.body.scheme === "Early Career Framework") {
+        if (req.body.scheme === "Early Career Framework (ECF)") {
             res.redirect('/' + version + '/providers/ecf-payment-breakdown');
     
         } else  {
