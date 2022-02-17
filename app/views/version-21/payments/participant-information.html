@@ -15,63 +15,23 @@
   <div class="govuk-grid-column-full ">
     
     <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1> 
-    {%if data.scheme === "Early Career Framework" %}
+    {%if data.scheme === "Early Career Framework (ECF)" %}
     <nav class="app-subnav " aria-label="Sub navigation">
       <ul class="app-subnav__list">
-  
-  
-  <li class="app-subnav__list-item  ">
-    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-payment-breakdown?scheme={{data.scheme}}">
-      
-        Your statements
-        <span class="govuk-visually-hidden">Current page</span>
-  </a></li>
-  <li class="app-subnav__list-item ">
-    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
-      
-Contract overview
-  
-  </a></li>
-  <li class="app-subnav__list-item app-subnav__list-item--selected">
-    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
-      
-      Trainee details
-        <span class="govuk-visually-hidden">Current page</span>
-  </a></li>
-
-  <li class="app-subnav__list-item ">
-    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
-      
-      Delivery partners
-        <span class="govuk-visually-hidden">Current page</span>
-  </a></li>
-  <li class="app-subnav__list-item ">
-    <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="support">
-      
-  Help
-        <span class="govuk-visually-hidden">Current page</span>
-  </a></li>
-
-  
-    </ul>
-    </nav>
-      {% elif data.scheme === "National professional qualifications" %}
-      <nav class="app-subnav " aria-label="Sub navigation">
-        <ul class="app-subnav__list">
-         
+          <li class="app-subnav__list-item ">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
+        
+      Programme overview
+    
+    </a></li>
     
     <li class="app-subnav__list-item  ">
-      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown?scheme={{data.scheme}}">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?scheme={{data.scheme}}">
         
-          Your statements
+          Provider statements
           <span class="govuk-visually-hidden">Current page</span>
     </a></li>
-    <li class="app-subnav__list-item ">
-      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="ecf-participant-information-p1">
-        
-      Contract overview 
-    
-    </a></li>
+
     <li class="app-subnav__list-item app-subnav__list-item--selected">
       <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
         
@@ -79,13 +39,46 @@ Contract overview
           <span class="govuk-visually-hidden">Current page</span>
     </a></li>
     <li class="app-subnav__list-item ">
-      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="support">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
         
-    Help
+        Delivery partners
+          <span class="govuk-visually-hidden">Current page</span>
+    </a></li>
+    <li class="app-subnav__list-item ">
+      <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="banding-tracker">
+        
+     Banding tracker
           <span class="govuk-visually-hidden">Current page</span>
     </a></li>
     
       </ul>
+    </nav>
+      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      <nav class="app-subnav " aria-label="Sub navigation">
+        <ul class="app-subnav__list">
+            <li class="app-subnav__list-item ">
+        <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
+          
+        Programme overview
+      
+      </a></li>
+      
+      <li class="app-subnav__list-item  ">
+        <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown">
+          
+            Provider statements
+            <span class="govuk-visually-hidden">Current page</span>
+      </a></li>
+
+      <li class="app-subnav__list-item app-subnav__list-item--selected">
+        <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+          
+          Trainee details
+            <span class="govuk-visually-hidden">Current page</span>
+      </a></li>
+      
+      
+        </ul>
       </nav>
       {%endif%}
  
