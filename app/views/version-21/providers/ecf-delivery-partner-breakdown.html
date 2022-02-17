@@ -37,13 +37,13 @@
                 <li class="app-subnav__list-item ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                     
-                    Participant information
+                    Trainee details
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 <li class="app-subnav__list-item app-subnav__list-item--selected">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
                     
-                    Delivery partner information
+                    Delivery partners
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 <li class="app-subnav__list-item ">
@@ -54,7 +54,7 @@
                 </a></li>
                   </ul>
                 </nav>
-                <h2 class="govuk-heading-l">        Delivery partner breakdown </h2>
+                <h2 class="govuk-heading-l">        Delivery partners </h2>
 <!--             
               <div class="search-box">
                 <form class="search-box__form" action="/admin/schools" accept-charset="UTF-8" data-remote="true" method="get">
@@ -70,70 +70,31 @@
               </div> -->
               <table class="govuk-table ">
                 <thead>
-                <!--     <h3 class="govuk-heading-s" style="margin-bottom: 0px; margin-top:10px">Delivery partner breakdown</h3> -->
+                <!--     <h3 class="govuk-heading-s" style="margin-bottom: 0px; margin-top:10px">Delivery partners</h3> -->
                     <tr class="govuk-table__row">
          
                         <th scope="col" class="govuk-table__header " style="font-weight:700">Delivery partner</th>
-                               <th scope="col" class="govuk-table__header govuk-table__cell" style="font-weight:700">January 2021 cohort participants</th>
-                               <th scope="col" class="govuk-table__header govuk-table__cell" style="font-weight:700">April 2021 cohort participants</th>
-                                  <th scope="col" class="govuk-table__header govuk-table__cell" style="font-weight:700">September 2021 cohort participants</th>
+                               <th scope="col" class="govuk-table__header govuk-table__cell" style="font-weight:700">January 2021 cohort trainees</th>
+                               <th scope="col" class="govuk-table__header govuk-table__cell" style="font-weight:700">April 2021 cohort trainees</th>
+                                  <th scope="col" class="govuk-table__header govuk-table__cell" style="font-weight:700">September 2021 cohort trainees</th>
                               
                                        <th scope="col" class="govuk-table__header govuk-table__cell" style="font-weight:700">Total</th>
                          
                     </tr>
                 </thead>
-                <tbody>
+           
+{% for item in data.pinfo %}
+{% if loop.index0 < 20 %}  
                     <tr class="govuk-table__row">
-                        <td class="govuk-table__cell" scope="row">Delivery partner 1</td>
+                        <td class="govuk-table__cell" scope="row">{{item.dp}}</td>
                        <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
                          <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
                     </tr>
-                    <tr class="govuk-table__row">
-                            <td class="govuk-table__cell" scope="row">Delivery partner 2</td>
-                            <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                            <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                            <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                             <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                         <td class="govuk-table__cell" scope="row">Delivery partner 3</td>
-                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                         <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="row">Delivery partner 4</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                           <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="row">Delivery partner 5</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                           <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="row">Delivery partner 6</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                           <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                        <tr class="govuk-table__row">
-                          <td class="govuk-table__cell" scope="row">Delivery partner 7</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                          <td class="govuk-table__cell govuk-table__cell" scope="row">50</td>
-                           <td class="govuk-table__cell govuk-table__cell" scope="row">200</td>
-                    </tr>
-                 
-                     
+               
+                {%endif%}
+                {%endfor%}  
                 </tbody>
             </table>
             <div class="hods-pagination">

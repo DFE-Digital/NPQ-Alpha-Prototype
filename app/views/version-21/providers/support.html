@@ -34,14 +34,14 @@
             <li class="app-subnav__list-item ">
               <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                 
-                Participant information
+                Trainee details
                   <span class="govuk-visually-hidden">Current page</span>
             </a></li>
 
             <li class="app-subnav__list-item ">
               <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
                 
-                Delivery partner information
+                Delivery partners
                   <span class="govuk-visually-hidden">Current page</span>
             </a></li>
             <li class="app-subnav__list-item app-subnav__list-item--selected">
@@ -74,7 +74,7 @@
               <li class="app-subnav__list-item ">
                 <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                   
-                  Participant information
+                  Trainee details
                     <span class="govuk-visually-hidden">Current page</span>
               </a></li>
               <li class="app-subnav__list-item app-subnav__list-item--selected">
@@ -168,98 +168,35 @@
                                   <legend id="filter-legend-q" class="govuk-fieldset__legend govuk-fieldset__legend--s">
                                     Search
                                   </legend>
-                                  <span class="govuk-hint" id="query-hint"> Search by participant ID or TRN</span>
+                                  <span class="govuk-hint" id="query-hint"> Search by ID or date</span>
                                     <input class="govuk-input " id="search" name="q" type="text" value="" aria-labelledby="filter-legend-q" autocomplete="off">
                                 </fieldset>
                               </div>
+
+                              <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">Status</legend>
+                                  <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="jan" name="cohort" type="checkbox" value="January 2021">
+                                      <label class="govuk-label govuk-checkboxes__label" for="jan">In progress</label>
+                                    </div>
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="apr" name="cohort" type="checkbox" value="April 2021">
+                                      <label class="govuk-label govuk-checkboxes__label" for="apr">Resolved</label></div>
+                                    <div class="govuk-checkboxes__item">
+                                      <input class="govuk-checkboxes__input" id="sep" name="cohort" type="checkbox" value="September 2021">
+                                      <label class="govuk-label govuk-checkboxes__label" for="sep">Something else</label>
+                                    </div>
+                               
+                                  </div>
                               
-                <div class=" govuk-!-padding-left-0">
-                  
-                  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
-                    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
-                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Status</button>
-                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
-                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
-                    </h2>
-                    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" >
-                      <div class="app-c-option-select__container-inner js-auto-height-inner">
-                        
-                  <div id="checkboxes" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
-                    <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset">
-                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
-                        <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="jan" name="cohort" type="checkbox" value="January 2021">
-                            <label class="govuk-label govuk-checkboxes__label" for="jan">January 2021</label>
-                          </div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="apr" name="cohort" type="checkbox" value="April 2021">
-                            <label class="govuk-label govuk-checkboxes__label" for="apr">April 2021</label></div>
-                          <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="sep" name="cohort" type="checkbox" value="September 2021">
-                            <label class="govuk-label govuk-checkboxes__label" for="sep">September 2021</label>
-                          </div>
-                     
-                        </div>
-                    
-                      </fieldset>
-                    </div>
-                  
-                  </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
-        
+                                </fieldset>
+                              </div>
+                              
+           
          
-                <div class=" govuk-!-padding-right-0">
-                
-                  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
-                    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
-                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Payments</button>
-                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
-                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
-                    </h2>
-                    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" >
-                      <div class="">
-                        
-                  <div id="checkboxes-fe072cac" class="gem-c-checkboxes gem-c-checkboxes__list " data-module="gem-checkboxes">
-                    <div class="govuk-form-group ">
-                      <label class="govuk-label" for="sort">
-                      Milestone
-                      </label>
-                      <select class="govuk-select govuk-!-width-full" id="sort" name="sort">
-                        <option value="All">All</option>
-                        <option value="Milestone 1">Milestone 1</option>
-                        <option value="Milestone 2">Milestone 2</option>
-                        <option value="Milestone 3">Milestone 3</option>
-                        <option value="Milestone 4">Milestone 4</option>
-                        <option value="Milestone 5">Milestone 5</option>
-                        <option value="Milestone 6">Milestone 6</option>
-                      </select>
-                    </div>
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="sort">
-                       Payment status
-                      </label>
-                      <select class="govuk-select govuk-!-width-full" id="sort" name="sort">
-                        <option value="All">All</option>
-                        <option value="Paid">Paid</option>
-                        <option value="Not paid">Not paid</option>
-                        <option value="Backpayment">Backpayment</option>
-                    
-                      </select>
-                    </div>
-                  
-                  </div>
-              
-                      </div>
-                    </div>
-                  </div>
-                  
-                </div>
+         
                           </form>
                         </div>
                       </div>
@@ -281,7 +218,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <div class="result-info__header">
-          <h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} requests   {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
+          <h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} problems</h2>
         </div>
       </div>
   

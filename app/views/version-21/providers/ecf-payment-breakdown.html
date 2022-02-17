@@ -17,6 +17,8 @@
            
             <div class="govuk-grid-column-full "> 
               <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1>
+
+              {% if data.version === "1" %}
               <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">
                  
@@ -36,13 +38,13 @@
                 <li class="app-subnav__list-item ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                     
-                    Participant information
+                    Trainee details
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 <li class="app-subnav__list-item ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
                     
-                    Delivery partner information
+                    Delivery partners
                       <span class="govuk-visually-hidden">Current page</span>
                 </a></li>
                 <li class="app-subnav__list-item ">
@@ -54,8 +56,29 @@
                 
                   </ul>
                 </nav>
+             {%else%}
+             <nav class="app-subnav " aria-label="Sub navigation">
+              <ul class="app-subnav__list">
              
             
+            <li class="app-subnav__list-item  app-subnav__list-item--selected">
+              <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-payment-breakdown?scheme={{data.scheme}}">
+                
+                  Your statements
+                  <span class="govuk-visually-hidden">Current page</span>
+            </a></li>
+        
+            <li class="app-subnav__list-item ">
+              <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                
+                Trainee details
+                  <span class="govuk-visually-hidden">Current page</span>
+            </a></li>
+       
+            
+              </ul>
+            </nav>
+             {%endif%}
 
 
 
@@ -68,7 +91,7 @@
 
                 </h2>
                 <div class="govuk-inset-text">
-                  Next milestone end date 28 February 2022
+              Cut off date: 15 February 2022
                 </div>
             
             <br>
@@ -81,7 +104,7 @@
                 
           
           <div class="autocomplete-wrapper">
-            <label class="govuk-label" for="date">View a different satement</label>
+            <label class="govuk-label" for="date">View a different statement</label>
             <!-- <duet-date-picker identifier="date">
 
               
@@ -116,15 +139,13 @@
 
             <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
             
-                <div style="width:30%" class="topic ">
+                <div style="width:auto" class="topic ">
                  
-                  <strong itemprop="name" class="govuk-heading-m govuk-!-margin-bottom-0   govuk-!-font-weight-regular"></strong>
-                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-0 ">Total £975,103.20</h4>
-                    <br>
-                    
-                    <p class=" govuk-body-m title-mobile govuk-!-margin-bottom-2">Service fee £975,103.20</p>
-                    <p class=" govuk-body-m title-mobile govuk-!-margin-bottom-0">VAT £975,103.20</p>
-                    <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
+                  <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2 ">Total £5,281,923.84</h4>
+                    <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
+                    <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
+                    <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">Output payment <span style="float:right" >£3,426,500.00</span></p>
+                    <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">Other payments<span style="float:right" >£0.00</span> </p>
                       
                      
                             <div class="additional-info bottom-aligned">
@@ -133,7 +154,7 @@
                                 <p class="govuk-!-margin-bottom-0 govuk-!-margin-top-0 govuk-!-font-size-16">
                                   <div></div>
                                   <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
-                                      <strong>Download provider statement (CSV)</strong>
+                                      <strong>Download</strong>
                                       </a>
                                   </p>
                                   <br>
@@ -154,19 +175,19 @@
 
                 <ul class="first govuk-list">
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">PO number</strong>
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Payment date</strong>
                      <div class="number-group">
                          <div class="number-container govuk-!-padding-right-4">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="">001</span></div>
+                                     <span class="">28 February 2022</span></div>
                              </div>
                          </div>
                      </div>
                  </li>
                     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">
-                        Current ECTs</strong>
+                        Current ECTs</strong> <br>
                         <div class="number-group">
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
@@ -244,7 +265,7 @@
          
 
                 <div class="govuk-grid-column-full ">
-                  <h2 class="govuk-heading-m">Output fee  
+                  <h2 class="govuk-heading-m">Output payment  
                    
                   </h2>
                   {%if data. statementDate === "April 2022" %}
@@ -262,7 +283,7 @@
                       <tr  class="govuk-table__row">
                        
                   
-                        <th   scope="col"  class="govuk-table__header">Milstones</th>
+                        <th   scope="col"  class="govuk-table__header">Outputs</th>
                   
                         <th    scope="col" class="govuk-table__header govuk-table__header--numeric">Band A </th>
                         <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Band B </th>
@@ -277,104 +298,104 @@
                       <tr class="govuk-table__row">
                         <td  style="border-bottom: none;" scope="row" class="govuk-table__cell"> <strong>Starts</strong>
                         </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000 </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000 </td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">500</td>
                         <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric"></td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Fee per participant</td>
+                        <td   scope="row" class="govuk-table__cell">Fee per trainee</td>
                         <td   class="govuk-table__cell govuk-table__cell--numeric">     £119.40</td>
                         <td   class="govuk-table__cell govuk-table__cell--numeric">     £117.48</td>
                         <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
                         <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <th   class="govuk-table__cell govuk-table__cell--numeric">£168,000.00</th>
+                        <th   class="govuk-table__cell govuk-table__cell--numeric">£763,560.00</th>
                    
                        </tr>
                        <tr class="govuk-table__row">
                         <td  style="border-bottom: none;" scope="row" class="govuk-table__cell"><strong>Retained 1</strong></td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000 </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000 </td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">500</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">0</td>
                         <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric"></td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Fee per participant</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £119.40</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £117.48</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <th   class="govuk-table__cell govuk-table__cell--numeric">£168,000.00</th>
+                        <td   scope="row" class="govuk-table__cell">Fee per trainee</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £110.40</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £112.48</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £100.92</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £95.92</td>
+                        <th   class="govuk-table__cell govuk-table__cell--numeric">£496,220.00</th>
                    
                        </tr>
                        <tr class="govuk-table__row">
                         <td  style="border-bottom: none;" scope="row" class="govuk-table__cell"><strong>Retained 2</strong> </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000 </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000 </td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">500</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">0</td>
                         <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric"></td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Fee per participant</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £119.40</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £117.48</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <th   class="govuk-table__cell govuk-table__cell--numeric">£168,000.00</th>
+                        <td   scope="row" class="govuk-table__cell">Fee per trainee</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £110.40</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £112.48</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £100.92</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £95.92</td>
+                        <th   class="govuk-table__cell govuk-table__cell--numeric">£496,220.00</th>
                    
                        </tr>
                        <tr class="govuk-table__row">
                         <td  style="border-bottom: none;" scope="row" class="govuk-table__cell"><strong>Retained 3</strong></td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000 </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000 </td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">500</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">0</td>
                         <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric"></td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Fee per participant</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £119.40</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £117.48</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <th   class="govuk-table__cell govuk-table__cell--numeric">£168,000.00</th>
+                        <td   scope="row" class="govuk-table__cell">Fee per trainee</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £110.40</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £112.48</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £100.92</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £95.92</td>
+                        <th   class="govuk-table__cell govuk-table__cell--numeric">£496,220.00</th>
                    
                        </tr>
                        <tr class="govuk-table__row">
                         <td  style="border-bottom: none;" scope="row" class="govuk-table__cell"><strong>Retained 4</strong></td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000 </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000 </td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">500</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">0</td>
                         <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric"></td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Fee per participant</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £119.40</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £117.48</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <th   class="govuk-table__cell govuk-table__cell--numeric">£168,000.00</th>
+                        <td   scope="row" class="govuk-table__cell">Fee per trainee</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £110.40</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £112.48</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £100.92</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £95.92</td>
+                        <th   class="govuk-table__cell govuk-table__cell--numeric">£496,220.00</th>
                    
                        </tr>
                        <tr class="govuk-table__row">
                         <td  style="border-bottom: none;" scope="row" class="govuk-table__cell"><strong>Completed </strong></td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000 </td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
-                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000 </td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                        <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric">500</td>
                         <td  style="border-bottom: none;" class="govuk-table__cell govuk-table__cell--numeric"></td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Fee per participant</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £119.40</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £117.48</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £115.92</td>
-                        <th   class="govuk-table__cell govuk-table__cell--numeric">£168,000.00</th>
+                        <td   scope="row" class="govuk-table__cell">Fee per trainee</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £105.40</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £104.48</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £103.92</td>
+                        <td   class="govuk-table__cell govuk-table__cell--numeric">     £100.92</td>
+                        <th   class="govuk-table__cell govuk-table__cell--numeric">£678,060.00</th>
                    
                        </tr>
                        
@@ -382,10 +403,10 @@
                   </table>
                
                
-
-                 <div style="float: right;" class="govuk-table__row">     
-    <div class=" govuk-heading-s govuk-table__header--numeric">Output fee total <br>£156,000.00</div> 
-  
+               
+                  <div style="float: right;" class="govuk-table__row">     
+                    <div class=" govuk-heading-s govuk-table__header--numeric">Output payment total <br>£3,426,500.00</div> 
+                  
 </div>     
 {%endif%}
              </div>
@@ -413,7 +434,7 @@
                     </a>
                   {%endif%}
                     
-                  <h2 class="govuk-heading-m">Other fees
+                  <h2 class="govuk-heading-m">Other payments
                    
                   </h2>
                   {%if data. statementDate === "April 2022" %}
@@ -431,11 +452,11 @@
                       <tr  class="govuk-table__row">
                        
                   
-                        <th   scope="col"  class="govuk-table__header">Payment Type</th>
+                        <th   scope="col"  class="govuk-table__header">Payment type</th>
                   
-                        <th    scope="col" class="govuk-table__header ">Participants </th>
+                        <th    scope="col" class="govuk-table__header ">Number of trainees </th>
                                     
-                        <th    scope="col" class="govuk-table__header ">Fee per participant </th>
+                        <th    scope="col" class="govuk-table__header ">Fee per trainee </th>
                         <th   scope="col" class="govuk-table__header ">Payments</th>
                       </tr>
                      
@@ -443,15 +464,15 @@
                   
                     <tbody class="govuk-table__body">
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> Clawbacks
+                        <td   scope="row" class="govuk-table__cell"> Refunds
                         </td>
                        
                         <td  class="govuk-table__cell ">1000 </td>
                         <td   scope="row" class="govuk-table__cell"> 
-                          £100.00
+                          -£100.00
                         </td>
                   
-                        <td  class="govuk-table__cell">£10,000.00</td>
+                        <td  class="govuk-table__cell">-£100,000.00</td>
                       </tr>
                    
                        <tr class="govuk-table__row">
@@ -460,7 +481,7 @@
                         <td   scope="row" class="govuk-table__cell"> 
                           £100.00
                         </td>
-                        <td   class="govuk-table__cell ">£10,000.00</td>
+                        <td  class="govuk-table__cell">£100,000.00</td>
                       </tr>
                     
                
@@ -469,7 +490,7 @@
                   </table>
                
                  <div style="float: right;" class="govuk-table__row">     
-    <div class=" govuk-heading-s govuk-table__header--numeric">Other fees total <br> - £20,000.00</div> 
+    <div class=" govuk-heading-s govuk-table__header--numeric">Other payments total <br> £0.00</div> 
   
 </div>     
 {%endif%}
