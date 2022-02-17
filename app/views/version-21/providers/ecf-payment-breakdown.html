@@ -85,16 +85,16 @@
                
       
     
-        <span autocomplete="on" class="govuk-caption-l">{{data.providerName}} </span> 
-                <h2 class="govuk-heading-l">{{data.statementDate}} statement
-             
+
+                <h2 class="govuk-heading-l">
+             Your statements
 
                 </h2>
-                <div class="govuk-inset-text">
+                <!-- <div class="govuk-inset-text">
               Cut off date: 15 February 2022
                 </div>
             
-            <br>
+            <br> -->
                 <div class="govuk-grid-row">
                   <form  method="get" novalidate="" autocomplete="off" action="" >   
           
@@ -113,16 +113,16 @@
             <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
 
 
-               <option value="" ></option>
+              <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
 
-                <option value="February 2022">February 2022</option>
-                <option value="January 2022" >January 2022</option>
-                <option value="April 2021">April 2021</option>
-                <option value="March 2021" >March 2021</option>
-                <option value="February 2021">February 2021</option>
-                <option value="January 2022" >January 2021</option>
-               
-            </select>
+
+                <option value="" ></option>
+                <option value="Milestone 4 for 2023">Milestone 4 for 2023</option>
+                 <option value="Milestone 3 for 2022">Milestone 3 for 2022</option>
+                 <option value="Milestone 2 for 2022">Milestone 2 for 2022</option>
+                 <option value="Milestone 1 for 2022" >Milestone 1 for 2022</option>
+                
+             </select>
         
   
   </div>
@@ -140,7 +140,7 @@
             <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
             
                 <div style="width:auto" class="topic ">
-                 
+                  <strong itemprop="name" class="govuk-caption-l ">Milestone 1 for 2022</strong>
                   <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2 ">Total £5,281,923.84</h4>
                     <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
@@ -151,13 +151,8 @@
                             <div class="additional-info bottom-aligned">
                               
                               
-                                <p class="govuk-!-margin-bottom-0 govuk-!-margin-top-0 govuk-!-font-size-16">
-                                  <div></div>
-                                  <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
-                                      <strong>Download</strong>
-                                      </a>
-                                  </p>
-                                  <br>
+                               
+                             
                                   <!-- <div class="govuk-checkboxes " data-module="govuk-checkboxes">
                                     <div class="govuk-checkboxes__item">
                                       <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
@@ -175,17 +170,17 @@
 
                 <ul class="first govuk-list">
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Payment date</strong>
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cut off date</strong>
                      <div class="number-group">
                          <div class="number-container govuk-!-padding-right-4">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="">28 February 2022</span></div>
+                                     <span class="">15 February 2022</span></div>
                              </div>
                          </div>
                      </div>
                  </li>
-                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <!-- <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">
                         Current ECTs</strong> <br>
                         <div class="number-group">
@@ -197,9 +192,9 @@
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
-                <ul class="second govuk-list">
+                <!-- <ul class="second govuk-list">
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Contract number</strong>
                      <div class="number-group">
@@ -223,10 +218,10 @@
                             </div>
                         </div>
                     </li>
-                </ul>
+                </ul> -->
                 <ul class="booster govuk-list">
                 
-                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                  <!-- <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Recruitment target</strong>
                      <div class="number-group">
                          <div class="number-container govuk-!-padding-right-4">
@@ -236,14 +231,19 @@
                              </div>
                          </div>
                      </div>
-                 </li>
+                 </li> -->
                     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                        <strong class="govuk-body-s float govuk-!-margin-bottom-0"> <strong>Total declarations </strong></strong> 
+                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">  <p class="govuk-!-margin-bottom-0 govuk-!-margin-top-0 govuk-!-font-size-16">
+                              
+                    
+                          </p></strong> 
                         <div class="number-group">
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
                                     <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                        <span class="">2000</span></div>
+                                        <span class="">  <a href="" class="govuk-link  ">
+                                       Download
+                                          </a></span></div>
                                 </div>
                             </div>
                         </div>
