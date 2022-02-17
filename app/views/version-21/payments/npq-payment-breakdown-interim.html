@@ -1,4 +1,4 @@
-{% extends "layout-full-width.html" %}
+{% extends "layout-full-width-providers.html" %}
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 {{ govukBackLink({
@@ -28,34 +28,49 @@
   
       <div class="govuk-grid-row">
         <form  method="get" novalidate="" autocomplete="off" action="" >   
+          <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
+           
+   
+                   
+            <div class="autocomplete-wrapper">
+              <label class="govuk-label" for="sort">
+               View a different provider 
+                    </label>
+              <select class="govuk-select autocomplete-element " id="provider" name="providerName">
+
+
+           
+                <option value="" ></option>
+                <option value="Ambition Institute">Ambition Institute</option>
+                <option value="Best Practice Network (home of Outstanding Leaders Partnership)">Best Practice Network (home of Outstanding Leaders Partnership)</option>
+                <option value="Capita" >Capita</option>
+                <option value="Education Development Trust">Education Development Trust</option>
+                <option value="Teach First">Teach First</option>
+                <option value="UCL Institute of Education" >UCL Institute of Education</option>
+                 
+              </select>
+          
+    
+    </div>
+
+
+  </div>
       <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
  
 
+         
+        <div class="autocomplete-wrapper">
+          <label class="govuk-label" for="date">View a different statement</label>
+                <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
 
 
-</div>
-
-<div  class="govuk-grid-column-one-third">
- 
-      
-<div class="autocomplete-wrapper">
-  <label class="govuk-label" for="date">View a different statement</label>
-  <!-- <duet-date-picker identifier="date">
-
-    
-  </duet-date-picker> -->
-  
-  <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
-
-
-     <option value="" ></option>
-     <option value="April 2022">April 2022</option>
-      <option value="March 2022">March 2022</option>
-      <option value="February 2022">February 2022</option>
-      <option value="January 2022" >January 2022</option>
-     
-  </select>
-
+                  <option value="" ></option>
+                  <option value="Milestone 4 for 2023">Milestone 4 for 2023</option>
+                   <option value="Milestone 3 for 2022">Milestone 3 for 2022</option>
+                   <option value="Milestone 2 for 2022">Milestone 2 for 2022</option>
+                   <option value="Milestone 1 for 2021" >Milestone 1 for 2021</option>
+                  
+               </select>
 
 </div>
 
