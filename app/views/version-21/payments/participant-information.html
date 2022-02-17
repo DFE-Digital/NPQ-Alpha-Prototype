@@ -141,7 +141,7 @@
                                   <legend id="filter-legend-q" class="govuk-fieldset__legend govuk-fieldset__legend--s">
                                     Search
                                   </legend>
-                                  <span class="govuk-hint" id="query-hint"> Search by participant ID or TRN</span>
+                                  <span class="govuk-hint" id="query-hint"> Search by trainee ID or Teacher reference number</span>
                                     <input class="govuk-input " id="search" name="q" type="text" value="" aria-labelledby="filter-legend-q" autocomplete="off">
                                 </fieldset>
                               </div>
@@ -381,7 +381,7 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-full">
         <div class="result-info__header">
-          <h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} Participants for current milestone {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
+          <h2 class="gem-c-heading govuk-heading-s govuk-!-padding-top-2 " id="js-result-count">{{data.pinfo.length}} trainees for current output {% if data.providerName %} for {{data.providerName}} {%endif%}</h2>
         </div>
       </div>
   
@@ -393,11 +393,11 @@
     <thead >  
       <th scope="col" class="govuk-table__header"> 
   
-     UUID
+     Trainee ID
    </th>
    <th scope="col" class="govuk-table__header"> 
   
-     TRN
+    Teacher reference number
    </th>
    <th scope="col" class="govuk-table__header"> 
   
