@@ -87,27 +87,7 @@
                 {%else%}
 
                 {%endif%}
-                <!-- <div class="">
-                  <div  style="float:right" class="govuk-form-group govuk-radios--small govuk-!-margin-bottom-0 ">
-                    <div class="govuk-radios govuk-!-margin-bottom-0 ">
-                      <div class="govuk-radios__item"><input class="govuk-radios__input"
-                          id="lab-based-testing-and-capacity-by-test-type-0"
-                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="PCR tests"
-                          checked=""><label class="govuk-label govuk-radios__label "
-                          for="lab-based-testing-and-capacity-by-test-type-0">Current payment breakdown</label></div>
-                      <div class="govuk-radios__item"><input class="govuk-radios__input"
-                          id="lab-based-testing-and-capacity-by-test-type-1"
-                          name="lab-based-testing-and-capacity-by-test-type-option-choices" type="radio" value="Antibody tests"><label
-                          class="govuk-label govuk-radios__label " for="lab-based-testing-and-capacity-by-test-type-1">Forecast payment breakdown</label></div>
-      
-                        
-                        
-                    </div>
-                  
-                  </div>
-                
-                  
-      </div> -->
+           
 
 
       <h2 class="govuk-heading-l">Your statements
@@ -179,21 +159,7 @@ View
         <div id="changed-name-hint" class="govuk-hint">
          
         </div>
-        <!-- <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changed-name">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-              No
-            </label>
-          </div>
-        </div>
-     -->
+  
       </fieldset>
     </div>
     <a href="npq-payment-breakdown-option-3?payable=true"  class="govuk-button" data-module="govuk-button">
@@ -250,7 +216,9 @@ View
             <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
 
                 <div class="topic">
-                  <strong itemprop="name" class="govuk-caption-l ">Milestone 1 for 2021</strong>
+                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementDate %}  {{data.statementDate}}{%else%} Milestone 1 for 2021 {%endif%}
+
+                  </strong>
                     <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span  >£880,320.64</span></p>
            
@@ -305,24 +273,21 @@ View
          
 
     <div class="govuk-grid-column-full ">
-      <h2 class="govuk-heading-m  ">Course breakdown
-       
-      </h2>
+  
       <div class="moj-filter-layout__content">
-    
-
-    
+                                        
+                                    
+                                        
         <section style="border-bottom: 1px solid black;" class="app-application-card">
-    <header class="app-application-card__header">
+   
       <h2 class="govuk-heading-s">
     
-        Leading Teaching
+        Leading teaching course breakdown
       
       </h2>
      
       
-   
-    </header>
+
     <header class="app-application-card__header">
       <span class="govuk-body-s">     	Starts<br>1000 </span>
      
@@ -343,7 +308,7 @@ View
     
     
     
-      <span class="govuk-label--s">Payment details</span>
+      <span class="govuk-label--s govuk-visually-hidden">Payment details</span> 
       <table class="govuk-table">
                         
            
@@ -355,8 +320,8 @@ View
       
            
             <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
-            <th  scope="col" class="govuk-table__header govuk-body-s ">Participants</th>
-            <th  scope="col" class="govuk-table__header govuk-body-s "> Fee per participant</th>
+            <th  scope="col" class="govuk-table__header govuk-body-s ">Trainees</th>
+            <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
             <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
   
           </tr>
@@ -449,16 +414,16 @@ Refunds
     </section>
 <br>
     <section style="border-bottom: 1px solid black;" class="app-application-card">
-      <header class="app-application-card__header">
+     
         <h2 class="govuk-heading-s">
       
-          Leading Teacher development
+          Leading Teacher development course breakdown
         
-        </h2>
+</h2>
        
         
      
-      </header>
+     
       <header class="app-application-card__header">
         <span class="govuk-body-s">     	Starts<br>1000 </span>
        
@@ -475,7 +440,7 @@ Refunds
       
       
       
-        <span class="govuk-label--s">Payment details</span>
+        <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
         <table class="govuk-table">
                         
            
@@ -487,8 +452,8 @@ Refunds
         
              
               <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
-              <th  scope="col" class="govuk-table__header govuk-body-s ">Participants</th>
-              <th  scope="col" class="govuk-table__header govuk-body-s "> Fee per participant</th>
+              <th  scope="col" class="govuk-table__header govuk-body-s ">Trainees</th>
+              <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
               <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
     
             </tr>
@@ -582,16 +547,16 @@ Refunds
       </section>
       <br>
       <section style="border-bottom: 1px solid black;" class="app-application-card">
-        <header class="app-application-card__header">
+       
           <h2 class="govuk-heading-s">
         
-            Leading Behaviour and Culture
+            Leading Behaviour and Culture course breakdown
           
           </h2>
          
           
        
-        </header>
+   
         <header class="app-application-card__header">
           <span class="govuk-body-s">     	Starts<br>1000 </span>
          
@@ -608,7 +573,7 @@ Refunds
         
         
         
-          <span class="govuk-label--s">Payment details</span>
+          <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
           <table class="govuk-table">
                         
            
@@ -620,8 +585,8 @@ Refunds
           
                
                 <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
-                <th  scope="col" class="govuk-table__header govuk-body-s ">Participants</th>
-                <th  scope="col" class="govuk-table__header govuk-body-s "> Fee per participant</th>
+                <th  scope="col" class="govuk-table__header govuk-body-s ">Trainees</th>
+                <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
                 <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
       
               </tr>
@@ -713,17 +678,18 @@ Refunds
         </div>   
   
         </section>
+        <br>
         <section style="border-bottom: 1px solid black;" class="app-application-card">
-          <header class="app-application-card__header">
+         
             <h2 class="govuk-heading-s">
           
-              Senior Leadership
+              Senior Leadership course breakdown
             
             </h2>
            
             
          
-          </header>
+  
           <header class="app-application-card__header">
             <span class="govuk-body-s">     	Starts<br>1000 </span>
            
@@ -741,7 +707,7 @@ Refunds
           
           
           
-            <span class="govuk-label--s">Payment details</span>
+            <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
             <table class="govuk-table">
                         
            
@@ -753,8 +719,8 @@ Refunds
             
                  
                   <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
-                  <th  scope="col" class="govuk-table__header govuk-body-s ">Participants</th>
-                  <th  scope="col" class="govuk-table__header govuk-body-s "> Fee per participant</th>
+                  <th  scope="col" class="govuk-table__header govuk-body-s ">Trainees</th>
+                  <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
                   <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
         
                 </tr>
@@ -846,17 +812,17 @@ Refunds
           </div>   
     
           </section>
+          <br>
           <section style="border-bottom: 1px solid black;" class="app-application-card">
-            <header class="app-application-card__header">
+           
               <h2 class="govuk-heading-s">
             
-                Headship
+                Headship course breakdown
               
               </h2>
              
               
-           
-            </header>
+    
             <header class="app-application-card__header">
               <span class="govuk-body-s">     	Starts<br>1000 </span>
              
@@ -874,7 +840,7 @@ Refunds
             
             
             
-              <span class="govuk-label--s">Payment details</span>
+              <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
               <table class="govuk-table">
                         
            
@@ -886,8 +852,8 @@ Refunds
               
                    
                     <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
-                    <th  scope="col" class="govuk-table__header govuk-body-s ">Participants</th>
-                    <th  scope="col" class="govuk-table__header govuk-body-s "> Fee per participant</th>
+                    <th  scope="col" class="govuk-table__header govuk-body-s ">Trainee</th>
+                    <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
                     <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
           
                   </tr>
@@ -978,18 +944,18 @@ Refunds
               
             </div>   
             </section>
-
+            <br>
             <section style="border-bottom: 1px solid black;" class="app-application-card">
-              <header class="app-application-card__header">
+       
                 <h2 class="govuk-heading-s">
               
-                  Executive Leadership
+                  Executive Leadership course breakdown
                 
                 </h2>
                
                 
              
-              </header>
+   
               <header class="app-application-card__header">
                 <span class="govuk-body-s">     	Starts<br>1000 </span>
                
@@ -1007,7 +973,7 @@ Refunds
               
               
               
-                <span class="govuk-label--s">Payment details</span>
+                <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
                 <table class="govuk-table">
                         
            
@@ -1019,7 +985,7 @@ Refunds
                 
                      
                       <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
-                      <th  scope="col" class="govuk-table__header govuk-body-s ">Participants</th>
+                      <th  scope="col" class="govuk-table__header govuk-body-s ">Trainee</th>
                       <th  scope="col" class="govuk-table__header govuk-body-s "> Fee per participant</th>
                       <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
             
@@ -1111,17 +1077,16 @@ Refunds
                 
               </div>   
               </section>
-              <section style="border-bottom: 1px solid black;" class="app-application-card">
-                <header class="app-application-card__header">
+              <br>
+              <section style="border-bottom: none;" class="app-application-card">
+
                   <h2 class="govuk-heading-s">
                 
-                    Additional support offer for Headship
+                    Additional support offer for Headship course breakdown
                   
                   </h2>
                  
-                  
-               
-                </header>
+
                 <header class="app-application-card__header">
                   <span class="govuk-body-s">     	Starts<br>1000 </span>
                  
@@ -1139,7 +1104,7 @@ Refunds
                 
                 
                 
-                  <span class="govuk-label--s">Payment details</span>
+                  <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
                   <table class="govuk-table">
                           
              
@@ -1151,8 +1116,8 @@ Refunds
                   
                        
                         <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
-                        <th  scope="col" class="govuk-table__header govuk-body-s ">Participants</th>
-                        <th  scope="col" class="govuk-table__header govuk-body-s "> Fee per participant</th>
+                        <th  scope="col" class="govuk-table__header govuk-body-s ">Trainee</th>
+                        <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
                         <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
               
                       </tr>
@@ -1167,7 +1132,7 @@ Refunds
                       <tr class="govuk-table__row">
             
                         <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                         Output payment
+                         Output
                     
                                   </td> 
                
@@ -1220,303 +1185,13 @@ Refunds
                   
                 </div>   
                 </section>
+     
     
     
     
     
     
     </div>
-      <!-- <table class="govuk-table ">
-              
- 
-                   
-             
-        <thead class="govuk-table__head">
-      
-          <tr class="govuk-table__row">
- 
-            <th  colspan="" scope="col" class="govuk-table__header govuk-body-s">Course details</th>
-            <th  scope="col" class="govuk-table__header govuk-body-s">Recruitment target</th>
-            <th  scope="col" class="govuk-table__header govuk-body-s">Current trainees</th>
-        
-
-      
-            <th  scope="col" class="govuk-table__header govuk-body-s">Total paid</th>
-       
-            <th  scope="col" class="govuk-table__header govuk-body-s">Total not paid</th>
-            <th  scope="col" class="govuk-table__header govuk-body-s"> Fee per trainee</th>
-            <th  scope="col" class="govuk-table__header govuk-body-s ">Output payment  </th>
-            <th  scope="col" class="govuk-table__header govuk-body-s ">Service payment </th>
-            <th  scope="col" class="govuk-table__header govuk-body-s ">Refunds</th>
-            <th  scope="col" class="govuk-table__header govuk-body-s govuk-table__header--numeric">Course total</th>
-          </tr>
-         
-        </thead>
-      
-        <tbody class="govuk-table__body">
-     
-          <tr class="govuk-table__row">
-          
-            <td  scope="row" class="govuk-table__cell govuk-body-s"> 
-     Leading Teaching  <br><br>
-       <span> Starts -  1000 </span> <br>
-       <span> Retained -  1000 </span><br>
-       <span> Completed -  1000 </span>
-   
-          
-</td>
-
-    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-1000
-      </td>
-      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-        1000
-              </td>
-      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-      1000
-        </td>
-        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-        1000
-          </td>
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-            £1000.00
-            </td>
-      
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-             £1000.00
-            </td>
-      
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-              £1000.00
-            </td>
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-              -£1000.00
-            </td>
-            <td  scope="row" class="govuk-table__cell govuk-table__cell--numeric govuk-body-s "> 
-              £1000.00
-            </td>
-      
-      
-          </tr>
-          <tr class="govuk-table__row">
-            <td  scope="row" class="govuk-table__cell govuk-body-s"> 
-         
-Leading Teacher development<br><br>
-<span> Starts -  1000 </span> <br>
-<span> Retained -  1000 </span><br>
-<span> Completed -  1000 </span>
-
-   
-</td>
-
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-1000
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
- 1000
-       </td>
-      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-      1000
-        </td>
-        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-        1000
-          </td>
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-            £1000.00
-            </td>
-      
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-             £1000.00
-            </td>
-      
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-              £1000.00
-            </td>
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-              -£1000.00
-            </td>
-            <td  scope="row" class="govuk-table__cell govuk-table__cell--numeric govuk-body-s "> 
-              £1000.00
-            </td>
-      
-          </tr>
-        
-          <tr class="govuk-table__row">
-            <td  scope="row" class="govuk-table__cell govuk-body-s"> 
-         
-              Leading Behaviour and Culture<br><br>
-              <span> Starts -  1000 </span> <br>
-              <span> Retained -  1000 </span><br>
-              <span> Completed -  1000 </span>
-          
-                 
-       </td>
-       
-           <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-       1000
-             </td>
-             <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-               1000
-                     </td>
-      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-      1000
-        </td>
-        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-        1000
-          </td>
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-            £1000.00
-            </td>
-      
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-             £1000.00
-            </td>
-      
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-              £1000.00
-            </td>
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-              -£1000.00
-            </td>
-            <td  scope="row" class="govuk-table__cell govuk-table__cell--numeric govuk-body-s "> 
-              £1000.00
-            </td>
-          </tr>
-          <tr class="govuk-table__row">
-          
-            <td  scope="row" class="govuk-table__cell govuk-body-s"> 
-             Senior Leadership<br><br>
-             <span> Starts -  1000 </span> <br>
-             <span> Retained 1 -  1000 </span><br>
-             <span> Retained 2 -  1000 </span><br>
-             <span> Completed -  1000 </span>
-         
-                
-      </td>
-      
-          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-      1000
-            </td>
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-              1000
-                    </td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-1000
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-1000
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-£1000.00
-</td>
-
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
- £1000.00
-</td>
-
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-  £1000.00
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-  -£1000.00
-</td>
-<td  scope="row" class="govuk-table__cell govuk-table__cell--numeric govuk-body-s "> 
-  £1000.00
-</td>
-      
-          </tr>
-          <tr class="govuk-table__row">
-          
-            <td  scope="row" class="govuk-table__cell govuk-body-s"> 
-             Headship<br><br>
-             <span> Starts -  1000 </span> <br>
-             <span> Retained 1 -  1000 </span><br>
-             <span> Retained 2 -  1000 </span><br>
-             <span> Completed -  1000 </span>
-         
-                
-      </td>
-      
-          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-      1000
-            </td>
-            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-              1000
-                    </td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-1000
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-1000
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-£1000.00
-</td>
-
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
- £1000.00
-</td>
-
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-  £1000.00
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-  -£1000.00
-</td>
-<td  scope="row" class="govuk-table__cell govuk-table__cell--numeric govuk-body-s "> 
-  £1000.00
-</td>
-      
-          </tr>
-          <tr class="govuk-table__row">
-          
-            <td  scope="row" class="govuk-table__cell govuk-body-s"> 
-              Executive Leadership<br><br>
-              <span> Starts -  1000 </span> <br>
-              <span> Retained 1 -  1000 </span><br>
-              <span> Retained 2 -  1000 </span><br>
-              <span> Completed -  1000 </span>
-          
-                 
-       </td>
-       
-           <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-       1000
-             </td>
-             <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-               1000
-                     </td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-1000
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-1000
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-£1000.00
-</td>
-
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
- £1000.00
-</td>
-
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-  £1000.00
-</td>
-<td  scope="row" class="govuk-table__cell govuk-body-s "> 
-  -£1000.00
-</td>
-<td  scope="row" class="govuk-table__cell govuk-table__cell--numeric govuk-body-s "> 
-  £1000.00
-</td>
-      
-          </tr>
-           
-        </tbody>
-      </table>
-    -->
-
-   
 
  </div>
 
