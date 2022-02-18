@@ -13,14 +13,15 @@
            
             <div class="govuk-grid-column-full ">
               
-              <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1> 
+                    <span class="govuk-caption-xl">Manage CPD contracts</span>
+        <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1> 
               {%if data.scheme === "Early Career Framework (ECF)" %}
               {% if data.version === "1" %}
               <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">
                  
                 
-                <li class="app-subnav__list-item  app-subnav__list-item--selected">
+                <li class="app-subnav__list-item  ">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-payment-breakdown?scheme={{data.scheme}}">
                     
                       Your statements
@@ -32,7 +33,7 @@
                   Contract overview
                 
                 </a></li>
-                <li class="app-subnav__list-item ">
+                <li class="app-subnav__list-item app-subnav__list-item--selected">
                   <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
                     
                     Trainee details
@@ -90,7 +91,7 @@
                     <span class="govuk-visually-hidden">Current page</span>
               </a></li>
               <li class="app-subnav__list-item ">
-                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="ecf-participant-information-p1">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
                   
                 Contract overview 
               
@@ -491,19 +492,19 @@
   <p class="govuk-body-s govuk-!-margin-bottom-2"><strong>Course completed</strong></p>
 </header>
 <header class="app-application-card__header">
-   <span class="govuk-body-s">     Teacher reference number: {{item.trn}} </span>
-  <span class="govuk-body-s">Role: ECF</span>
+  <span class="govuk-body-s">     Teacher reference number: <br>{{item.trn}} </span>
+  <span class="govuk-body-s">Role:  <br>Early career teacher</span>
   
-<span class="govuk-body-s">Cohort: {{item.c}} {{item.s}}</span>
+  <span class="govuk-body-s">Cohort:  <br>{{item.c}} {{item.s}}</span>
   
   
-
-
+  
+  
   <span class="govuk-body-s">     
-    Delivery partner:
-    {{item.dp}} </span>
-   
-</header>
+  Delivery partner: <br>
+  {{item.dp}} </span>
+  
+  </header>
 
 
 

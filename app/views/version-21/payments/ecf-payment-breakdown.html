@@ -16,7 +16,8 @@
         <div class="govuk-grid-row">
            
             <div class="govuk-grid-column-full "> 
-              <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1>
+              <span class="govuk-caption-xl">Manage CPD contracts</span>
+              <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1>
               <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">
                       <li class="app-subnav__list-item ">
@@ -54,7 +55,7 @@
                 
                   </ul>
                 </nav>
-                {%if data.statementDate === "April 2022"%}
+                {%if data.statementPeriod === "Milestone 3 for 2022"%}
                 <div id="notification" class="govuk-notification-banner " role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                   <div class="govuk-notification-banner__header">
                     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -143,7 +144,7 @@
             
           
 
-            <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
+            <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
 
               <option value="" ></option>
@@ -253,9 +254,7 @@
             
                 <div style="width:auto" class="topic ">
                  
-                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementDate %}  {{data.statementDate}}{%else%} Milestone 1 for 2021 {%endif%}
-
-              </strong>
+                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} Milestone 1 for 2021 {%endif%}</strong>
                     <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2 ">Total £5,281,923.84</h4>
                     <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
@@ -265,7 +264,7 @@
 
                     <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
                       
-                      {%if data.statementDate === "April 2022" %}
+                      {%if data.statementPeriod === "Milestone 3 for 2022" %}
                 
                       {%else%}
                      
@@ -395,7 +394,7 @@
                   <h2 class="govuk-heading-m">Output payments 
                    
                   </h2>
-                  {%if data. statementDate === "April 2022" %}
+                  {%if data. statementPeriod === "Milestone 3 for 2022" %}
                   <div class="govuk-inset-text">
                     There is no output payment this month.
                   </div>
@@ -553,7 +552,7 @@
  
 
                 <div class="govuk-grid-column-full ">
-                  {%if data. statementDate === "April 2022" %}
+                  {%if data. statementPeriod === "Milestone 3 for 2022" %}
                 
                   {%else%}
                   <a style="float:right; font-size: 16px;" href="ecf-uplift-payment-information" class="govuk-link govuk-link--no-visited-state">
@@ -564,7 +563,7 @@
                   <h2 class="govuk-heading-m">Other payments
                    
                   </h2>
-                  {%if data. statementDate === "April 2022" %}
+                  {%if data. statementPeriod === "Milestone 3 for 2022" %}
                   <div class="govuk-inset-text">
                     There are no other payments this month.
                   </div>
