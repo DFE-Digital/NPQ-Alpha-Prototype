@@ -19,7 +19,7 @@
     
 
 
-              <h2 class="govuk-heading-l">{% if data.statementDate %}  {{data.statementDate}}{%else%} Milestone 1 for 2021 {%endif%}
+              <h2 class="govuk-heading-l">{% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} Milestone 1 for 2021 {%endif%}
 
               </h2>
   
@@ -38,7 +38,7 @@
          
   <div class="autocomplete-wrapper">
     <label class="govuk-label" for="date">View a different statement</label>
-          <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
+          <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
 
             <option value="" ></option>

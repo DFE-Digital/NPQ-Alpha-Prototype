@@ -110,7 +110,7 @@
           
 
 
-              <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
+              <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
 
                 <option value="" ></option>
@@ -137,7 +137,7 @@
             <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
             
                 <div style="width:auto" class="topic ">
-                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementDate %}  {{data.statementDate}}{%else%} Milestone 1 for 2021 {%endif%}
+                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} Milestone 1 for 2021 {%endif%}
 
                   </strong>
                   <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2 ">Total £5,281,923.84</h4>
@@ -267,11 +267,7 @@
                   <h2 class="govuk-heading-m">Output payments  
                    
                   </h2>
-                  {%if data. statementDate === "April 2022" %}
-                  <div class="govuk-inset-text">
-                    There is no output payment this month.
-                  </div>
-                  {%else%}
+               
                   <table class="govuk-table ">
               
    
@@ -407,7 +403,7 @@
                     <div class=" govuk-heading-s govuk-table__header--numeric">Output payment total <br>£3,426,500.00</div> 
                   
 </div>     
-{%endif%}
+
              </div>
           
                  </div>    
@@ -425,22 +421,16 @@
  
 
                 <div class="govuk-grid-column-full ">
-                  {%if data. statementDate === "April 2022" %}
                 
-                  {%else%}
                   <a style="float:right; font-size: 16px;" href="ecf-uplift-payment-information" class="govuk-link govuk-link--no-visited-state">
                   <strong>View uplift payments</strong>
                     </a>
-                  {%endif%}
+                
                     
                   <h2 class="govuk-heading-m">Other payments
                    
                   </h2>
-                  {%if data. statementDate === "April 2022" %}
-                  <div class="govuk-inset-text">
-                    There are no other Payments this month.
-                  </div>
-                  {%else%}
+              
                   <table class="govuk-table ">
               
    
@@ -492,7 +482,7 @@
     <div class=" govuk-heading-s govuk-table__header--numeric">Other payments total <br> £0.00</div> 
   
 </div>     
-{%endif%}
+
              </div>
           
                  </div>    
