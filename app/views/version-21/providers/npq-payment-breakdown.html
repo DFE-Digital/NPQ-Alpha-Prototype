@@ -117,7 +117,7 @@
     
   </duet-date-picker> -->
   
-  <select class="govuk-select autocomplete-element" id="statement" name="statementDate">
+  <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
 
     <option value="" ></option>
@@ -217,7 +217,7 @@ View
             <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
 
                 <div class="topic">
-                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementDate %}  {{data.statementDate}}{%else%} Milestone 1 for 2021 {%endif%}
+                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} Milestone 1 for 2021 {%endif%}
 
                   </strong>
                     <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>

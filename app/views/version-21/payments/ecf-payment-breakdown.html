@@ -394,11 +394,7 @@
                   <h2 class="govuk-heading-m">Output payments 
                    
                   </h2>
-                  {%if data. statementPeriod === "Milestone 3 for 2022" %}
-                  <div class="govuk-inset-text">
-                    There is no output payment this month.
-                  </div>
-                  {%else%}
+                
                   <table class="govuk-table ">
               
    
@@ -534,7 +530,7 @@
     <div class=" govuk-heading-s govuk-table__header--numeric">Output payment total <br>£3,426,500.00</div> 
   
 </div>     
-{%endif%}
+
              </div>
           
                  </div>    
@@ -552,22 +548,16 @@
  
 
                 <div class="govuk-grid-column-full ">
-                  {%if data. statementPeriod === "Milestone 3 for 2022" %}
                 
-                  {%else%}
                   <a style="float:right; font-size: 16px;" href="ecf-uplift-payment-information" class="govuk-link govuk-link--no-visited-state">
                   <strong>View uplift payment information</strong>
                     </a>
-                  {%endif%}
+              
                     
                   <h2 class="govuk-heading-m">Other payments
                    
                   </h2>
-                  {%if data. statementPeriod === "Milestone 3 for 2022" %}
-                  <div class="govuk-inset-text">
-                    There are no other payments this month.
-                  </div>
-                  {%else%}
+              
                   <table class="govuk-table ">
               
    
@@ -619,7 +609,7 @@
     <div class=" govuk-heading-s govuk-table__header--numeric">Other payments total <br> £0.00</div> 
   
 </div>     
-{%endif%}
+
              </div>
           
                  </div>    
