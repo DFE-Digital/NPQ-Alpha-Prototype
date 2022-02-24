@@ -1,10 +1,7 @@
 {% extends "layout-full-width-providers.html" %}
 {% block beforeContent %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
-{{ govukBackLink({
-  text: "Change trainee scheme",
-  href: "scheme"
-  }) }}
+
 {% endblock %}
 {% block content %}
 
@@ -68,21 +65,36 @@ View
            
            
             <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
-
+              
+                      
+              
+           
                 <div class="topic">
 
                     <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>
-                    <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span  >£880,320.64</span></p>
-                
+                    <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
+                    <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
+              
                    
-                    <p class="grey govuk-!-font-size-16 ">
-                      
-                      <a href="" class="govuk-link govuk-link--no-visited-state ext-link">
-                        <strong>Download provider statement (CSV)</strong>
-                        </a>
-                    </p>
+                
                 </div>
 
+                <ul class="first govuk-list">
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  <a  style="float:right" href="" class="govuk-link govuk-link--no-visited-state ext-link">
+                    Voided declarations
+                      </a> </strong>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">100</span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                
+                </ul>
                 <ul class="first govuk-list">
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Milestone cut off date </strong>
@@ -1041,7 +1053,7 @@ Refunds
                 </section>
      
     
-    
+           
     
     
     
@@ -1049,8 +1061,64 @@ Refunds
 
  </div>
 
-     </div>    
-
+     </div>   
+     <br> 
+     <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+           Contract information
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header">Course Identifier</th>
+            <th class="govuk-table__header govuk-table__cell--numeric">Recruitment target</th>
+            <th class="govuk-table__header govuk-table__cell--numeric">Payment amount per participant</th>
+          </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+          <td class="govuk-table__cell">npq-additional-support-offer</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">300</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£800.00</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">npq-leading-teaching</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">npq-leading-behaviour-culture</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">npq-leading-teaching-development</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">1500</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">npq-senior-leadership</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£1,149.00</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">npq-headship</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£1,985.00</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">npq-executive-leadership</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">400</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">£4,099.00</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+    </details>
 </div>
 
 
