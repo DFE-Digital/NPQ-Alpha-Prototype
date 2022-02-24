@@ -55,7 +55,7 @@
                 
                   </ul>
                 </nav>
-                {%if data.statementPeriod === "Milestone 3 for 2022"%}
+                {%if data.statementPeriod === "March 2022"%}
                 <div id="notification" class="govuk-notification-banner " role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                   <div class="govuk-notification-banner__header">
                     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -143,18 +143,17 @@
             </duet-date-picker> -->
             
           
-
             <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
 
               <option value="" ></option>
-              <option value="Milestone 4 for 2023">Milestone 4 for 2023</option>
-               <option value="Milestone 3 for 2022">Milestone 3 for 2022</option>
-               <option value="Milestone 2 for 2022">Milestone 2 for 2022</option>
-               <option value="Milestone 1 for 2021" >Milestone 1 for 2021</option>
+             
+               <option value="April 2022">April 2022</option>
+               <option value="March 2022">March 2022</option>
+               <option value="February 2022">February 2022</option>
+               <option value="January 2022" >January 2022</option>
               
            </select>
-      
         
   
   </div>
@@ -252,9 +251,9 @@
 </div> 
             <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
             
-                <div style="width:auto" class="topic ">
+                <div class=" ">
                  
-                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} Milestone 1 for 2021 {%endif%}</strong>
+                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} March 2022 {%endif%}</strong>
                     <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2 ">Total £5,281,923.84</h4>
                     <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
@@ -262,7 +261,7 @@
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">Other payments<span style="float:right" >£0.00</span> </p>
         
 
-                    <p class="grey govuk-!-font-size-16 govuk-!-margin-top-1">
+                 
                       
                       {%if data.statementPeriod === "Milestone 3 for 2022" %}
                 
@@ -276,25 +275,25 @@
                           </div>
                           <br>
                             {%else%}
-                            <div>
+                           
                               <button class="govuk-button" id="myBtn">Approve payment</button>
-                            </div>
+                              
+                       
                        
 
                             {%endif%}
                             {%endif%}   
-                            <div class="additional-info bottom-aligned">
+                        
                               
-                              
-                                <p class="govuk-!-margin-bottom-0 govuk-!-margin-top-0 govuk-!-font-size-16">
-                                  <div></div>
-                                  <a href="" class="govuk-link govuk-link--no-visited-state bottom-aligned govuk-!-margin-top-2 ext-link">
+                            <p class=" govuk-body-s title-mobile">
+                             
+                                  <a href="" class="govuk-link ">
                                       <strong>Download provider statement (CSV)</strong>
                                       </a>
                                   </p>
-                                  <br>
+                            
                                 
-                                  </div>
+                         
                                 </div>
 
                   
@@ -325,7 +324,7 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="second govuk-list">
+                <ul class="second  govuk-list">
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>
                      <div class="number-group">
@@ -377,7 +376,7 @@
 
                
                 </ul>
- 
+               
             </div>   
       
             <br>

@@ -109,17 +109,17 @@
             
           
 
+            <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
-              <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
-
-                <option value="" ></option>
-                <option value="Milestone 4 for 2023">Milestone 4 for 2023</option>
-                 <option value="Milestone 3 for 2022">Milestone 3 for 2022</option>
-                 <option value="Milestone 2 for 2022">Milestone 2 for 2022</option>
-                 <option value="Milestone 1 for 2021" >Milestone 1 for 2021</option>
-                
-             </select>
+              <option value="" ></option>
+             
+              <option value="April 2022">April 2022</option>
+              <option value="March 2022">March 2022</option>
+              <option value="February 2022">February 2022</option>
+              <option value="January 2022" >January 2022</option>
+              
+           </select>
         
   
   </div>
@@ -137,7 +137,7 @@
             <div class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
             
                 <div style="width:auto" class="topic ">
-                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} Milestone 1 for 2021 {%endif%}
+                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} March 2022 {%endif%}
 
                   </strong>
                   <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2 ">Total £5,281,923.84</h4>

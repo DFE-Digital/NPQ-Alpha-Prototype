@@ -100,16 +100,16 @@
          
         <div class="autocomplete-wrapper">
           <label class="govuk-label" for="date">View a different statement</label>
-                <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
+          <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
 
-                  <option value="" ></option>
-                  <option value="Milestone 4 for 2023">Milestone 4 for 2023</option>
-                   <option value="Milestone 3 for 2022">Milestone 3 for 2022</option>
-                   <option value="Milestone 2 for 2022">Milestone 2 for 2022</option>
-                   <option value="Milestone 1 for 2021" >Milestone 1 for 2021</option>
-                  
-               </select>
+            <option value="" ></option>
+             
+            <option value="April 2022">April 2022</option>
+            <option value="March 2022">March 2022</option>
+            <option value="February 2022">February 2022</option>
+            <option value="January 2022" >January 2022</option>
+         </select>
 
 </div>
 
@@ -209,73 +209,159 @@ View
 
 </div>
          
-           
-           
-            <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
-
-                <div class="topic">
-                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} Milestone 1 for 2021 {%endif%}
-
-                  </strong>
-                    <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>
-                    <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span  >£880,320.64</span></p>
-                    {%if data.payable ==="true"%}
-                    <div>
-                    <strong class="govuk-tag">
-                      APPROVED
-                    </strong>
-                  </div>
-                  <br>
-                    {%else%}
-                    <div>
-                      <button class="govuk-button" id="myBtn">Approve payment</button>
-                    </div>
-               
-
-                    {%endif%}
-                    <p class="grey govuk-!-font-size-16 ">
-                      
-                      <a href="" class="govuk-link govuk-link--no-visited-state ext-link">
-                        <strong>Download provider statement (CSV)</strong>
-                        </a>
-                    </p>
-                </div>
-
-                <ul class="first govuk-list">
-                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Milestone cut off date </strong>
-                     <div class="number-group">
-                         <div class="number-container govuk-!-padding-right-4">
-                             <div class="float tooltip">
-                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="">15 December 2021</span></div>
-                             </div>
-                         </div>
-                     </div>
-                 </li>
-                
-                </ul>
-          
-                  <ul class="first govuk-list">
-                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort</strong>
-                       <div class="number-group">
-                           <div class="number-container govuk-!-padding-right-4">
-                               <div class="float tooltip">
-                                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                       <span class="">Spring 2022</span></div>
-                               </div>
-                           </div>
-                       </div>
-                   </li>
-                  
-                  </ul>
+<div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
               
-            
+                      
+              
+           
+  <div style="width:35%" class="govuk-!-margin-right-4">
+    <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} March 2022 {%endif%}</strong>
+      <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>
+      <p class=" govuk-body-s  govuk-!-margin-bottom-2">Output payment            <span style="float:right" >£975,103.20</span></p> 
+      <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
+      <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
+      {%if data.payable ==="true"%}
+      <div>
+      <strong class="govuk-tag">
+        APPROVED
+      </strong>
+    </div>
+    <br>
+      {%else%}
+      <div>
+        <button class="govuk-button" id="myBtn">Approve payment</button>
+      </div>
+ 
+
+      {%endif%}
+      <p class="grey govuk-!-font-size-16 ">
+                      
+        <a href="" class="govuk-link govuk-link--no-visited-state ext-link">
+          <strong>Download </strong>
+          </a>
+      </p>
+     
+  
+  </div>
+
+  <ul class="first govuk-list govuk-!-margin-bottom-0">
+    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Output payment cut off date </strong>
+       <div class="number-group">
+           <div class="number-container govuk-!-padding-right-4">
+               <div class="float tooltip">
+                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                       <span class="">11 March 2022</span></div>
+               </div>
+           </div>
+       </div>
+   </li>
+   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+    <strong class="govuk-body-s  govuk-!-margin-bottom-0">Recruitment target total <br>(for 2 cohorts)</strong>
+    <br>
+     <div class="number-group">
+      
+                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                     <span class="">1000</span></div>
+             </div>
+       
+ </li>
+  
+ 
+
+  </ul>
+  <ul class="second govuk-list govuk-!-margin-bottom-0">
+    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort </strong> <br>
+       <div class="number-group">
+           <div class="number-container govuk-!-padding-right-4">
+               <div class="float tooltip">
+                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                       <span class="">Spring 2022</span></div>
+               </div>
+           </div>
+       </div>
+   </li>
+   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
+     Total starts 
+    </strong> <br>
+     <div class="number-group">
+         <div class="number-container govuk-!-padding-right-4">
+             <div class="float tooltip">
+                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                     <span class="">100</span></div>
+             </div>
+         </div>
+     </div>
+ </li>
+
+  </ul>
+
+<ul class="booster govuk-list govuk-!-margin-bottom-0">
+  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  <a  style="float:right" href="" class="govuk-link govuk-link--no-visited-state ext-link">
+    Voided declarations
+      </a> </strong> <br>
+     <div class="number-group">
+         <div class="number-container govuk-!-padding-right-4">
+             <div class="float tooltip">
+                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                     <span class="">100</span></div>
+             </div>
+         </div>
+     </div>
+ </li>
+  
+ 
+ <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+  <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
+  Total retained
+  </strong> <br>
+  <div class="number-group">
+      <div class="number-container govuk-!-padding-right-4">
+          <div class="float tooltip">
+              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                  <span class="">100</span></div>
+          </div>
+      </div>
+  </div>
+</li>
+  </ul>
+  <ul class="fourth govuk-list govuk-!-margin-bottom-0">
+   
+    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+     <strong class="govuk-body-s float govuk-!-margin-bottom-0"></strong>
+      <div class="number-group">
+          <div class="number-container govuk-!-padding-right-4">
+              <div class="float tooltip">
+                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                      <span class=""></span></div>
+              </div>
+          </div>
+      </div>
+  </li>
+  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
+       Total completed
+      </strong> <br>
+       <div class="number-group">
+           <div class="number-container govuk-!-padding-right-4">
+               <div class="float tooltip">
+                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                       <span class="">100</span></div>
+               </div>
+           </div>
+       </div>
+   </li>
+ 
+   </ul>
+
+
+                  
+</div>   
         
  
-                                
-            </div>   
             <br>
                                     </div>
        
@@ -285,21 +371,21 @@ View
                                              
                                     
                                         <div class="govuk-grid-column-full ">
-                                       
-                                          <div class="moj-filter-layout__content">
-                                        
                                     
-                                        
+                                          <div class="moj-filter-layout__content">
+                                                                            
+                                                                        
+                                                                            
                                             <section style="border-bottom: 1px solid black;" class="app-application-card">
                                        
                                           <h2 class="govuk-heading-s">
                                         
-                                            Leading teaching course breakdown
+                                            Leading Teaching course breakdown
                                           
                                           </h2>
                                          
                                           
-                                
+                                    
                                         <header class="app-application-card__header">
                                           <span class="govuk-body-s">     	Starts<br>1000 </span>
                                          
@@ -309,7 +395,7 @@ View
                                           <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
                                          
                                           <span class="govuk-body-s">Current trainees<br> 1000</span>
-                                            <span class="govuk-body-s">Total not paid<br> 1000</span>
+                                            <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
                                     
                                          
                                     
@@ -396,7 +482,7 @@ View
                                     <tr class="govuk-table__row">
                                     
                                     <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                    Refunds
+                                    Refund to DfE
                                     
                                               </td> 
                                     
@@ -420,7 +506,7 @@ View
                                             </tbody>
                                           </table>
                                           <div class="govuk-table__row govuk-!-padding-bottom-1">     
-                                            <div class=" govuk-label--s govuk-table__header--numeric">Course Total <br> £1000.00</div> 
+                                            <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
                                           
                                         </div>   
                                         </section>
@@ -429,9 +515,9 @@ View
                                          
                                             <h2 class="govuk-heading-s">
                                           
-                                              Leading Teacher development course breakdown
+                                              Leading Teacher Development course breakdown
                                             
-                                   </h2>
+                                    </h2>
                                            
                                             
                                          
@@ -445,7 +531,7 @@ View
                                             <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
                                            
                                             <span class="govuk-body-s">Current trainees<br> 1000</span>
-                                              <span class="govuk-body-s">Total not paid<br> 1000</span>
+                                              <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
                                     
                                           </header>
                                           
@@ -528,7 +614,7 @@ View
                                      <tr class="govuk-table__row">
                                       
                                       <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                    Refunds
+                                    Refund to DfE
                                     
                                                 </td> 
                                     
@@ -552,7 +638,7 @@ View
                                               </tbody>
                                             </table>
                                             <div class="govuk-table__row govuk-!-padding-bottom-1">     
-                                              <div class=" govuk-label--s govuk-table__header--numeric">Course Total <br> £1000.00</div> 
+                                              <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
                                             
                                           </div>   
                                     
@@ -578,7 +664,7 @@ View
                                               <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
                                              
                                               <span class="govuk-body-s">Current trainees<br> 1000</span>
-                                                <span class="govuk-body-s">Total not paid<br> 1000</span>
+                                                <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
                                       
                                             </header>
                                             
@@ -661,7 +747,7 @@ View
                                        <tr class="govuk-table__row">
                                         
                                         <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                    Refunds
+                                    Refund to DfE
                                     
                                                   </td> 
                                     
@@ -685,7 +771,7 @@ View
                                                 </tbody>
                                               </table>
                                               <div class="govuk-table__row govuk-!-padding-bottom-1">     
-                                                <div class=" govuk-label--s govuk-table__header--numeric">Course Total <br> £1000.00</div> 
+                                                <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
                                               
                                             </div>   
                                       
@@ -712,7 +798,7 @@ View
                                                 <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
                                                
                                                 <span class="govuk-body-s">Current trainees<br> 1000</span>
-                                                  <span class="govuk-body-s">Total not paid<br> 1000</span>
+                                                  <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
                                         
                                               </header>
                                               
@@ -795,7 +881,7 @@ View
                                          <tr class="govuk-table__row">
                                           
                                           <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                    Refunds
+                                    Refund to DfE
                                       
                                                     </td> 
                                     
@@ -819,7 +905,7 @@ View
                                                   </tbody>
                                                 </table>
                                                 <div class="govuk-table__row govuk-!-padding-bottom-1">     
-                                                  <div class=" govuk-label--s govuk-table__header--numeric">Course Total <br> £1000.00</div> 
+                                                  <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
                                                 
                                               </div>   
                                         
@@ -845,7 +931,7 @@ View
                                                   <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
                                                  
                                                   <span class="govuk-body-s">Current trainees<br> 1000</span>
-                                                    <span class="govuk-body-s">Total not paid<br> 1000</span>
+                                                    <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
                                           
                                                 </header>
                                                 
@@ -928,7 +1014,7 @@ View
                                            <tr class="govuk-table__row">
                                             
                                             <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                      Refunds
+                                      Refund to DfE
                                         
                                                       </td> 
                                     
@@ -952,7 +1038,7 @@ View
                                                     </tbody>
                                                   </table>
                                                   <div class="govuk-table__row govuk-!-padding-bottom-1">     
-                                                    <div class=" govuk-label--s govuk-table__header--numeric">Course Total <br> £1000.00</div> 
+                                                    <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
                                                   
                                                 </div>   
                                                 </section>
@@ -978,7 +1064,7 @@ View
                                                     <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
                                                    
                                                     <span class="govuk-body-s">Current trainees<br> 1000</span>
-                                                      <span class="govuk-body-s">Total not paid<br> 1000</span>
+                                                      <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
                                             
                                                   </header>
                                                   
@@ -998,7 +1084,7 @@ View
                                                          
                                                           <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
                                                           <th  scope="col" class="govuk-table__header govuk-body-s ">Trainee</th>
-                                                          <th  scope="col" class="govuk-table__header govuk-body-s "> Fee per participant</th>
+                                                          <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
                                                           <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
                                                 
                                                         </tr>
@@ -1061,7 +1147,7 @@ View
                                              <tr class="govuk-table__row">
                                               
                                               <td  scope="row" class="govuk-table__cell govuk-body-s "> 
-                                        Refunds
+                                        Refund to DfE
                                           
                                                         </td> 
                                      
@@ -1085,20 +1171,20 @@ View
                                                       </tbody>
                                                     </table>
                                                     <div class="govuk-table__row govuk-!-padding-bottom-1">     
-                                                      <div class=" govuk-label--s govuk-table__header--numeric">Course Total <br> £1000.00</div> 
+                                                      <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
                                                     
                                                   </div>   
                                                   </section>
                                                   <br>
                                                   <section style="border-bottom: none;" class="app-application-card">
-                                   
+                                    
                                                       <h2 class="govuk-heading-s">
                                                     
                                                         Additional support offer for Headship course breakdown
                                                       
                                                       </h2>
                                                      
-        
+                                    
                                                     <header class="app-application-card__header">
                                                       <span class="govuk-body-s">     	Starts<br>1000 </span>
                                                      
@@ -1109,7 +1195,7 @@ View
                                                       <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
                                                      
                                                       <span class="govuk-body-s">Current trainees<br> 1000</span>
-                                                        <span class="govuk-body-s">Total not paid<br> 1000</span>
+                                                        <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
                                               
                                                     </header>
                                                     
@@ -1193,24 +1279,79 @@ View
                                                         </tbody>
                                                       </table>
                                                       <div class="govuk-table__row govuk-!-padding-bottom-1">     
-                                                        <div class=" govuk-label--s govuk-table__header--numeric">Course Total <br> £1000.00</div> 
+                                                        <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
                                                       
                                                     </div>   
                                                     </section>
                                          
                                         
-                                        
+                                               
                                         
                                         
                                         
                                         </div>
-
+                                    
                                      </div>
                                     
-                                         </div>    
-                                    
+                                         </div>   
+                                         <br> 
+                                         <details class="govuk-details" data-module="govuk-details">
+                                          <summary class="govuk-details__summary">
+                                            <span class="govuk-details__summary-text">
+                                               Contract information
+                                            </span>
+                                          </summary>
+                                          <div class="govuk-details__text">
+                                            <table class="govuk-table">
+                                              <thead class="govuk-table__head">
+                                              <tr class="govuk-table__row">
+                                                <th class="govuk-table__header">Course identifier</th>
+                                                <th class="govuk-table__header govuk-table__cell--numeric">Recruitment target</th>
+                                                <th class="govuk-table__header govuk-table__cell--numeric">Payment per trainee</th>
+                                              </tr>
+                                              </thead>
+                                              <tbody class="govuk-table__body">
+                                              <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-additional-support-offer</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">300</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£800.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-leading-teaching</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-leading-behaviour-culture</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-leading-teaching-development</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">1500</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-senior-leadership</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£1,149.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-headship</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£1,985.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-executive-leadership</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">400</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£4,099.00</td>
+                                            </tr>
+                                            
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </details>
                                     </div>
-
 
 
  
