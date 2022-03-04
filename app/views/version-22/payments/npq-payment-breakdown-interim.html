@@ -1,0 +1,1231 @@
+{% extends "layout-full-width-providers.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{{ govukBackLink({
+  text: "Change trainee scheme",
+  href: "scheme"
+  }) }}
+{% endblock %}
+{% block content %}
+
+
+
+
+        <div class="govuk-grid-row">
+           
+            <div class="govuk-grid-column-full ">
+              <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">National professional qualifications (NPQs)</h1>
+         
+    
+
+
+      <span autocomplete="on" class="govuk-caption-l"> {% if data.providerName %} {{data.providerName}}{%else%} Ambition Institute 
+{%endif%}</span> 
+      <h2 class="govuk-heading-l">{% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} December 2022 {%endif%}
+
+      </h2>
+  
+      <div class="govuk-grid-row">
+        <form  method="get" novalidate="" autocomplete="off" action="" >   
+          <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
+           
+   
+                   
+            <div class="autocomplete-wrapper">
+              <label class="govuk-label" for="sort">
+               View a different provider 
+                    </label>
+              <select class="govuk-select autocomplete-element " id="provider" name="providerName">
+
+
+           
+                <option value="" ></option>
+                <option value="Ambition Institute">Ambition Institute</option>
+                <option value="Best Practice Network (home of Outstanding Leaders Partnership)">Best Practice Network (home of Outstanding Leaders Partnership)</option>
+                <option value="Capita" >Capita</option>
+                <option value="Education Development Trust">Education Development Trust</option>
+                <option value="Teach First">Teach First</option>
+                <option value="UCL Institute of Education" >UCL Institute of Education</option>
+                 
+              </select>
+          
+    
+    </div>
+
+
+  </div>
+      <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
+ 
+
+         
+        <div class="autocomplete-wrapper">
+          <label class="govuk-label" for="date">View a different statement</label>
+          <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
+
+
+            <option value="" ></option>
+             
+            <option value="April 2022">April 2022</option>
+            <option value="March 2022">March 2022</option>
+            <option value="February 2022">February 2022</option>
+            <option value="January 2022" >January 2022</option>
+            
+         </select>
+
+</div>
+
+
+</div>
+
+<button  type="submit" style=" margin-top:30px; display:inline-block" class="govuk-button govuk-button--secondary govuk-!-margin-left-2" data-module="govuk-button">
+View
+</button>
+        </form>
+</div>
+
+      
+           
+<div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+              
+                      
+              
+           
+  <div style="width:50%" class="govuk-!-margin-right-4">
+
+      <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>
+      <p class=" govuk-body-s  govuk-!-margin-bottom-2">Output payment            <span style="float:right" >£975,103.20</span></p> 
+      <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
+      <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
+      <p class="grey govuk-!-font-size-16 ">
+                      
+        <a href="" class="govuk-link govuk-link--no-visited-state ext-link">
+          <strong>Download </strong>
+          </a>
+      </p>
+     
+  
+  </div>
+  <ul style="width:30%" class="first govuk-list govuk-!-margin-bottom-0">
+    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Output payment cut off date </strong>
+       <div class="number-group">
+           <div class="number-container govuk-!-padding-right-4">
+               <div class="float tooltip">
+                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                       <span class="">11 March 2022</span>
+                       <br>
+                       <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
+                      </div>
+               </div>
+           </div>
+       </div>
+   </li>
+   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+    <strong class="govuk-body-s float govuk-!-margin-bottom-0">
+    Voided declarations</strong> <br>
+     <div class="number-group">
+         <div class="number-container govuk-!-padding-right-4">
+             <div class="float tooltip">
+                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                     <span class="">100</span> <br>
+                     <a href="" class="govuk-link govuk-body-s " style="font-weight: normal;">View</a>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </li>
+  
+  
+ 
+
+  </ul>
+  <ul style="width:25%" class="second govuk-list govuk-!-margin-bottom-0">
+    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort </strong> <br>
+       <div class="number-group">
+           <div class="number-container govuk-!-padding-right-4">
+               <div class="float tooltip">
+                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                       <span class="">Spring 2022</span></div>
+               </div>
+           </div>
+       </div>
+   </li>
+   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
+     Total starts 
+    </strong> <br>
+     <div class="number-group">
+         <div class="number-container govuk-!-padding-right-4">
+             <div class="float tooltip">
+                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                     <span class="">100</span></div>
+             </div>
+         </div>
+     </div>
+ </li>
+
+  </ul>
+
+<ul style="width:25%" class="booster govuk-list govuk-!-margin-bottom-0">
+  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+    <strong class="govuk-body-s  govuk-!-margin-bottom-0">Recruitment target total <br>(for 2 cohorts)</strong>
+    <br>
+     <div class="number-group">
+      
+                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                     <span class="">1000</span></div>
+             </div>
+       
+ </li>
+  
+
+ 
+ <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+  <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
+  Total retained
+  </strong> <br>
+  <div class="number-group">
+      <div class="number-container govuk-!-padding-right-4">
+          <div class="float tooltip">
+              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                  <span class="">100</span></div>
+          </div>
+      </div>
+  </div>
+</li>
+  </ul>
+  <ul class="fourth govuk-list govuk-!-margin-bottom-0">
+   
+    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+     <strong class="govuk-body-s float govuk-!-margin-bottom-0"></strong>
+      <div class="number-group">
+          <div class="number-container govuk-!-padding-right-4">
+              <div class="float tooltip">
+                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                      <span class=""></span></div>
+              </div>
+          </div>
+      </div>
+  </li>
+  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
+       Total completed
+      </strong> <br>
+       <div class="number-group">
+           <div class="number-container govuk-!-padding-right-4">
+               <div class="float tooltip">
+                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                       <span class="">100</span></div>
+               </div>
+           </div>
+       </div>
+   </li>
+ 
+   </ul>
+
+                  
+</div>   
+   
+            <br>
+                                    </div>
+       
+
+                                    <div class="govuk-grid-column-full ">
+                                      <div style="border-bottom:none; border-top:none" class="vaccinations  " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
+                                             
+                                    
+                                        <div class="govuk-grid-column-full ">
+                                    
+                                          <div class="moj-filter-layout__content">
+                                                                            
+                                                                        
+                                                                            
+                                            <section style="border-bottom: 1px solid black;" class="app-application-card">
+                                       
+                                          <h2 class="govuk-heading-s">
+                                        
+                                            Leading Teaching course breakdown
+                                          
+                                          </h2>
+                                         
+                                          
+                                    
+                                        <header class="app-application-card__header">
+                                          <span class="govuk-body-s">     	Starts<br>1000 </span>
+                                         
+                                            <span class="govuk-body-s">Retained<br> 0</span>
+                                            <span class="govuk-body-s">Completed<br> 0</span>
+                                    
+                                          <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                         
+                                          <span class="govuk-body-s">Current trainees<br> 1000</span>
+                                            <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
+                                    
+                                         
+                                    
+                                     
+                                        </header>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                          <span class="govuk-label--s govuk-visually-hidden">Payment details</span> 
+                                          <table class="govuk-table">
+                                                            
+                                               
+                                                                 
+                                                           
+                                            <thead class="govuk-table__head">
+                                          
+                                              <tr class="govuk-table__row">
+                                          
+                                               
+                                                <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
+                                                <th  scope="col" class="govuk-table__header govuk-body-s ">Trainees</th>
+                                                <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
+                                                <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
+                                      
+                                              </tr>
+                                             
+                                            </thead>
+                                          
+                                            <tbody class="govuk-table__body">
+                                         
+                                     
+                                       
+                                             
+                                              <tr class="govuk-table__row">
+                                    
+                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                 Output
+                                            
+                                                          </td> 
+                                       
+                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                   1000 
+                                            
+                                                          </td> 
+                                                  
+                                              
+                                                     
+                                                                   </td> 
+                                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                  
+                                                                     £1000.00
+                                                                              </td> 
+                                                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                           
+                                                                               £1000.00
+                                                                                        </td> 
+                                         </tr>
+                                         <tr class="govuk-table__row">
+                                    
+                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                     Service fee
+                                      
+                                                    </td> 
+                                    
+                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                             1000 
+                                      
+                                                    </td> 
+                                            
+                                         
+                                               
+                                                             </td> 
+                                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                            
+                                                               £1000.00
+                                                                        </td> 
+                                                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                     
+                                                                         £1000.00
+                                                                                  </td> 
+                                    </tr>
+                                    <tr class="govuk-table__row">
+                                    
+                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                    Refund to DfE
+                                    
+                                              </td> 
+                                    
+                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                       1000 
+                                    
+                                              </td> 
+                                      
+                                    
+                                         
+                                                       </td> 
+                                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                      
+                                                         -£1000.00
+                                                                  </td> 
+                                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                               
+                                                                   £1000.00
+                                                                            </td> 
+                                    </tr>
+                                            </tbody>
+                                          </table>
+                                          <div class="govuk-table__row govuk-!-padding-bottom-1">     
+                                            <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
+                                          
+                                        </div>   
+                                        </section>
+                                    <br>
+                                        <section style="border-bottom: 1px solid black;" class="app-application-card">
+                                         
+                                            <h2 class="govuk-heading-s">
+                                          
+                                              Leading Teacher Development course breakdown
+                                            
+                                    </h2>
+                                           
+                                            
+                                         
+                                         
+                                          <header class="app-application-card__header">
+                                            <span class="govuk-body-s">     	Starts<br>1000 </span>
+                                           
+                                              <span class="govuk-body-s">Retained<br> 0</span>
+                                              <span class="govuk-body-s">Completed<br> 0</span>
+                                      
+                                            <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                           
+                                            <span class="govuk-body-s">Current trainees<br> 1000</span>
+                                              <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
+                                    
+                                          </header>
+                                          
+                                          
+                                          
+                                          
+                                            <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
+                                            <table class="govuk-table">
+                                                            
+                                               
+                                                                 
+                                                           
+                                              <thead class="govuk-table__head">
+                                            
+                                                <tr class="govuk-table__row">
+                                            
+                                                 
+                                                  <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
+                                                  <th  scope="col" class="govuk-table__header govuk-body-s ">Trainees</th>
+                                                  <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
+                                                  <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
+                                        
+                                                </tr>
+                                               
+                                              </thead>
+                                            
+                                              <tbody class="govuk-table__body">
+                                           
+                                       
+                                         
+                                               
+                                                <tr class="govuk-table__row">
+                                      
+                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                   Output
+                                              
+                                                            </td> 
+                                         
+                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                     1000 
+                                              
+                                                            </td> 
+                                                    
+                                                
+                                                       
+                                                                     </td> 
+                                                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                    
+                                                                       £1000.00
+                                                                                </td> 
+                                                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                             
+                                                                                 £1000.00
+                                                                                          </td> 
+                                           </tr>
+                                           <tr class="govuk-table__row">
+                                      
+                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                       Service fee
+                                        
+                                                      </td> 
+                                    
+                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                               1000 
+                                        
+                                                      </td> 
+                                              
+                                           
+                                                 
+                                                               </td> 
+                                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                              
+                                                                 £1000.00
+                                                                          </td> 
+                                                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                       
+                                                                           £1000.00
+                                                                                    </td> 
+                                     </tr>
+                                     <tr class="govuk-table__row">
+                                      
+                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                    Refund to DfE
+                                    
+                                                </td> 
+                                    
+                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                         1000 
+                                    
+                                                </td> 
+                                        
+                                     
+                                           
+                                                         </td> 
+                                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                        
+                                                           -£1000.00
+                                                                    </td> 
+                                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                 
+                                                                     £1000.00
+                                                                              </td> 
+                                    </tr>
+                                              </tbody>
+                                            </table>
+                                            <div class="govuk-table__row govuk-!-padding-bottom-1">     
+                                              <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
+                                            
+                                          </div>   
+                                    
+                                          </section>
+                                          <br>
+                                          <section style="border-bottom: 1px solid black;" class="app-application-card">
+                                           
+                                              <h2 class="govuk-heading-s">
+                                            
+                                                Leading Behaviour and Culture course breakdown
+                                              
+                                              </h2>
+                                             
+                                              
+                                           
+                                       
+                                            <header class="app-application-card__header">
+                                              <span class="govuk-body-s">     	Starts<br>1000 </span>
+                                             
+                                                <span class="govuk-body-s">Retained<br> 0</span>
+                                                <span class="govuk-body-s">Completed<br> 0</span>
+                                        
+                                              <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                             
+                                              <span class="govuk-body-s">Current trainees<br> 1000</span>
+                                                <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
+                                      
+                                            </header>
+                                            
+                                            
+                                            
+                                            
+                                              <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
+                                              <table class="govuk-table">
+                                                            
+                                               
+                                                                 
+                                                           
+                                                <thead class="govuk-table__head">
+                                              
+                                                  <tr class="govuk-table__row">
+                                              
+                                                   
+                                                    <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
+                                                    <th  scope="col" class="govuk-table__header govuk-body-s ">Trainees</th>
+                                                    <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
+                                                    <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
+                                          
+                                                  </tr>
+                                                 
+                                                </thead>
+                                              
+                                                <tbody class="govuk-table__body">
+                                             
+                                         
+                                           
+                                                 
+                                                  <tr class="govuk-table__row">
+                                        
+                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                     Output
+                                                
+                                                              </td> 
+                                           
+                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                       1000 
+                                                
+                                                              </td> 
+                                                      
+                                                  
+                                                         
+                                                                       </td> 
+                                                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                      
+                                                                         £1000.00
+                                                                                  </td> 
+                                                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                               
+                                                                                   £1000.00
+                                                                                            </td> 
+                                             </tr>
+                                             <tr class="govuk-table__row">
+                                        
+                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                         Service fee
+                                          
+                                                        </td> 
+                                     
+                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                 1000 
+                                          
+                                                        </td> 
+                                                
+                                             
+                                                   
+                                                                 </td> 
+                                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                
+                                                                   £1000.00
+                                                                            </td> 
+                                                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                         
+                                                                             £1000.00
+                                                                                      </td> 
+                                       </tr>
+                                       <tr class="govuk-table__row">
+                                        
+                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                    Refund to DfE
+                                    
+                                                  </td> 
+                                    
+                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                           1000 
+                                    
+                                                  </td> 
+                                          
+                                       
+                                             
+                                                           </td> 
+                                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                          
+                                                             -£1000.00
+                                                                      </td> 
+                                                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                   
+                                                                       £1000.00
+                                                                                </td> 
+                                    </tr>
+                                                </tbody>
+                                              </table>
+                                              <div class="govuk-table__row govuk-!-padding-bottom-1">     
+                                                <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
+                                              
+                                            </div>   
+                                      
+                                            </section>
+                                            <br>
+                                            <section style="border-bottom: 1px solid black;" class="app-application-card">
+                                             
+                                                <h2 class="govuk-heading-s">
+                                              
+                                                  Senior Leadership course breakdown
+                                                
+                                                </h2>
+                                               
+                                                
+                                             
+                                      
+                                              <header class="app-application-card__header">
+                                                <span class="govuk-body-s">     	Starts<br>1000 </span>
+                                               
+                                                  <span class="govuk-body-s">Retained 1<br> 0</span>
+                                                  <span class="govuk-body-s">Retained 2<br> 0</span>
+                                                  <span class="govuk-body-s">Completed<br> 0</span>
+                                          
+                                                <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                               
+                                                <span class="govuk-body-s">Current trainees<br> 1000</span>
+                                                  <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
+                                        
+                                              </header>
+                                              
+                                              
+                                              
+                                              
+                                                <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
+                                                <table class="govuk-table">
+                                                            
+                                               
+                                                                 
+                                                           
+                                                  <thead class="govuk-table__head">
+                                                
+                                                    <tr class="govuk-table__row">
+                                                
+                                                     
+                                                      <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
+                                                      <th  scope="col" class="govuk-table__header govuk-body-s ">Trainees</th>
+                                                      <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
+                                                      <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
+                                            
+                                                    </tr>
+                                                   
+                                                  </thead>
+                                                
+                                                  <tbody class="govuk-table__body">
+                                               
+                                           
+                                             
+                                                   
+                                                    <tr class="govuk-table__row">
+                                          
+                                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                       Output
+                                                  
+                                                                </td> 
+                                             
+                                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                         1000 
+                                                  
+                                                                </td> 
+                                                        
+                                                    
+                                                           
+                                                                         </td> 
+                                                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                        
+                                                                           £1000.00
+                                                                                    </td> 
+                                                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                                 
+                                                                                     £1000.00
+                                                                                              </td> 
+                                               </tr>
+                                               <tr class="govuk-table__row">
+                                          
+                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                           Service fee
+                                            
+                                                          </td> 
+                                       
+                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                   1000 
+                                            
+                                                          </td> 
+                                                  
+                                               
+                                                     
+                                                                   </td> 
+                                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                  
+                                                                     £1000.00
+                                                                              </td> 
+                                                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                           
+                                                                               £1000.00
+                                                                                        </td> 
+                                         </tr>
+                                         <tr class="govuk-table__row">
+                                          
+                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                    Refund to DfE
+                                      
+                                                    </td> 
+                                    
+                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                             1000 
+                                      
+                                                    </td> 
+                                            
+                                         
+                                               
+                                                             </td> 
+                                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                            
+                                                               -£1000.00
+                                                                        </td> 
+                                                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                     
+                                                                         £1000.00
+                                                                                  </td> 
+                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                                <div class="govuk-table__row govuk-!-padding-bottom-1">     
+                                                  <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
+                                                
+                                              </div>   
+                                        
+                                              </section>
+                                              <br>
+                                              <section style="border-bottom: 1px solid black;" class="app-application-card">
+                                               
+                                                  <h2 class="govuk-heading-s">
+                                                
+                                                    Headship course breakdown
+                                                  
+                                                  </h2>
+                                                 
+                                                  
+                                        
+                                                <header class="app-application-card__header">
+                                                  <span class="govuk-body-s">     	Starts<br>1000 </span>
+                                                 
+                                                    <span class="govuk-body-s">Retained 1<br> 0</span>
+                                                    <span class="govuk-body-s">Retained 2<br> 0</span>
+                                                    <span class="govuk-body-s">Completed<br> 0</span>
+                                            
+                                                  <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                 
+                                                  <span class="govuk-body-s">Current trainees<br> 1000</span>
+                                                    <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
+                                          
+                                                </header>
+                                                
+                                                
+                                                
+                                                
+                                                  <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
+                                                  <table class="govuk-table">
+                                                            
+                                               
+                                                                 
+                                                           
+                                                    <thead class="govuk-table__head">
+                                                  
+                                                      <tr class="govuk-table__row">
+                                                  
+                                                       
+                                                        <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
+                                                        <th  scope="col" class="govuk-table__header govuk-body-s ">Trainee</th>
+                                                        <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
+                                                        <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
+                                              
+                                                      </tr>
+                                                     
+                                                    </thead>
+                                                  
+                                                    <tbody class="govuk-table__body">
+                                                 
+                                             
+                                               
+                                                     
+                                                      <tr class="govuk-table__row">
+                                            
+                                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                         Output
+                                                    
+                                                                  </td> 
+                                               
+                                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                           1000 
+                                                    
+                                                                  </td> 
+                                                          
+                                                      
+                                                             
+                                                                           </td> 
+                                                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                          
+                                                                             £1000.00
+                                                                                      </td> 
+                                                                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                                   
+                                                                                       £1000.00
+                                                                                                </td> 
+                                                 </tr>
+                                                 <tr class="govuk-table__row">
+                                            
+                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                             Service fee
+                                              
+                                                            </td> 
+                                         
+                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                     1000 
+                                              
+                                                            </td> 
+                                                    
+                                                 
+                                                       
+                                                                     </td> 
+                                                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                    
+                                                                       £1000.00
+                                                                                </td> 
+                                                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                             
+                                                                                 £1000.00
+                                                                                          </td> 
+                                           </tr>
+                                           <tr class="govuk-table__row">
+                                            
+                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                      Refund to DfE
+                                        
+                                                      </td> 
+                                    
+                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                               1000 
+                                        
+                                                      </td> 
+                                              
+                                           
+                                                 
+                                                               </td> 
+                                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                              
+                                                                 -£1000.00
+                                                                          </td> 
+                                                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                       
+                                                                           £1000.00
+                                                                                    </td> 
+                                     </tr>
+                                                    </tbody>
+                                                  </table>
+                                                  <div class="govuk-table__row govuk-!-padding-bottom-1">     
+                                                    <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
+                                                  
+                                                </div>   
+                                                </section>
+                                                <br>
+                                                <section style="border-bottom: 1px solid black;" class="app-application-card">
+                                           
+                                                    <h2 class="govuk-heading-s">
+                                                  
+                                                      Executive Leadership course breakdown
+                                                    
+                                                    </h2>
+                                                   
+                                                    
+                                                 
+                                       
+                                                  <header class="app-application-card__header">
+                                                    <span class="govuk-body-s">     	Starts<br>1000 </span>
+                                                   
+                                                      <span class="govuk-body-s">Retained 1<br> 0</span>
+                                                      <span class="govuk-body-s">Retained 2<br> 0</span>
+                                                      <span class="govuk-body-s">Completed<br> 0</span>
+                                              
+                                                    <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                   
+                                                    <span class="govuk-body-s">Current trainees<br> 1000</span>
+                                                      <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
+                                            
+                                                  </header>
+                                                  
+                                                  
+                                                  
+                                                  
+                                                    <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
+                                                    <table class="govuk-table">
+                                                            
+                                               
+                                                                 
+                                                           
+                                                      <thead class="govuk-table__head">
+                                                    
+                                                        <tr class="govuk-table__row">
+                                                    
+                                                         
+                                                          <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
+                                                          <th  scope="col" class="govuk-table__header govuk-body-s ">Trainee</th>
+                                                          <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
+                                                          <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
+                                                
+                                                        </tr>
+                                                       
+                                                      </thead>
+                                                    
+                                                      <tbody class="govuk-table__body">
+                                                   
+                                               
+                                                 
+                                                       
+                                                        <tr class="govuk-table__row">
+                                              
+                                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                           Output
+                                                      
+                                                                    </td> 
+                                                 
+                                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                             1000 
+                                                      
+                                                                    </td> 
+                                                            
+                                                        
+                                                               
+                                                                             </td> 
+                                                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                            
+                                                                               £1000.00
+                                                                                        </td> 
+                                                                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                                     
+                                                                                         £1000.00
+                                                                                                  </td> 
+                                                   </tr>
+                                                   <tr class="govuk-table__row">
+                                              
+                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                               Service fee
+                                                
+                                                              </td> 
+                                           
+                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                       1000 
+                                                
+                                                              </td> 
+                                                      
+                                                   
+                                                         
+                                                                       </td> 
+                                                                        <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                      
+                                                                         £1000.00
+                                                                                  </td> 
+                                                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                               
+                                                                                   £1000.00
+                                                                                            </td> 
+                                             </tr>
+                                             <tr class="govuk-table__row">
+                                              
+                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                        Refund to DfE
+                                          
+                                                        </td> 
+                                     
+                                              <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                 1000 
+                                          
+                                                        </td> 
+                                                
+                                             
+                                                   
+                                                                 </td> 
+                                                                  <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                
+                                                                   -£1000.00
+                                                                            </td> 
+                                                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                         
+                                                                             £1000.00
+                                                                                      </td> 
+                                       </tr>
+                                                      </tbody>
+                                                    </table>
+                                                    <div class="govuk-table__row govuk-!-padding-bottom-1">     
+                                                      <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
+                                                    
+                                                  </div>   
+                                                  </section>
+                                                  <br>
+                                                  <section style="border-bottom: none;" class="app-application-card">
+                                    
+                                                      <h2 class="govuk-heading-s">
+                                                    
+                                                        Additional support offer for Headship course breakdown
+                                                      
+                                                      </h2>
+                                                     
+                                    
+                                                    <header class="app-application-card__header">
+                                                      <span class="govuk-body-s">     	Starts<br>1000 </span>
+                                                     
+                                                        <span class="govuk-body-s">Retained 1<br> 0</span>
+                                                      <span class="govuk-body-s">Retained 2<br> 0</span>
+                                                        <span class="govuk-body-s">Completed<br> 0</span>
+                                                
+                                                      <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                     
+                                                      <span class="govuk-body-s">Current trainees<br> 1000</span>
+                                                        <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
+                                              
+                                                    </header>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                      <span class="govuk-label--s govuk-visually-hidden">Payment details</span>
+                                                      <table class="govuk-table">
+                                                              
+                                                 
+                                                                   
+                                                             
+                                                        <thead class="govuk-table__head">
+                                                      
+                                                          <tr class="govuk-table__row">
+                                                      
+                                                           
+                                                            <th  scope="col" class="govuk-table__header govuk-body-s ">Payment type </th>
+                                                            <th  scope="col" class="govuk-table__header govuk-body-s ">Trainee</th>
+                                                            <th  scope="col" class="govuk-table__header govuk-body-s "> Payment per trainee</th>
+                                                            <th  scope="col" class="govuk-table__header govuk-body-s ">Total</th>
+                                                  
+                                                          </tr>
+                                                         
+                                                        </thead>
+                                                      
+                                                        <tbody class="govuk-table__body">
+                                                     
+                                                 
+                                                   
+                                                         
+                                                          <tr class="govuk-table__row">
+                                                
+                                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                             Output
+                                                        
+                                                                      </td> 
+                                                   
+                                                            <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                               1000 
+                                                        
+                                                                      </td> 
+                                                              
+                                                          
+                                                                 
+                                                                               </td> 
+                                                                                <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                              
+                                                                                 £1000.00
+                                                                                          </td> 
+                                                                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                                       
+                                                                                           £1000.00
+                                                                                                    </td> 
+                                                     </tr>
+                                                     <tr class="govuk-table__row">
+                                                
+                                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                 Service fee
+                                                  
+                                                                </td> 
+                                             
+                                                      <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                               0
+                                                  
+                                                                </td> 
+                                                        
+                                                     
+                                                           
+                                                                         </td> 
+                                                                          <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                        
+                                                                           £0.00
+                                                                                    </td> 
+                                                                                    <td  scope="row" class="govuk-table__cell govuk-body-s "> 
+                                                                                 
+                                                                                      £0.00
+                                                                                              </td> 
+                                               </tr>
+                                      
+                                                        </tbody>
+                                                      </table>
+                                                      <div class="govuk-table__row govuk-!-padding-bottom-1">     
+                                                        <div class=" govuk-label--s govuk-table__header--numeric">Course total <br> £1000.00</div> 
+                                                      
+                                                    </div>   
+                                                    </section>
+                                         
+                                        
+                                               
+                                        
+                                        
+                                        
+                                        </div>
+                                    
+                                     </div>
+                                    
+                                         </div>   
+                                         <br> 
+                                         <details class="govuk-details" data-module="govuk-details">
+                                          <summary class="govuk-details__summary">
+                                            <span class="govuk-details__summary-text">
+                                               Contract information
+                                            </span>
+                                          </summary>
+                                          <div class="govuk-details__text">
+                                            <table class="govuk-table">
+                                              <thead class="govuk-table__head">
+                                              <tr class="govuk-table__row">
+                                                <th class="govuk-table__header">Course identifier</th>
+                                                <th class="govuk-table__header govuk-table__cell--numeric">Recruitment target</th>
+                                                <th class="govuk-table__header govuk-table__cell--numeric">Payment per trainee</th>
+                                              </tr>
+                                              </thead>
+                                              <tbody class="govuk-table__body">
+                                              <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-additional-support-offer</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">300</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£800.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-leading-teaching</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-leading-behaviour-culture</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-leading-teaching-development</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">1500</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-senior-leadership</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">2000</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£1,149.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-headship</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">1000</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£1,985.00</td>
+                                            </tr>
+                                            <tr class="govuk-table__row">
+                                              <td class="govuk-table__cell">npq-executive-leadership</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">400</td>
+                                              <td class="govuk-table__cell govuk-table__cell--numeric">£4,099.00</td>
+                                            </tr>
+                                            
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </details>
+                                    </div>
+
+
+
+
+ 
+                    </div>
+
+            
+  
+
+{% endblock %}
+

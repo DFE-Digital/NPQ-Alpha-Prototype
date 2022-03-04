@@ -1,0 +1,215 @@
+{% extends "layout-full-width.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{{ govukBackLink({
+  text: "Change trainee scheme", 
+ href: "scheme"
+}) }}
+
+{% endblock %}
+{% block content %}
+
+
+
+
+        <div class="govuk-grid-row">
+           
+            <div class="govuk-grid-column-full "> 
+            
+ 
+              <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1>
+              <nav class="app-subnav " aria-label="Sub navigation">
+                <ul class="app-subnav__list">
+                    <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
+                  
+                Programme overview
+              
+              </a></li>
+              
+              <li class="app-subnav__list-item  ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?scheme={{data.scheme}}">
+                  
+                    Provider statements
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
+                  
+                  Trainee details
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
+                  
+                  Delivery partners
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+              <li class="app-subnav__list-item app-subnav__list-item--selected ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="">
+                  
+               Banding tracker
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+              
+                </ul>
+              </nav>
+              <h2 class="govuk-heading-l " style="margin-top: 0; "  id="company-Name">Banding Tracker</h2>
+              <div class="govuk-inset-text">
+              You can use this to check declarations are being added to the right payment band
+              </div>
+
+
+  
+                 <div class="dashboard-numbers govuk-!-width-one-quarter">
+      <p class="govuk-heading-m">Target declarations</p>
+      <p class="govuk-heading-l">15600000</p>
+    </div>
+                </h2>
+                <div class="govuk-grid-row">
+                <div  class="govuk-grid-column-one-third">
+           
+                
+                  <div class="autocomplete-wrapper">
+                    <label class="govuk-label" for="sort">
+               Filter by provider
+                          </label>
+                    <select class="govuk-select autocomplete-element" id="delveryProvider" name="delveryProvider">
+      
+      
+                       <option value="" ></option>
+                        <option value="dec">Ambition Institute</option>
+                        <option value="nov">Best Practice Network (home of Outstanding Leaders Partnership)</option>
+                        <option value="oct" >Capita</option>
+                        <option value="sep">Education Development Trust</option>
+                        <option value="aug">Teach First</option>
+                        <option value="jul" >UCL Institute of Education</option>
+             
+                       
+                    </select>
+                
+          
+          </div>
+      
+        </div>
+        <button  style=" margin-top:30px; display:inline-block" class="govuk-button govuk-!-margin-left-2" data-module="govuk-button">
+          Filter
+        </button>
+        </div>
+                <table class="govuk-table">
+            
+ 
+                 
+           
+                  <thead class="govuk-table__head">
+           
+                    <tr  class="govuk-table__row">
+                     
+              
+                      <th  style="border-bottom: 1px solid black;" scope="col"  class="govuk-table__header">Band</th>
+                      <th  style="border-bottom: 1px solid black;" style="border-bottom: 1px solid black;" scope="col" class="govuk-table__header govuk-table__header--numeric">Starts </th>
+
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 1</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 2</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 3</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Retention 4</th>
+                      <th   style="border-bottom: 1px solid black;"scope="col" class="govuk-table__header govuk-table__header--numeric">Completed</th>
+                    </tr>
+                    <th  style=" border-bottom: 1px solid black;" scope="col" colspan="7" class="govuk-table__header govuk-colour">Paid declarations</th>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band A</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band B</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band C</td>
+                      <td   class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td   class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td   class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                    
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  style="border-bottom: 1px solid black;" scope="row" class="govuk-table__cell">Band D</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  style="border-bottom: 1px solid black;" class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                    
+                    </tr>
+                    <th  style="border-bottom: 1px solid black;"  scope="col" colspan="7" class="govuk-table__header">Payable declarations </th>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band A</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band B</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     2000</td>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                      <th class="govuk-table__cell govuk-table__cell--numeric">2000</th>
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band C</td>
+         
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                    
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td  scope="row" class="govuk-table__cell">Band D</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td   class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                      <td  class="govuk-table__cell govuk-table__cell--numeric">     250</td>
+                    
+                    </tr>
+                  </tbody>
+                </table>
+
+
+    
+        
+           
+         
+    
+            </div>
+
+{% endblock %}
