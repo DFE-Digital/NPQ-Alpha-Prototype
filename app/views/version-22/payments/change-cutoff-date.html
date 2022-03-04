@@ -1,0 +1,166 @@
+{% extends "layout-full-width.html" %}
+
+
+{% block beforeContent %}
+
+{%if data.scheme === "Early Career Framework (ECF)" %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+
+{{ govukBackLink({
+    text: "Back",
+    href: "ecf-payment-breakdown"
+    }) }}
+
+    {% endif %}
+    {%if data.scheme === "National professional qualifications (NPQ)" %}
+
+    {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+    
+    
+    
+    {{ govukBackLink({
+        text: "Back",
+        href: "ecf-payment-breakdown"
+        }) }}
+        
+        {% endif %}
+{% endblock %}
+
+{% block content %}
+
+{%if data.scheme === "Early Career Framework (ECF)" %}
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+            
+ 
+
+
+            <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">Change milestone cut off date
+            </h1>
+            <div class="govuk-inset-text"> 
+              <strong>Previous date</strong><br>
+              <span>30 November 2021</span>
+            </div>
+            <form  method="post" novalidate="" autocomplete="off" action="ecf-payment-breakdown?cutoffDate=changed" >
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="cutoff-date-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Enter a new date
+                  </h1>
+                </legend>
+                <div id="cutoff-date-hint" class="govuk-hint">
+                  For example, 27 3 2007
+                </div>
+                <div class="govuk-date-input" id="cutoff-date">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="cutoff-date-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="cutoff-date-day" name="cutoffdateday" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="cutoff-date-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="cutoff-date-month" name="cutoffdatemonth" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="cutoff-date-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="cutoff-date-year" name="cutoffdateyear" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+         
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Confirm
+            </button>
+            </form>
+              </div>
+        
+        </div>
+    </main>
+</div>
+{% endif %}
+
+{%if data.scheme === "National professional qualifications (NPQ)" %}
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+            
+ 
+
+
+            <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">Change output payment cut off date 
+            </h1>
+            <div class="govuk-inset-text"> 
+              <strong>Previous date</strong><br>
+              <span>
+                11 March 2022</span>
+            </div>
+            <form  method="post" novalidate="" autocomplete="off" action="npq-payment-breakdown?cutoffDate=changed" >
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="cutoff-date-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Enter a new date
+                  </h1>
+                </legend>
+                <div id="cutoff-date-hint" class="govuk-hint">
+                  For example, 27 3 2007
+                </div>
+                <div class="govuk-date-input" id="cutoff-date">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="cutoff-date-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="cutoff-date-day" name="cutoffdateday" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="cutoff-date-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="cutoff-date-month" name="cutoffdatemonth" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="cutoff-date-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="cutoff-date-year" name="cutoffdateyear" type="text" pattern="[0-9]*" inputmode="numeric">
+                    </div>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+         
+            <button type="submit" class="govuk-button" data-module="govuk-button">
+              Confirm
+            </button>
+            </form>
+              </div>
+        
+        </div>
+    </main>
+</div>
+{% endif %}
+{% endblock %}
+
+

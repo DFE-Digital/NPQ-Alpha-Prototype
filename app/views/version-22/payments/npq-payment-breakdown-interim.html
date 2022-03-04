@@ -14,120 +14,63 @@
         <div class="govuk-grid-row">
            
             <div class="govuk-grid-column-full ">
-            
-              <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1>
-
-              {% if data.version === "1" %}
-              <nav class="app-subnav " aria-label="Sub navigation">
-                  <ul class="app-subnav__list">
-                 
-                
-                <li class="app-subnav__list-item  app-subnav__list-item--selected">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown">
-                    
-                      Your statements
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
-                    
-                  Contract overview
-                
-                </a></li>
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
-                    
-                    Trainee details
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="support">
-                    
-                   Help
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                
-                  </ul>
-                </nav>
-                {%else%}
-                <nav class="app-subnav " aria-label="Sub navigation">
-                  <ul class="app-subnav__list">
-                 
-                
-                <li class="app-subnav__list-item  app-subnav__list-item--selected">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="npq-payment-breakdown">
-                    
-                      Your statements
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-            
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
-                    
-                    Trainee details
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-           
-                  </ul>
-                </nav>
-                {%endif%}
-                {%if data.payable ==="true"%}
-                <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-                  <div class="govuk-notification-banner__header">
-                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                      Success
-                    </h2>
-                  </div>
-                  <div class="govuk-notification-banner__content">
-                    <h3 class="govuk-notification-banner__heading">
-                     Payment has been approved
-                    </h3>
-
-                  </div>
-                </div>
-                {%else%}
-
-                {%endif%}
-           
+              <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">National professional qualifications (NPQs)</h1>
+         
+    
 
 
-      <h2 class="govuk-heading-l">Your statements
-   
-
+      <span autocomplete="on" class="govuk-caption-l"> {% if data.providerName %} {{data.providerName}}{%else%} Ambition Institute 
+{%endif%}</span> 
+      <h2 class="govuk-heading-l">{% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} December 2022 {%endif%}
 
       </h2>
-      <!-- <div class="govuk-inset-text">
-        Milestone cut off date 30 November 2021
-      </div> -->
+  
       <div class="govuk-grid-row">
         <form  method="get" novalidate="" autocomplete="off" action="" >   
+          <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
+           
+   
+                   
+            <div class="autocomplete-wrapper">
+              <label class="govuk-label" for="sort">
+               View a different provider 
+                    </label>
+              <select class="govuk-select autocomplete-element " id="provider" name="providerName">
+
+
+           
+                <option value="" ></option>
+                <option value="Ambition Institute">Ambition Institute</option>
+                <option value="Best Practice Network (home of Outstanding Leaders Partnership)">Best Practice Network (home of Outstanding Leaders Partnership)</option>
+                <option value="Capita" >Capita</option>
+                <option value="Education Development Trust">Education Development Trust</option>
+                <option value="Teach First">Teach First</option>
+                <option value="UCL Institute of Education" >UCL Institute of Education</option>
+                 
+              </select>
+          
+    
+    </div>
+
+
+  </div>
       <div  class=" govuk-grid-column-one-third govuk-!-margin-right-3">
  
 
-
-</div>
-
-<div  class="govuk-grid-column-one-third">
- 
-      
-<div class="autocomplete-wrapper">
-  <label class="govuk-label" for="date">View a different statement</label>
-  <!-- <duet-date-picker identifier="date">
-
-    
-  </duet-date-picker> -->
-  
-  <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
+         
+        <div class="autocomplete-wrapper">
+          <label class="govuk-label" for="date">View a different statement</label>
+          <select class="govuk-select autocomplete-element" id="statement" name="statementPeriod">
 
 
-    <option value="" ></option>
+            <option value="" ></option>
              
-    <option value="April 2022">April 2022</option>
-    <option value="March 2022">March 2022</option>
-    <option value="February 2022">February 2022</option>
-    <option value="January 2022" >January 2022</option>
-    
- </select>
+            <option value="April 2022">April 2022</option>
+            <option value="March 2022">March 2022</option>
+            <option value="February 2022">February 2022</option>
+            <option value="January 2022" >January 2022</option>
+            
+         </select>
 
 </div>
 
@@ -140,87 +83,15 @@ View
         </form>
 </div>
 
-       
-
+      
            
-  <!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-
-    
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h1 class="govuk-fieldset__heading">
-            Do you want to approve a payment of £975,103.20 for {{data.providerName}}?
-          </h1>
-        </legend>
-        <div id="changed-name-hint" class="govuk-hint">
-         
-        </div>
-  
-      </fieldset>
-    </div>
-    <a href="npq-payment-breakdown-option-3?payable=true"  class="govuk-button" data-module="govuk-button">
-   Continue
-    </a>
-    <button class="close govuk-button govuk-button--secondary"> Cancel</button>  
-  </div>
-
-</div>
-
-<!-- The Modal -->
-<div id="sendmodal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close2"> <span >&times;</span> Close</span>  
-    
-    <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-          <h1 class="govuk-fieldset__heading">
-          Are you sure you want to send this payment breakdown to {{data.providerName}}?
-          </h1>
-        </legend>
-        <div id="changed-name-hint" class="govuk-hint">
-         
-        </div>
-        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="changed-name">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="changed-name-2">
-              No
-            </label>
-          </div>
-        </div>
-    
-      </fieldset>
-    </div>
-    <a href="ecf-payment-breakdown?payable=true"  class="govuk-button" data-module="govuk-button">
-   Continue
-    </a>
-  </div>
-
-</div>
-         
-           
-               
 <div class="vaccinations " itemtype="https://schema.org/SpecialAnnouncement" itemprop="SpecialAnnouncement" itemscope="">
               
                       
               
            
-  <div style="width:35%" class="govuk-!-margin-right-4">
-    <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} December 2022 {%endif%}</strong>
+  <div style="width:50%" class="govuk-!-margin-right-4">
+
       <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2">Total £1,663,733.30</h4>
       <p class=" govuk-body-s  govuk-!-margin-bottom-2">Output payment            <span style="float:right" >£975,103.20</span></p> 
       <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
@@ -234,34 +105,41 @@ View
      
   
   </div>
-
-  <ul class="first govuk-list govuk-!-margin-bottom-0">
+  <ul style="width:30%" class="first govuk-list govuk-!-margin-bottom-0">
     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
       <strong class="govuk-body-s float govuk-!-margin-bottom-0">Output payment cut off date </strong>
        <div class="number-group">
            <div class="number-container govuk-!-padding-right-4">
                <div class="float tooltip">
                    <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                       <span class="">11 March 2022</span></div>
+                       <span class="">11 March 2022</span>
+                       <br>
+                       <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
+                      </div>
                </div>
            </div>
        </div>
    </li>
    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-    <strong class="govuk-body-s  govuk-!-margin-bottom-0">Recruitment target total <br>(for 2 cohorts)</strong>
-    <br>
+    <strong class="govuk-body-s float govuk-!-margin-bottom-0">
+    Voided declarations</strong> <br>
      <div class="number-group">
-      
+         <div class="number-container govuk-!-padding-right-4">
+             <div class="float tooltip">
                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                     <span class="">1000</span></div>
+                     <span class="">100</span> <br>
+                     <a href="" class="govuk-link govuk-body-s " style="font-weight: normal;">View</a>
+                 </div>
              </div>
-       
+         </div>
+     </div>
  </li>
+  
   
  
 
   </ul>
-  <ul class="second govuk-list govuk-!-margin-bottom-0">
+  <ul style="width:25%" class="second govuk-list govuk-!-margin-bottom-0">
     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
       <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort </strong> <br>
        <div class="number-group">
@@ -289,21 +167,19 @@ View
 
   </ul>
 
-<ul class="booster govuk-list govuk-!-margin-bottom-0">
+<ul style="width:25%" class="booster govuk-list govuk-!-margin-bottom-0">
   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  <a  style="float:right" href="" class="govuk-link govuk-link--no-visited-state ext-link">
-    Voided declarations
-      </a> </strong> <br>
+    <strong class="govuk-body-s  govuk-!-margin-bottom-0">Recruitment target total <br>(for 2 cohorts)</strong>
+    <br>
      <div class="number-group">
-         <div class="number-container govuk-!-padding-right-4">
-             <div class="float tooltip">
+      
                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                     <span class="">100</span></div>
+                     <span class="">1000</span></div>
              </div>
-         </div>
-     </div>
+       
  </li>
   
+
  
  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
   <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
@@ -348,10 +224,9 @@ View
  
    </ul>
 
-
                   
 </div>   
-        
+   
             <br>
                                     </div>
        
@@ -1345,115 +1220,12 @@ View
 
 
 
+
  
                     </div>
 
             
-    
-                    <script src="/public/javascripts/date-picker.js"></script>
-                    <script type="module" src="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/duet.esm.js"></script>
-        <script nomodule src="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/duet.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/themes/default.css" />
-        <script>
-         
-          const picker = document.querySelector("duet-date-picker")
-          const DATE_FORMAT_US = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/
-        
-          picker.dateAdapter = {
-            parse(value = "", createDate) {
-              const matches = value.match(DATE_FORMAT_US)
-        
-              if (matches) {
-                return createDate(matches[3], matches[1], matches[2])
-              }
-            },
-            format(date) {
-              return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
-            },
-          }
-        
-          picker.localization = {
-            buttonLabel: "Choose date",
-            placeholder: "",
-            selectedDateMessage: "Selected date is",
-            prevMonthLabel: "Previous month",
-            nextMonthLabel: "Next month",
-            monthSelectLabel: "Month",
-            yearSelectLabel: "Year",
-            closeLabel: "Close window",
-            calendarHeading: "Choose a date",
-            dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            locale: "en-UK",
-          }
-        </script>
-        <script>
-        
-        
-        function myFunction() {
-          var x = document.getElementById("myDIV");
-          if (x.innerHTML === "Hello") {
-            x.innerHTML = "Swapped text!";
-          } else {
-            x.innerHTML = "Hello";
-          }
-        }
-        
-        // Get the modal
-        var modal = document.getElementById("myModal");
-        
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        
-        // When the user clicks on the button, open the modal
-        btn.onclick = function() {
-          modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-        }
-        
-        // // Get the modal
-        // var sendmodal = document.getElementById("sendmodal");
-        
-        // // Get the button that opens the modal
-        // var sendbtn = document.getElementById("send");
-        
-        // // Get the <span> element that closes the modal
-        // var sendspan = document.getElementsByClassName("close2")[0];
-        
-        // // When the user clicks on the button, open the modal
-        // sendbtn.onclick = function() {
-        //   sendmodal.style.display = "block";
-        // }
-        
-        // // When the user clicks on <span> (x), close the modal
-        // sendspan.onclick = function() {
-        //   sendmodal.style.display = "none";
-        // }
-        
-        // // When the user clicks anywhere outside of the modal, close it
-        // window.onclick = function(event) {
-        //   if (event.target == sendmodal) {
-        //     sendmodal.style.display = "none";
-        //   }
-        // }
-        
-        </script>
-
+  
 
 {% endblock %}
 

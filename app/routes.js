@@ -4951,5 +4951,6 @@ require('./views/version-18/routes.js')(router);
 require('./views/version-19/routes.js')(router);
 require('./views/version-20/routes.js')(router);
 require('./views/version-21/routes.js')(router);
+require('./views/version-22/routes.js')(router);
 
 module.exports = router
