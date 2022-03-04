@@ -164,19 +164,20 @@
   {% block scripts %}
     {% include "includes/scripts.html" %}
     {% block pageScripts %}
+    
     <script>
       $(document).ready(function(){
       
-         var anchor = '/version-21/payments/ecf-or-npq';
-         var anchor1 = '/version-21/payments/choose-provider';
-         var anchor2 = '/version-21/payments/ecf-payment-breakdown';
-         var anchor3 = '/version-21/payments/npq-payment-breakdown';
-         var anchor4 = '/version-21/payments/participant-information';
-         var anchor5 = '/version-21/payments/scheme';
-         var anchor6 = '/version-21/payments/index';
-         var anchor7 = '/version-21/payments/ecf-delivery-partner-breakdown';
-         var anchor8 = '/version-21/payments/banding-tracker';
-         var anchor10 = '/version-21/payments/service-performance';
+         var anchor = '/{{version}}/payments/ecf-or-npq';
+         var anchor1 = '/{{version}}/payments/choose-provider';
+         var anchor2 = '/{{version}}/payments/ecf-payment-breakdown';
+         var anchor3 = '/{{version}}/payments/npq-payment-breakdown';
+         var anchor4 = '/{{version}}/payments/participant-information';
+         var anchor5 = '/{{version}}/payments/scheme';
+         var anchor6 = '/{{version}}/payments/index';
+         var anchor7 = '/{{version}}/payments/ecf-delivery-partner-breakdown';
+         var anchor8 = '/{{version}}/payments/banding-tracker';
+         var anchor10 = '/{{version}}/payments/service-performance';
          if (window.location.href.indexOf(anchor) > 0 || window.location.href.indexOf(anchor1) > 0 || window.location.href.indexOf(anchor2) > 0|| window.location.href.indexOf(anchor3) > 0 || window.location.href.indexOf(anchor4) > 0 || window.location.href.indexOf(anchor5) > 0 || window.location.href.indexOf(anchor6) > 0 || window.location.href.indexOf(anchor7) > 0 || window.location.href.indexOf(anchor8) > 0) {
       $(".nav-item2").addClass("nav-item__selected")
       $(".nav-item1").removeClass("nav-item__selected")
