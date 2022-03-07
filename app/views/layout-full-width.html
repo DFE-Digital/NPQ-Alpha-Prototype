@@ -63,14 +63,14 @@
   <div class="govuk-width-container">
     <div id="navlinks" class="primary-nav">
         <div class="nav-item nav-item1 ">
-  <a class="govuk-link govuk-link--no-visited-state" href="/version-21/payments/service-performance">
+  <a class="govuk-link govuk-link--no-visited-state" href="/{{version}}/payments/service-performance">
     
       Service performance
  <span class="govuk-visually-hidden">Current page</span>
 </a></div>
 
         <div id="one" class="nav-item nav-item2">
-  <a class="govuk-link govuk-link--no-visited-state" href="/version-21/payments/scheme">
+  <a class="govuk-link govuk-link--no-visited-state" href="/{{version}}/payments/scheme">
     
     Manage CPD contracts
  
@@ -178,7 +178,20 @@
          var anchor7 = '/{{version}}/payments/ecf-delivery-partner-breakdown';
          var anchor8 = '/{{version}}/payments/banding-tracker';
          var anchor10 = '/{{version}}/payments/service-performance';
-         if (window.location.href.indexOf(anchor) > 0 || window.location.href.indexOf(anchor1) > 0 || window.location.href.indexOf(anchor2) > 0|| window.location.href.indexOf(anchor3) > 0 || window.location.href.indexOf(anchor4) > 0 || window.location.href.indexOf(anchor5) > 0 || window.location.href.indexOf(anchor6) > 0 || window.location.href.indexOf(anchor7) > 0 || window.location.href.indexOf(anchor8) > 0) {
+         var anchor11 = '/{{version}}/payments/change-cutoff-date';
+
+         if (
+         window.location.href.indexOf(anchor) > 0 || 
+         window.location.href.indexOf(anchor1) > 0 || 
+         window.location.href.indexOf(anchor2) > 0 || 
+         window.location.href.indexOf(anchor3) > 0 || 
+         window.location.href.indexOf(anchor4) > 0 || 
+         window.location.href.indexOf(anchor5) > 0 || 
+         window.location.href.indexOf(anchor6) > 0 || 
+         window.location.href.indexOf(anchor7) > 0 || 
+         window.location.href.indexOf(anchor8) > 0 ||
+         window.location.href.indexOf(anchor11) > 0
+         ) {
       $(".nav-item2").addClass("nav-item__selected")
       $(".nav-item1").removeClass("nav-item__selected")
  

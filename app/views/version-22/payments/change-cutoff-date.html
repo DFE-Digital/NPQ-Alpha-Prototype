@@ -44,7 +44,7 @@
               <strong>Previous date</strong><br>
               <span>30 November 2021</span>
             </div>
-            <form  method="post" novalidate="" autocomplete="off" action="ecf-payment-breakdown?cutoffDate=changed" >
+            <form  method="post" novalidate="" autocomplete="off" action="ecf-payment-breakdown?cutoffDate=changed&notification=2" >
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="cutoff-date-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -92,8 +92,7 @@
               </div>
         
         </div>
-    </main>
-</div>
+   
 {% endif %}
 
 {%if data.scheme === "National professional qualifications (NPQ)" %}
@@ -101,7 +100,7 @@
             <div class="govuk-grid-column-full">
             
  
-{{data.version}}
+
 
             <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">Change output payment cut off date 
             </h1>
@@ -110,7 +109,7 @@
               <span>
                 11 March 2022</span>
             </div>
-            <form  method="post" novalidate="" autocomplete="off" action="npq-payment-breakdown?cutoffDate=changed" >
+            <form  method="post" novalidate="" autocomplete="off" action="npq-payment-breakdown?cutoffDate=changed&notification=2" >
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="cutoff-date-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -158,8 +157,7 @@
               </div>
         
         </div>
-    </main>
-</div>
+ 
 {% endif %}
 {% endblock %}
 

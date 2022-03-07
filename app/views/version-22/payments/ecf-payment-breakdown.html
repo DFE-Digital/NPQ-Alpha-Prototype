@@ -73,7 +73,7 @@
                 {%else%}
 
                 {%endif%}
-                {%if data.payable === "true"%}
+                {%if data.notification === "1"%}
                 <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                   <div class="govuk-notification-banner__header">
                     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -82,7 +82,7 @@
                   </div>
                   <div class="govuk-notification-banner__content">
                     <h3 class="govuk-notification-banner__heading">
-                     Payment has been approved
+                     Declarations status changed
                     </h3>
 
                   </div>
@@ -90,7 +90,7 @@
                 {%else%}
 
                 {%endif%}
-                {%if data.cutoffDate === "changed"%}
+                {%if data.notification === "2"%}
                 <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                   <div class="govuk-notification-banner__header">
                     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -276,7 +276,7 @@
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">Output payment <span style="float:right" >£3,426,500.00</span></p>
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">Adjustments<span style="float:right" >£0.00</span> </p>
-        
+               
 
                  
                       
@@ -284,21 +284,6 @@
                 
                       {%else%}
                      
-                            {%if data.payable ==="true"%}
-                            <div>
-                            <strong class="govuk-tag">
-                              APPROVED
-                            </strong>
-                          </div>
-                          <br>
-                            {%else%}
-                           
-                              <button class="govuk-button" id="myBtn">Approve payment</button>
-                              
-                       
-                       
-
-                            {%endif%}
                             {%endif%}   
                         
                               
@@ -316,46 +301,40 @@
                   
 
                 <ul class="first govuk-list">
-                  {%if data.cutoffDate === "changed"%}
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>
-                     <div class="number-group">
-                         <div class="number-container govuk-!-padding-right-4">
-                             <div class="float tooltip">
-                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="">{{data.cutoffdateday}} {{data.cutoffdatemonth}} {{data.cutoffdateyear}}</span>
-                                     <br>
-                                     <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
-                                    </div>
-                                     
-                             </div>
-                         </div>
-                     </div>
-                 </li>
-                  {%else%}
-                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>
-                     <div class="number-group">
-                         <div class="number-container govuk-!-padding-right-4">
-                             <div class="float tooltip">
-                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="">	30 November 2021 </span>
-                                     <br>
-                                     <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
-                                    </div>
-                                     
-                             </div>
-                         </div>
-                     </div>
-                 </li>
-                 {%endif%}
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Declarations status </strong> 
+                    <br>
+                    <div class="number-group">
+                        <div class="number-container govuk-!-padding-right-4">
+                            <div class="float tooltip">
+                                <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                  {%if data.payable ==="true"%}
+                             
+                                  <strong class="govuk-tag govuk-tag--green">
+                                  PAID
+                                  </strong>
+                         
+                                  {%else%}
+                                  <strong  class="govuk-tag govuk-tag--blue">
+                                    Payable
+                                   </strong>
+                                   <br>
+                                   <a href="change-declaration-status" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
+                                   {%endif%}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">
                        Voided declarations</strong> <br>
                         <div class="number-group">
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
-                                    <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                    <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                         <span class="">100</span> <br>
                                         <a href="" class="govuk-link govuk-body-s " style="font-weight: normal;">View</a>
                                     </div>
@@ -369,7 +348,7 @@
                         <div class="number-group">
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
-                                    <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                    <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                         <span class="">16,000</span>
                                     </div>
                                 </div>
@@ -378,24 +357,59 @@
                     </li> -->
                 </ul>
                 <ul class="second  govuk-list">
+                  {%if data.cutoffDate === "changed"%}
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Payment date</strong>
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>
+                    <br>
                      <div class="number-group">
                          <div class="number-container govuk-!-padding-right-4">
                              <div class="float tooltip">
-                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="">30 November 2021</span></div>
+                                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">{{data.cutoffdateday}} {{data.cutoffdatemonth}} {{data.cutoffdateyear}}</span>
+                                     <br>
+                                     <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
+                                    </div>
+                                     
                              </div>
                          </div>
                      </div>
                  </li>
+                  {%else%}
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>  
+                    <br>  
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">	30 November 2021 </span>
+                                     <br>
+                                     <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
+                                    </div>
+                                     
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+                 {%endif%}
+           
+                 <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                  <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Total outputs </strong> <br>
+                  <div class="number-group">
+                      <div class="number-container govuk-!-padding-right-4">
+                          <div class="float tooltip">
+                              <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                  <span class="">31,000</span></div>
+                          </div>
+                      </div>
+                  </div>
+              </li>
                     <!-- <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                         <strong class="govuk-body-s float govuk-!-margin-bottom-0">Current mentors</strong><br>
                         <div class="number-group">
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
-                                    <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                    <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                         <span class="">15,000</span>
                                     </div>
                                 </div>
@@ -404,30 +418,32 @@
                     </li> -->
                 </ul>
                 <ul class="booster govuk-list">
-                
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Payment date</strong>
+                    <br>
+                     <div class="number-group">
+                         <div class="number-container govuk-!-padding-right-4">
+                             <div class="float tooltip">
+                                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                     <span class="">30 November 2021</span></div>
+                             </div>
+                         </div>
+                     </div>
+                 </li>
                   <!-- <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Recruitment target</strong>
                      <div class="number-group">
                          <div class="number-container govuk-!-padding-right-4">
                              <div class="float tooltip">
-                                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                      <span class="">	4500 </span></div>
                              </div>
                          </div>
                      </div>
                  </li> -->
-                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                        <strong class="govuk-body-s float govuk-!-margin-bottom-0"> <strong>Total outputs </strong></strong> 
-                        <div class="number-group">
-                            <div class="number-container govuk-!-padding-right-4">
-                                <div class="float tooltip">
-                                    <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                        <span class="">31,000</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
+                   
+                  
                
                 </ul>
                
