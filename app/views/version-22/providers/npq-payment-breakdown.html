@@ -71,23 +71,7 @@
                   </ul>
                 </nav>
                 {%endif%}
-                {%if data.payable ==="true"%}
-                <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-                  <div class="govuk-notification-banner__header">
-                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                      Success
-                    </h2>
-                  </div>
-                  <div class="govuk-notification-banner__content">
-                    <h3 class="govuk-notification-banner__heading">
-                     Payment has been approved
-                    </h3>
-
-                  </div>
-                </div>
-                {%else%}
-
-                {%endif%}
+         
            
 
 
@@ -234,45 +218,65 @@ View
      
   
   </div>
-
   <ul class="first govuk-list govuk-!-margin-bottom-0">
+
+  
     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Output payment cut off date </strong>
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Output payment cut off date  </strong>
+      <br>
        <div class="number-group">
            <div class="number-container govuk-!-padding-right-4">
                <div class="float tooltip">
-                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                       <span class="">11 March 2022</span></div>
+                   <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                    {%if data.cutoffDate === "changed"%}
+                       <span class="">{{data.cutoffdateday}} {{data.cutoffdatemonth}} {{data.cutoffdateyear}}</span>
+                       {%else%}
+                       <span class="">11 March 2022</span>
+                       {%endif%}
+                
+                      </div>
+                       
                </div>
            </div>
        </div>
    </li>
+
+
    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-    <strong class="govuk-body-s  govuk-!-margin-bottom-0">Recruitment target total <br>(for 2 cohorts)</strong>
-    <br>
+    <strong class="govuk-body-s float govuk-!-margin-bottom-0">
+    Voided declarations</strong> <br>
      <div class="number-group">
-      
-                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                     <span class="">1000</span></div>
+         <div class="number-container govuk-!-padding-right-4">
+             <div class="float tooltip">
+                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                     <span class="">100</span> <br>
+                     <a href="" class="govuk-link govuk-body-s " style="font-weight: normal;">View</a>
+                 </div>
              </div>
-       
+         </div>
+     </div>
  </li>
+  
   
  
 
   </ul>
   <ul class="second govuk-list govuk-!-margin-bottom-0">
     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort </strong> <br>
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort </strong> 
+      <br>
        <div class="number-group">
            <div class="number-container govuk-!-padding-right-4">
                <div class="float tooltip">
-                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                   <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                        <span class="">Spring 2022</span></div>
                </div>
            </div>
        </div>
    </li>
+  
+ 
+
    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
     <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
      Total starts 
@@ -280,7 +284,7 @@ View
      <div class="number-group">
          <div class="number-container govuk-!-padding-right-4">
              <div class="float tooltip">
-                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                      <span class="">100</span></div>
              </div>
          </div>
@@ -290,29 +294,30 @@ View
   </ul>
 
 <ul class="booster govuk-list govuk-!-margin-bottom-0">
+ 
   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  <a  style="float:right" href="" class="govuk-link govuk-link--no-visited-state ext-link">
-    Voided declarations
-      </a> </strong> <br>
+    <strong class="govuk-body-s  govuk-!-margin-bottom-0">Recruitment target total <br>(for 2 cohorts)</strong>
+    <br>
      <div class="number-group">
-         <div class="number-container govuk-!-padding-right-4">
-             <div class="float tooltip">
-                 <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                     <span class="">100</span></div>
+      
+                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                     <span class="">1000</span></div>
              </div>
-         </div>
-     </div>
+       
  </li>
+
   
+
  
  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
   <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
   Total retained
-  </strong> <br>
+  </strong> 
+  <br>
   <div class="number-group">
       <div class="number-container govuk-!-padding-right-4">
           <div class="float tooltip">
-              <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+              <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                   <span class="">100</span></div>
           </div>
       </div>
@@ -322,16 +327,15 @@ View
   <ul class="fourth govuk-list govuk-!-margin-bottom-0">
    
     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-     <strong class="govuk-body-s float govuk-!-margin-bottom-0"></strong>
-      <div class="number-group">
-          <div class="number-container govuk-!-padding-right-4">
-              <div class="float tooltip">
-                  <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                      <span class=""></span></div>
-              </div>
-          </div>
-      </div>
-  </li>
+      <strong class="govuk-body-s  govuk-!-margin-bottom-0"></strong>
+      <br>
+       <div class="number-group">
+        
+                   <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                       <span class=""></span></div>
+               </div>
+         
+   </li>
   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
       <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
        Total completed
@@ -339,7 +343,7 @@ View
        <div class="number-group">
            <div class="number-container govuk-!-padding-right-4">
                <div class="float tooltip">
-                   <div class="float govuk-heading-m govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                   <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                        <span class="">100</span></div>
                </div>
            </div>
@@ -347,6 +351,7 @@ View
    </li>
  
    </ul>
+
 
 
                   
