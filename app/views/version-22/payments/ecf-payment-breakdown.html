@@ -82,7 +82,7 @@
                   </div>
                   <div class="govuk-notification-banner__content">
                     <h3 class="govuk-notification-banner__heading">
-                     Declarations status changed
+                     Status of declarations changed
                     </h3>
 
                   </div>
@@ -302,7 +302,7 @@
 
                 <ul class="first govuk-list">
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Declarations status </strong> 
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Status of declarations </strong> 
                     <br>
                     <div class="number-group">
                         <div class="number-container govuk-!-padding-right-4">
@@ -311,12 +311,12 @@
                                   {%if data.payable ==="true"%}
                              
                                   <strong class="govuk-tag govuk-tag--green">
-                                  PAID
+                                  READY TO BE PAID
                                   </strong>
                          
                                   {%else%}
                                   <strong  class="govuk-tag govuk-tag--blue">
-                                    Payable
+                                    ELIGIBLE TO BE PAID
                                    </strong>
                                    <br>
                                    <a href="change-declaration-status" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
