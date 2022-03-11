@@ -330,7 +330,7 @@
                 
                    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">
-                       Voided declarations</strong> <br>
+                       Total voids</strong> <br>
                         <div class="number-group">
                             <div class="number-container govuk-!-padding-right-4">
                                 <div class="float tooltip">
@@ -357,7 +357,7 @@
                     </li> -->
                 </ul>
                 <ul class="second  govuk-list">
-                  {%if data.cutoffDate === "changed"%}
+                  <!-- {%if data.cutoffDate === "changed"%}
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>
                     <br>
@@ -374,7 +374,7 @@
                          </div>
                      </div>
                  </li>
-                  {%else%}
+                  {%else%} -->
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>  
                     <br>  
@@ -383,15 +383,15 @@
                              <div class="float tooltip">
                                  <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
                                      <span class="">	30 November 2021 </span>
-                                     <br>
-                                     <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
+                                     <!-- <br>
+                                     <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a> -->
                                     </div>
                                      
                              </div>
                          </div>
                      </div>
                  </li>
-                 {%endif%}
+                 <!-- {%endif%} -->
            
                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                   <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Total outputs </strong> <br>
@@ -617,14 +617,7 @@
  
 
                 <div class="govuk-grid-column-full ">
-                
-                  <!-- <a style="float:right; font-size: 16px;" href="ecf-uplift-payment-information" class="govuk-link govuk-link--no-visited-state">
-                  <strong>View uplift payment information</strong>
-                    </a> -->
-              
-                          <!-- <a style="float:right; font-size: 16px;" href="refunds" class="govuk-link govuk-link--no-visited-state">
-                  <strong>View refunds</strong>
-                    </a>  -->
+             
                   <h2 class="govuk-heading-m">Adjustments
                    
                   </h2>
@@ -649,7 +642,7 @@
                     <tbody class="govuk-table__body">
                    
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> <strong>Claimed back - starts</strong>
+                        <td   scope="row" class="govuk-table__cell"> Claimed back - starts
                         </td>
                         <td  class="govuk-table__cell ">B</td>
                         <td   class="govuk-table__cell" >2000</td>
@@ -658,7 +651,7 @@
                         <td   class="govuk-table__cell govuk-table__cell--numeric">-£220,800.00</td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> <strong>Claimed back - retained 1</strong>
+                        <td   scope="row" class="govuk-table__cell"> Claimed back - retained 1
                         </td>
                         <td  class="govuk-table__cell ">C</td>
                         <td   class="govuk-table__cell ">2000</td>
@@ -669,7 +662,7 @@
                   
                  
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> <strong>Claimed back - retained 2</strong>
+                        <td   scope="row" class="govuk-table__cell">Claimed back - retained 2
                         </td>
                         <td  class="govuk-table__cell ">A</td>
                         <td   class="govuk-table__cell ">2000</td>
@@ -678,7 +671,7 @@
                         <td   class="govuk-table__cell govuk-table__cell--numeric">-£220,800.00</td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> <strong>Claimed back - retained 3</strong>
+                        <td   scope="row" class="govuk-table__cell"> Claimed back - retained 3
                         </td>
                         <td  class="govuk-table__cell ">B</td>
                         <td   class="govuk-table__cell ">2000</td>
@@ -687,7 +680,7 @@
                         <td   class="govuk-table__cell govuk-table__cell--numeric">-£220,800.00</td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> <strong>Claimed back - retained 4</strong>
+                        <td   scope="row" class="govuk-table__cell"> Claimed back - retained 4
                         </td>
                         <td  class="govuk-table__cell ">C</td>
                         <td   class="govuk-table__cell ">2000</td>
@@ -696,7 +689,7 @@
                         <td   class="govuk-table__cell govuk-table__cell--numeric">-£220,800.00</td>
                       </tr>
                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> <strong>Claimed back - completed</strong>
+                        <td   scope="row" class="govuk-table__cell"> Claimed back - completed
                         </td>
                         <td  class="govuk-table__cell ">C</td>
                         <td   class="govuk-table__cell ">2000</td>
@@ -707,7 +700,7 @@
                     
                       <tr class="govuk-table__row">
                         
-                        <td   scope="row" class="govuk-table__cell"> <strong>Uplift fee</strong>
+                        <td   scope="row" class="govuk-table__cell"> Uplift fee
                         <td   scope="row" class="govuk-table__cell">Not applicable</td>
                         <td   class="govuk-table__cell ">1000 </td>
                         <td   scope="row" class="govuk-table__cell "> 
