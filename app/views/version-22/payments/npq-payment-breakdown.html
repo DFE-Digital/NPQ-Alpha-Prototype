@@ -51,7 +51,7 @@
                   </div>
                   <div class="govuk-notification-banner__content">
                     <h3 class="govuk-notification-banner__heading">
-                     Declarations status changed
+                      Status of declarations changed
                     </h3>
 
                   </div>
@@ -251,7 +251,7 @@ View
 
   <ul class="first govuk-list govuk-!-margin-bottom-0">
     <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-      <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Declarations status </strong> 
+      <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Status of declarations </strong> 
       <br>
       <div class="number-group">
           <div class="number-container govuk-!-padding-right-4">
@@ -260,12 +260,12 @@ View
                     {%if data.payable ==="true"%}
                
                     <strong class="govuk-tag govuk-tag--green">
-                    PAID
+                      READY TO BE PAID
                     </strong>
            
                     {%else%}
                     <strong  class="govuk-tag govuk-tag--blue">
-                      Payable
+                      ELIGIBLE TO BE PAID
                      </strong>
                      <br>
                      <a href="change-declaration-status" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
@@ -277,25 +277,24 @@ View
       </div>
   </li>
   
-  
-
-
-
-   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-    <strong class="govuk-body-s float govuk-!-margin-bottom-0">
-    Voided declarations</strong> <br>
+  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
+     Total starts 
+    </strong> <br>
      <div class="number-group">
          <div class="number-container govuk-!-padding-right-4">
              <div class="float tooltip">
                  <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                     <span class="">100</span> <br>
-                     <a href="" class="govuk-link govuk-body-s " style="font-weight: normal;">View</a>
-                 </div>
+                     <span class="">100</span></div>
              </div>
          </div>
      </div>
  </li>
   
+
+
+
+
   
  
 
@@ -324,79 +323,55 @@ View
 
    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
     <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
-     Total starts 
-    </strong> <br>
-     <div class="number-group">
-         <div class="number-container govuk-!-padding-right-4">
-             <div class="float tooltip">
-                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                     <span class="">100</span></div>
-             </div>
-         </div>
-     </div>
- </li>
+    Total retained
+    </strong> 
+    <br>
+    <div class="number-group">
+        <div class="number-container govuk-!-padding-right-4">
+            <div class="float tooltip">
+                <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                    <span class="">100</span></div>
+            </div>
+        </div>
+    </div>
+  </li>
 
   </ul>
 
 <ul class="booster govuk-list govuk-!-margin-bottom-0">
   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Cohort </strong> 
-    <br>
+    <strong class="govuk-body-s float govuk-!-margin-bottom-0">
+    Total voids</strong> <br>
      <div class="number-group">
          <div class="number-container govuk-!-padding-right-4">
              <div class="float tooltip">
                  <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                     <span class="">Spring 2022</span></div>
+                     <span class="">100</span> <br>
+                     <a href="" class="govuk-link govuk-body-s " style="font-weight: normal;">View</a>
+                 </div>
              </div>
          </div>
      </div>
  </li>
+ <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+  <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
+   Total completed
+  </strong> <br>
+   <div class="number-group">
+       <div class="number-container govuk-!-padding-right-4">
+           <div class="float tooltip">
+               <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                   <span class="">100</span></div>
+           </div>
+       </div>
+   </div>
+</li>
 
   
 
  
- <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-  <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
-  Total retained
-  </strong> 
-  <br>
-  <div class="number-group">
-      <div class="number-container govuk-!-padding-right-4">
-          <div class="float tooltip">
-              <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                  <span class="">100</span></div>
-          </div>
-      </div>
-  </div>
-</li>
   </ul>
-  <ul class="fourth govuk-list govuk-!-margin-bottom-0">
-   
-    <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-      <strong class="govuk-body-s  govuk-!-margin-bottom-0">Recruitment target total <br>(for 2 cohorts)</strong>
-      <br>
-       <div class="number-group">
-        
-                   <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                       <span class="">1000</span></div>
-               </div>
-         
-   </li>
-  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-      <strong class="govuk-body-s float govuk-!-margin-bottom-0">  
-       Total completed
-      </strong> <br>
-       <div class="number-group">
-           <div class="number-container govuk-!-padding-right-4">
-               <div class="float tooltip">
-                   <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                       <span class="">100</span></div>
-               </div>
-           </div>
-       </div>
-   </li>
- 
-   </ul>
+
 
 
                   
@@ -433,7 +408,7 @@ View
                                             <span class="govuk-body-s">Retained<br> 0</span>
                                             <span class="govuk-body-s">Completed<br> 0</span>
                                     
-                                          <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                  <!--   <span class="govuk-body-s">     	Recruitment target <br>1000 </span> -->
                                          
                                           <span class="govuk-body-s">Total declarations received<br> 1000</span>
                                             <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
@@ -569,7 +544,7 @@ View
                                               <span class="govuk-body-s">Retained<br> 0</span>
                                               <span class="govuk-body-s">Completed<br> 0</span>
                                       
-                                            <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                    <!--   <span class="govuk-body-s">     	Recruitment target <br>1000 </span> -->
                                            
                                             <span class="govuk-body-s">Total declarations received<br> 1000</span>
                                               <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
@@ -702,7 +677,7 @@ View
                                                 <span class="govuk-body-s">Retained<br> 0</span>
                                                 <span class="govuk-body-s">Completed<br> 0</span>
                                         
-                                              <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                      <!--   <span class="govuk-body-s">     	Recruitment target <br>1000 </span> -->
                                              
                                               <span class="govuk-body-s">Total declarations received<br> 1000</span>
                                                 <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
@@ -836,7 +811,7 @@ View
                                                   <span class="govuk-body-s">Retained 2<br> 0</span>
                                                   <span class="govuk-body-s">Completed<br> 0</span>
                                           
-                                                <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                        <!--   <span class="govuk-body-s">     	Recruitment target <br>1000 </span> -->
                                                
                                                 <span class="govuk-body-s">Total declarations received<br> 1000</span>
                                                   <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
@@ -969,7 +944,7 @@ View
                                                     <span class="govuk-body-s">Retained 2<br> 0</span>
                                                     <span class="govuk-body-s">Completed<br> 0</span>
                                             
-                                                  <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                          <!--   <span class="govuk-body-s">     	Recruitment target <br>1000 </span> -->
                                                  
                                                   <span class="govuk-body-s">Total declarations received<br> 1000</span>
                                                     <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
@@ -1102,7 +1077,7 @@ View
                                                       <span class="govuk-body-s">Retained 2<br> 0</span>
                                                       <span class="govuk-body-s">Completed<br> 0</span>
                                               
-                                                    <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                            <!--   <span class="govuk-body-s">     	Recruitment target <br>1000 </span> -->
                                                    
                                                     <span class="govuk-body-s">Total declarations received<br> 1000</span>
                                                       <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
@@ -1233,7 +1208,7 @@ View
                                                       <span class="govuk-body-s">Retained 2<br> 0</span>
                                                         <span class="govuk-body-s">Completed<br> 0</span>
                                                 
-                                                      <span class="govuk-body-s">     	Recruitment target <br>1000 </span>
+                                                              <!--   <span class="govuk-body-s">     	Recruitment target <br>1000 </span> -->
                                                      
                                                       <span class="govuk-body-s">Total declarations received<br> 1000</span>
                                                         <span class="govuk-body-s">Total not eligible for funding<br> 1000</span>
