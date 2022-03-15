@@ -494,8 +494,16 @@
         <header class="app-application-card__header">
         <span class="govuk-body-s">     Teacher reference number: <br>{{item.trn}} </span>
         
-        
-        <span class="govuk-body-s">Cohort:  <br>{{item.c}} {{item.s}}</span>
+        {%if data.scheme === "Early Career Framework (ECF)" %}
+<span class="govuk-body-s">Cohort:  <br>{{item.c}} </span>
+
+<span class="govuk-body-s">Schedule:  <br>{{item.s}}</span>
+{% elif data.scheme === "National professional qualifications (NPQ)" %}
+
+<span class="govuk-body-s">Cohort:  <br>2021 </span>
+
+<span class="govuk-body-s">Schedule:  <br>Spring</span>
+{%endif%}
         
         
         

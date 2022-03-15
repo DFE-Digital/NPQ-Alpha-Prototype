@@ -301,7 +301,7 @@ September 2021  <span style="float:right">X</span>
               <div id="checkboxes3" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
+ 
                     <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="ai" name="lp" type="checkbox" value="Ambition Institute">
@@ -441,11 +441,16 @@ September 2021  <span style="float:right">X</span>
 <header class="app-application-card__header">
 <span class="govuk-body-s">     Teacher reference number: <br>{{item.trn}} </span>
 
+{%if data.scheme === "Early Career Framework (ECF)" %}
+<span class="govuk-body-s">Cohort:  <br>{{item.c}} </span>
 
-<span class="govuk-body-s">Cohort:  <br>{{item.c}} {{item.s}}</span>
+<span class="govuk-body-s">Schedule:  <br>{{item.s}}</span>
+{% elif data.scheme === "National professional qualifications (NPQ)" %}
 
+<span class="govuk-body-s">Cohort:  <br>2021 </span>
 
-
+<span class="govuk-body-s">Schedule:  <br>Spring</span>
+{%endif%}
 
 <span class="govuk-body-s">     
 Delivery partner: <br>
