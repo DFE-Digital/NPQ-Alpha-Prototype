@@ -63,7 +63,7 @@
   <div class="govuk-width-container">
     <div id="navlinks" class="primary-nav">
         <div class="nav-item nav-item1 ">
-  <a class="govuk-link govuk-link--no-visited-state" href="/{{version}}/payments/service-performance">
+  <a class="govuk-link govuk-link--no-visited-state" href="/{{version}}/performance/service-performance">
     
       Service performance
  <span class="govuk-visually-hidden">Current page</span>
@@ -177,8 +177,10 @@
          var anchor6 = '/{{version}}/payments/index';
          var anchor7 = '/{{version}}/payments/ecf-delivery-partner-breakdown';
          var anchor8 = '/{{version}}/payments/banding-tracker';
-         var anchor10 = '/{{version}}/payments/service-performance';
-         var anchor11 = '/{{version}}/payments/change-cutoff-date';
+         var anchor10 = '/{{version}}/payments/change-cutoff-date';
+         var anchor11 = '/{{version}}/performance/service-performance';
+         var anchor12 = '/{{version}}/performance/trainee-details';
+         var anchor13 = '/{{version}}/performance/declarations-feed';
 
          if (
          window.location.href.indexOf(anchor) > 0 || 
@@ -190,13 +192,17 @@
          window.location.href.indexOf(anchor6) > 0 || 
          window.location.href.indexOf(anchor7) > 0 || 
          window.location.href.indexOf(anchor8) > 0 ||
-         window.location.href.indexOf(anchor11) > 0
+         window.location.href.indexOf(anchor10) > 0
          ) {
       $(".nav-item2").addClass("nav-item__selected")
       $(".nav-item1").removeClass("nav-item__selected")
  
          }
-        else if (window.location.href.indexOf(anchor10) > 0) {
+        else if (
+          window.location.href.indexOf(anchor11) > 0 ||
+          window.location.href.indexOf(anchor12) > 0 ||
+          window.location.href.indexOf(anchor13) > 0 
+        )  {
 
       $(".nav-item1").addClass("nav-item__selected")
       $(".nav-item2").removeClass("nav-item__selected")

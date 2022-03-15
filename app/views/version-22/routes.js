@@ -41,7 +41,7 @@ module.exports = (app) => {
   
   
     if (req.body.user === "cm") {
-        res.redirect('/' + version + '/payments/service-performance');
+        res.redirect('/' + version + '/performance/service-performance');
 
     } else  {
         res.redirect('/' + version + '/providers/email-notification');
