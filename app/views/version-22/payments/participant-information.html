@@ -430,45 +430,70 @@ September 2021  <span style="float:right">X</span>
 {% for item in data.pinfo %}
 <section class="app-application-card">
 <header class="app-application-card__header">
-<h2 class="govuk-heading-s">
+<h2 class="govuk-body-s">
+  <strong>
+  {%if data.scheme === "Early Career Framework (ECF)" %}
+  {{item.id}} <br>
+  {% elif data.scheme === "National professional qualifications (NPQ)" %}
 
-{{item.id}} 
+{{item.id}} <br>
 
+{%endif%}
+</strong>
 </h2>
-<span class="govuk-body-s"><strong>Early career teacher</strong></span>
+{%if data.scheme === "Early Career Framework (ECF)" %}
+
+{% elif data.scheme === "National professional qualifications (NPQ)" %}
+<span class="govuk-body-s"> <strong>{{item.npqcourse}}</strong></span>
+{%endif%}
 <p class="govuk-body-s govuk-!-margin-bottom-2"><strong>Course completed</strong></p>
 </header>
-<header class="app-application-card__header">
-<span class="govuk-body-s">     Teacher reference number: <br>{{item.trn}} </span>
 
-{%if data.scheme === "Early Career Framework (ECF)" %}
-<span class="govuk-body-s">Cohort:  <br>{{item.c}} </span>
 
-<span class="govuk-body-s">Schedule:  <br>{{item.s}}</span>
-{% elif data.scheme === "National professional qualifications (NPQ)" %}
 
-<span class="govuk-body-s">Cohort:  <br>2021 </span>
 
-<span class="govuk-body-s">Schedule:  <br>Spring</span>
-{%endif%}
+<div class="govuk-grid-row">
+  <div style="width:32%" class="  govuk-grid-column-one-third govuk-body-s">Teacher reference number: <br> {{item.trn}} </div>
 
-<span class="govuk-body-s">     
-Delivery partner: <br>
-{{item.dp}} </span>
+  
+  <div style="width:32%" class="govuk-grid-column-one-third   govuk-body-s">     
+    Delivery partner: <br>
+    {{item.dp}} </div>
 
-<span class="govuk-body-s">     
-  Uplift fee type: <br>
-  Pupil premium and Sparcity </span>
+
+    <div style="width:32%" class="govuk-grid-column-one-third  govuk-body-s">     
+      Uplift fee type  <br>
+      Pupil premium and Sparcity</div>
+
+
+
+
+</div>
+<div class="govuk-grid-row">
+  <div style="width:32%" class="govuk-grid-column-one-third govuk-body-s">Role: <br>Early career teacher</div>
+  <div style="width:32%" class="  govuk-grid-column-one-third govuk-body-s">Cohort:  <br>{{item.c}} </div>
+  {%if data.scheme === "Early Career Framework (ECF)" %}
+  
+  
+  <div style="width:32%" class="govuk-grid-column-one-third govuk-body-s">Schedule:  <br>{{item.secf}}</div>
+  {% elif data.scheme === "National professional qualifications (NPQ)" %}
   
 
-</header>
+  
+  <div style="width:32%" class="govuk-grid-column-one-third  govuk-body-s">Schedule:  <br>{{item.snpq}}</div>
+  {%endif%}
 
 
 
 
-<span class="govuk-heading-s">Declarations</span>
 
-<ul class="govuk-list "
+
+</div>
+
+
+<p class="govuk-body-s"> <strong>Declarations</strong></p>
+
+<ul class="govuk-list govuk-body-s "
 >
 <li class="govuk-tab">
 Milestone 1:&nbsp;
@@ -478,7 +503,7 @@ Milestone 1:&nbsp;
 {%endif%}
 >
 {% if item.m1 === 'NOT PAID' %}
-{{item.m1}}</strong> - <span class="govuk-body-m">in September 2022 due to previous induction </span>
+{{item.m1}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction </span>
 {%else%}
 {{item.m1}}
 </strong> in January 2021 
@@ -493,7 +518,7 @@ Milestone 2:
 {%endif%}
 >
 {% if item.m2 === 'NOT PAID' %}
-{{item.m2}}</strong> - <span class="govuk-body-m">in September 2022 due to previous induction</span>
+{{item.m2}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
 {%else%}
 {{item.m2}}
 </strong> in January 2021 
@@ -508,7 +533,7 @@ Milestone 3:
 {%endif%}
 >
 {% if item.m3 === 'NOT PAID' %}
-{{item.m3}}</strong> - <span class="govuk-body-m">in September 2022 due to previous induction</span>
+{{item.m3}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
 {%else%}
 {{item.m3}}
 </strong> in January 2021 
@@ -523,7 +548,7 @@ Milestone 4:
 {%endif%}
 >
 {% if item.m4 === 'NOT PAID' %}
-{{item.m4}}</strong> - <span class="govuk-body-m">in September 2022 due to previous induction</span>
+{{item.m4}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
 {%else%}
 {{item.m4}}
 </strong> in January 2021 
@@ -538,7 +563,7 @@ Milestone 5:
 {%endif%}
 >
 {% if item.m5 === 'NOT PAID' %}
-{{item.m5}}</strong> - <span class="govuk-body-m">in September 2022 due to previous induction</span>
+{{item.m5}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
 {%else%}
 {{item.m5}}
 </strong> in January 2021 
@@ -553,7 +578,7 @@ Milestone 6:
 {%endif%}
 > 
 {% if item.m6 === 'NOT PAID' %}
-{{item.m6}}</strong> - <span class="govuk-body-m">in September 2022 due to previous induction</span>
+{{item.m6}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
 {%else%}
 {{item.m6}}
 </strong> in January 2021 
