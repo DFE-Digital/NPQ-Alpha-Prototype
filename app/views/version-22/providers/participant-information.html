@@ -493,11 +493,7 @@
     {%endif%}
     </strong>
     </h2>
-    {%if data.scheme === "Early Career Framework (ECF)" %}
-    
-    {% elif data.scheme === "National professional qualifications (NPQ)" %}
-    <span class="govuk-body-s"> <strong>{{item.npqcourse}}</strong></span>
-    {%endif%}
+  
     <p class="govuk-body-s govuk-!-margin-bottom-2"><strong>Course completed</strong></p>
     </header>
     
@@ -514,8 +510,14 @@
     
     
         <div style="width:32%" class="govuk-grid-column-one-third  govuk-body-s">     
+          {%if data.scheme === "Early Career Framework (ECF)" %}
           Uplift fee type  <br>
-          Pupil premium and sparcity</div>
+          Pupil premium and sparcity
+          {% elif data.scheme === "National professional qualifications (NPQ)" %}
+          Course:  <br>
+          {{item.npqcourse}}
+          {%endif%}
+        </div>
     
     
     
@@ -555,7 +557,13 @@
     {%endif%}
     >
     {% if item.m1 === 'NOT PAID' %}
-    {{item.m1}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction </span>
+    {{item.m1}}</strong> - <span class="govuk-body-s">
+      {%if data.scheme === "Early Career Framework (ECF)" %}
+      in September 2022 due to previous induction 
+      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      in September 2022 not eligible for funding
+      {%endif%}
+    </span>
     {%else%}
     {{item.m1}}
     </strong> in January 2021 
@@ -570,7 +578,11 @@
     {%endif%}
     >
     {% if item.m2 === 'NOT PAID' %}
-    {{item.m2}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
+    {{item.m2}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early Career Framework (ECF)" %}
+      in September 2022 due to previous induction 
+      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      in September 2022 not eligible for funding
+      {%endif%}</span>
     {%else%}
     {{item.m2}}
     </strong> in January 2021 
@@ -585,7 +597,11 @@
     {%endif%}
     >
     {% if item.m3 === 'NOT PAID' %}
-    {{item.m3}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
+    {{item.m3}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early Career Framework (ECF)" %}
+      in September 2022 due to previous induction 
+      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      in September 2022 not eligible for funding
+      {%endif%}</span>
     {%else%}
     {{item.m3}}
     </strong> in January 2021 
@@ -601,7 +617,11 @@
     {%endif%}
     >
     {% if item.m4 === 'NOT PAID' %}
-    {{item.m4}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
+    {{item.m4}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early Career Framework (ECF)" %}
+      in September 2022 due to previous induction 
+      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      in September 2022 not eligible for funding
+      {%endif%}</span>
     {%else%}
     {{item.m4}}
     </strong> in January 2021 
@@ -616,7 +636,11 @@
     {%endif%}
     >
     {% if item.m5 === 'NOT PAID' %}
-    {{item.m5}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
+    {{item.m5}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early Career Framework (ECF)" %}
+      in September 2022 due to previous induction 
+      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      in September 2022 not eligible for funding
+      {%endif%}</span>
     {%else%}
     {{item.m5}}
     </strong> in January 2021 
@@ -632,7 +656,13 @@
     {%endif%}
     > 
     {% if item.m6 === 'NOT PAID' %}
-    {{item.m6}}</strong> - <span class="govuk-body-s">in September 2022 due to previous induction</span>
+    {{item.m6}}</strong> - <span class="govuk-body-s">
+      {%if data.scheme === "Early Career Framework (ECF)" %}
+      in September 2022 due to previous induction 
+      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      in September 2022 not eligible for funding
+      {%endif%}
+    </span>
     {%else%}
     {{item.m6}}
     </strong> in January 2021 
