@@ -515,7 +515,7 @@
     
         <div style="width:32%" class="govuk-grid-column-one-third  govuk-body-s">     
           Uplift fee type  <br>
-          Pupil premium and Sparcity</div>
+          Pupil premium and sparcity</div>
     
     
     
@@ -592,6 +592,7 @@
     {%endif%}
     
     </li>
+    {%if data.scheme === "Early Career Framework (ECF)" %}
     <li>
     Milestone 4:
     <strong {% if item.m4 === 'PAID' %} class="govuk-tag govuk-tag--green"
@@ -620,7 +621,8 @@
     {{item.m5}}
     </strong> in January 2021 
     {%endif%}
-    
+   
+    <li>
     </li>
     <li>
     Milestone 6:
@@ -635,7 +637,8 @@
     {{item.m6}}
     </strong> in January 2021 
     {%endif%}
-    
+    {%elif data.scheme === "National professional qualifications (NPQ)" %}
+    {%endif%}
     
     </li>
     </ul>
