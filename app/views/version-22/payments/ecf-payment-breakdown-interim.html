@@ -18,43 +18,7 @@
             <div class="govuk-grid-column-full "> 
             
               <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1>
-              <nav class="app-subnav " aria-label="Sub navigation">
-                  <ul class="app-subnav__list">
-                      <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="index">
-                    
-                  Programme overview
-                
-                </a></li>
-                
-                <li class="app-subnav__list-item  app-subnav__list-item--selected">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="choose-provider?scheme={{data.scheme}}">
-                    
-                      Provider statements
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-  
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="participant-information">
-                    
-                    Trainee details
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="ecf-delivery-partner-breakdown">
-                    
-                    Delivery partners
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                <li class="app-subnav__list-item ">
-                  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="banding-tracker">
-                    
-                 Banding tracker
-                      <span class="govuk-visually-hidden">Current page</span>
-                </a></li>
-                
-                  </ul>
-                </nav>
+         
                 {%if data.statementPeriod === "March 2022"%}
                 <div id="notification" class="govuk-notification-banner " role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
                   <div class="govuk-notification-banner__header">
@@ -111,11 +75,11 @@
                
       
     
-        <span autocomplete="on" class="govuk-caption-l">Provider statements </span> 
-                <h2 class="govuk-heading-l">{{data.providerName}}
-             
-
-                </h2>
+                <span autocomplete="on" class="govuk-caption-l"> {% if data.providerName %} {{data.providerName}}{%else%} Ambition Institute 
+                  {%endif%}</span> 
+                        <h2 class="govuk-heading-l">{% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} March 2022 {%endif%}
+                  
+                        </h2>
            
              
             <br>
@@ -270,7 +234,7 @@
             
                 <div class=" ">
                  
-                  <strong itemprop="name" class="govuk-caption-l ">    {% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} March 2022 {%endif%}</strong>
+
                     <h4 class="govuk-heading-l title-mobile govuk-!-margin-bottom-2 ">Total £5,281,923.84</h4>
                     <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
@@ -279,20 +243,9 @@
                
 
                  
-                      
-                      {%if data.statementPeriod === "Milestone 3 for 2022" %}
-                
-                      {%else%}
-                     
-                            {%endif%}   
-                        
+                   
                               
-                            <p class=" govuk-body-s title-mobile">
-                             
-                                  <a href="" class="govuk-link ">
-                                      <strong>Download declaration breakdown (CSV)</strong>
-                                      </a>
-                                  </p>
+                        
                             
                                 
                          
@@ -301,80 +254,6 @@
                   
 
                 <ul class="first govuk-list">
-                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Status of declarations </strong> 
-                    <br>
-                    <div class="number-group">
-                        <div class="number-container govuk-!-padding-right-4">
-                            <div class="float tooltip">
-                                <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                  {%if data.payable ==="true"%}
-                             
-                                  <strong class="govuk-tag govuk-tag--green">
-                                  READY TO BE PAID
-                                  </strong>
-                         
-                                  {%else%}
-                                  <strong  class="govuk-tag govuk-tag--blue">
-                                    READY FOR FINAL SIGN OFF
-                                   </strong>
-                                   <br>
-                                   <a href="change-declaration-status" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
-                                   {%endif%}
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                
-                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                       <strong class="govuk-body-s float govuk-!-margin-bottom-0">
-                       Total voided</strong> <br>
-                        <div class="number-group">
-                            <div class="number-container govuk-!-padding-right-4">
-                                <div class="float tooltip">
-                                    <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                        <span class="">100</span> <br>
-                                        <a href="" class="govuk-link govuk-body-s " style="font-weight: normal;">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                       <strong class="govuk-body-s float govuk-!-margin-bottom-0">
-                        Current ECTs</strong> <br>
-                        <div class="number-group">
-                            <div class="number-container govuk-!-padding-right-4">
-                                <div class="float tooltip">
-                                    <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                        <span class="">16,000</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li> -->
-                </ul>
-                <ul class="second  govuk-list">
-                  <!-- {%if data.cutoffDate === "changed"%}
-                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>
-                    <br>
-                     <div class="number-group">
-                         <div class="number-container govuk-!-padding-right-4">
-                             <div class="float tooltip">
-                                 <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="">{{data.cutoffdateday}} {{data.cutoffdatemonth}} {{data.cutoffdateyear}}</span>
-                                     <br>
-                                     <a href="change-cutoff-date" class="govuk-link govuk-body-s " style="font-weight: normal;">Change</a>
-                                    </div>
-                                     
-                             </div>
-                         </div>
-                     </div>
-                 </li>
-                  {%else%} -->
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">  Milestone cut off date </strong>  
                     <br>  
@@ -391,33 +270,10 @@
                          </div>
                      </div>
                  </li>
-                 <!-- {%endif%} -->
-           
-                 <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                  <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Total declarations received </strong> <br>
-                  <div class="number-group">
-                      <div class="number-container govuk-!-padding-right-4">
-                          <div class="float tooltip">
-                              <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                  <span class="">31,000</span></div>
-                          </div>
-                      </div>
-                  </div>
-              </li>
-                    <!-- <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                        <strong class="govuk-body-s float govuk-!-margin-bottom-0">Current mentors</strong><br>
-                        <div class="number-group">
-                            <div class="number-container govuk-!-padding-right-4">
-                                <div class="float tooltip">
-                                    <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                        <span class="">15,000</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li> -->
+                
+                
                 </ul>
-                <ul class="booster govuk-list">
+                <ul class="second  govuk-list">
                   <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
 
                     <strong class="govuk-body-s float govuk-!-margin-bottom-0">Payment date</strong>
@@ -431,18 +287,42 @@
                          </div>
                      </div>
                  </li>
-                  <!-- <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
-                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">Recruitment target</strong>
+           
+            
+                  
+                </ul>
+                <ul class="booster govuk-list">
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0"> Total declarations received </strong> <br>
+                    <div class="number-group">
+                        <div class="number-container govuk-!-padding-right-4">
+                            <div class="float tooltip">
+                                <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
+                                    <span class="">31,000</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                   
+                  
+               
+                </ul>
+                <ul class="booster govuk-list">
+                  <li itemprop="Observation" itemtype="https://schema.org/Observation" itemscope="">
+                    <strong class="govuk-body-s float govuk-!-margin-bottom-0">
+                    Total voided</strong> <br>
                      <div class="number-group">
                          <div class="number-container govuk-!-padding-right-4">
                              <div class="float tooltip">
                                  <div class="float govuk-heading-s govuk-!-margin-bottom-0 govuk-!-padding-top-0 total-figure2">
-                                     <span class="">	4500 </span></div>
+                                     <span class="">100</span> <br>
+                                     <a href="" class="govuk-link govuk-body-s " style="font-weight: normal;">View</a>
+                                 </div>
                              </div>
                          </div>
                      </div>
-                 </li> -->
-                   
+                 </li>
                   
                
                 </ul>
@@ -630,7 +510,7 @@
 
                   
                         <th    scope="col" class="govuk-table__header ">Adjustment type </th>
-                        <th   scope="col" class="govuk-table__header ">Band</th>
+                     
                         <th   scope="col" class="govuk-table__header "> Number of trainees </th>
                         <th   scope="col" class="govuk-table__header ">Fee per trainee </th>
            
@@ -640,68 +520,12 @@
                     </thead>
                   
                     <tbody class="govuk-table__body">
-                   
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> Claimed back - starts
-                        </td>
-                        <td  class="govuk-table__cell ">B</td>
-                        <td   class="govuk-table__cell" >100</td>
-                        <td   class="govuk-table__cell ">        £90.00</td>
-            
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">-£9,000.00</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> Claimed back - retained 1
-                        </td>
-                        <td  class="govuk-table__cell ">C</td>
-                        <td   class="govuk-table__cell ">100</td>
-                        <td   class="govuk-table__cell ">         £80.00</td>
-            
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">-£8,000.00</td>
-                      </tr>
-                  
-                 
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Claimed back - retained 2
-                        </td>
-                        <td  class="govuk-table__cell ">A</td>
-                        <td   class="govuk-table__cell ">100</td>
-                        <td   class="govuk-table__cell ">        £100.00</td>
-            
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">-£10,000.00</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> Claimed back - retained 3
-                        </td>
-                        <td  class="govuk-table__cell ">B</td>
-                        <td   class="govuk-table__cell ">100</td>
-                        <td   class="govuk-table__cell ">        £90.00</td>
-            
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">-£9,000.00</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> Claimed back - retained 4
-                        </td>
-                        <td  class="govuk-table__cell ">C</td>
-                        <td   class="govuk-table__cell ">100</td>
-                        <td   class="govuk-table__cell ">         £80.00</td>
-            
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">-£8,000.00</td>
-                      </tr>
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> Claimed back - completed
-                        </td>
-                        <td  class="govuk-table__cell ">C</td>
-                        <td   class="govuk-table__cell ">100</td>
-                        <td   class="govuk-table__cell ">        £80.00</td>
-            
-                        <td   class="govuk-table__cell govuk-table__cell--numeric">-£8,000.00</td>
-                      </tr>
+               
                     
                       <tr class="govuk-table__row">
                         
                         <td   scope="row" class="govuk-table__cell"> Uplift fee
-                        <td   scope="row" class="govuk-table__cell">Not applicable</td>
+                     
                         <td   class="govuk-table__cell ">100 </td>
                         <td   scope="row" class="govuk-table__cell "> 
                           £100.00
@@ -713,53 +537,7 @@
                        
                     </tbody>
                   </table>
-                  <!-- <table class="govuk-table ">
-              
-   
-                   
-             
-                    <thead class="govuk-table__head">
-                  
-                      <tr  class="govuk-table__row">
-                       
-                  
-                        <th   scope="col"  class="govuk-table__header">Adjustment type</th>
-                  
-                        <th    scope="col" class="govuk-table__header ">Number of trainees </th>
-                                    
-                        <th    scope="col" class="govuk-table__header ">Fee per trainee </th>
-                        <th   scope="col" class="govuk-table__header ">Payments</th>
-                      </tr>
-                     
-                    </thead>
-                  
-                    <tbody class="govuk-table__body">
-                      <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell"> Refunds
-                        </td>
-                       
-                        <td  class="govuk-table__cell ">1000 </td>
-                        <td   scope="row" class="govuk-table__cell"> 
-                          -£100.00
-                        </td>
-                  
-                        <td  class="govuk-table__cell">-£100,000.00</td>
-                      </tr>
-                   
-                       <tr class="govuk-table__row">
-                        <td   scope="row" class="govuk-table__cell">Uplift fee</td>
-                        <td   class="govuk-table__cell ">1000 </td>
-                        <td   scope="row" class="govuk-table__cell"> 
-                          £100.00
-                        </td>
-                        <td  class="govuk-table__cell">£100,000.00</td>
-                      </tr>
-                    
-               
-                       
-                    </tbody>
-                  </table> -->
-               
+        
                  <div style="float: right;" class="govuk-table__row">     
     <div class=" govuk-heading-s govuk-table__header--numeric">Adjustments total <br> £48,000.00</div> 
   

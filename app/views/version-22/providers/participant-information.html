@@ -15,7 +15,7 @@
               
                   
         <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1> 
-              {%if data.scheme === "Early Career Framework (ECF)" %}
+              {%if data.scheme === "Early career framework (ECF)" %}
               {% if data.version === "1" %}
               <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">
@@ -78,7 +78,7 @@
             </nav>
              {%endif%}
 
-                {% elif data.scheme === "National professional qualifications (NPQ)" %}
+                {% elif data.scheme === "National professional qualifications (NPQs)" %}
                 {% if data.version === "1" %}
                 <nav class="app-subnav " aria-label="Sub navigation">
                   <ul class="app-subnav__list">
@@ -484,9 +484,9 @@
     <header class="app-application-card__header">
     <h2 class="govuk-body-s">
       <strong>
-      {%if data.scheme === "Early Career Framework (ECF)" %}
+      {%if data.scheme === "Early career framework (ECF)" %}
       {{item.id}} <br>
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
     
     {{item.id}} <br>
     
@@ -510,10 +510,10 @@
     
     
         <div style="width:32%" class="govuk-grid-column-one-third  govuk-body-s">     
-          {%if data.scheme === "Early Career Framework (ECF)" %}
+          {%if data.scheme === "Early career framework (ECF)" %}
           Uplift fee type  <br>
           Pupil premium and sparcity
-          {% elif data.scheme === "National professional qualifications (NPQ)" %}
+          {% elif data.scheme === "National professional qualifications (NPQs)" %}
           Course:  <br>
           {{item.npqcourse}}
           {%endif%}
@@ -526,11 +526,11 @@
     <div class="govuk-grid-row">
       <div style="width:32%" class="govuk-grid-column-one-third govuk-body-s">Role: <br>Early career teacher</div>
       <div style="width:32%" class="  govuk-grid-column-one-third govuk-body-s">Cohort:  <br>{{item.c}} </div>
-      {%if data.scheme === "Early Career Framework (ECF)" %}
+      {%if data.scheme === "Early career framework (ECF)" %}
       
       
       <div style="width:32%" class="govuk-grid-column-one-third govuk-body-s">Schedule:  <br>{{item.secf}}</div>
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
       
     
       
@@ -558,9 +558,9 @@
     >
     {% if item.m1 === 'NOT PAID' %}
     {{item.m1}}</strong> - <span class="govuk-body-s">
-      {%if data.scheme === "Early Career Framework (ECF)" %}
+      {%if data.scheme === "Early career framework (ECF)" %}
       in September 2022 due to previous induction 
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
       in September 2022 not eligible for funding
       {%endif%}
     </span>
@@ -578,9 +578,9 @@
     {%endif%}
     >
     {% if item.m2 === 'NOT PAID' %}
-    {{item.m2}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early Career Framework (ECF)" %}
+    {{item.m2}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early career framework (ECF)" %}
       in September 2022 due to previous induction 
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
       in September 2022 not eligible for funding
       {%endif%}</span>
     {%else%}
@@ -597,9 +597,9 @@
     {%endif%}
     >
     {% if item.m3 === 'NOT PAID' %}
-    {{item.m3}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early Career Framework (ECF)" %}
+    {{item.m3}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early career framework (ECF)" %}
       in September 2022 due to previous induction 
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
       in September 2022 not eligible for funding
       {%endif%}</span>
     {%else%}
@@ -608,7 +608,7 @@
     {%endif%}
     
     </li>
-    {%if data.scheme === "Early Career Framework (ECF)" %}
+    {%if data.scheme === "Early career framework (ECF)" %}
     <li>
     Milestone 4:
     <strong {% if item.m4 === 'PAID' %} class="govuk-tag govuk-tag--green"
@@ -617,9 +617,9 @@
     {%endif%}
     >
     {% if item.m4 === 'NOT PAID' %}
-    {{item.m4}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early Career Framework (ECF)" %}
+    {{item.m4}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early career framework (ECF)" %}
       in September 2022 due to previous induction 
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
       in September 2022 not eligible for funding
       {%endif%}</span>
     {%else%}
@@ -636,9 +636,9 @@
     {%endif%}
     >
     {% if item.m5 === 'NOT PAID' %}
-    {{item.m5}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early Career Framework (ECF)" %}
+    {{item.m5}}</strong> - <span class="govuk-body-s">   {%if data.scheme === "Early career framework (ECF)" %}
       in September 2022 due to previous induction 
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
       in September 2022 not eligible for funding
       {%endif%}</span>
     {%else%}
@@ -657,9 +657,9 @@
     > 
     {% if item.m6 === 'NOT PAID' %}
     {{item.m6}}</strong> - <span class="govuk-body-s">
-      {%if data.scheme === "Early Career Framework (ECF)" %}
+      {%if data.scheme === "Early career framework (ECF)" %}
       in September 2022 due to previous induction 
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
       in September 2022 not eligible for funding
       {%endif%}
     </span>
@@ -667,7 +667,7 @@
     {{item.m6}}
     </strong> in January 2021 
     {%endif%}
-    {%elif data.scheme === "National professional qualifications (NPQ)" %}
+    {%elif data.scheme === "National professional qualifications (NPQs)" %}
     {%endif%}
     
     </li>

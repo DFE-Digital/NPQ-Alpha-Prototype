@@ -3,7 +3,7 @@
 
 {% block beforeContent %}
 
-{%if data.scheme === "Early Career Framework (ECF)" %}
+{%if data.scheme === "Early career framework (ECF)" %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
@@ -15,7 +15,7 @@
     }) }}
 
     {% endif %}
-    {%if data.scheme === "National professional qualifications (NPQ)" %}
+    {%if data.scheme === "National professional qualifications (NPQs)" %}
 
     {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
     
@@ -31,7 +31,7 @@
 
 {% block content %}
 
-{%if data.scheme === "Early Career Framework (ECF)" %}
+{%if data.scheme === "Early career framework (ECF)" %}
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
             
@@ -85,7 +85,7 @@
  
 {% endif %}
 
-{%if data.scheme === "National professional qualifications (NPQ)" %}
+{%if data.scheme === "National professional qualifications (NPQs)" %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
   

@@ -16,7 +16,7 @@
     
         
         <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">{{data.scheme}}</h1> 
-    {%if data.scheme === "Early Career Framework (ECF)" %}
+    {%if data.scheme === "Early career framework (ECF)" %}
     <nav class="app-subnav " aria-label="Sub navigation">
       <ul class="app-subnav__list">
           <li class="app-subnav__list-item ">
@@ -54,7 +54,7 @@
     
       </ul>
     </nav>
-      {% elif data.scheme === "National professional qualifications (NPQ)" %}
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
       <nav class="app-subnav " aria-label="Sub navigation">
         <ul class="app-subnav__list">
             <li class="app-subnav__list-item ">
@@ -432,18 +432,18 @@ September 2021  <span style="float:right">X</span>
 <header class="app-application-card__header">
 <h2 class="govuk-body-s">
   <strong>
-  {%if data.scheme === "Early Career Framework (ECF)" %}
+  {%if data.scheme === "Early career framework (ECF)" %}
   {{item.id}} <br>
-  {% elif data.scheme === "National professional qualifications (NPQ)" %}
+  {% elif data.scheme === "National professional qualifications (NPQs)" %}
 
 {{item.id}} <br>
 
 {%endif%}
 </strong>
 </h2>
-{%if data.scheme === "Early Career Framework (ECF)" %}
+{%if data.scheme === "Early career framework (ECF)" %}
 
-{% elif data.scheme === "National professional qualifications (NPQ)" %}
+{% elif data.scheme === "National professional qualifications (NPQs)" %}
 <span class="govuk-body-s"> <strong>{{item.npqcourse}}</strong></span>
 {%endif%}
 <p class="govuk-body-s govuk-!-margin-bottom-2"><strong>Course completed</strong></p>
@@ -472,11 +472,11 @@ September 2021  <span style="float:right">X</span>
 <div class="govuk-grid-row">
   <div style="width:32%" class="govuk-grid-column-one-third govuk-body-s">Role: <br>Early career teacher</div>
   <div style="width:32%" class="  govuk-grid-column-one-third govuk-body-s">Cohort:  <br>{{item.c}} </div>
-  {%if data.scheme === "Early Career Framework (ECF)" %}
+  {%if data.scheme === "Early career framework (ECF)" %}
   
   
   <div style="width:32%" class="govuk-grid-column-one-third govuk-body-s">Schedule:  <br>{{item.secf}}</div>
-  {% elif data.scheme === "National professional qualifications (NPQ)" %}
+  {% elif data.scheme === "National professional qualifications (NPQs)" %}
   
 
   

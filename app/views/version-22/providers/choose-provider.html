@@ -18,7 +18,7 @@
         <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
             <h1 class="govuk-heading-xl " style="margin-top: 0; "  id="company-Name">{{data.scheme}}</h1> 
-            {%if data.scheme === "Early Career Framework (ECF)" %}
+            {%if data.scheme === "Early career framework (ECF)" %}
             <nav class="app-subnav " aria-label="Sub navigation">
                 <ul class="app-subnav__list">
                     <li class="app-subnav__list-item ">
@@ -56,7 +56,7 @@
               </a></li>
                 </ul>
               </nav>
-              {% elif data.scheme === "National professional qualifications (NPQ)" %}
+              {% elif data.scheme === "National professional qualifications (NPQs)" %}
               <nav class="app-subnav " aria-label="Sub navigation">
                 <ul class="app-subnav__list">
                     <li class="app-subnav__list-item ">
@@ -115,7 +115,7 @@
                     </legend>
                     <div class="govuk-form-group">
                         <fieldset class="govuk-fieldset">
-                            {% if data.scheme === "Early Career Framework (ECF)"%}
+                            {% if data.scheme === "Early career framework (ECF)"%}
                       <div class="govuk-radios">
                                 <div class="govuk-radios__item">
                                     <input class="govuk-radios__input" id="provider1" name="providerName" type="radio" value="Ambition Institute" {{ checked( 'chooseSearch', 'Ambition Institute') }}>
