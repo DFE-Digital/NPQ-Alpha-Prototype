@@ -201,7 +201,44 @@
                                     <input class="govuk-input " id="search" name="q" type="text" value="" aria-labelledby="filter-legend-q" autocomplete="off">
                                 </fieldset>
                               </div>
-                              
+                              <div class=" govuk-!-padding-left-0">
+                                <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+                                  <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+                                    <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Delivery partner</button>
+                                    <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+                                    <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+                                  </h2>
+                                  <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" >
+                                    <div class="app-c-option-select__container-inner js-auto-height-inner">
+                                      
+                                <div id="checkboxes" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+                                  <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
+                                      <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                        <div class="govuk-checkboxes__item">
+                                          <input class="govuk-checkboxes__input" id="dp" name="dp" type="checkbox" value="Leading Teaching">
+                                          <label class="govuk-label govuk-checkboxes__label" for="dp">DabZ</label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                          <input class="govuk-checkboxes__input" id="dp" name="dp" type="checkbox" value="Leading Teacher Development ">
+                                          <label class="govuk-label govuk-checkboxes__label" for="dp">Feedbug </label>
+                                        </div>
+                                        <div class="govuk-checkboxes__item">
+                                          <input class="govuk-checkboxes__input" id="dp" name="dp" type="checkbox" value="Leading Behaviour and Culture">
+                                          <label class="govuk-label govuk-checkboxes__label" for="dp">Demivee</label>
+                                        </div>
+                      
+                                  
+                                    </fieldset>
+                                  </div>
+                                
+                                </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              {%if data.scheme === "Early career framework (ECF)" %}   
                 <div class=" govuk-!-padding-left-0">
                   <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
                     <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
@@ -236,6 +273,60 @@
                     </div>
                   </div>
                 </div>
+                {% elif data.scheme === "National professional qualifications (NPQs)" %}
+                <div class=" govuk-!-padding-left-0">
+                  <div class="app-c-option-select js-collapsible js-closed" data-module="option-select" data-closed-on-load="true">
+                    <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
+                      <button class="js-container-button app-c-option-select__title app-c-option-select__button" type="button" aria-expanded="false" id="option-select-title-list-of-hats" aria-controls="list_of_hats">Course</button>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--up" aria-hidden="true" focusable="false"><path d="m798.16 609.84l-256-256c-16.683-16.683-43.691-16.683-60.331 0l-256 256c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.84-225.84 225.84 225.84c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331z"></path></svg>
+                      <svg version="1.1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="app-c-option-select__icon app-c-option-select__icon--down" aria-hidden="true" focusable="false"><path d="m225.84 414.16l256 256c16.683 16.683 43.691 16.683 60.331 0l256-256c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.84 225.84-225.84-225.84c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"></path></svg>
+                    </h2>
+                    <div role="group" aria-labelledby="option-select-title-list-of-hats" class="app-c-option-select__container js-options-container" id="list_of_hats" tabindex="-1" >
+                      <div class="app-c-option-select__container-inner js-auto-height-inner">
+                        
+                  <div id="checkboxes" class="gem-c-checkboxes govuk-form-group govuk-checkboxes--small" data-module="gem-checkboxes">
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m govuk-visually-hidden">Cohort</legend>
+                        <div class="govuk-checkboxes gem-c-checkboxes__list govuk-checkboxes--small" data-module="govuk-checkboxes">
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="course" name="course" type="checkbox" value="Leading Teaching">
+                            <label class="govuk-label govuk-checkboxes__label" for="course">Leading Teaching</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="course" name="course" type="checkbox" value="Leading Teacher Development ">
+                            <label class="govuk-label govuk-checkboxes__label" for="course">Leading Teacher Development </label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="course" name="course" type="checkbox" value="Leading Behaviour and Culture">
+                            <label class="govuk-label govuk-checkboxes__label" for="course">Leading Behaviour and Culture</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="course" name="course" type="checkbox" value="Senior Leadership">
+                            <label class="govuk-label govuk-checkboxes__label" for="course">Senior Leadership</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="course" name="course" type="checkbox" value="Headship">
+                            <label class="govuk-label govuk-checkboxes__label" for="course">Headship</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="course" name="course" type="checkbox" value="Executive Leadership">
+                            <label class="govuk-label govuk-checkboxes__label" for="course">Executive Leadership</label>
+                          </div>
+                          <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="course" name="course" type="checkbox" value="Additional support offer for Headship course breakdown">
+                            <label class="govuk-label govuk-checkboxes__label" for="course">Additional support offer for Headship</label>
+                          </div>
+                    
+                      </fieldset>
+                    </div>
+                  
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {%endif%}
                   <div class=" govuk-!-padding-right-0">
                   <div class="app-c-option-select js-collapsible js-closed govuk-!-margin-bottom-0" data-module="option-select" data-closed-on-load="true">
                     <h2 class="app-c-option-select__heading js-container-heading govuk-!-margin-0">
@@ -493,8 +584,13 @@
     {%endif%}
     </strong>
     </h2>
-  
+    {% if item.m1 === 'PAID' %}
     <p class="govuk-body-s govuk-!-margin-bottom-2"><strong>Course completed</strong></p>
+
+
+    {%else%}
+    <p class="govuk-body-s govuk-!-margin-bottom-2"><strong>Withdrawn</strong></p>
+    {%endif%}
     </header>
     
     
@@ -524,7 +620,12 @@
     
     </div>
     <div class="govuk-grid-row">
+      {%if data.scheme === "Early career framework (ECF)" %}
       <div style="width:32%" class="govuk-grid-column-one-third govuk-body-s">Role: <br>Early career teacher</div>
+      {% elif data.scheme === "National professional qualifications (NPQs)" %}
+
+      {%endif%}
+    
       <div style="width:32%" class="  govuk-grid-column-one-third govuk-body-s">Cohort:  <br>{{item.c}} </div>
       {%if data.scheme === "Early career framework (ECF)" %}
       
