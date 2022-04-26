@@ -1,0 +1,300 @@
+{% extends "layout-full-width-no-menu.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{{ govukBackLink({
+  text: "Back",
+ href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+
+<!-- <nav class="app-subnav " aria-label="Sub navigation">
+  <ul class="app-subnav__list">
+      <li class="app-subnav__list-item ">
+  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="service-performance">
+    
+API usage overview
+
+</a></li>
+
+<li class="app-subnav__list-item  ">
+  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="trainee-details">
+    
+  Trainee details
+
+      <span class="govuk-visually-hidden">Current page</span>
+</a></li>
+
+<li class="app-subnav__list-item app-subnav__list-item--selected">
+  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="declarations-feed">
+Declarations feed
+
+      <span class="govuk-visually-hidden">Current page</span>
+</a></li>
+
+
+
+  </ul>
+</nav> -->
+<main class="govuk-main-wrapper govuk-body" id="main-content" role="main">
+<div class="govuk-grid-row" id="main-content" role="main">
+<div class="govuk-grid-column-two-thirds" id="main-content" role="main">
+      
+
+  {%if data.change === "withdrawn"%}
+    
+  <h1 class="govuk-heading-xl">Withdraw participant</h1>
+  <div class="govuk-inset-text">
+<span><strong>User ID / Participant ID</strong></span>
+<p>229e87f2-e5e8-44a4-82a5-1b0932a994f5</p>
+<span><strong>Induction record</strong></span>
+<p>37cbc011-0791-4e14-8e3f-c13e58df6410</p>
+<span><strong>Induction status</strong></span>
+<p>Active</p>
+
+  </div>
+          <form action="participant-information?pp1=no" method="post" novalidate>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+            Do you want to withdraw this participant?
+                  </h1>
+                </legend>
+                <div id="changed-name-hint" class="govuk-hint">
+              
+                </div>
+                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name" name="pp" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="changed-name">
+     Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="changed-name-2" name="pp" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                 No
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+ 
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </form>
+          {%elif data.change === "activate" %}
+          <h1 class="govuk-heading-xl">Activate participant</h1>
+          <div class="govuk-inset-text">
+            <span><strong>User ID / Participant ID</strong></span>
+            <p>229e87f2-e5e8-44a4-82a5-1b0932a994f5</p>
+            <span><strong>Induction record</strong></span>
+            <p>37cbc011-0791-4e14-8e3f-c13e58df6410</p>
+            <span><strong>Induction status</strong></span>
+            <p>Withdrawn</p>
+            
+              </div>
+                  <form action="participant-information?pp=no" method="post" novalidate>
+        
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                          <h1 class="govuk-fieldset__heading">
+                    Do you want to activate this participant?
+                          </h1>
+                        </legend>
+                        <div id="changed-name-hint" class="govuk-hint">
+                      
+                        </div>
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name" name="pp1" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="changed-name">
+             Yes
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name-2" name="pp1" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                         No
+                            </label>
+                          </div>
+                        </div>
+                    
+                      </fieldset>
+                    </div>
+         
+                    <button class="govuk-button" data-module="govuk-button">
+                      Continue
+                    </button>
+                  </form>
+
+                  {%elif data.change === "trainingStatus" %}
+
+                  <h1 class="govuk-heading-xl">Change training status</h1>
+                  <div class="govuk-inset-text">
+                <span><strong>User ID / Participant ID</strong></span>
+                <p>229e87f2-e5e8-44a4-82a5-1b0932a994f5</p>
+                <span><strong>Training status</strong></span>
+                <p>Active</p>
+                
+                  </div>
+                          <form action="participant-information?pp=no" method="post" novalidate>
+                
+                            <div class="govuk-form-group">
+                              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                  <h1 class="govuk-fieldset__heading">
+                            Choose a different training status
+                                  </h1>
+                                </legend>
+                                <div id="changed-name-hint" class="govuk-hint">
+                              
+                                </div>
+                                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="changed-name" name="pp2" type="radio" value="Deferred">
+                                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                                      Deferred
+                                    </label>
+                                  </div>
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="pp2" type="radio" value="Withdrawn">
+                                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                 Withdrawn
+                                    </label>
+                                  </div>
+                                </div>
+                            
+                              </fieldset>
+                            </div>
+                 
+                            <button class="govuk-button" data-module="govuk-button">
+                              Continue
+                            </button>
+                          </form>
+                          {%elif data.change === "void" %}
+
+                  <h1 class="govuk-heading-xl">Void declaration</h1>
+                  <div class="govuk-inset-text">
+                <span><strong>User ID / Participant ID</strong></span>
+                <p>229e87f2-e5e8-44a4-82a5-1b0932a994f5</p>
+                <span><strong>Declaration type</strong></span>
+                <p>Started</p>
+                <span><strong>Declaration date</strong></span>
+                <p>	16 September 2021, 2:55 PM</p>
+                <span><strong>Course identifier</strong></span>
+                <p>ecf-induction</p>
+                <span><strong>Lead provider</strong></span>
+                <p>	UCL Institute of Education</p>
+                <span><strong>State</strong></span>
+                <p>Paid</p>
+                
+                  </div>
+                          <form action="participant-information?pp=no" method="post" novalidate>
+                
+                            <div class="govuk-form-group">
+                              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                  <h1 class="govuk-fieldset__heading">
+                          Do you want to void this declaration?
+                                  </h1>
+                                </legend>
+                                <div id="changed-name-hint" class="govuk-hint">
+                              
+                                </div>
+                                <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="changed-name" name="pp3" type="radio" value="yes">
+                                    <label class="govuk-label govuk-radios__label" for="changed-name">
+                     Yes
+                                    </label>
+                                  </div>
+                                  <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="changed-name-2" name="pp3" type="radio" value="no">
+                                    <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                 No
+                                    </label>
+                                  </div>
+                                </div>
+                            
+                              </fieldset>
+                            </div>
+                 
+                            <button class="govuk-button" data-module="govuk-button">
+                              Continue
+                            </button>
+                          </form>
+     
+          {%elif data.change === "approvalStatus" %}
+
+          <!-- <h1 class="govuk-heading-xl">Change NPQ application 1 approval status</h1>
+          <div class="govuk-inset-text">
+        <span><strong>Application ID</strong></span>
+        <p>229e87f2-e5e8-44a4-82a5-1b0932a994f5</p>
+        <span><strong>Lead provider</strong></span>
+        <p>	Best Practice Network</p> -->
+        <!-- <span><strong>Lead Provider approval status</strong></span>
+        <p>Accepted</p> -->
+        <!-- <span><strong>NPQ course</strong></span>
+        <p>	NPQ Leading Teaching (NPQLT)</p>
+        <span><strong>School URN</strong></span>
+        <p>	100458	
+          	</p>
+      
+        <span><strong>School UKPRN</strong></span>
+        <p>10001257</p> -->
+        
+          <!-- </div> -->
+                  <form action="participant-information?pp=no" method="post" novalidate>
+        
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                          <h1 class="govuk-fieldset__heading">
+                  Are you sure you want to change the status to pending?
+                          </h1>
+                        </legend>
+                    
+                        <div class="govuk-inset-text">
+                          <span><strong>Lead Provider approval status</strong></span>
+                        <p>Accepted</p>
+                  
+                        </div>
+                        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name" name="pp4" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="changed-name">
+             Yes
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name-2" name="pp4" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                         No
+                            </label>
+                          </div>
+                        </div>
+                    
+                      </fieldset>
+                    </div>
+         
+                    <button class="govuk-button" data-module="govuk-button">
+                      Continue
+                    </button>
+                  </form>
+  {% endif%}
+  
+</div>
+  
+</div>
+</main>
+
+<script src="/public/javascripts/filters.js"></script>
+{% endblock %}

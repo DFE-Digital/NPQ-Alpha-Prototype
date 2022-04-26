@@ -1,0 +1,199 @@
+{#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
+{%- set assetPath = '/govuk/assets' -%}
+
+{% extends "govuk/template.njk" %}
+
+{% from "govuk/components/accordion/macro.njk"        import govukAccordion %}
+{% from "govuk/components/back-link/macro.njk"        import govukBackLink %}
+{% from "govuk/components/breadcrumbs/macro.njk"      import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk"           import govukButton %}
+{% from "govuk/components/character-count/macro.njk"  import govukCharacterCount %}
+{% from "govuk/components/checkboxes/macro.njk"       import govukCheckboxes %}
+{% from "govuk/components/date-input/macro.njk"       import govukDateInput %}
+{% from "govuk/components/details/macro.njk"          import govukDetails %}
+{% from "govuk/components/error-message/macro.njk"    import govukErrorMessage %}
+{% from "govuk/components/error-summary/macro.njk"    import govukErrorSummary %}
+{% from "govuk/components/fieldset/macro.njk"         import govukFieldset %}
+{% from "govuk/components/file-upload/macro.njk"      import govukFileUpload %}
+{% from "govuk/components/input/macro.njk"            import govukInput %}
+{% from "govuk/components/inset-text/macro.njk"       import govukInsetText %}
+{% from "govuk/components/panel/macro.njk"            import govukPanel %}
+{% from "govuk/components/phase-banner/macro.njk"     import govukPhaseBanner %}
+{% from "govuk/components/radios/macro.njk"           import govukRadios %}
+{% from "govuk/components/select/macro.njk"           import govukSelect %}
+{% from "govuk/components/skip-link/macro.njk"        import govukSkipLink %}
+{% from "govuk/components/summary-list/macro.njk"     import govukSummaryList %}
+{% from "govuk/components/table/macro.njk"            import govukTable %}
+{% from "govuk/components/tabs/macro.njk"             import govukTabs %}
+{% from "govuk/components/tag/macro.njk"              import govukTag %}
+{% from "govuk/components/textarea/macro.njk"         import govukTextarea %}
+{% from "govuk/components/warning-text/macro.njk"     import govukWarningText %}
+{% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+
+
+{% block head %}
+
+  {% include "includes/head.html" %}
+  
+  
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+  {# Set serviceName in config.js. #}
+ 
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+     
+    
+  })
+ 
+}}
+
+
+
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong style="color:black; background-color: #fee100; border: 1px solid black" class="govuk-tag ">
+  PROTOTYPE
+    </strong>
+    -&nbsp;
+    <span class="govuk-phase-banner__text">
+    This is not a real service
+    </span>
+  </p>
+  
+</div>
+
+<style>
+  .govuk-width-container {
+    max-width: 1100px;
+  
+  }
+  </style>
+ 
+{% endblock %}
+
+<a class="govuk-footer__link" href="#">
+  Privacy
+</a>
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+
+{% if useAutoStoreData %}
+
+
+ {% block footer %}
+ 
+    {{ govukFooter({
+      meta: {
+        html: '
+        <li class="govuk-footer__inline-list-item">
+          <a class="govuk-button govuk-button--warning" href="/prototype-admin/clear-data">
+            Clear data
+          </a>
+        </li>
+        <h2 class="govuk-heading-m">Support and guidance</h2><p class="govuk-body-s">If you have a question, or you&apos;ve had a problem using this service, please contact us at <a class="govuk-footer__link" href="mailto:continuing-professional-development@digital.education.gov.uk">continuing-professional-development@digital.education.gov.uk</a></p>
+        
+        <ul  class="govuk-footer__inline-list">
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="#">
+                    Privacy
+                  </a>
+                </li>
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="#">
+                    Cookies
+                  </a>
+                </li>
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="#">
+                    Accessibility
+                  </a>
+                </li>
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
+                    GOV.UK Prototype Kit v9.11.0
+                  </a>
+                </li>
+
+
+            </ul>',
+        items: [
+
+        ]
+      }
+    }) }}
+  {% endblock %}
+  
+{% endif %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}
+    
+    <script>
+      $(document).ready(function(){
+      
+         var anchor = '/{{version}}/payments/ecf-or-npq';
+         var anchor1 = '/{{version}}/payments/choose-provider';
+         var anchor2 = '/{{version}}/payments/ecf-payment-breakdown';
+         var anchor3 = '/{{version}}/payments/npq-payment-breakdown';
+         var anchor4 = '/{{version}}/payments/participant-information';
+         var anchor5 = '/{{version}}/payments/scheme';
+         var anchor6 = '/{{version}}/payments/index';
+         var anchor7 = '/{{version}}/payments/ecf-delivery-partner-breakdown';
+         var anchor8 = '/{{version}}/payments/banding-tracker';
+         var anchor10 = '/{{version}}/payments/change-cutoff-date';
+         var anchor11 = '/{{version}}/performance/service-performance';
+         var anchor12 = '/{{version}}/performance/trainee-details';
+         var anchor13 = '/{{version}}/performance/declarations-feed';
+
+         if (
+         window.location.href.indexOf(anchor) > 0 || 
+         window.location.href.indexOf(anchor1) > 0 || 
+         window.location.href.indexOf(anchor2) > 0 || 
+         window.location.href.indexOf(anchor3) > 0 || 
+         window.location.href.indexOf(anchor4) > 0 || 
+         window.location.href.indexOf(anchor5) > 0 || 
+         window.location.href.indexOf(anchor6) > 0 || 
+         window.location.href.indexOf(anchor7) > 0 || 
+         window.location.href.indexOf(anchor8) > 0 ||
+         window.location.href.indexOf(anchor10) > 0
+         ) {
+      $(".nav-item2").addClass("nav-item__selected")
+      $(".nav-item1").removeClass("nav-item__selected")
+ 
+         }
+        else if (
+          window.location.href.indexOf(anchor11) > 0 ||
+          window.location.href.indexOf(anchor12) > 0 ||
+          window.location.href.indexOf(anchor13) > 0 
+        )  {
+
+      $(".nav-item1").addClass("nav-item__selected")
+      $(".nav-item2").removeClass("nav-item__selected")
+         }
+      
+
+      
+      });
+      
+          </script>
+
+    {% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}
