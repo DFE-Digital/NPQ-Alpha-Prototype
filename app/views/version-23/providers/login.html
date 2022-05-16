@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form class="new_user" id="new_user" action="scheme" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="BwONCt63BPwIeFOJ97EQsXsGmvls69IAawu7hJfjj61I++OAWk1oK9bVVBcms6tRtWkKBminm7xNmZzA0JoGHQ==">
+      
+
+      <h1 class="govuk-heading-xl">Sign in</h1>
+      <div class="govuk-form-group">
+        <div class="govuk-form-group"><label for="user-email-field" class="govuk-label">Email address</label><input id="user-email-field" class="govuk-input" type="email" value="" name="user[email]"></div>
+        <div class="govuk-form-group"><label for="user-email-field" class="govuk-label">Password</label><input id="user-email-field" class="govuk-input" type="email" value="" name="user[email]"></div>
+      </div>
+
+      <input type="submit" name="commit" value="Sign in" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button">
+</form>    
+<!-- 
+<h2 class="govuk-heading-m">How to access this service</h2>
+      		<p>Enter your registered email address (the one we send emails to).</p>
+      		<p>Do not use your DfE Sign-in details.</p>
+        	<p>If you’re not registered, <a class="govuk-link" href="">find out how to get an account</a>.</p> -->
+  </div>
+</div>
+
+{% endblock %}

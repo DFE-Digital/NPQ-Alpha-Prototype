@@ -1,0 +1,434 @@
+{% extends "layout-full-width-no-menu.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{{ govukBackLink({
+  text: "Back",
+ href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+
+<!-- <nav class="app-subnav " aria-label="Sub navigation">
+  <ul class="app-subnav__list">
+      <li class="app-subnav__list-item ">
+  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="service-performance">
+    
+API usage overview
+
+</a></li>
+
+<li class="app-subnav__list-item  ">
+  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="trainee-details">
+    
+  Trainee details
+
+      <span class="govuk-visually-hidden">Current page</span>
+</a></li>
+
+<li class="app-subnav__list-item app-subnav__list-item--selected">
+  <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="declarations-feed">
+Declarations feed
+
+      <span class="govuk-visually-hidden">Current page</span>
+</a></li>
+
+
+
+  </ul>
+</nav> -->
+<main class="govuk-main-wrapper govuk-body" id="main-content" role="main">
+<div class="govuk-grid-row" id="main-content" role="main">
+<div class="govuk-grid-column-full" id="main-content" role="main">
+      
+  
+  <h1 class="govuk-heading-xl">Participant</h1>
+  
+  <h2>Identities</h2>
+  
+    <h3>Identity 1</h3>
+  
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          User ID / Participant ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a class="govuk-link" href="">229e87f2-e5e8-44a4-82a5-1b0932a994f5</a>
+        </dd>
+      </div>
+  
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          External ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a class="govuk-link" href="">6e0ea217-00be-45ee-8efd-b483d2371d04</a>
+        </dd>
+      </div>
+    </dl>
+    <h3>Identity 2</h3>
+  
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          User ID / Participant ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a class="govuk-link" href="">229e87f2-e5e8-44a4-82a5-1b0932a994f5</a>
+        </dd>
+      </div>
+  
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          External ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a class="govuk-link" href="">229e87f2-e5e8-44a4-82a5-1b0932a994f5</a>
+        </dd>
+      </div>
+    </dl>
+  
+
+  
+    <h3>ParticipantProfile::ECT</h3>
+  
+      <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">User ID / Participant ID</dt>
+          <dd class="govuk-summary-list__value">229e87f2-e5e8-44a4-82a5-1b0932a994f5</dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row ">
+          <dt class="govuk-summary-list__key">Profile ID</dt>
+          <dd class="govuk-summary-list__value">b9ba3a83-a2af-47da-a10d-d52df1be522a</dd>
+          <dd class="govuk-summary-list__actions"> </dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">Lead provider</dt>
+          <dd class="govuk-summary-list__value">UCL Institute of Education</dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">School URN</dt>
+          <dd class="govuk-summary-list__value">103080</dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        
+        <!-- <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">Status</dt>
+          {% if data.pp === "yes" %}
+          <dd class="govuk-summary-list__value">Withdrawn</dd>
+          <dd class="govuk-summary-list__value">
+            <a class="govuk-link" href="participant-information-1?change=activate">
+              Activate participant<span class="govuk-visually-hidden"> </span>
+            </a>
+          </dd>
+     
+          {% elif data.pp1 === "yes" %}
+          <dd class="govuk-summary-list__value">active</dd>
+          <dd class="govuk-summary-list__value">
+            <a class="govuk-link" href="participant-information-1?change=withdrawn">
+              Withdraw participant<span class="govuk-visually-hidden"> </span>
+            </a>
+          </dd>
+          {% endif %}
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">Training status</dt>
+             {% if data.pp2 %}
+             <dd class="govuk-summary-list__value">{{data.pp2}}</dd>
+             {%else%}
+          <dd class="govuk-summary-list__value">active</dd>
+          {%endif%}
+          <dd class="govuk-summary-list__value">
+            <a class="govuk-link" href="participant-information-1?change=trainingStatus">
+              Change<span class="govuk-visually-hidden"> </span>
+            </a>
+
+          </dd>
+        </div> -->
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">Schedule identifier</dt>
+          <dd class="govuk-summary-list__value">ecf-standard-september</dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">Schedule cohort</dt>
+          <dd class="govuk-summary-list__value">2021</dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">Created at</dt>
+          <dd class="govuk-summary-list__value">19 July 2021, 2:56 PM</dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+          <dt class="govuk-summary-list__key">Updated at</dt>
+          <dd class="govuk-summary-list__value">22 March 2022, 3:56 PM</dd>
+          <dd class="govuk-summary-list__actions"></dd>
+        </div>
+      </dl>
+  <h4>Induction records</h4>
+  
+  <h5>Induction record: 37cbc011-0791-4e14-8e3f-c13e58df6410</h5>
+  
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Training programme</dt>
+      <dd class="govuk-summary-list__value">Full induction programme</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">School URN</dt>
+      <dd class="govuk-summary-list__value">103080</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Lead provider</dt>
+      <dd class="govuk-summary-list__value">UCL Institute of Education</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Induction status</dt>
+      {% if data.pp === "yes" %}
+      <dd class="govuk-summary-list__value">Withdrawn</dd>
+      <dd class="govuk-summary-list__value">
+        <a class="govuk-link" href="participant-information-1?change=activate">
+          Activate participant<span class="govuk-visually-hidden"> </span>
+        </a>
+      </dd>
+ 
+      {% elif data.pp1 === "yes" %}
+      <dd class="govuk-summary-list__value">Active</dd>
+      <dd class="govuk-summary-list__value">
+        <a class="govuk-link" href="participant-information-1?change=withdrawn">
+          Withdraw participant<span class="govuk-visually-hidden"> </span>
+        </a>
+      </dd>
+      {% endif %}
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Training status</dt>
+         {% if data.pp2 %}
+         <dd class="govuk-summary-list__value">{{data.pp2}}</dd>
+         {%else%}
+      <dd class="govuk-summary-list__value">Active</dd>
+      {%endif%}
+      <dd class="govuk-summary-list__value">
+        <a class="govuk-link" href="participant-information-1?change=trainingStatus">
+          Change<span class="govuk-visually-hidden"> </span>
+        </a>
+
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Start date</dt>
+      <dd class="govuk-summary-list__value">1 September 2021, 12:00 AM</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">End date</dt>
+      <dd class="govuk-summary-list__value"></dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Schedule</dt>
+      <dd class="govuk-summary-list__value">ecf-standard-september</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+  </dl>
+  <h4>Declarations</h4>
+  
+  
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Declaration type</dt>
+      <dd class="govuk-summary-list__value">started</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Declaration date</dt>
+      <dd class="govuk-summary-list__value">16 September 2021, 2:55 PM</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Course identifier</dt>
+      <dd class="govuk-summary-list__value">ecf-induction</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Evidence held</dt>
+      <dd class="govuk-summary-list__value"></dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Lead provider</dt>
+      <dd class="govuk-summary-list__value">UCL Institute of Education</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">State</dt>
+      {% if data.pp3 === "yes" %}
+             <dd class="govuk-summary-list__value">Voided</dd>
+             {%else%}
+      <dd class="govuk-summary-list__value">paid</dd>
+      {%endif%}
+      <dd class="govuk-summary-list__value">
+        <a class="govuk-link" href="participant-information-1?change=void">
+          Void declaration<span class="govuk-visually-hidden"> </span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Created at</dt>
+      <dd class="govuk-summary-list__value">27 October 2021, 12:28 PM</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Updated at</dt>
+      <dd class="govuk-summary-list__value">8 February 2022, 2:38 PM</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+  </dl>
+  <h4>Declaration State History</h4>
+  
+  <div class="nhsuk-table-container">
+    <table data-test="admin-participants-table" class="govuk-table nhsuk-table-responsive">
+      <thead class="nhsuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">State</th>
+          <th scope="col" class="govuk-table__header">Changed at</th>
+          <th scope="col" class="govuk-table__header">Reason</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body nhsuk-table__body">
+        <tr class="govuk-table__row nhsuk-table__row">
+          <td class="govuk-table__cell nhsuk-table__cell">
+            submitted
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            27 October 2021, 12:28 PM
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            N/A
+          </td>
+        </tr>
+        <tr class="govuk-table__row nhsuk-table__row">
+          <td class="govuk-table__cell nhsuk-table__cell">
+            eligible
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            27 October 2021, 12:28 PM
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            N/A
+          </td>
+        </tr>
+        <tr class="govuk-table__row nhsuk-table__row">
+          <td class="govuk-table__cell nhsuk-table__cell">
+            payable
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            8 November 2021, 11:47 AM
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            N/A
+          </td>
+        </tr>
+        <tr class="govuk-table__row nhsuk-table__row">
+          <td class="govuk-table__cell nhsuk-table__cell">
+            paid
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            24 January 2022, 9:57 AM
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            N/A
+          </td>
+        </tr>
+        {% if data.pp3 === "yes" %}
+        <tr class="govuk-table__row nhsuk-table__row">
+          <td class="govuk-table__cell nhsuk-table__cell">
+            Voided
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            24 January 2022, 9:57 AM by [USER-ID]
+          </td>
+          <td class="govuk-table__cell nhsuk-table__cell">
+            N/A
+          </td>
+        </tr>
+        {%else%}
+    
+        {%endif%}
+      </tbody>
+    </table>
+  </div>
+  
+  
+  
+  
+  
+  <h2>NPQ applications</h2>
+  <h3>NPQ application 1</h3>
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Application ID</dt>
+      <dd class="govuk-summary-list__value"><a class="govuk-link"
+          href="">41180d5f-e02f-48b7-85c1-251eef74d535</a></dd>
+          <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Lead Provider</dt>
+      <dd class="govuk-summary-list__value">Best Practice Network</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Lead Provider approval status</dt>
+      {% if data.pp4 === "yes" %}
+      <dd class="govuk-summary-list__value">Pending</dd>
+      {%else%}
+      <dd class="govuk-summary-list__value">Accepted</dd>
+      {%endif%}
+      <dd class="govuk-summary-list__value">
+        <a class="govuk-link" href="participant-information-1?change=approvalStatus">
+         Change to pending<span class="govuk-visually-hidden"> </span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">NPQ course</dt>
+      <dd class="govuk-summary-list__value">NPQ Leading Teaching (NPQLT)</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">School URN</dt>
+      <dd class="govuk-summary-list__value">100458</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">School UKPRN</dt>
+      <dd class="govuk-summary-list__value">10001257</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Created at</dt>
+      <dd class="govuk-summary-list__value">27 September 2021, 7:26 AM</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+    <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+      <dt class="govuk-summary-list__key">Updated at</dt>
+      <dd class="govuk-summary-list__value">7 January 2022, 3:15 PM</dd>
+      <dd class="govuk-summary-list__actions"></dd>
+    </div>
+  </dl>
+  
+</div>
+  
+</div>
+</main>
+
+<script src="/public/javascripts/filters.js"></script>
+{% endblock %}

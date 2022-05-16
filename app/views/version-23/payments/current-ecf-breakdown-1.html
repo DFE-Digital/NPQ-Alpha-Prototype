@@ -1,0 +1,333 @@
+{% extends "layout-full-width.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+
+{% endblock %}
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="/finance/ecf/payment_breakdowns/89b5e410-438a-4fc4-95fa-69989945b09d/payable">Payable</a></li>
+      <li>Current</li>
+    </ul>
+  </div>
+
+  <div class="govuk-grid-column-three-quarters">
+    <h1 class="govuk-heading-xl">Ambition Institute</h1>
+    <p class="govuk-caption-m govuk-!-margin-0">Payment of</p>
+    <h2 class="govuk-heading-xl govuk-!-margin-0">£67,139.54</h2>
+    <p class="govuk-caption-m govuk-!-margin-top-0">On 25 January 2022</p>
+
+    <table class="govuk-table payment-breakdown-table">
+  <tbody>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__cell govuk-!-font-weight-regular">Submission deadline</th>
+      <td class="govuk-table__cell">25 December 2021</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="govuk-table payment-breakdown-table">
+  <tbody>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__cell govuk-!-font-weight-regular">Current ECTs</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__cell govuk-!-font-weight-regular">Current Mentors</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__cell">Total</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">0</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__cell govuk-!-font-weight-regular">Recruitment target</th>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4500</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">Payment Breakdown</h2>
+
+<table class="govuk-table payment-breakdown-table">
+  <thead>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header">Payment type</th>
+      <th class="govuk-table__header govuk-table__cell--numeric govuk-!-font-weight-bold">Number of participants</th>
+      <th class="govuk-table__header govuk-table__cell--numeric govuk-!-font-weight-bold">Payment amount for period</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Service fee</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4500</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£55,949.62</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Output fee</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Uplift fee</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <!--TODO: Add clawbacks-->
+      <td class="govuk-table__cell">Clawbacks</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">0</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£0.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__cell govuk-!-font-weight-regular">VAT</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£11,189.92</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__cell">Total payment</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric govuk-!-font-weight-bold">£67,139.54</td>
+    </tr>
+  </tbody>
+</table>
+   
+<h2 class="govuk-heading-m">Service fee</h2>
+
+<table class="govuk-table ">
+              
+   
+                   
+             
+  <thead class="govuk-table__head">
+
+    <tr  class="govuk-table__row">
+     
+
+      <th  scope="col"  class="govuk-table__header">Details</th>
+
+      <th  scope="col" class="govuk-table__header ">Band A</th>
+      <th  scope="col" class="govuk-table__header ">Band B</th>
+      <th  scope="col" class="govuk-table__header ">Band C</th>
+ 
+    </tr>
+   
+  </thead>
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+
+      <td   class="govuk-table__cell">Starts</td>
+      <td   class="govuk-table__cell ">1000</td>
+
+      <td   class="govuk-table__cell ">1000</td>
+      <td   class="govuk-table__cell ">£1000</td>
+    </tr>
+    <tr class="govuk-table__row">
+
+      <td   class="govuk-table__cell ">Retained 1</td>
+      <td   class="govuk-table__cell ">1000</td>
+
+      <td   class="govuk-table__cell ">1000</td>
+      <td   class="govuk-table__cell ">£1000</td>
+     </tr>
+
+    <tr class="govuk-table__row">
+  
+      <td   class="govuk-table__cell ">Fee per participant</td>
+      <td   class="govuk-table__cell ">£100.00</td>
+      <td   class="govuk-table__cell ">£100.00</td>
+      <td   class="govuk-table__cell ">£100.00</td>
+ </tr>
+ <tr class="govuk-table__row">
+  
+  <td   class="govuk-table__cell ">Payments</td>
+  <td   class="govuk-table__cell ">£1000</td>
+
+  <td   class="govuk-table__cell ">£1000</td>
+  <td   class="govuk-table__cell ">£1000</td>
+</tr>
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">Output fee</h2>
+
+<table class="govuk-table ">
+              
+   
+                   
+             
+  <thead class="govuk-table__head">
+
+    <tr  class="govuk-table__row">
+     
+
+      <th  scope="col"  class="govuk-table__header">Details</th>
+
+      <th  scope="col" class="govuk-table__header ">Band A</th>
+      <th  scope="col" class="govuk-table__header ">Band B</th>
+      <th  scope="col" class="govuk-table__header ">Band C</th>
+ 
+    </tr>
+   
+  </thead>
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+
+      <td   class="govuk-table__cell">Starts</td>
+      <td   class="govuk-table__cell ">1000</td>
+
+      <td   class="govuk-table__cell ">1000</td>
+      <td   class="govuk-table__cell ">£1000</td>
+    </tr>
+    <tr class="govuk-table__row">
+
+      <td   class="govuk-table__cell ">Retained 1</td>
+      <td   class="govuk-table__cell ">1000</td>
+
+      <td   class="govuk-table__cell ">1000</td>
+      <td   class="govuk-table__cell ">£1000</td>
+     </tr>
+
+    <tr class="govuk-table__row">
+  
+      <td   class="govuk-table__cell ">Fee per participant</td>
+      <td   class="govuk-table__cell ">£100.00</td>
+
+      <td   class="govuk-table__cell ">£100.00</td>
+      <td   class="govuk-table__cell ">£100.00</td>
+ </tr>
+ <tr class="govuk-table__row">
+  
+  <td   class="govuk-table__cell ">Payments</td>
+  <td   class="govuk-table__cell ">£1000</td>
+
+  <td   class="govuk-table__cell ">£1000</td>
+  <td   class="govuk-table__cell ">£1000</td>
+</tr>
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">Participant breakdown</h2>
+
+<table class="govuk-table ">
+              
+   
+                   
+             
+  <thead class="govuk-table__head">
+
+    <tr  class="govuk-table__row">
+     
+
+      <th  scope="col"  class="govuk-table__header">Milstone</th>
+
+     
+      <th  scope="col" class="govuk-table__header ">Number of participants</th>
+      <th  scope="col" class="govuk-table__header ">Total paid </th>
+      <th  scope="col" class="govuk-table__header ">Total not paid</th>
+ 
+    </tr>
+   
+  </thead>
+
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+
+      <td   class="govuk-table__cell">Starts</td>
+      <td   class="govuk-table__cell ">1000</td>
+
+      <td   class="govuk-table__cell ">1000</td>
+      <td   class="govuk-table__cell ">£1000</td>
+    </tr>
+    <tr class="govuk-table__row">
+
+      <td   class="govuk-table__cell ">Retained 1</td>
+      <td   class="govuk-table__cell ">1000</td>
+
+      <td   class="govuk-table__cell ">1000</td>
+      <td   class="govuk-table__cell ">£1000</td>
+     </tr>
+
+
+  </tbody>
+</table>
+
+ </div> </div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.innerHTML === "Hello") {
+    x.innerHTML = "Swapped text!";
+  } else {
+    x.innerHTML = "Hello";
+  }
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// // Get the modal
+// var sendmodal = document.getElementById("sendmodal");
+
+// // Get the button that opens the modal
+// var sendbtn = document.getElementById("send");
+
+// // Get the <span> element that closes the modal
+// var sendspan = document.getElementsByClassName("close2")[0];
+
+// // When the user clicks on the button, open the modal
+// sendbtn.onclick = function() {
+//   sendmodal.style.display = "block";
+// }
+
+// // When the user clicks on <span> (x), close the modal
+// sendspan.onclick = function() {
+//   sendmodal.style.display = "none";
+// }
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == sendmodal) {
+//     sendmodal.style.display = "none";
+//   }
+// }
+
+</script>
+{% endblock %}

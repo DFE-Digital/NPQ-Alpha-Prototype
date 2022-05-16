@@ -1,0 +1,296 @@
+{% extends "layout-full-width.html" %}
+{% block beforeContent %}
+
+{% endblock %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+ 
+    <div class="govuk-grid-column-full">
+
+       
+      <img style="float:right" height="200px;" width="300px;" src="/public/images/3jnq.gif" alt="wip gif"> 
+        <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">Service performance</h1> 
+
+       
+            <nav class="app-subnav " aria-label="Sub navigation">
+                <ul class="app-subnav__list">
+                    <li class="app-subnav__list-item app-subnav__list-item--selected">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" aria-current="page" href="service-performance">
+                  
+API usage overview
+              
+              </a></li>
+              
+              <li class="app-subnav__list-item  ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="trainee-details">
+                  
+                Trainee details
+              
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+
+              <li class="app-subnav__list-item ">
+                <a class="govuk-link app-subnav__link govuk-link--no-visited-state" href="declarations-feed">
+              Declarations feed
+              
+                    <span class="govuk-visually-hidden">Current page</span>
+              </a></li>
+
+           
+              
+                </ul>
+              </nav>
+     <h2 class="govuk-heading-l">API usage overview </h2>
+     <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+        <div class="app-card app-card--blue govuk-!-margin-bottom-4">
+        <a class="app-card__link" href="#not-connected">
+          <span class="app-card__count">9</span>
+        API calls in the last 24 hours
+    </a></div>
+    
+      </div>
+      <div class="govuk-grid-column-one-quarter">
+        <div class="app-card app-card--blue govuk-!-margin-bottom-4">
+        <a class="app-card__link" href="#not-synced">
+          <span class="app-card__count">43</span>
+          API calls in the last 7 days
+        
+    </a>
+    <br>  <br>
+  </div>
+    
+      </div>
+      <div class="govuk-grid-column-one-quarter">
+        <div class="app-card app-card--red govuk-!-margin-bottom-4">
+        <a class="app-card__link" href="#not-posted-decision">
+          <span class="app-card__count">59</span>
+         Errors over the last 7 days
+    </a>
+    <br>  <br>
+  </div>
+    
+      </div>
+  
+    </div>
+<div class="moj-filter-layout__filter app-filter" tabindex="-1">
+  <div class="moj-filter">
+    <div class="moj-filter__header">
+      <div class="moj-filter__header-title">
+        <h2 class="govuk-heading-m">Filter</h2>
+      </div>
+      <div class="moj-filter__header-action">
+      </div>
+    </div>
+
+    <div class="moj-filter__content" tabindex="-1">
+      <div class="moj-filter__selected">
+    
+      </div>
+      <div class="moj-filter__options">
+        <form method="get">
+          <input type="submit" name="commit" value="Apply filters" class="govuk-button" data-disable-with="Apply filters">
+
+          
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend id="filter-legend-q" class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  Search
+                </legend>
+                  <input class="govuk-input " id="q" name="q" type="text" value="" aria-labelledby="filter-legend-q" autocomplete="off">
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend id="filter-legend-request_method" class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  Method
+                </legend>
+                  <input value="" name="request_method[]" type="hidden">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="request_method-HEAD" name="request_method[]" type="checkbox" value="HEAD">
+                        <label class="govuk-label govuk-checkboxes__label" for="request_method-HEAD">
+                          HEAD
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="request_method-OPTIONS" name="request_method[]" type="checkbox" value="OPTIONS">
+                        <label class="govuk-label govuk-checkboxes__label" for="request_method-OPTIONS">
+                          OPTIONS
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="request_method-PATCH" name="request_method[]" type="checkbox" value="PATCH">
+                        <label class="govuk-label govuk-checkboxes__label" for="request_method-PATCH">
+                          PATCH
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="request_method-POST" name="request_method[]" type="checkbox" value="POST">
+                        <label class="govuk-label govuk-checkboxes__label" for="request_method-POST">
+                          POST
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="request_method-GET" name="request_method[]" type="checkbox" value="GET">
+                        <label class="govuk-label govuk-checkboxes__label" for="request_method-GET">
+                          GET
+                        </label>
+                      </div>
+                    </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend id="filter-legend-status_code" class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  Status code
+                </legend>
+                  <input value="" name="status_code[]" type="hidden">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="status_code-401" name="status_code[]" type="checkbox" value="401">
+                        <label class="govuk-label govuk-checkboxes__label" for="status_code-401">
+                          401
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="status_code-404" name="status_code[]" type="checkbox" value="404">
+                        <label class="govuk-label govuk-checkboxes__label" for="status_code-404">
+                          404
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="status_code-422" name="status_code[]" type="checkbox" value="422">
+                        <label class="govuk-label govuk-checkboxes__label" for="status_code-422">
+                          422
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="status_code-302" name="status_code[]" type="checkbox" value="302">
+                        <label class="govuk-label govuk-checkboxes__label" for="status_code-302">
+                          302
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="status_code-200" name="status_code[]" type="checkbox" value="200">
+                        <label class="govuk-label govuk-checkboxes__label" for="status_code-200">
+                          200
+                        </label>
+                      </div>
+                    </div>
+              </fieldset>
+            </div>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend id="filter-legend-provider_id" class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  Provider
+                </legend>
+                  <input value="" name="provider_id[]" type="hidden">
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-2" name="provider_id[]" type="checkbox" value="2">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-2">
+                          Ambition Institute
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-5113" name="provider_id[]" type="checkbox" value="5113">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-5113">
+                          Best Practice Network (home of Outstanding Leaders Partnership)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-5" name="provider_id[]" type="checkbox" value="5">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-5">
+                          Church of England
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-288" name="provider_id[]" type="checkbox" value="288">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-288">
+                          Education Development Trust
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-2652" name="provider_id[]" type="checkbox" value="2652">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-2652">
+                          School-Led Network
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-1970" name="provider_id[]" type="checkbox" value="1970">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-1970">
+                          Leadership Learning South East (LLSE)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-6033" name="provider_id[]" type="checkbox" value="6033">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-6033">
+                          Teacher Development Trust
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-1770" name="provider_id[]" type="checkbox" value="1770">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-1770">
+                          Teach First
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="provider_id-863" name="provider_id[]" type="checkbox" value="863">
+                        <label class="govuk-label govuk-checkboxes__label" for="provider_id-863">
+                          UCL Institute of Education
+                        </label>
+                      </div>
+                    </div>
+
+              </fieldset>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+</div>
+
+
+<script src="/public/javascripts/filters.js"></script>
+{% endblock %}
