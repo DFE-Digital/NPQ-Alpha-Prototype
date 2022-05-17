@@ -1,0 +1,212 @@
+{% extends "layout-full-width-no-menu.html" %}
+{% block beforeContent %}
+
+{% endblock %}
+{% block header %}
+
+  {# Set serviceName in config.js. #}
+ 
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+     
+    
+  })
+ 
+}}
+
+
+<div class="primary-nav-container">
+  <div class="govuk-width-container">
+    <div class="primary-nav">
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/schools">
+    
+      Schools
+ 
+</a></div>
+
+        <div class="nav-item nav-item__selected">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/participants">
+    
+      Participants
+ <span class="govuk-visually-hidden">Current page</span>
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/suppliers">
+    
+      Suppliers
+ 
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/administrators">
+    
+      Admin users
+ 
+</a></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong style="color:black; background-color: #fee100; border: 1px solid black" class="govuk-tag ">
+  PROTOTYPE
+    </strong>
+    -&nbsp;
+    <span class="govuk-phase-banner__text">
+    This is not a real service
+    </span>
+  </p>
+  
+</div>
+
+{% endblock %}
+{% block content %}
+
+
+      
+  
+  <span class="govuk-caption-l">Mentor</span>
+<h1 class="govuk-heading-xl">
+  Abdul Mentor
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">Contents</h2>
+  <ul class="govuk-tabs__list" role="tablist">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation"><a class="govuk-tabs__tab" href="#details" id="tab_details" role="tab" aria-controls="details" aria-selected="true" tabindex="0">Details</a></li>
+      <li class="govuk-tabs__list-item" role="presentation"><a class="govuk-tabs__tab" href="#school" id="tab_school" role="tab" aria-controls="school" aria-selected="false" tabindex="-1">School</a></li>
+      <li class="govuk-tabs__list-item" role="presentation"><a class="govuk-tabs__tab" href="#history" id="tab_history" role="tab" aria-controls="history" aria-selected="false" tabindex="-1">History</a></li>
+  </ul>
+    <div class="govuk-tabs__panel" id="details" role="tabpanel" aria-labelledby="tab_details">          <table class="govuk-table">
+  <tbody class="govuk-table__body admin-tabs">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header ">Full name</th>
+      <td class="govuk-table__cell">Abdul Mentor</td>
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/admin/participants/0ab88fc7-e555-4e98-8e5d-0e2e637a40a2/edit-name">
+          Change <span class="govuk-visually-hidden">name</span>
+</a>      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Email address</th>
+      <td class="govuk-table__cell">rp-mentor-ucl@example.com</td>
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="/admin/participants/0ab88fc7-e555-4e98-8e5d-0e2e637a40a2/edit-email">
+          Change <span class="govuk-visually-hidden">email</span>
+</a>      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">ID</th>
+      <td class="govuk-table__cell">5dca6189-8fc1-415c-ae28-4b48e33dd6ec</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">External ID</th>
+      <td class="govuk-table__cell">5dca6189-8fc1-415c-ae28-4b48e33dd6ec</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Associated email addresses</th>
+      <td class="govuk-table__cell">
+      <ul>
+         <li>rp-mentor-ucl@example.com</li>
+      </ul>
+      </td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Validation status</th>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Contacting for information</strong></td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Start term</th>
+      <td class="govuk-table__cell">Autumn 2021</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Notes</th>
+       <td class="govuk-table__cell">No notes</td>
+
+       <td class="govuk-table__cell">
+         <a class="govuk-link" href="/admin/notes/0ab88fc7-e555-4e98-8e5d-0e2e637a40a2/edit">
+           <span>Add notes</span>
+</a>       </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="school" role="tabpanel" aria-labelledby="tab_school">          <table class="govuk-table">
+  <tbody class="govuk-table__body admin-tabs">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">School</th>
+      <td class="govuk-table__cell">Example school three</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Lead provider</th>
+      <td class="govuk-table__cell">UCL Institute of Education</td>
+      <td class="govuk-table__cell">
+        <a class="govuk-link" href="#">
+          Challenge <span class="govuk-visually-hidden">lead provider</span>
+</a>      </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Delivery partner</th>
+      <td class="govuk-table__cell">Farrell-Keeling</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="history" role="tabpanel" aria-labelledby="tab_history">          <table class="govuk-table">
+  <tbody class="govuk-table__body admin-tabs">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Added to the service</th>
+      <td class="govuk-table__cell">17 May 2022</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>School transfers</h2><table class="govuk-table">
+  <tbody class="govuk-table__body">
+      
+      <tr>
+       <th scope="row" class="govuk-table__header">School name</th>
+       <th scope="row" class="govuk-table__header">Induction Programme</th>
+       <th scope="row" class="govuk-table__header">Start Date</th>
+       <th scope="row" class="govuk-table__header">End Date</th>
+      </tr>
+        <tr>
+         <td class="govuk-table__cell">Example school</td>
+         <td class="govuk-table__cell">Full induction programme</td>
+         <td class="govuk-table__cell">1 September 2021</td>
+         <td class="govuk-table__cell"></td>
+        </tr>
+  </tbody>
+</table>
+
+</div>
+</div>
+      <a class="govuk-link" href="/admin/participants/0ab88fc7-e555-4e98-8e5d-0e2e637a40a2/remove">Delete participant</a>
+  </div>
+</div>
+
+
+
+
+
+
+<script src="/public/javascripts/filters.js"></script>
+{% endblock %}

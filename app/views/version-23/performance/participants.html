@@ -1,0 +1,408 @@
+{% extends "layout-full-width-no-menu.html" %}
+{% block beforeContent %}
+
+{% endblock %}
+{% block header %}
+
+  {# Set serviceName in config.js. #}
+ 
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container"
+     
+    
+  })
+ 
+}}
+
+
+<div class="primary-nav-container">
+  <div class="govuk-width-container">
+    <div class="primary-nav">
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/schools">
+    
+      Schools
+ 
+</a></div>
+
+        <div class="nav-item nav-item__selected">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/participants">
+    
+      Participants
+ <span class="govuk-visually-hidden">Current page</span>
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/suppliers">
+    
+      Suppliers
+ 
+</a></div>
+
+        <div class="nav-item ">
+  <a class="govuk-link govuk-link--no-visited-state" href="/admin/administrators">
+    
+      Admin users
+ 
+</a></div>
+
+    </div>
+  </div>
+</div>
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong style="color:black; background-color: #fee100; border: 1px solid black" class="govuk-tag ">
+  PROTOTYPE
+    </strong>
+    -&nbsp;
+    <span class="govuk-phase-banner__text">
+    This is not a real service
+    </span>
+  </p>
+  
+</div>
+
+{% endblock %}
+{% block content %}
+
+    
+<h1 class="govuk-heading-xl">Participants</h1>
+
+<div class="search-box">
+<form class="search-box__form" action="/admin/participants" accept-charset="UTF-8" data-remote="true" method="get">
+  <div class="search-box__input">
+    <div class="govuk-form-group"><label for="query-field" class="govuk-label govuk-label--s">Search participants</label><span class="govuk-hint" id="query-hint">Enter the participant’s name, school’s name or URN</span><input id="query-field" class="govuk-input" aria-describedby="query-hint" type="text" name="query"></div>
+  </div>
+
+    <div class="search-box__input">
+      <div class="govuk-form-group"><label for="type-field" class="govuk-label">Filter by type</label><select id="type-field" class="govuk-select" name="type"><option value=""></option>
+<option value="ParticipantProfile::ECT">ECT</option>
+<option value="ParticipantProfile::Mentor">Mentor</option>
+<option value="ParticipantProfile::NPQ">NPQ</option></select></div>
+    </div>
+
+  <button type="submit" formnovalidate="formnovalidate" class="govuk-button search-box__button" data-module="govuk-button" data-prevent-double-click="true" data-test="search-button">Search</button>
+</form></div>
+
+<div class="nhsuk-table-container">
+<table data-test="admin-participants-table" class="govuk-table nhsuk-table-responsive">
+  <thead class="nhsuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Full name</th>
+      <th scope="col" class="govuk-table__header">Role</th>
+      <th scope="col" class="govuk-table__header">School</th>
+      <th scope="col" class="govuk-table__header">School URN</th>
+      <th scope="col" class="govuk-table__header">Date added</th>
+      <th scope="col" class="govuk-table__header">Validation status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body nhsuk-table__body">
+    <tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="participants-1">Abdul Mentor</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  Mentor
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  Example school three
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  5555555
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--grey">Contacting for information</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/01fcd878-ea08-4b9d-a4ce-a9191e67808d">Agnes Welch Sr.</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  NPQ
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  794225
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--yellow">Pending</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/92690ddd-9162-45f5-b974-28c1a72238a4">Alfonzo Block</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  Early career teacher
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  Emmerich LLC
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  519821
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--green">Eligible to start</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/d7914ab4-5785-4c3e-8835-b5cae2a52642">Alta McDermott</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  Mentor
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  Emmerich LLC
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  519821
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--green">Eligible to start</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/5367ca1c-5b31-4181-bd37-00b5555a54cb">Alysia Littel</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  Mentor
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  ZZ Test School 206
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  000206
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--green">Eligible to start</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/141daf53-7f45-41e1-ac3d-b44fd31e6db9">Amb. Olga Rowe</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  NPQ
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  901007
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--yellow">Pending</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/5b746df2-22b3-414e-946e-121a4bb4b7a8">Analisa Lang Sr.</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  Early career teacher
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  DuBuque-Wiegand
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  731423
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--green">Eligible to start</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/fa186978-c90b-4c13-934d-5fac95935c9a">Bennett Beahan VM</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  Mentor
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  Zboncak-Huel
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  158865
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--green">Eligible to start</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/964c89ed-e969-4dde-a64e-a661b7475cc6">CIP ECT</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  Early career teacher
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  ZZ Test School 200
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  000200
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--grey">Contacting for information</strong>
+</td>
+</tr>
+<tr class="govuk-table__row nhsuk-table__row">
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Full name</span>
+  <div class="school-name-with-tag">
+    <a class="govuk-link" href="/admin/participants/5122a3db-e326-4b3d-bc26-f0437dce8200">CIP ECT</a>
+  </div>
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Type</span>
+  Early career teacher
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School</span>
+  ZZ Test School 206
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">School URN</span>
+  000206
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Date added</span>
+  17 May 2022
+</td>
+<td class="govuk-table__cell nhsuk-table__cell">
+  <span class="govuk-visually-hidden">Validation status</span>
+  <strong class="govuk-tag govuk-tag--grey">Contacting for information</strong>
+</td>
+</tr>
+
+  </tbody>
+</table>
+</div>
+
+<nav aria-label="pager" class="pagination ecf-pagination" role="navigation">
+
+      <span class="page current">1</span>
+            <span class="page"><a href="/admin/participants?page=2" rel="next" class="govuk-link">2</a></span>
+            <span class="page"><a href="/admin/participants?page=3" class="govuk-link">3</a></span>
+            <span class="page"><a href="/admin/participants?page=4" class="govuk-link">4</a></span>
+            <span class="page"><a href="/admin/participants?page=5" class="govuk-link">5</a></span>
+            <span class="page gap">...</span>
+      <span class="page"><a href="/admin/participants?page=13" class="govuk-link">13</a></span>
+    
+  <span class="ecf-page-link ecf-page-link__next">
+    <a href="/admin/participants?page=2" rel="next" aria-label="next" class="govuk-link">Next →</a>
+  </span>
+</nav>
+
+
+
+
+<script src="/public/javascripts/filters.js"></script>
+{% endblock %}
