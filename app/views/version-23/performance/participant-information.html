@@ -160,12 +160,12 @@ Declarations feed
           <dd class="govuk-summary-list__actions"></dd>
         </div>
         <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-          <dt class="govuk-summary-list__key">Created at</dt>
+          <dt class="govuk-summary-list__key">Created</dt>
           <dd class="govuk-summary-list__value">19 July 2021, 2:56 PM</dd>
           <dd class="govuk-summary-list__actions"></dd>
         </div>
         <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-          <dt class="govuk-summary-list__key">Updated at</dt>
+          <dt class="govuk-summary-list__key">Updated</dt>
           <dd class="govuk-summary-list__value">22 March 2022, 3:56 PM</dd>
           <dd class="govuk-summary-list__actions"></dd>
         </div>
@@ -250,7 +250,7 @@ Declarations feed
     </div>
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
       <dt class="govuk-summary-list__key">Declaration date</dt>
-      <dd class="govuk-summary-list__value">16 September 2021, 2:55 PM</dd>
+      <dd class="govuk-summary-list__value">16 September 2021 at 2:55pm</dd>
       <dd class="govuk-summary-list__actions"></dd>
     </div>
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
@@ -271,7 +271,7 @@ Declarations feed
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
       <dt class="govuk-summary-list__key">State</dt>
       {% if data.pp3 === "yes" %}
-             <dd class="govuk-summary-list__value">Voided</dd>
+             <dd class="govuk-summary-list__value">voided</dd>
              {%else%}
       <dd class="govuk-summary-list__value">paid</dd>
       {%endif%}
@@ -283,16 +283,16 @@ Declarations feed
     </div>
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
       <dt class="govuk-summary-list__key">Created at</dt>
-      <dd class="govuk-summary-list__value">27 October 2021, 12:28 PM</dd>
+      <dd class="govuk-summary-list__value">27 October 2021 at 12:28pm</dd>
       <dd class="govuk-summary-list__actions"></dd>
     </div>
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
       <dt class="govuk-summary-list__key">Updated at</dt>
-      <dd class="govuk-summary-list__value">8 February 2022, 2:38 PM</dd>
+      <dd class="govuk-summary-list__value">8 February 2022 at 2:38pm</dd>
       <dd class="govuk-summary-list__actions"></dd>
     </div>
   </dl>
-  <h4>Declaration State History</h4>
+  <h4>Declaration state history</h4>
   
   <div class="nhsuk-table-container">
     <table data-test="admin-participants-table" class="govuk-table nhsuk-table-responsive">
@@ -309,10 +309,10 @@ Declarations feed
             submitted
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            27 October 2021, 12:28 PM
+            27 October 2021 at 12:28pm
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            N/A
+            Not applicable
           </td>
         </tr>
         <tr class="govuk-table__row nhsuk-table__row">
@@ -320,10 +320,10 @@ Declarations feed
             eligible
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            27 October 2021, 12:28 PM
+            27 October 2021 at 12:28pm
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            N/A
+            Not applicable
           </td>
         </tr>
         <tr class="govuk-table__row nhsuk-table__row">
@@ -331,10 +331,10 @@ Declarations feed
             payable
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            8 November 2021, 11:47 AM
+            8 November 2021 at 11:47am
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            N/A
+            Not applicable
           </td>
         </tr>
         <tr class="govuk-table__row nhsuk-table__row">
@@ -342,22 +342,22 @@ Declarations feed
             paid
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            24 January 2022, 9:57 AM
+            24 January 2022 at 9:57am
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            N/A
+            Not applicable
           </td>
         </tr>
         {% if data.pp3 === "yes" %}
         <tr class="govuk-table__row nhsuk-table__row">
           <td class="govuk-table__cell nhsuk-table__cell">
-            Voided
+            voided
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            24 January 2022, 9:57 AM by [USER-ID]
+            24 January 2022 at 9:57am by [USER-ID]
           </td>
           <td class="govuk-table__cell nhsuk-table__cell">
-            N/A
+            Not applicable
           </td>
         </tr>
         {%else%}
@@ -381,12 +381,12 @@ Declarations feed
           <dd class="govuk-summary-list__actions"></dd>
     </div>
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-      <dt class="govuk-summary-list__key">Lead Provider</dt>
+      <dt class="govuk-summary-list__key">Lead provider</dt>
       <dd class="govuk-summary-list__value">Best Practice Network</dd>
       <dd class="govuk-summary-list__actions"></dd>
     </div>
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-      <dt class="govuk-summary-list__key">Lead Provider approval status</dt>
+      <dt class="govuk-summary-list__key">Lead provider approval status</dt>
       {% if data.pp4 === "yes" %}
       <dd class="govuk-summary-list__value">Pending</dd>
       {%else%}
@@ -414,13 +414,13 @@ Declarations feed
       <dd class="govuk-summary-list__actions"></dd>
     </div>
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-      <dt class="govuk-summary-list__key">Created at</dt>
-      <dd class="govuk-summary-list__value">27 September 2021, 7:26 AM</dd>
+      <dt class="govuk-summary-list__key">Created</dt>
+      <dd class="govuk-summary-list__value">27 September 2021 at 7:26am</dd>
       <dd class="govuk-summary-list__actions"></dd>
     </div>
     <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-      <dt class="govuk-summary-list__key">Updated at</dt>
-      <dd class="govuk-summary-list__value">7 January 2022, 3:15 PM</dd>
+      <dt class="govuk-summary-list__key">Updated</dt>
+      <dd class="govuk-summary-list__value">7 January 2022 at 3:15pm</dd>
       <dd class="govuk-summary-list__actions"></dd>
     </div>
   </dl>
