@@ -10,7 +10,7 @@ module.exports = (app) => {
     app.post('/' + version + '/payments/payment-breakdown', function (req, res) {
   
   
-      if (req.body.scheme === "Early career framework (ECF)") {
+      if (req.body.scheme === "Early career framework (ECF)" && req.body.test === "test 1") {
           res.redirect('/' + version + '/payments/ecf-payment-breakdown');
   
       } else  {
