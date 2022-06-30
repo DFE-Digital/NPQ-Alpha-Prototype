@@ -5,7 +5,7 @@ module.exports = (app) => {
         res.end();
     });
   
-  var version = 'version-22'
+  var version = 'version-23'
    
     app.post('/' + version + '/payments/payment-breakdown', function (req, res) {
   
