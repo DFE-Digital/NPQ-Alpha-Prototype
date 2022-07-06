@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="access" method="post" novalidate>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="accessotherrole-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+           Do you need access to another role?
+          </h1>
+        </legend>
+        <div id="accessotherrole-hint" class="govuk-hint">
+       Something helpful
+        </div>
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="accessotherrole" name="accessotherrole" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="accessotherrole">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="accessotherrole-2" name="accessotherrole" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="accessotherrole-2">
+              No
+            </label>
+          </div>
+        </div>
+    
+      </fieldset>
+    </div>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+       </button>
+       </form>
+  </div>
+</div>
+    
+
+{% endblock %}
+

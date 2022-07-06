@@ -20,7 +20,35 @@ module.exports = (app) => {
       
         
     });
+    app.post('/' + version + '/access-management/signin', function (req, res) {
+  
+  
+      if (req.body.user['email']  === "delivery-partner@example.com") {
+          res.redirect('/' + version + '/access-management/already-user');
+  
+      } else  {
+          res.redirect('/' + version + '/access-management/signin-as-sit?noaccess=false');
+  
+      }
+      
+  
     
+  });
+
+  app.post('/' + version + '/access-management/access', function (req, res) {
+  
+  
+    if (req.body.accessotherrole  === "yes") {
+        res.redirect('/' + version + '/access-management/access-management1');
+
+    } else  {
+        res.redirect('/' + version + '/access-management/delivery-partners-2');
+
+    }
+    
+
+  
+});
       
       app.post('/' + version + '/providers/trainee-scheme-route', function (req, res) {
   

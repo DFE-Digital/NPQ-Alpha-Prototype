@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:history.back()"
+  }) }}
+
+
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <form action="access-management2" method="post" novalidate>
+    
+      
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="role-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-heading-xl"> Select a role you need access to</h1>
+          </legend>
+          <div id="role-hint" class="govuk-hint">
+            Select all that apply.
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="role" name="role" type="checkbox" value="School induction tutor">
+              <label class="govuk-label govuk-checkboxes__label" for="role">
+              School induction tutor
+              </label>
+            </div>
+            
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="role-2" name="role" type="checkbox" value="Delivery partner">
+              <label class="govuk-label govuk-checkboxes__label" for="role-2">
+        Delivery partner
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="role-3" name="role" type="checkbox" value="Lead provider">
+              <label class="govuk-label govuk-checkboxes__label" for="role-3">
+               Lead provider
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="role-2" name="role" type="checkbox" value="Something else">
+              <label class="govuk-label govuk-checkboxes__label" for="role-2">
+  Something else
+              </label>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+  
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+      </button>
+    </form>
+  </div>
+</div>  
+            <script>
+
+              $("#searchbtn").click(function() {
+              
+                $.each($("#table tbody tr"), function() {
+              
+              if($(this).text().toLowerCase().indexOf($('#search').val().toLowerCase()) === -1){
+                  $(this).hide();
+                            
+              
+              } 
+            
+
+          
+              
+                })
+                var showAll = true;
+  $('tr').not(':first').hide();
+
+  $('input:checkbox:checked').each(function() {
+    showAll = false;
+    var status = $(this).attr('rel');
+    var value = $(this).val();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent().siblings('tr').show();
+  
+  });
+  if (showAll) {
+    $('tr').show();
+  }
+;
+              });
+              
+              
+              
+                        </script>
+
+{% endblock %}
+

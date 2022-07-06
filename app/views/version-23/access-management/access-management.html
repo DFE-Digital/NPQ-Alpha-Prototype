@@ -1,0 +1,67 @@
+{% extends "layout2.html" %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      <form class="new_user" id="new_user" action="signin?rolechange=" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="qyVF8PLHg9+xuHT8999EonOoYpNmNmmIbQqayX5XqxVrNllvbCfwGwU2yyiS2gfot4ytnt7JBvtVqZ5oDBLXOw==" autocomplete="off">
+      
+
+          <h1 class="govuk-heading-xl">Sign in</h1>
+          <div class="govuk-form-group">
+              <div class="govuk-form-group"><label for="user-email-field" class="govuk-label">Email address</label><input id="user-email-field" class="govuk-input" type="email" value="" name="user[email]"></div>
+          </div>
+          <button type="submit" formnovalidate="formnovalidate" class="govuk-button" data-module="govuk-button" >Sign in</button>
+</form>
+      <h2 class="govuk-heading-m">How to access this service</h2>
+<p class="govuk-body">Enter your registered email address (the one we send emails to).</p>
+      <p class="govuk-body">Do not use your DfE Sign-in details.</p>
+      <p class="govuk-body">If you’re not registered or need to nominate an induction tutor for your school, <a class="govuk-link govuk-link govuk-link--no-visited-state" href="">find out how to get access</a>.</p>
+      
+  </div>
+</div>
+            
+            <script>
+
+              $("#searchbtn").click(function() {
+              
+                $.each($("#table tbody tr"), function() {
+              
+              if($(this).text().toLowerCase().indexOf($('#search').val().toLowerCase()) === -1){
+                  $(this).hide();
+                            
+              
+              } 
+            
+
+          
+              
+                })
+                var showAll = true;
+  $('tr').not(':first').hide();
+
+  $('input:checkbox:checked').each(function() {
+    showAll = false;
+    var status = $(this).attr('rel');
+    var value = $(this).val();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent().siblings('tr').show();
+  
+  });
+  if (showAll) {
+    $('tr').show();
+  }
+;
+              });
+              
+              
+              
+                        </script>
+
+{% endblock %}
+

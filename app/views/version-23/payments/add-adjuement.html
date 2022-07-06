@@ -103,7 +103,7 @@
         <br>
               <div class="autocomplete-wrapper">
           
-                <label class="govuk-label" for="date">View a different cohort</label>
+                <label class="govuk-label" for="date">View a different contract period</label>
                 <!-- <duet-date-picker identifier="date">
               
                   
@@ -117,8 +117,8 @@
                 
                   <option value=""></option>
                 
-                  <option value="April 2022">2021</option>
-                  <option value="March 2022">2022</option>
+                  <option value="April 2022">2021/22</option>
+                  <option value="March 2022">2022/23</option>
                 
                 
                 </select>
@@ -252,7 +252,6 @@
                     <p class=" govuk-body-s  govuk-!-margin-bottom-2">Service fee             <span style="float:right" >£975,103.20</span></p> 
 
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">Output payment <span style="float:right" >£3,426,500.00</span></p>
-                    <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">Uplift fee<span style="float:right" >£48,000.00</span> </p>
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">Adjustments<span style="float:right" >£48,000.00</span> </p>
                     <p class=" govuk-body-s title-mobile govuk-!-margin-bottom-2">VAT <span style="float:right" >£880,320.64</span></p>
 
@@ -533,7 +532,7 @@
                           <th   scope="col" class="govuk-table__header "> Number of trainees </th>
                           <th   scope="col" class="govuk-table__header ">Fee per trainee </th>
              
-                          <th   scope="col" class="govuk-table__header govuk-table__header--numeric">total</th>
+                          <th   scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
                         </tr>
                        
                       </thead>
@@ -557,7 +556,11 @@
                       </tbody>
                     </table>
           
-
+                   <div style="float: right;" class="govuk-table__row">     
+                  
+      <div class=" govuk-heading-s govuk-table__header--numeric">Adjustments total <br> £48,000.00</div> 
+    
+  </div>     
   
                </div>
             
@@ -572,12 +575,11 @@
  
 
                 <div class="govuk-grid-column-full ">
-            
+                  <a style="float:right"; href="" class="govuk-link">Add Adjustment</a>
                   <h2 class="govuk-heading-m">Adjustments
                    
                   </h2>
-                  
-                  <table class="govuk-table  ">
+                  <table class="govuk-table ">
               
   
                     <thead class="govuk-table__head">
@@ -613,133 +615,8 @@
                        
                     </tbody>
                   </table>
-                  <table id="addedrow" class="govuk-table govuk-visually-hidden">
-              
-  
-                    <thead class="govuk-table__head">
-                  
-                      <tr  class="govuk-table__row">
-
-                  
-                        <th    scope="col" class="govuk-table__header ">Description </th>
-                     
-                        <th   scope="col" class="govuk-table__header "> Amount </th>
-                        <th   scope="col" class="govuk-table__header ">Action </th>
-           
-                     
-                      </tr>
-                     
-                    </thead>
-                  
-                    <tbody class="govuk-table__body">
-               
-                    
-                      <tr class="govuk-table__row">
-                        
-                        <td   scope="row" class="govuk-table__cell">Some random thing
-                     
-                        <td   class="govuk-table__cell ">£100 </td>
-                        <td   scope="row" class="govuk-table__cell "> 
-                      <a href="">Edit</a>
-                        </td>
-         
-                      </tr>
-                 
-                      
-                       
-                    </tbody>
-                  </table>
-                  <div class="">
-                  <div data-module="moj-add-another">
-
-           
-                    <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0 ">
-                      <div class="moj-button-action ">
-                  
-                        <button style="  background: none!important;
-                        border: none;
-                        padding: 0!important;
-                       
-                        color: #069;
-                        text-decoration: underline;
-                        cursor: pointer" id="addbtn" class="govuk-link  govuk-heading-s govuk-!-margin-bottom-4" data-module="govuk-button">
-                          + Add an adjustment
-                        </button>
-                  
-                      </div>
-                    </div>
-             
-                    <div id="addform" class="govuk-visually-hidden">
-                  
-                      <fieldset class="govuk-fieldset moj-add-another__item">
-                  
-                    
-                        <div class="govuk-grid-column-one-half govuk-!-padding-left-0">
-                  
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-!-font-weight-bold" for="person[0][first_name]">
-                           Description
-                          </label>
-                  
-                          <input class="govuk-input " id="person[0][first_name]" name="person[0][first_name]" type="text" data-name="person[%index%][first_name]" data-id="person[%index%][first_name]">
-                        </div>
-</div>
-<div class="govuk-grid-column-one-quarter">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label govuk-!-font-weight-bold" for="person[0][first_name]">
-                          Amount
-                          </label>
-                          <div class="govuk-input__wrapper">
-                            <div class="govuk-input__prefix" aria-hidden="true">£</div>
-                            <input class="govuk-input" id="cost" name="cost" type="text" spellcheck="false">
-                          </div>
-                        </div>
-                        </div>
-
-                        <div class=" ">
-                  
-                          <button id="savebtn" class="govuk-button govuk-!-margin-top-6 govuk-!-margin-left-5" data-module="govuk-button">
-                            Save
-                          </button>
-                          <button style="  background: none!important;
-                          border: none;
-                          padding: 0!important;
-                         
-                          color: #069;
-                          text-decoration: underline;
-                          cursor: pointer" id="removebtn" class="govuk-button govuk-!-margin-left-5 govuk-!-margin-top-7" data-module="govuk-button">
-                            Remove
-                          </button>
-                        </div>
-                    
-                  
-                 
-                  
-                      </fieldset>
-                          
-                      <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
-                      <div class="moj-button-action ">
-                  
-                        <button style="  background: none!important;
-                        border: none;
-                        padding: 0!important;
-                       
-                        color: #069;
-                        text-decoration: underline;
-                        cursor: pointer" class="govuk-link  govuk-heading-s moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button">
-                          + Add another adjustment
-                        </button>
-                  
-                      </div>
-                    </div>
-               
-                  
-                  </div>
-                  
-                  </div>
-                </div>
-
-                 <div style="float: right;" class="govuk-table__row govuk-!-margin-top-9">     
+        
+                 <div style="float: right;" class="govuk-table__row">     
     <div class=" govuk-heading-s govuk-table__header--numeric">Adjustments total <br> £48,000.00</div> 
   
 </div>     
@@ -846,32 +723,15 @@
     </div>
   </div> 
             <script>
-
-$( "#savebtn" ).click(function() {
-  $( "#addform" ).addClass('govuk-visually-hidden');
-  $( "#addbtn" ).removeClass('govuk-visually-hidden');
-  $( "#addedrow" ).removeClass('govuk-visually-hidden');
-});
-                  $( "#addbtn" ).click(function() {
-  $( "#addform" ).removeClass('govuk-visually-hidden');
-  $( "#addbtn" ).addClass('govuk-visually-hidden');
-});
-
-$( "#removebtn" ).click(function() {
-  $( "#addform" ).addClass('govuk-visually-hidden');
-  $( "#addbtn" ).removeClass('govuk-visually-hidden');
-});
             $(function() {
   $('#date').addClass('govuk-input');
 });
            </script>
             <script src="/public/javascripts/date-picker.js"></script>
-            <script src="/public/javascripts/all.js"></script>
             <script type="module" src="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/duet.esm.js"></script>
 <script nomodule src="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/duet.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/themes/default.css" />
 <script>
-
   $( "#mybtn2" ).click(function() {
   $( "#notification" ).removeClass('govuk-visually-hidden');
 });

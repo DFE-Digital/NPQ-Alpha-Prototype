@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {%if data.noaccess === "true" %}
+    <h1 class="govuk-heading-xl">
+      Request access
+          </h1>
+    <p class="govuk-body">You do not have access to another role. You need to request access to change roles.</p>
+
+    <a class="govuk-button govuk-link govuk-link--no-visited-state" href="access-management1">Continue</a>.
+    {%else%}
+
+    {% if data.rolechange === "Delivery partner" %}
+    <form action="signin-as-sit" method="post" novalidate>
+      {%else%}
+      <form action="delivery-partners" method="post" novalidate>
+      {%endif%}
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+          Change role
+            </h1>
+          </legend>
+          <div class="govuk-hint">
+Select a role to access relevant service
+
+          </div>
+          {% if data.rolechange === "Delivery partner" %}
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="School induction tutor">
+              <label class="govuk-label govuk-radios__label" for="rolechange">
+         School induction tutor
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value=" Appropriate body">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+            Appropriate body
+              </label>
+            </div>
+          </div>
+          {% else %}
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner">
+              <label class="govuk-label govuk-radios__label" for="rolechange">
+              Delivery partner
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value=" Appropriate body">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+            Appropriate body
+              </label>
+            </div>
+        
+         
+          </div>
+        
+         
+  
+          {% endif %}
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+      </button>
+    </form>
+
+    <p class="govuk-body">If you need access to another role you need to <a class="govuk-link govuk-link govuk-link--no-visited-state" href="access-management1">request access</a>.</p>
+    {%endif%}
+  </div>
+</div>  
+            <script>
+
+              $("#searchbtn").click(function() {
+              
+                $.each($("#table tbody tr"), function() {
+              
+              if($(this).text().toLowerCase().indexOf($('#search').val().toLowerCase()) === -1){
+                  $(this).hide();
+                            
+              
+              } 
+            
+
+          
+              
+                })
+                var showAll = true;
+  $('tr').not(':first').hide();
+
+  $('input:checkbox:checked').each(function() {
+    showAll = false;
+    var status = $(this).attr('rel');
+    var value = $(this).val();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent().siblings('tr').show();
+  
+  });
+  if (showAll) {
+    $('tr').show();
+  }
+;
+              });
+              
+              
+              
+                        </script>
+
+{% endblock %}
+

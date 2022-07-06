@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+    Request sent
+      </h1>
+      <div class="govuk-panel__body">
+      
+      </div>
+    </div>
+
+    <p class="govuk-body">You will get an email confirmation.</p>
+
+    <h2 class="govuk-heading-m">What happens next</h2>
+
+    <p class="govuk-body">
+     Something 
+    </p>
+    <p class="govuk-body">
+    Something
+    </p>
+<a href="delivery-partners" class="govuk-link">Go to participants</a>
+
+  </div>
+</div> 
+            <script>
+
+              $("#searchbtn").click(function() {
+              
+                $.each($("#table tbody tr"), function() {
+              
+              if($(this).text().toLowerCase().indexOf($('#search').val().toLowerCase()) === -1){
+                  $(this).hide();
+                            
+              
+              } 
+            
+
+          
+              
+                })
+                var showAll = true;
+  $('tr').not(':first').hide();
+
+  $('input:checkbox:checked').each(function() {
+    showAll = false;
+    var status = $(this).attr('rel');
+    var value = $(this).val();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent().siblings('tr').show();
+  
+  });
+  if (showAll) {
+    $('tr').show();
+  }
+;
+              });
+              
+              
+              
+                        </script>
+
+{% endblock %}
+

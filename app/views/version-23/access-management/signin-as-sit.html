@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+      
+
+<span class="govuk-caption-xl">
+  <span class="govuk-visually-hidden">This section is: </span> ACME Primary School 
+</span>
+<h1 class="govuk-heading-xl">Manage your training</h1>
+
+
+          <!-- Top sections with Induction tutor, ects and mentors -->
+          <dl class="govuk-summary-list govuk-!-margin-bottom-3">
+<div class="govuk-summary-list__row ">
+  <dt class="govuk-summary-list__key">Induction tutor</dt>
+  <dd class="govuk-summary-list__value">Hugo Furst</dd>
+  <dd class="govuk-summary-list__actions"><a class="govuk-link" href="participants/induction-tutor/full-name?induction-tutor=Yes">Change<span class="govuk-visually-hidden"> your SIT</span></a></dd>
+</div>
+<!-- We do not show ECTs or Mentors to DIY -->
+
+  <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">ECTs</dt>
+      <dd class="govuk-summary-list__value">
+          
+              9
+          
+      </dd>
+      <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="participants/#ect">Add or manage<span class="govuk-visually-hidden"> ECTs or mentors</span></a>
+      </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">Mentors</dt>
+      <dd class="govuk-summary-list__value">
+          
+              4
+          
+      </dd>
+      <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="participants/#mentors">Add or manage<span class="govuk-visually-hidden"> ECTs or mentors</span></a>
+      </dd>
+  </div>
+
+<!-- // -->
+</dl>
+
+          <!-- ////////////////////// -->
+
+          <!-- Next incoming year -->
+          <h2 class="govuk-heading-m govuk-!-margin-top-9 govuk-!-margin-bottom-3">ECF-based training starting 2022 to 2023 academic year</h2>
+
+          <!-- New Year training has not been setup -->
+          
+
+              <p><a href="/nominations/">Tell us if any new ECTs will start training</a> at your school in the 2022 to 2023 academic year.</p>
+              
+
+
+          
+
+
+          <!-- Current academic year -->
+          <h2 class="govuk-heading-m govuk-!-margin-top-9 govuk-!-margin-bottom-3">ECF-based training started 2021 to 2022 academic year</h2>
+
+              <!-- ///// Start of 2021 //// -->
+              <dl class="govuk-summary-list govuk-!-margin-bottom-7">
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">Duration</dt>
+                      <dd class="govuk-summary-list__value">2 years</dd>
+                      <dd class="govuk-summary-list__actions"></dd>
+                  </div>
+
+                  <div class="govuk-summary-list__row">
+                      <dt class="govuk-summary-list__key">Programme</dt>
+                      <dd class="govuk-summary-list__value">
+                          
+                              Training provider, funded by the DfE
+                          
+                      </dd>
+                      <dd class="govuk-summary-list__actions"><a class="govuk-link" href="programme-choice">Change<span class="govuk-visually-hidden"> programme</span></a></dd>
+                  </div>
+
+                  <!-- Using an approved training provider -->
+                  
+                      <!-- Needed for if we show the actions line or not -->
+                      
+                      <div class="govuk-summary-list__row">
+                      
+                          <dt class="govuk-summary-list__key">Training provider</dt>
+                          <dd class="govuk-summary-list__value"></dd>
+                          
+                          <dd class="govuk-summary-list__actions">
+                              <a class="govuk-link" href="sign-up-to-training-provider">Sign up<span class="govuk-visually-hidden"> to a training provider</span></a>
+                          </dd>
+                          
+                      </div>
+                      
+                  <!-- Using DfE accredited materials -->
+                  
+
+
+
+
+              </dl>
+
+              
+
+
+
+              <!-- ///// End of 2021 //// -->
+
+
+
+          <!-- We are not using this yet - as it will show the 2nd year of an induction programme -->
+
+              <!-- ///// Start of 2020 //// -->
+              
+              <!-- ///// End of 2020 //// -->
+
+
+
+              <!-- ///// Start of 2019 //// -->
+              
+              <!-- ///// End of 2019 //// -->
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}
+
