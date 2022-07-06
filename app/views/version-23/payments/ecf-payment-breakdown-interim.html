@@ -640,7 +640,15 @@
                      
                         <td   class="govuk-table__cell ">£100 </td>
                         <td   scope="row" class="govuk-table__cell "> 
-                      <a href="">Edit</a>
+                          <button style="  background: none!important;
+                          border: none;
+                          padding: 0!important;
+                         
+                          color: #069;
+                          text-decoration: underline;
+                          cursor: pointer" id="editbtn" class="govuk-button govuk-!-margin-0" data-module="govuk-button">
+                            Edit
+                          </button>
                         </td>
          
                       </tr>
@@ -716,7 +724,8 @@
                  
                   
                       </fieldset>
-                          
+                      <hr>
+                      <br>
                       <div class="govuk-grid-column-one-quarter govuk-!-padding-left-0">
                       <div class="moj-button-action ">
                   
@@ -733,9 +742,9 @@
                       </div>
                     </div>
                
-                  
+               
                   </div>
-                  
+               
                   </div>
                 </div>
 
@@ -860,6 +869,12 @@ $( "#savebtn" ).click(function() {
 $( "#removebtn" ).click(function() {
   $( "#addform" ).addClass('govuk-visually-hidden');
   $( "#addbtn" ).removeClass('govuk-visually-hidden');
+});
+
+$( "#editbtn" ).click(function() {
+  $( "#addform" ).removeClass('govuk-visually-hidden');
+  $( "#addbtn" ).addClass('govuk-visually-hidden');
+  $( "#addedrow" ).addClass('govuk-visually-hidden');
 });
             $(function() {
   $('#date').addClass('govuk-input');
