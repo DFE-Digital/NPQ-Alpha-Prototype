@@ -27,18 +27,19 @@ href: "javascript:history.back()"
       {%else%}
       <form action="delivery-partners" method="post" novalidate>
       {%endif%}
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-            <h1 class="govuk-fieldset__heading">
-          Select delivery partner
-            </h1>
-          </legend>
-          <div class="govuk-hint">
-Select a delivery partner
 
-          </div>
           {% if data.rolechange === "Appropriate body" %}
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+              Select appropriate body
+                </h1>
+              </legend>
+              <div class="govuk-hint">
+    Select an appropriate body
+    
+              </div>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="School induction tutor">
