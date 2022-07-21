@@ -1,14 +1,18 @@
 {% extends "layout.html" %}
 
-{% block content %}
+{% block beforeContent %}
 
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 {{ govukBackLink({
-  text: "Back",
-  href: "#"
+text: "Back",
+href: "javascript:history.back()"
 }) }}
-    
+{% endblock %}
+
+{% block content %}
+
+
 <style>
   .govuk-width-container {
     max-width: 1650px;
