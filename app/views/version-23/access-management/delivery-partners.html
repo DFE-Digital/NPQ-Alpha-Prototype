@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 
-{% block content %}
 {% from "govuk/components/back-link/macro.njk" import govukBackLink %}
 
 {{ govukBackLink({
@@ -9,6 +8,7 @@ href: "javascript:history.back()"
 }) }}
 {% endblock %}
 {% block content %}
+
           
 <style>
   .govuk-width-container {
@@ -16,7 +16,7 @@ href: "javascript:history.back()"
   
   }
   </style>
-  <span class="govuk-caption-xl">[Name of delivery partner, appropriate body...]</span>
+  <span class="govuk-caption-xl">[Name of delivery partner, appropriate body...</span>
   <h1 class="govuk-heading-xl">Participants</h1>
 
 <div class="govuk-grid-row">
