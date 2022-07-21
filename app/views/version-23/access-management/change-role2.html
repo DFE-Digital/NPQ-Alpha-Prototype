@@ -31,11 +31,11 @@ href: "javascript:history.back()"
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-          Select role
+          Select delivery partner
             </h1>
           </legend>
           <div class="govuk-hint">
-Select a role to access relevant service
+Select a delivery partner
 
           </div>
           {% if data.rolechange === "Delivery partner" %}
@@ -43,13 +43,13 @@ Select a role to access relevant service
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="School induction tutor">
               <label class="govuk-label govuk-radios__label" for="rolechange">
-                Delivery partner
+                Partner 1
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value=" Appropriate body">
               <label class="govuk-label govuk-radios__label" for="rolechange-2">
-            Appropriate body
+                Partner 2
               </label>
             </div>
           </div>
@@ -58,13 +58,13 @@ Select a role to access relevant service
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner">
               <label class="govuk-label govuk-radios__label" for="rolechange">
-              Delivery partner
+                Partner 1
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value=" Appropriate body">
               <label class="govuk-label govuk-radios__label" for="rolechange-2">
-            Appropriate body
+                Partner 2
               </label>
             </div>
         
@@ -81,7 +81,7 @@ Select a role to access relevant service
       </button>
     </form>
 
-    <p class="govuk-body">If you need access to another role you need to <a class="govuk-link govuk-link govuk-link--no-visited-state" href="access-management1">request access</a>.</p>
+    <!-- <p class="govuk-body">If you need access to another role you need to <a class="govuk-link govuk-link govuk-link--no-visited-state" href="access-management1">request access</a>.</p> -->
     {%endif%}
   </div>
 </div>  
