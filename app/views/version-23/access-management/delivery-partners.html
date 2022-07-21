@@ -21,9 +21,24 @@ href: "javascript:history.back()"
   </style>
    {% if data.rolechange === "ab1" %}
    <span class="govuk-caption-xl">Barnsley and Doncaster Teaching School Hub</span>
-     {%else%}
+   {%elif data.rolechange === "ab2" %}
+  <span class="govuk-caption-xl">Derby</span>
+  {%elif data.rolechange === "ab3" %}
+  <span class="govuk-caption-xl">DRET Teaching School Hub</span>
+  {%elif data.rolechange === "dp1" %}
+  <span class="govuk-caption-xl">ARK Teaching School Hub</span>
+  {%elif data.rolechange === "dp2" %}
+  <span class="govuk-caption-xl">Academies Enterprise Trust (MAT)</span>
+  {%elif data.rolechange === "dp3" %}
+  <span class="govuk-caption-xl">Academy Transformation Trust</span>
+  {%elif data.rolechange === "dp4" %}
+  <span class="govuk-caption-xl">Advantage Schools</span>
+  {%elif data.rolechange === "dp5" %}
+  <span class="govuk-caption-xl">Benfleet TSA</span>
+  {%else%}
   <span class="govuk-caption-xl">[Name of delivery partner / appropriate body...]</span>
   {%endif%}
+
   <h1 class="govuk-heading-xl">Participants</h1>
 
 <div class="govuk-grid-row">
