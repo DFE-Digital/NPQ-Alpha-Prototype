@@ -19,7 +19,11 @@ href: "javascript:history.back()"
   
   }
   </style>
+   {% if data.rolechange === "ab1" %}
+   <span class="govuk-caption-xl">Barnsley and Doncaster Teaching School Hub</span>
+     {%else%}
   <span class="govuk-caption-xl">[Name of delivery partner / appropriate body...]</span>
+  {%endif%}
   <h1 class="govuk-heading-xl">Participants</h1>
 
 <div class="govuk-grid-row">
