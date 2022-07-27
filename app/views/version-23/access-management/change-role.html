@@ -31,25 +31,25 @@ href: "javascript:history.back()"
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-          Select a role
+          Choose a role
             </h1>
           </legend>
-          <div class="govuk-hint">
-Select a role to access relevant service
+          <!-- <div class="govuk-hint"> -->
+            <p>Choose a role to view the relevant organisations.</p>
 
-          </div>
-          {% if data.rolechange === "Delivery partner" %}
+          <!-- </div> -->
+          {% if data.rolechange === "Appropriate body" %}
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner" checked="checked">
-              <label class="govuk-label govuk-radios__label" for="rolechange">
-                Delivery partner
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body" checked="checked">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+              Appropriate body
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body">
-              <label class="govuk-label govuk-radios__label" for="rolechange-2">
-              Appropriate body
+              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner">
+              <label class="govuk-label govuk-radios__label" for="rolechange">
+                Delivery partner
               </label>
             </div>
             <div class="govuk-radios__item">
@@ -62,15 +62,15 @@ Select a role to access relevant service
           {% else %}
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner"checked="checked">
-              <label class="govuk-label govuk-radios__label" for="rolechange">
-              Delivery partner
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body" checked="checked">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+            Appropriate body
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body">
-              <label class="govuk-label govuk-radios__label" for="rolechange-2">
-            Appropriate body
+              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner">
+              <label class="govuk-label govuk-radios__label" for="rolechange">
+              Delivery partner
               </label>
             </div>
             <div class="govuk-radios__item">

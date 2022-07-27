@@ -13,6 +13,7 @@ href: "javascript:history.back()"
 {% block content %}
 
 
+
 <style>
   .govuk-width-container {
     max-width: 1650px;
@@ -67,70 +68,55 @@ href: "javascript:history.back()"
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-<div class="search-box">
-  <div class="search-box__form">
-    <div class="search-box__input govuk-!-width-one-third">
-      <div class="govuk-form-group"><label for="query-field" class="govuk-label govuk-label--s">Search
-          </label><span class="govuk-hint" id="query-hint">For example, school, participant name or teacher reference number (TRN)</span><input id="search" class="govuk-input " aria-describedby="query-hint" type="text" name="query"></div>
-    </div>
-    <div class="search-box__input govuk-!-width-one-third">
-      <div class="govuk-form-group"><label for="type-field" class="govuk-label">Filter by role</label>
+    <div class="search-box">
+      <div class="search-box__form">
+        <div class="search-box__input govuk-!-width-one-third">
+          <div class="govuk-form-group"><label for="query-field" class="govuk-label govuk-label--s">Search
+            </label><span class="govuk-hint" id="query-hint">For example, school, participant name or teacher reference number (TRN)</span><input id="search" class="govuk-input " aria-describedby="query-hint" type="text" name="query"></div>
+          </div>
+          <div class="search-box__input govuk-!-width-one-third">
+            <div class="govuk-form-group"><label for="type-field" class="govuk-label">Filter by role</label>
+              <select id="type-field1" class="govuk-select " name="type">
+                  <option value="0">All participants</option>
+                  <option value="Early career teacher">Early career teacher</option>
+                  <option value="Mentor">Mentor</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-box__input govuk-!-width-one-third">
+            <div class="govuk-form-group"><label for="type-field" class="govuk-label">Filter by academic year</label>
+              <select id="type-field2" class="govuk-select " name="type">
+                <option value="All academic years">All academic years</option>
+                <option value="2021/22">   	2021/22</option>
+                <option value="2022/23"> 	2022/23 </option>
+              </select>
+            </div>
+          </div>
+          <div class="search-box__input govuk-!-width-one-third">
+            <div class="govuk-form-group"><label for="type-field" class="govuk-label">Filter by status</label>
+              <select id="type-field3" class="govuk-select " name="type">
+              <option value="0">All statuses</option>
+              <option value="Training or eligible for training">Training or eligible for training</option>
+              <option value="Not eligible for funded training">Not eligible for funded training</option>
+              <option value="No longer being trained">No longer being trained </option>
+              <option value="Contacted for information">Contacted for information</option>
+              <option value="Checking QTS">Checking QTS</option>
+              <option value="Moving schools">Moving schools</option>
+              <option value="DfE checking eligibility"> DfE checking eligibility</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <input id="searchbtn" type="button" name="commit" value="Search" formnovalidate="formnovalidate" class="govuk-button search-box__button" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Search" data-test="search-button">
+          </div>
+          <a class="govuk-!-padding-left-3" href="">Clear</a>
 
-        <select id="type-field1" class="govuk-select " name="type">
-          <option value="0">All participants</option>
-       
-          <option value="Early career teacher">Early career teacher</option>
-          <option value="Mentor">Mentor</option>
-          
-        </select>
-
-      </div>
-      </div>
-      <div class="search-box__input govuk-!-width-one-third">
-      <div class="govuk-form-group"><label for="type-field" class="govuk-label">Filter by academic year</label>
-
-        <select id="type-field2" class="govuk-select " name="type">
-          <option value="All academic years">All academic years</option>
-       
-          <option value="2021/22">   	2021/22</option>
-          <option value="2022/23"> 	2022/23 </option>
-     
-          
-        </select>
-
-      </div>
-    </div>
-    <div class="search-box__input govuk-!-width-one-third">
-      <div class="govuk-form-group"><label for="type-field" class="govuk-label">Filter by status</label>
-
-        <select id="type-field3" class="govuk-select " name="type">
-          <option value="0">All statuses</option>
-       
-          <option value="Training or eligible for training">Training or eligible for training</option>
-          <option value="Not eligible for funded training">Not eligible for funded training</option>
-          <option value="No longer being trained">No longer being trained </option>
-          <option value="Contacted for information">Contacted for information</option>
-          <option value="Checking QTS">Checking QTS</option>
-          <option value="Moving schools">Moving schools</option>
-          <option value="DfE checking eligibility"> DfE checking eligibility</option>
-        </select>
-
+        </div>
       </div>
     </div>
+  </div>
 
-
-
-  
-
-<div><input id="searchbtn" type="button" name="commit" value="Search" formnovalidate="formnovalidate" class="govuk-button search-box__button" data-module="govuk-button" data-prevent-double-click="true" data-disable-with="Search" data-test="search-button">
-
-</div>
-<a class="govuk-!-padding-left-3" href="">Clear</a>
-
-</div></div>
-</div>
-</div>
-<div class="govuk-grid-row">
+  <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 <div class="">
   <table class="govuk-table nhsuk-table-responsive">
