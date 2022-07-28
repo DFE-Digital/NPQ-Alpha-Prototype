@@ -21,13 +21,13 @@ href: "javascript:history.back()"
 
     <a class="govuk-button govuk-link govuk-link--no-visited-state" href="access-management1">Continue</a>.
     {%else%}
-<!-- 
+
     {% if data.rolechange === "Delivery partner" %}
     <form action="change-role2" method="post" novalidate>
       {%else%}
       <form action="change-role2" method="post" novalidate>
-      {%endif%} -->
-      <form action="change-role2" method="post" novalidate>
+      {%endif%}
+
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -39,7 +39,7 @@ href: "javascript:history.back()"
             <p>Choose a role to view the relevant organisations.</p>
 
           <!-- </div> -->
-          <!-- {% if data.rolechange === "Appropriate body" %} -->
+          {% if data.rolechange === "Appropriate body" %}
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body" checked="checked">
@@ -60,7 +60,7 @@ href: "javascript:history.back()"
               </label>
             </div>
           </div>
-          <!-- {% else %}
+          {% else %}
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body" checked="checked">
@@ -81,11 +81,11 @@ href: "javascript:history.back()"
               </label>
             </div>
          
-          </div> -->
+          </div>
         
          
   
-          <!-- {% endif %} -->
+          {% endif %}
         </fieldset>
       </div>
       <button type="submit" class="govuk-button" data-module="govuk-button">
