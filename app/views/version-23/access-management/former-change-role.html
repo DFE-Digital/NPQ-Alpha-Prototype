@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<!-- 
+    {%if data.noaccess === "true" %}
+    <h1 class="govuk-heading-xl">
+      Request access
+          </h1>
+    <p class="govuk-body">You do not have access to another role. You need to request access to change roles.</p>
+
+    <a class="govuk-button govuk-link govuk-link--no-visited-state" href="access-management1">Continue</a>.
+    {%else%}
+
+    {% if data.rolechange === "Delivery partner" %}
+    <form action="change-role2" method="post" novalidate>
+      {%else%} -->
+    <form action="change-role2" method="post" novalidate>
+      <!-- {%endif%} -->
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+          What role do you want to use?
+            </h1>
+          </legend>
+          <!-- <div class="govuk-hint"> -->
+            <p>Choose a role to view the relevant organisations.</p>
+
+          <!-- </div> -->
+          <!-- {% if data.rolechange === "Appropriate body" %}
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body" checked="checked">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+              Appropriate body
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner">
+              <label class="govuk-label govuk-radios__label" for="rolechange">
+                Delivery partner
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="School induction tutor">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+              School induction tutor
+              </label>
+            </div>
+          </div>
+          {% else %} -->
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body" checked="checked">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+            Appropriate body
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner">
+              <label class="govuk-label govuk-radios__label" for="rolechange">
+              Delivery partner
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="School induction tutor">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+                School induction tutor
+              </label>
+            </div>
+         
+          </div>
+        
+         
+  
+          {% endif %}
+        </fieldset>
+      </div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+     Continue
+      </button>
+    </form>
+
+    <p class="govuk-body">To change your roles email the Support team on <a class="govuk-link" href="mailto:continuing-professional-development@digital.education.gov.uk" data-hsupport="email">continuing-professional-development@digital.education.gov.uk</a>.</p>
+
+    {%endif%}
+  </div>
+</div>  
+            <!-- <script>
+
+              $("#searchbtn").click(function() {
+              
+                $.each($("#table tbody tr"), function() {
+              
+              if($(this).text().toLowerCase().indexOf($('#search').val().toLowerCase()) === -1){
+                  $(this).hide();
+                            
+              
+              } 
+            
+
+          
+              
+                })
+                var showAll = true;
+  $('tr').not(':first').hide();
+
+  $('input:checkbox:checked').each(function() {
+    showAll = false;
+    var status = $(this).attr('rel');
+    var value = $(this).val();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'schedule' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'cohort' + '[rel="' + value + '"]').parent().siblings('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent('tr').show();
+    $('td.' + 'lp' + '[rel="' + value + '"]').parent().siblings('tr').show();
+  
+  });
+  if (showAll) {
+    $('tr').show();
+  }
+;
+              });
+              
+              
+              
+                        </script> -->
+
+{% endblock %}
+

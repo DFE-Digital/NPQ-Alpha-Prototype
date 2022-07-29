@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block beforeContent %}
+
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{{ govukBackLink({
+text: "Back",
+href: "javascript:history.back()"
+}) }}
+{% endblock %}
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="change-roleb" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+          Contact Support
+            </h1>
+          </legend>
+          <p class="govuk-body">To change your roles email the Support team on <a class="govuk-link" href="mailto:continuing-professional-development@digital.education.gov.uk" data-hsupport="email">continuing-professional-development@digital.education.gov.uk</a>.</p>
+          <!-- <p>Choose a role to view the relevant organisations.</p>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="Appropriate body" checked="checked">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+            Appropriate body
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange" name="rolechange" type="radio" value="Delivery partner">
+              <label class="govuk-label govuk-radios__label" for="rolechange">
+              Delivery partner
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="rolechange-2" name="rolechange" type="radio" value="School induction tutor">
+              <label class="govuk-label govuk-radios__label" for="rolechange-2">
+                School induction tutor
+              </label>
+            </div>        
+          </div>
+        </fieldset>
+      </div> -->
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+     View my roles
+      </button>
+    </form>
+  </div>
+</div>  
+
+{% endblock %}
+
