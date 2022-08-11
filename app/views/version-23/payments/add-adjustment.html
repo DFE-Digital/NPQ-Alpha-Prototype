@@ -15,22 +15,25 @@
       <span class="govuk-caption-xl">Add adjustment</span>
       <h1 class="govuk-heading-xl">What is the adjustment you want to add?</h1>
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="adda-check-answers" method="post">
         <div class="govuk-form-group">
           <label class="govuk-label" for="adjustment-name">
             What is the name or description of the adjustment?
           </label>
-          <input class="govuk-input" id="adjustment-name" name="adjustment-name" type="text">
+          <input class="govuk-input" id="adjName" name="adjustment-name" type="text" value="{{ data['adjustment-name'] }}">
         </div>
         <label class="govuk-label" for="adjustment-name">
           What is the amount of the adjustment?
         </label>
         <div id="more-detail-hint" class="govuk-hint">
-          You can enter positive or negative amounts. ??
+          To increase your payment enter your amount in pounds and pence.<br>For example 1234.87
+        </div>
+        <div id="more-detail-hint" class="govuk-hint">
+          To reduce your payment enter a negative number.<br>For example -1234.87
         </div>
         <div class="govuk-input__wrapper">
           <div class="govuk-input__prefix" aria-hidden="true">£</div>
-          <input class="govuk-input govuk-!-width-one-quarter" id="cost" name="cost" type="text" spellcheck="false">
+          <input class="govuk-input govuk-!-width-one-quarter" id="adjcost" name="adjustment-cost" type="text" spellcheck="false" value="{{ data['adjustment-cost'] }}">
         </div>
         <!-- <p>[Insert question content here]</p>
 
