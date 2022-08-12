@@ -53,23 +53,28 @@
 {% endblock %}
 {% block content %}
 
-
-
 <div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+
           <span class="govuk-caption-xl">{{data.scheme}}</span>
           <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">Ambition Institute</h1>
-         
-          
-
-               
-      
-    
           <!-- <span autocomplete="on" class="govuk-caption-l"> {% if data.providerName %} {{data.providerName}}{%else%} Ambition Institute 
             {%endif%}</span>  -->
-                  <h2 class="govuk-heading-l">{% if data.statementPeriod %}  {{data.statementPeriod}}{%else%} March 2022 {%endif%}
-            
-                  </h2>
+            {% if data.statementPeriod === "March 2022" %}
+                  <h2 class="govuk-heading-l">March 2022</h2>
+            {%else%}
+                   <h2 class="govuk-heading-l">February</h2>
+            {%endif%}
+  </div>
+  <div class="govuk-grid-column-one-quarter">
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <h2 class="govuk-heading-s " style="margin-top: 0;"  id="company-Name">Related content</h2>
+</div>
+</div>
 
+<!-- <div class="govuk-grid-row"> -->
+ 
+          <!-- <div> -->
                   <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-quarter">
                       <div class="govuk-form-group">
@@ -98,13 +103,13 @@
                         <label class="govuk-label" for="sort">
                           View a different statement
                         </label>
-                        <select class="govuk-select" id="sort" name="sort">
-                          <option value="feb22" selected>February 2022</option>
-                          <option value="mar22">March 2022</option>
-                          <option value="apr22">April 2022</option>
-                          <option value="may22">May 2022</option>
-                          <option value="jun22">June 2022</option>
-                          <option value="jul22">July 2022</option>
+                        <select class="govuk-select" id="month" name="statementPeriod">
+                          <option value="February 2022" selected>February 2022</option>
+                          <option value="March 2022">March 2022</option>
+                          <option value="April 2022">April 2022</option>
+                          <option value="May 2022">May 2022</option>
+                          <option value="June 2022">June 2022</option>
+                          <option value="July 2022">July 2022</option>
                         </select>
                       </div>
                       <button type="submit" class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
@@ -132,7 +137,7 @@
                           <p>15</p>
                         </div>
                         <div class="govuk-grid-column-one-third">
-                          <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption>
+                          <!-- <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption> -->
                           <table class="govuk-table">
                             <thead class="govuk-table__head">
                               <tr class="govuk-table__row">
@@ -312,7 +317,7 @@
                             <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
                           </tr>
                         </thead>
-                        {% if data['adjustment-cost'] == '0' %}
+                        {% if data['adjustment-cost'] == '' %}
                         <tbody class="govuk-table__body">
                           <tr class="govuk-table__row">
                             <td class="govuk-table__cell">Clawback for started (Band A)</th>  
@@ -335,7 +340,7 @@
                             <td class="govuk-table__cell">{{ data['adjustment-name'] }}</th>  
                             <td class="govuk-table__cell"></th>
                             <td class="govuk-table__cell"></th>
-                            <td class="govuk-table__cell govuk-table__cell--numeric">{{ data['adjustment-cost'] }}</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">£{{ data['adjustment-cost'] }}</td>
                           </tr>
                         </tbody>
 
@@ -428,7 +433,7 @@
 
   </div>
 
-</div> 
+<!-- </div>  -->
 <script>
 
 $( "#savebtn" ).click(function() {
