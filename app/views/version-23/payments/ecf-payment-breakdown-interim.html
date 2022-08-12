@@ -55,7 +55,7 @@
 
 
 
-        <div class="govuk-grid-row">
+<div class="govuk-grid-row">
           <span class="govuk-caption-xl">{{data.scheme}}</span>
           <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">Ambition Institute</h1>
          
@@ -132,12 +132,12 @@
                           <p>15</p>
                         </div>
                         <div class="govuk-grid-column-one-third">
+                          <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption>
                           <table class="govuk-table">
-                            <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption>
                             <thead class="govuk-table__head">
                               <tr class="govuk-table__row">
                                 <th scope="col" class="govuk-table__header">Total (inc VAT)</th>
-                                <th scope="col" class="govuk-table__header govuk-table__cell--numeric">£1,526,674.00</th>
+                                <th scope="col" class="govuk-table__header govuk-table__header--numeric">£1,526,674.00</th>
                               </tr>
                             </thead>
                             <tbody class="govuk-table__body">
@@ -165,8 +165,8 @@
                           </table>
                         </div>
                       <table class="govuk-table">
-                        <caption class="govuk-table__caption govuk-table__caption--m">Output payments</caption>
                         <thead class="govuk-table__head">
+                          <caption class="govuk-table__caption govuk-table__caption--m">Output payments</caption>
                           <tr class="govuk-table__row">
                             <th scope="col" class="govuk-table__header">Outputs</th>
                             <th scope="col" class="govuk-table__header govuk-table__header--numeric">Band A</th>
@@ -312,6 +312,7 @@
                             <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
                           </tr>
                         </thead>
+                        {% if data['adjustment-cost'] == '0' %}
                         <tbody class="govuk-table__body">
                           <tr class="govuk-table__row">
                             <td class="govuk-table__cell">Clawback for started (Band A)</th>  
@@ -320,6 +321,25 @@
                             <td class="govuk-table__cell govuk-table__cell--numeric">-£1,190.00</td>
                           </tr>
                         </tbody>
+                        {%else%}
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">Clawback for started (Band A)</th>  
+                            <td class="govuk-table__cell">10</th>
+                            <td class="govuk-table__cell">£119.00</th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">-£1,190.00</td>
+                          </tr>
+                        </tbody>
+                        <tbody class="govuk-table__body">
+                          <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">{{ data['adjustment-name'] }}</th>  
+                            <td class="govuk-table__cell"></th>
+                            <td class="govuk-table__cell"></th>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">{{ data['adjustment-cost'] }}</td>
+                          </tr>
+                        </tbody>
+
+                        {%endif%}
                       </table>
                       <form class="form" action="add-adjustment" method="post">
                       <button type="submit" class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
@@ -406,7 +426,7 @@
                   </div>
           <div style="box-shadow: none;" class="moj-filter-layout__filter app-filter" tabindex="-1">
 
-          </div>
+  </div>
 
 </div> 
 <script>
