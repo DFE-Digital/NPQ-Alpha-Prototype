@@ -17,29 +17,31 @@
 
       <form class="form" action="adda-check-answers" method="post">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="adjustment-name">
+          <h2 class="govuk-heading-m">
             What is the name or description of the adjustment?
-          </label>
-          <input class="govuk-input" id="adjName" name="adjustment-name" type="text" value="{{ data['adjustment-name'] }}">
+          </h2>
+          <div id="more-detail-hint" class="govuk-hint">
+            Enter a maximum of 50 characters.
+          </div>
+          <input class="govuk-input" id="adjName" name="adjustment-name" type="text" value="{{ data['adjustment-name'] }}" maxlength="50">
         </div>
-        <label class="govuk-label" for="adjustment-name">
-          What is the amount of the adjustment?
-        </label>
-        <div id="more-detail-hint" class="govuk-hint">
-          To increase your payment enter your amount in pounds and pence.<br>For example 1234.87
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
+            What is the amount of the adjustment?
+          </h2>
+          <div id="more-detail-hint" class="govuk-hint">
+            Enter your amount in pounds and pence. For example 1234.87
+          </div>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+            To reduce your payment enter a negative number.<br>For example -1234.87
+          </div> -->
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-!-width-one-third" id="adjcost" name="adjustment-cost" type="text" spellcheck="false" value="{{ data['adjustment-cost'] }}">
+          </div>
         </div>
-        <div id="more-detail-hint" class="govuk-hint">
-          To reduce your payment enter a negative number.<br>For example -1234.87
-        </div>
-        <div class="govuk-input__wrapper">
-          <div class="govuk-input__prefix" aria-hidden="true">£</div>
-          <input class="govuk-input govuk-!-width-one-quarter" id="adjcost" name="adjustment-cost" type="text" spellcheck="false" value="{{ data['adjustment-cost'] }}">
-        </div>
-        <!-- <p>[Insert question content here]</p>
-
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p> -->
         <div class="govuk-form-group"></div>
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
         </div>
 
       </form>
