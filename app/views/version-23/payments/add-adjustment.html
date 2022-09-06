@@ -12,6 +12,60 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      {% if data.scheme === "National professional qualifications (NPQs)" %}
+      <span class="govuk-caption-xl">Add reconciliation</span>
+      <h1 class="govuk-heading-xl">What reconciliation do you want to add?</h1>
+
+      <form class="form" action="adda-check-answers" method="post">
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
+            Enter a short name or description for the reconciliation
+          </h2>
+          <p>
+            This will be added to the financial statement. For example: One-off IT consultant fee
+          </p>
+          <div id="more-detail-hint" class="govuk-hint">
+            Enter a maximum of 50 characters
+          </div>
+          <input class="govuk-input" id="nadjName" name="nadjustment-name" type="text" value="{{ data['nadjustment-name'] }}" maxlength="50">
+        </div>
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
+            What is the amount of the reconciliation?
+          </h2>
+          <div id="more-detail-hint" class="govuk-hint">
+            Enter the amount in pounds and pence. For example: 1234.87
+          </div>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+            To reduce your payment enter a negative number.<br>For example -1234.87
+          </div> -->
+          <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+              <input class="govuk-input" id="nadjCost" name="nadjustment-cost" type="text" value="{{ data['nadjustment-cost'] }}" maxlength="50">
+          </div>
+        </div>
+        <div class="govuk-form-group">
+          <h2 class="govuk-heading-m">
+            What is your name?
+          </h2>
+          <div id="more-detail-hint" class="govuk-hint">
+            Enter your first and last name.
+          </div>
+          <!-- <div id="more-detail-hint" class="govuk-hint">
+            To reduce your payment enter a negative number.<br>For example -1234.87
+          </div> -->
+          <div class="govuk-input__wrapper">
+            <!-- <div class="govuk-input__prefix" aria-hidden="true">£</div> -->
+            <input class="govuk-input govuk-!-width-one-third" id="nadjperson" name="nadjustment-person" type="text" spellcheck="false" value="{{ data['nadjustment-person'] }}">
+          </div>
+        </div>
+        <div class="govuk-form-group"></div>
+          <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </div>
+
+      </form>
+      {%else%}
+      
       <span class="govuk-caption-xl">Add adjustment</span>
       <h1 class="govuk-heading-xl">What adjustment do you want to add?</h1>
 
@@ -48,6 +102,7 @@
         </div>
 
       </form>
+      {%endif%}
 
     </div>
   </div>

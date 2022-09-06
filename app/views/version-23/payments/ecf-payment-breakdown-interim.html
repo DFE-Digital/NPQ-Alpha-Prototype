@@ -60,8 +60,8 @@
           <h1 class="govuk-heading-xl " style="margin-top: 0;"  id="company-Name">Financial statement</h1>
           <!-- <span autocomplete="on" class="govuk-caption-l"> {% if data.providerName %} {{data.providerName}}{%else%} Ambition Institute 
             {%endif%}</span>  -->
-            {% if data.statementPeriod === "March 2022" %}
-                  <h2 class="govuk-heading-l">March 2022</h2>
+            {% if data.scheme === "National professional qualifications (NPQs)" %}
+                  <h2 class="govuk-heading-l">UCL Institute of Education, Cohort 2021, March 2022</h2>
             {%else%}
                    <h2 class="govuk-heading-l">Ambition Institute, Cohort 2021, February 2022</h2>
             {%endif%}
@@ -82,14 +82,25 @@
                         <label class="govuk-label" for="sort">
                           Provider
                         </label>
+                        {% if data.scheme === "National professional qualifications (NPQs)" %}
+                        <select class="govuk-select" id="sort" name="sort">
+                          <option value="ambition">Ambition Institute</option>
+                          <option value="bpn">Best Practice Network</option>
+                          <option value="capita">Capita</option>
+                          <option value="edt">Education Development Trust</option>
+                          <option value="tf">Teach First</option>
+                          <option value="ucl"selected>UCL Institute of Education</option>
+                        </select>
+                        {%else%}
                         <select class="govuk-select" id="sort" name="sort">
                           <option value="ambition" selected>Ambition Institute</option>
                           <option value="bpn">Best Practice Network</option>
                           <option value="capita">Capita</option>
                           <option value="edt">Education Development Trust</option>
-                          <option value="edt">Teach First</option>
-                          <option value="edt">UCL Institute of Education</option>
+                          <option value="tf">Teach First</option>
+                          <option value="ucl">UCL Institute of Education</option>
                         </select>
+                        {%endif%}
                       </div>
                       <div class="govuk-form-group">
                         <label class="govuk-label" for="sort">
@@ -112,6 +123,17 @@
                         <label class="govuk-label" for="sort">
                           Statement
                         </label>
+                        {% if data.scheme === "National professional qualifications (NPQs)" %}
+                        <select class="govuk-select" id="month" name="statementPeriod">
+                          <option value="February 2022" selected>March 2022</option>
+                          <option value="February 2022">February 2022</option>
+                          <option value="January 2022">January 2022</option>
+                          <option value="December 2021">December 2021</option>
+                          <option value="November 2021">November 2021</option>
+                          <option value="October 2021">October 2021</option>
+                          <option value="September 2021">September 2021</option>
+                        </select>
+                        {%else%}
                         <select class="govuk-select" id="month" name="statementPeriod">
                           <option value="February 2022" selected>February 2022</option>
                           <option value="January 2022">January 2022</option>
@@ -120,6 +142,7 @@
                           <option value="October 2021">October 2021</option>
                           <option value="September 2021">September 2021</option>
                         </select>
+                        {%endif%}
                       </div>
                       <button type="submit" class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
                         View
@@ -140,16 +163,40 @@
                     </div>
                     <div class="govuk-grid-column-three-quarters">
                       <div class="govuk-grid-column-one-third govuk-!-padding-left-0">
+                          {% if data.scheme === "National professional qualifications (NPQs)" %}
+                          <h2 class="govuk-heading-m">Output payment cut off date</h2>
+                          <p>30 December 2021</p>
+                          {%else%} 
                           <h2 class="govuk-heading-m">Milestone cut-off date</h2>
                           <p>30 November 2021</p>
+                          {%endif%}
+                          {% if data.scheme === "National professional qualifications (NPQs)" %}  
+                          <h2 class="govuk-heading-m">Status of declarations</h2>
+                          <button type="submit" class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
+                            Ready for sign off
+                          </button>
+                          <!-- <h2 class="govuk-heading-m">Payment date</h2> -->
+                          {%else%} 
                           <h2 class="govuk-heading-m">Payment date</h2>
                           <p>31 November 2021</p>
+                          {%endif%}
                         </div>
                         <div class="govuk-grid-column-one-third govuk-!-padding-left-0">
+                          {% if data.scheme === "National professional qualifications (NPQs)" %}  
+                          <h2 class="govuk-heading-m">Total starts</h2>
+                          <p>7,800</p>
+                          <h2 class="govuk-heading-m">Total retained</h2>
+                          <p>6,800</p>
+                          <h2 class="govuk-heading-m">Total completed</h2>
+                          <p>999</p>
+                          <h2 class="govuk-heading-m">Total voided</h2>
+                          <p>1 <a href="">View</a></p>
+                          {%else%} 
                           <h2 class="govuk-heading-m">Total declarations received</h2>
                           <p>11,600</p>
                           <h2 class="govuk-heading-m">Total declarations voided</h2>
-                          <p>15</p>
+                          <p>15 <a href="">View</a></p>
+                          {%endif%}
                         </div>
                         <div class="govuk-grid-column-one-third govuk-!-padding-right-0 govuk-!-padding-left-0">
                           <!-- <caption class="govuk-table__caption govuk-table__caption--m">Summary</caption> -->
@@ -169,14 +216,30 @@
                                 <td class="govuk-table__cell">Output payment</th>
                                 <td class="govuk-table__cell govuk-table__cell--numeric">£1,138,820.00</td>
                               </tr>
+                              {% if data.scheme === "National professional qualifications (NPQs)" %}
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">Targeted delivery funding</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">£18,000.00</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">Clawback deductions</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">-£190.00</td>
+                              </tr> 
+                              <tr class="govuk-table__row">
+                                <td class="govuk-table__cell">Reconciliation</th>
+                                <td class="govuk-table__cell govuk-table__cell--numeric">-£1,000.00</td>
+                              </tr> 
+
+                              {%else%}
                               <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">Uplift fees</th>
                                 <td class="govuk-table__cell govuk-table__cell--numeric">£18,000.00</td>
-                              </tr>                            
+                              </tr>     
                               <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">Adjustments</th>
                                 <td class="govuk-table__cell govuk-table__cell--numeric">-£1,190.00</td>
-                              </tr>                            
+                              </tr>  
+                              {%endif%}                                          
                               <tr class="govuk-table__row">
                                 <td class="govuk-table__cell">VAT</th>
                                 <td class="govuk-table__cell govuk-table__cell--numeric">£254,644.00</td>
@@ -184,6 +247,428 @@
                             </tbody>
                           </table>
                         </div>
+                        {% if data.scheme === "National professional qualifications (NPQs)" %}
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <caption class="govuk-table__caption govuk-table__caption--m govuk-!-padding-top-9">
+                              Leading Teaching
+                            </caption>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Starts</th>
+                              <th scope="col" class="govuk-table__header">Retained</th>
+                              <th scope="col" class="govuk-table__header">Completed</th>
+                              <th scope="col" class="govuk-table__header">Total declarations received</th>
+                              <th scope="col" class="govuk-table__header">Total not eligible for funding</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">950</td>
+                              <td class="govuk-table__cell">50</td>
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <!-- <caption class="govuk-table__caption govuk-table__caption--m">Leading Teaching course breakdown</caption> -->
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Payment type</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Participants</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment per participant</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Output</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£100.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£9,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Service fee</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Claimed back</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">-£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Targeted delivery funding</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">50</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£5.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£250.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <caption class="govuk-table__caption govuk-table__caption--m govuk-!-padding-top-9">
+                              Leading Teacher Development
+                            </caption>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Starts</th>
+                              <th scope="col" class="govuk-table__header">Retained</th>
+                              <th scope="col" class="govuk-table__header">Completed</th>
+                              <th scope="col" class="govuk-table__header">Total declarations received</th>
+                              <th scope="col" class="govuk-table__header">Total not eligible for funding</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">950</td>
+                              <td class="govuk-table__cell">50</td>
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <!-- <caption class="govuk-table__caption govuk-table__caption--m">Leading Teaching course breakdown</caption> -->
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Payment type</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Participants</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment per participant</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Output</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£100.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£9,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Service fee</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Claimed back</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">-£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Targeted delivery funding</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">50</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£5.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£250.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <caption class="govuk-table__caption govuk-table__caption--m govuk-!-padding-top-9">
+                              Leading Behaviour and Culture
+                            </caption>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Starts</th>
+                              <th scope="col" class="govuk-table__header">Retained</th>
+                              <th scope="col" class="govuk-table__header">Completed</th>
+                              <th scope="col" class="govuk-table__header">Total declarations received</th>
+                              <th scope="col" class="govuk-table__header">Total not eligible for funding</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">950</td>
+                              <td class="govuk-table__cell">50</td>
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <!-- <caption class="govuk-table__caption govuk-table__caption--m">Leading Teaching course breakdown</caption> -->
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Payment type</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Participants</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment per participant</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Output</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£100.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£9,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Service fee</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Claimed back</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">-£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Targeted delivery funding</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">50</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£5.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£250.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <caption class="govuk-table__caption govuk-table__caption--m govuk-!-padding-top-9">
+                              Senior Leadership
+                            </caption>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Starts</th>
+                              <th scope="col" class="govuk-table__header">Retained</th>
+                              <th scope="col" class="govuk-table__header">Completed</th>
+                              <th scope="col" class="govuk-table__header">Total declarations received</th>
+                              <th scope="col" class="govuk-table__header">Total not eligible for funding</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">950</td>
+                              <td class="govuk-table__cell">50</td>
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <!-- <caption class="govuk-table__caption govuk-table__caption--m">Leading Teaching course breakdown</caption> -->
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Payment type</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Participants</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment per participant</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Output</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£100.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£9,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Service fee</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Claimed back</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">-£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Targeted delivery funding</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">50</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£5.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£250.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <caption class="govuk-table__caption govuk-table__caption--m govuk-!-padding-top-9">
+                              Headship
+                            </caption>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Starts</th>
+                              <th scope="col" class="govuk-table__header">Retained</th>
+                              <th scope="col" class="govuk-table__header">Completed</th>
+                              <th scope="col" class="govuk-table__header">Total declarations received</th>
+                              <th scope="col" class="govuk-table__header">Total not eligible for funding</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">950</td>
+                              <td class="govuk-table__cell">50</td>
+                              <td class="govuk-table__cell">1,000</td>
+                              <td class="govuk-table__cell">0</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="govuk-table">
+                          <thead class="govuk-table__head">
+                            <!-- <caption class="govuk-table__caption govuk-table__caption--m">Leading Teaching course breakdown</caption> -->
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="col" class="govuk-table__header">Outputs</th> -->
+                              <th scope="col" class="govuk-table__header">Payment type</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Participants</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payment per participant</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Output</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£100.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£9,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Service fee</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Claimed back</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">950</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£50.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">-£4,500.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <!-- <th scope="row" class="govuk-table__header">Started</th> -->
+                              <td class="govuk-table__cell">Targeted delivery funding</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">50</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£5.00</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£250.00</td>
+                              <!-- <td class="govuk-table__cell govuk-table__cell--numeric">0</td> -->
+                            </tr>
+                          </tbody>
+                        </table>
+                        <br>
+                        <!-- <table class="govuk-table">
+                          <caption class="govuk-table__caption govuk-table__caption--m">Uplift fees</caption>
+                          <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                              <th scope="col" class="govuk-table__header">Number of participants</th>
+                              <th scope="col" class="govuk-table__header">Fee per participant</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
+                            </tr>
+                          </thead>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">180</th>  
+                              <td class="govuk-table__cell">£100.00</th>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£18,000.00</td>
+                            </tr>
+                          </tbody>
+                        </table> -->
+                        <br>
+                        <table class="govuk-table">
+                          <caption class="govuk-table__caption govuk-table__caption--m">Reconciliation</caption>
+                          <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                              <th scope="col" class="govuk-table__header">Reconciliation type</th>
+                              <!-- <th scope="col" class="govuk-table__header">Number of participants</th> -->
+                              <th scope="col" class="govuk-table__header">Approved by</th>
+                              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
+                            </tr>
+                          </thead>
+                          {% if data['adjustment-cost'] == "" %}
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">Name of reconciliation</th>  
+                              <td class="govuk-table__cell">Jonh Alan</th>
+                              <!-- <td class="govuk-table__cell">£119.00</th> -->
+                              <td class="govuk-table__cell govuk-table__cell--numeric">-£1,190.00</td>
+                            </tr>
+                          </tbody>
+                          {%else%}
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">Name of reconciliation</th>  
+                                <td class="govuk-table__cell">Jonh Alan</th>
+                                <!-- <td class="govuk-table__cell">£119.00</th> -->
+                                <td class="govuk-table__cell govuk-table__cell--numeric">-£1,190.00</td>
+                            </tr>
+                          </tbody>
+                          <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">{{ data['adjustment-name'] }}</th>  
+                              <td class="govuk-table__cell"></th>
+                              <td class="govuk-table__cell"></th>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£{{ data['adjustment-cost'] }}</td>
+                            </tr>
+                          </tbody>
+  
+                          {%endif%}
+                        </table>
+                        <form class="form" action="add-adjustment" method="post">
+                        <button type="submit" class="govuk-button govuk-!-margin-bottom-1" data-module="govuk-button">
+                          Add reconciliation
+                        </button>
+                        </form>
+                      
+                      {%else%}
+
                       <table class="govuk-table">
                         <thead class="govuk-table__head">
                           <caption class="govuk-table__caption govuk-table__caption--m">Output payments</caption>
@@ -366,6 +851,7 @@
                         Add adjustment
                       </button>
                       </form>
+                      {%endif%}
                       <br>
                       <br>
                       <br>
@@ -449,7 +935,7 @@
   </div>
 
 <!-- </div>  -->
-<script>
+<!-- <script>
 
 $( "#savebtn" ).click(function() {
   $( "#addform" ).addClass('govuk-visually-hidden');
@@ -518,8 +1004,8 @@ $( "#editbtn" ).click(function() {
     locale: "en-UK",
 
   }
-</script>
-<script>
+</script> -->
+<!-- <script>
 
 
 
@@ -530,61 +1016,6 @@ function myFunction() {
   } else {
     x.innerHTML = "Hello";
   }
-}
+} -->
 
-
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-// // Get the modal
-// var sendmodal = document.getElementById("sendmodal");
-
-// // Get the button that opens the modal
-// var sendbtn = document.getElementById("send");
-
-// // Get the <span> element that closes the modal
-// var sendspan = document.getElementsByClassName("close2")[0];
-
-// // When the user clicks on the button, open the modal
-// sendbtn.onclick = function() {
-//   sendmodal.style.display = "block";
-// }
-
-// // When the user clicks on <span> (x), close the modal
-// sendspan.onclick = function() {
-//   sendmodal.style.display = "none";
-// }
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == sendmodal) {
-//     sendmodal.style.display = "none";
-//   }
-// }
-
-</script>
 {% endblock %}
