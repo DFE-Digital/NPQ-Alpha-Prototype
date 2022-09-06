@@ -632,7 +632,7 @@
                               <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
                             </tr>
                           </thead>
-                          {% if data['adjustment-cost'] == "" %}
+                          {% if data['nadjustment-cost']|length == "" %}
                           <tbody class="govuk-table__body">
                             <tr class="govuk-table__row">
                               <td class="govuk-table__cell">Name of reconciliation</th>  
@@ -817,7 +817,7 @@
                             <th scope="col" class="govuk-table__header govuk-table__header--numeric">Payments</th>
                           </tr>
                         </thead>
-                        {% if data['adjustment-cost'] == '' %}
+                        {% if data['adjustment-cost']|length == "" %}
                         <tbody class="govuk-table__body">
                           <tr class="govuk-table__row">
                             <td class="govuk-table__cell">Clawback for started (Band A)</th>  
