@@ -84,6 +84,7 @@
                         </label>
                         {% if data.scheme === "National professional qualifications (NPQs)" %}
                         <select class="govuk-select" id="sort" name="sort">
+                          <option value="ambition">2Learn Institute</option>
                           <option value="ambition">Ambition Institute</option>
                           <option value="bpn">Best Practice Network</option>
                           <option value="capita">Capita</option>
@@ -855,6 +856,65 @@
                       <br>
                       <br>
                       <br>
+                      {% if data.scheme === "National professional qualifications (NPQs)" %}
+                      <details class="govuk-details" data-module="govuk-details">
+                        <summary class="govuk-details__summary">
+                          <span class="govuk-details__summary-text">
+                            Contract information
+                          </span>
+                        </summary>
+                        <div class="govuk-details__text">
+                          <table class="govuk-table">
+                            <thead class="govuk-table__head">
+                            <tr class="govuk-table__row">
+                              <th class="govuk-table__header">Course identifier</th>
+                              <th class="govuk-table__header">Recruitment target</th>
+                              <th class="govuk-table__header govuk-table__cell--numeric">Payment per participant</th>
+                            </tr>
+                            </thead>
+                            <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">npq-additional-support-offer</td>
+                              <td class="govuk-table__cell">300</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£800.00</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">npq-leading-teaching</td>
+                              <td class="govuk-table__cell">1000</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">npq-leading-behaviour-culture</td>
+                              <td class="govuk-table__cell">1000</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">npq-leading-teaching-development</td>
+                              <td class="govuk-table__cell">1500</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£902.00</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">npq-senior-leadership</td>
+                              <td class="govuk-table__cell">2000</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£1,149.00</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">npq-headship</td>
+                              <td class="govuk-table__cell">1000</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£1,985.00</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                              <td class="govuk-table__cell">npq-executive-leadership</td>
+                              <td class="govuk-table__cell">400</td>
+                              <td class="govuk-table__cell govuk-table__cell--numeric">£4,099.00</td>
+                            </tr>
+                          
+                            </tbody>
+                          </table>
+                          
+                        </div>
+                      </details>
+                      {%else%}
                       <details class="govuk-details" data-module="govuk-details">
                         <summary class="govuk-details__summary">
                           <span class="govuk-details__summary-text">
@@ -928,6 +988,7 @@
                           </table>
                         </div>
                       </details>
+                      {%endif%}
                     </div>
                   </div>
           <div style="box-shadow: none;" class="moj-filter-layout__filter app-filter" tabindex="-1">
