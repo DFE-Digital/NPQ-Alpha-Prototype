@@ -6068,3 +6068,265 @@ font-size: 19px;
 }
 
 //related content
+
+
+
+/*  START
+------------------------------
+VERSION 24: 
+Darren C15/11/22
+------------------------------ */
+
+.govuk-\!-width-full {
+  width: 100% !important;
+}
+.govuk-\!-width-three-quarters {
+  width: 100% !important;
+}
+.statement-selector {
+  select {
+    width: 100% !important;
+  }
+}
+.statement-selector .govuk-form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 8px;
+}
+.statement-selector {
+    margin-bottom: 30px;
+}
+
+.statement-selector button[type=submit] {
+    margin-bottom: 0;
+    vertical-align: bottom;
+}
+
+.statement-selector button[type=submit] {
+    margin-bottom: 0;
+    vertical-align: bottom;
+}
+
+
+.app-application__panel__summary {
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    background-color: #f8f8f8;
+    border: 1px solid #f3f2f1;
+    display: grid;
+    flex: 1 1 100%;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(3, auto);
+    margin-bottom: 0!important;
+    padding: 20px;
+}
+
+.app-application__panel__summary div .float {
+    display: inline-block;
+    float: left;
+}
+.app-application__panel__summary div .number-group {
+    display: block;
+}
+.app-application__panel__summary ul {
+    grid-gap: .5rem;
+    display: grid;
+    grid-auto-flow: row;
+    padding: unset;
+}
+.app-application__panel {
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    background-color: #f8f8f8;
+    border: 1px solid #f3f2f1;
+    display: grid;
+    flex: 1 1 100%;
+    grid-auto-flow: row;
+//    grid-template-columns: repeat(2, 1fr);
+//    grid-template-rows: repeat(3, auto);
+    margin-bottom: 0!important;
+    padding: 20px;
+}
+.app-application-card__header {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.moj-filter-layout__content {
+    overflow: hidden;
+}
+.finance-panel {
+    background-color: #f8f8f8;
+    padding: 20px 20px 10px;
+}
+.finance-panel.finance-panel__summary {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+.finance-panel .finance-panel__summary__total-payment-breakdown p {
+    display: flex;
+    justify-content: space-between;
+}
+.finance-panel .finance-panel__summary__meta {
+    flex-grow: 1;
+}
+.finance-panel .finance-panel__summary__meta__dates {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+.finance-panel .finance-panel__summary__meta__counts {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+.finance-panel .output-payments tbody tr:nth-of-type(2n - 1) td, .finance-panel .output-payments tbody tr:nth-of-type(2n - 1) th {
+    border-bottom: 0;
+}
+.finance-panel__summary__downloads {
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background: #f8f8f8;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 0 20px;
+}
+.finance-panel__summary__downloads .duvet {
+    border-top: 1px solid #b1b4b6;
+    padding-top: 20px;
+}
+
+
+/*  media queries 
+------------------------------ */
+$test1: 40.625em;
+.app-application__panel__summary {
+  @media (min-width: $test1) {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+  }
+}
+
+$test2: 68.75em;
+.app-application__panel__summary {
+  @media (min-width: $test2) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+$test3: 40.0625em;
+.app-application__panel__summary li {
+  @media (min-width: $test3) {
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+
+$test4: 40.625em;
+.app-application__panel {
+  @media (min-width: $test4) {
+//    grid-template-columns: repeat(2, 1fr);
+//    grid-template-rows: repeat(3, auto);
+  }
+}
+
+$test5: 68.75em;
+.app-application__panel {
+  @media (min-width: $test5) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(3, auto);
+  }
+}
+
+$test6: 68.75em;
+.app-application__card {
+  @media (min-width: $test6) {
+    margin-bottom: 10px;
+  }
+}
+
+$test7: 40.625em;
+.finance-panel.finance-panel__summary {
+  @media (min-width: $test7) {
+   grid-template-columns: auto 1fr;
+  }
+}
+
+$test8: 40.625em;
+.finance-panel .finance-panel__summary__meta__dates {
+  @media (min-width: $test8) {
+   grid-template-columns: auto 1fr;
+  }
+}
+
+$test9: 40.625em;
+.finance-panel .finance-panel__summary__meta__counts{
+  @media (min-width: $test9) {
+  grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+$test10: 40.0525em;
+.statement-selector select{
+  @media (min-width: $test10) {
+// margin-bottom: 15px;
+  }
+}
+
+$test11: 812px;
+.govuk-form-group{
+  @media (max-width: $test11) {
+  width: 100% !important;
+  }
+}
+
+/*  END 
+------------------------------ */
+
+/* dc */
+
+.mb20 {
+  margin-bottom: 20px;
+}
+.tag-version {
+  margin-bottom: 50px;
+}
+
+.app-application-card__header {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.finance-panel__summary__downloads {
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    background: #f8f8f8;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    padding: 0 20px;
+}
+/* border */
+.app-application__card {
+    border-bottom: 1px solid #b1b4b6;
+}
+
+/* spacing */
+.app-application__panel__summary p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.finance-panel__summary__downloads .duvet {
+    border-top: 1px solid #b1b4b6;
+    padding-top: 20px;
+}
