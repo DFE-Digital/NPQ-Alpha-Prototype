@@ -12,7 +12,9 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-
+      <span class="govuk-caption-xl">
+        Add adjustment 
+      </span>
       <h1 class="govuk-heading-xl">Check your answers</h1>
 
       <h2 class="govuk-heading-m">What type of adjustment do you want to add?</h2>
@@ -26,7 +28,7 @@
             {{ data['adjustment-type']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/add-adjustment-type">
+            <a href="/version-24/add-adjustment-type">
               Change
               <span class="govuk-visually-hidden"> adjustment type</span>
             </a>
@@ -42,10 +44,10 @@
             Payments
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['how-much']}}
+            £{{ data['how-much']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/add-adjustment-how-much">
+            <a href="/version-24/add-adjustment-how-much">
               Change
               <span class="govuk-visually-hidden"> payments</span>
             </a>

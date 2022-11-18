@@ -3,8 +3,8 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-// Run this code when a form is submitted to 'choose-provider-answer'
-router.post('/choose-provider-answer', function (req, res) {
+// Run this code when a form is submitted to 'choose-provider-answer-npq'
+router.post('/choose-provider-answer-npq', function (req, res) {
 
   // Make a variable and give it the value from 'choose-provider'
   var chooseProvider = req.session.data['choose-provider']

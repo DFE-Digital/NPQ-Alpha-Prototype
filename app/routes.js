@@ -4949,8 +4949,8 @@ router.get('/*/sandbox/ecfchoosy' , function (req, res) {
 
 // VERSION 24
 // ----
-// Run this code when a form is submitted to 'choose-provider-answer'
-router.post('/choose-provider-answer', function (req, res) {
+// Run this code when a form is submitted to 'choose-provider-answer-npq'
+router.post('/choose-provider-answer-npq', function (req, res) {
 
   // Make a variable and give it the value from 'choose-provider'
   var chooseProvider = req.session.data['choose-provider']
@@ -4962,6 +4962,23 @@ router.post('/choose-provider-answer', function (req, res) {
   } else {
     // Send user to ineligible page
     res.redirect('/version-24/financial-statement-NPQ-v9-page-unavailable')
+  }
+
+})
+
+// Run this code when a form is submitted to 'choose-provider-answer-ecf'
+router.post('/choose-provider-answer-ecf', function (req, res) {
+
+  // Make a variable and give it the value from 'choose-provider'
+  var chooseProvider = req.session.data['choose-provider']
+
+  // Check whether the variable matches a condition
+  if (chooseProvider == "ambition institute"){
+    // Send user to next page
+    res.redirect('/version-24/financial-statement-ECF-v3-B2')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/version-24/financial-statement-ECF-v3-B2-page-unavailable')
   }
 
 })
@@ -4993,7 +5010,7 @@ router.post('/add-adjustment-answer', function (req, res) {
   if (needAnotherAdjustment == "no"){
     // Send user to next page
     // change link back to ECF financial statement when design approved
-    res.redirect('/version-24/choose-provider-ecf')
+    res.redirect('/version-24/financial-statement-ECF-v3-B2-added-adjustment')
   } else {
     // Send user to ineligible page
     res.redirect('/version-24/add-adjustment-type')
@@ -5010,11 +5027,11 @@ router.post('/remove-adjustment-answer', function (req, res) {
   // Check whether the variable matches a condition
   if (removeAdjustment == "no"){
     // Send user to next page
-    res.redirect('/adjustments-add-to-a-list')
+    res.redirect('/version-24/adjustments-add-to-a-list')
   } else {
     // Send user to ineligible page
     // change link back to ECF financial statement when design approved
-    res.redirect('/version-24/choose-provider-ecf')
+    res.redirect('/version-24/financial-statement-ECF-v3-B2')
   }
 
 })
