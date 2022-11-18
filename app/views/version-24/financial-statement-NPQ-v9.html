@@ -1,4 +1,4 @@
-{% extends "layout-wide.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
 	Question page template – {{ serviceName }} – GOV.UK Prototype Kit
@@ -6,13 +6,6 @@
 
 {% block beforeContent %}
 
-{{ govukPhaseBanner({
-	tag: {
-		text: "Prototype"
-	},
-	html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
-	}) }}
-	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -1191,13 +1184,5 @@
 		</div> <!-- /.govuk-grid-column-full -->
 	</div> <!-- /.govuk-grid-row -->
 
-
-	<div class="govuk-grid-row">
-		<div class="govuk-grid-column-full">
-
-			
-
-		</div> <!-- /.govuk-grid-column-full -->
-	</div> <!-- /.govuk-grid-row -->
 
 {% endblock %}
