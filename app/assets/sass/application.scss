@@ -6376,5 +6376,7 @@ $tweak13: 558px;
   }
 }
 
-/*  End: media queries 
------------------------------- */
+.wide {
+  width: 100em;
+  max-width: unset !important;
+}
