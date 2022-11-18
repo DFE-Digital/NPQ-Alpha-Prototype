@@ -6072,9 +6072,10 @@ font-size: 19px;
 
 
 /*  START
-------------------------------
+==============================
 VERSION 24: 
-Darren C15/11/22
+==============================
+Darren C - 15/11/22
 ------------------------------ */
 
 .govuk-\!-width-full {
@@ -6096,18 +6097,14 @@ Darren C15/11/22
 .statement-selector {
     margin-bottom: 30px;
 }
-
 .statement-selector button[type=submit] {
     margin-bottom: 0;
     vertical-align: bottom;
 }
-
 .statement-selector button[type=submit] {
     margin-bottom: 0;
     vertical-align: bottom;
 }
-
-
 .app-application__panel__summary {
     grid-row-gap: 1rem;
     grid-column-gap: 1rem;
@@ -6121,7 +6118,6 @@ Darren C15/11/22
     margin-bottom: 0!important;
     padding: 20px;
 }
-
 .app-application__panel__summary div .float {
     display: inline-block;
     float: left;
@@ -6199,113 +6195,18 @@ Darren C15/11/22
     border-top: 1px solid #b1b4b6;
     padding-top: 20px;
 }
-
-
-/*  media queries 
------------------------------- */
-$test1: 40.625em;
-.app-application__panel__summary {
-  @media (min-width: $test1) {
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,auto);
-  }
-}
-
-$test2: 68.75em;
-.app-application__panel__summary {
-  @media (min-width: $test2) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-$test3: 40.0625em;
-.app-application__panel__summary li {
-  @media (min-width: $test3) {
-    font-size: 1.1875rem;
-    line-height: 1.31579;
-  }
-}
-
-
-$test4: 40.625em;
-.app-application__panel {
-  @media (min-width: $test4) {
-//    grid-template-columns: repeat(2, 1fr);
-//    grid-template-rows: repeat(3, auto);
-  }
-}
-
-$test5: 68.75em;
-.app-application__panel {
-  @media (min-width: $test5) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr repeat(3, auto);
-  }
-}
-
-$test6: 68.75em;
-.app-application__card {
-  @media (min-width: $test6) {
-    margin-bottom: 10px;
-  }
-}
-
-$test7: 40.625em;
-.finance-panel.finance-panel__summary {
-  @media (min-width: $test7) {
-   grid-template-columns: auto 1fr;
-  }
-}
-
-$test8: 40.625em;
-.finance-panel .finance-panel__summary__meta__dates {
-  @media (min-width: $test8) {
-   grid-template-columns: auto 1fr;
-  }
-}
-
-$test9: 40.625em;
-.finance-panel .finance-panel__summary__meta__counts{
-  @media (min-width: $test9) {
-  grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-$test10: 40.0525em;
-.statement-selector select{
-  @media (min-width: $test10) {
-// margin-bottom: 15px;
-  }
-}
-
-$test11: 812px;
-.govuk-form-group{
-  @media (max-width: $test11) {
-  width: 100% !important;
-  }
-}
-
-/*  END 
------------------------------- */
-
-/* dc */
-
 .mb20 {
   margin-bottom: 20px;
 }
 .tag-version {
   margin-bottom: 50px;
 }
-
 .app-application-card__header {
     align-items: baseline;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-
 .finance-panel__summary__downloads {
     grid-column-gap: 0;
     grid-row-gap: 0;
@@ -6319,14 +6220,157 @@ $test11: 812px;
 .app-application__card {
     border-bottom: 1px solid #b1b4b6;
 }
-
 /* spacing */
 .app-application__panel__summary p {
     display: flex;
     justify-content: space-between;
 }
-
 .finance-panel__summary__downloads .duvet {
     border-top: 1px solid #b1b4b6;
     padding-top: 20px;
 }
+.finance-panel-wrapper {
+  background-color: #f8f8f8;
+  padding: 20px 0 0;
+}
+.finance-panel__adjustments caption {
+  margin-bottom: 15px;
+}
+.table-adjustments-sub {
+  margin-bottom: 0;
+}
+.table-adjustments-sub .govuk-table__cell {
+  border: none;
+}
+.finance-panel.finance-panel__adjustments-clawbacks {
+    padding-bottom: 0;
+    padding-top:0;
+    margin-bottom: 0;
+}
+.finance-panel.finance-panel__adjustments-addtional {
+    padding-bottom: 0;
+    padding-top:0;
+    margin-bottom: 0;
+}
+.finance-panel-wrapper h2 {
+  padding-left: 20px;
+}
+.table-adjustments-actions td {
+  vertical-align: bottom;
+}
+.push-r12 {
+    margin-right: 12px;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/*  Start: media queries 
+------------------------------ */
+$tweak1: 40.625em;
+.app-application__panel__summary {
+  @media (min-width: $tweak1) {
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+  }
+}
+
+$tweak2: 68.75em;
+.app-application__panel__summary {
+  @media (min-width: $tweak2) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+$tweak3: 40.0625em;
+.app-application__panel__summary li {
+  @media (min-width: $tweak3) {
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+
+
+$tweak4: 40.625em;
+.app-application__panel {
+  @media (min-width: $tweak4) {
+//    grid-template-columns: repeat(2, 1fr);
+//    grid-template-rows: repeat(3, auto);
+  }
+}
+
+$tweak5: 68.75em;
+.app-application__panel {
+  @media (min-width: $tweak5) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr repeat(3, auto);
+  }
+}
+
+$tweak6: 68.75em;
+.app-application__card {
+  @media (min-width: $tweak6) {
+    margin-bottom: 10px;
+  }
+}
+
+$tweak7: 40.625em;
+.finance-panel.finance-panel__summary {
+  @media (min-width: $tweak7) {
+   grid-template-columns: auto 1fr;
+  }
+}
+
+$tweak8: 40.625em;
+.finance-panel .finance-panel__summary__meta__dates {
+  @media (min-width: $tweak8) {
+   grid-template-columns: auto 1fr;
+  }
+}
+
+$tweak9: 40.625em;
+.finance-panel .finance-panel__summary__meta__counts{
+  @media (min-width: $tweak9) {
+  grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+$tweak10: 40.0525em;
+.statement-selector select{
+  @media (min-width: $tweak10) {
+// margin-bottom: 15px;
+  }
+}
+
+$tweak11: 812px;
+.govuk-form-group{
+  @media (max-width: $tweak11) {
+  width: 100% !important;
+  }
+}
+
+$tweak12: 640px;
+.button-view {
+  @media (max-width: $tweak12) {
+  margin-top: 15px;
+  }
+}
+
+$tweak13: 558px;
+.table-responsive-max-width {
+  @media (max-width: $tweak13) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}
+
+/*  End: media queries 
+------------------------------ */
